@@ -5,7 +5,7 @@ paginate: 5
 title: TomBen's Blog
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: tomben
 
 # GA Tracking ID
 googleAnalytics: UA-139205906-1
@@ -15,7 +15,7 @@ googleAnalytics: UA-139205906-1
 DefaultContentLanguage: zh-cn
 
 permalinks:
-    post: /p/:slug/
+    post: /post/:slug/
     page: /:slug/
 
 params:
@@ -23,7 +23,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: img/favicon.ico
 
     footer:
         since: 2021
@@ -35,7 +35,7 @@ params:
 
     sidebar:
         emoji: 🏄‍♂️️
-        subtitle: TomBen 的自留地
+        subtitle: 我的自留地
         avatar:
             local: true
             src: img/avatar.png
@@ -49,7 +49,7 @@ params:
     comments:
         enabled: true
         provider: disqus
-        disqusShortname: disqus_q8BnZz1CjH
+        disqusShortname: tomben
 
         utterances:
             repo:
@@ -125,6 +125,12 @@ menu:
           url: search
           weight: -60
           pre: search
+
+        - identifier: rss
+          name: RSS
+          url: index.xml
+          weight: -50
+          pre: rss
 
 related:
     includeNewer: true
