@@ -67,7 +67,7 @@ categories:
 
 而在 2010 年，诺贝尔经济学奖得主，普林斯顿大学的 Daniel Kahneman 与同事 Angus Stewart Deaton 共同发表了一项针对美国被试的 [研究](https://www.pnas.org/content/107/38/16489) 表明，当人们的家庭收入超出一年 7.5 万美元（约合人民币 48 万元）后，幸福感便不再随着收入增长而提升了，这项研究影响甚广，被引超过 2600 余次。
 
-2021 年的这篇论文发表之后，很多学者提出了质疑，比如 [Jonas Kristoffer](https://lindeloev.net/new-pnas-paper-income-is-a-poor-way-to-improve-well-being)、[Kieran Healy](https://kieranhealy.org/blog/archives/2021/01/26/income-and-happiness) 等。以我对 PNAS 有限的认识来看，它经常会发表一些题目很有趣甚至耸人听闻的研究，比如「在飞机上看到头等舱更容易感到不平等，从而产生机怒症」。针对这项使用美国数据进行的研究，我们就当吃瓜群众看看就好。不过，由此引出一个思考：**你认为收入多少自己最幸福呢？**也许研究一下不同收入群体中，金钱对其幸福感影响的占比还挺有趣的，好让我们穷人对号入座，不用去仰望高不可攀的 7.5 万美元 😂。
+2021 年的这篇论文发表之后，很多学者提出了质疑，比如 [Jonas Kristoffer](https://lindeloev.net/new-pnas-paper-income-is-a-poor-way-to-improve-well-being)、[Kieran Healy](https://kieranhealy.org/blog/archives/2021/01/26/income-and-happiness) 等。以我对 PNAS 有限的认识来看，它经常会发表一些题目很有趣甚至耸人听闻的研究，比如「在飞机上看到头等舱更容易感到不平等，从而产生机怒症」。针对这项使用美国数据进行的研究，我们就当吃瓜群众看看就好。不过，由此引出一个思考：**你认为收入多少自己最幸福呢**？也许研究一下不同收入群体中，金钱对其幸福感影响的占比还挺有趣的，好让我们穷人对号入座，不用去仰望高不可攀的 7.5 万美元 😂。
 
 ## 网络资源
 
