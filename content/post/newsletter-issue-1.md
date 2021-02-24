@@ -10,8 +10,6 @@ categories:
 
 > 这是我的 Newsletter 第一期，欢迎 [订阅](https://newsletter.retompi.com) 👏
 
-<script async data-uid="0cdc3c081d" src="https://witty-pioneer-2917.ck.page/0cdc3c081d/index.js"></script>
-
 ## 为什么我要写 Newsletter?
 
 **1. 把我们连接在一起**
@@ -76,23 +74,23 @@ categories:
 
 - [Glitch Art Generator](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall)
 
-  简单易用的在线服务。用来生成多颜色、多线条的条状背景图片。
+简单易用的在线服务。用来生成多颜色、多线条的条状背景图片。
 
 - [My WiFi Sign](https://www.mywifisign.com)
 
-  这个网站可以创建一张包含家里 WiFi 信息的卡片，下载并打印下来供手机扫描，对于经常记不住 WiFi 密码的童鞋来说非常实用。可参考 [这个介绍](https://www.appinn.com/my-wifi-sign-online)，类似的网站还有 [📶 WiFi Card](https://wificard.bdw.to/)。
+这个网站可以创建一张包含家里 WiFi 信息的卡片，下载并打印下来供手机扫描，对于经常记不住 WiFi 密码的童鞋来说非常实用。可参考 [这个介绍](https://www.appinn.com/my-wifi-sign-online)，类似的网站还有 [📶 WiFi Card](https://wificard.bdw.to/)。
 
 - [历史车轮](https://www.lishichelun.com)
 
-  历史数据可视化，可以看看哪些著名人物生活在同一时代，比如 「唐玄宗天宝十四年在世的人物」，挺有趣的。
+历史数据可视化，可以看看哪些著名人物生活在同一时代，比如 「唐玄宗天宝十四年在世的人物」，挺有趣的。
 
 - [Ebook Reader for web](https://www.loudreader.com)
 
-  在浏览器中阅读电子书，支持的格式包括 azw3、epub、mobi、PDF，拖拽即可开始阅读，对于临时打开一些不常用的电子书格式比较方便。
+在浏览器中阅读电子书，支持的格式包括 azw3、epub、mobi、PDF，拖拽即可开始阅读，对于临时打开一些不常用的电子书格式比较方便。
 
 - [Icons and Photos For Everything icon](https://thenounproject.com)
 
-  免费下载图片和图标，注册后可免费下载 SVG 格式的图标。
+免费下载图片和图标，注册后可免费下载 SVG 格式的图标。
 
 ## 数字技巧
 
