@@ -2,12 +2,15 @@
 title: 为什么我要写 Newsletter?
 description: Newsletter 第 1 期
 date: 2021-02-23
+slug: "newsletter-issue-1"
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/newsletter-1-cover.jpg
 categories:
     - Newsletter
 ---
 
 > 这是我的 Newsletter 第一期，欢迎 [订阅](https://newsletter.retompi.com) 👏
+
+<script async data-uid="0cdc3c081d" src="https://witty-pioneer-2917.ck.page/0cdc3c081d/index.js"></script>
 
 ## 为什么我要写 Newsletter?
 
@@ -99,9 +102,9 @@ categories:
 
 与 [https://cnki.net](https://cnki.net/) 相比，[知网海外版](https://oversea.cnki.net/) 增加了下载 PDF 全文的选项，点击就可以直接下载。
 
-**2. 油猴脚本**安装油猴脚本
+**2. 油猴脚本**
 
-[知网下载助手](https://greasyfork.org/zh-CN/scripts/371938-知网下载助手)，就可以直接在 [https://cnki.net](https://cnki.net/) 下载 PDF 学位论文，油猴脚本使用方法可以参考 [这个简单的介绍](https://greasyfork.org/zh-CN)。
+安装油猴脚本 [知网下载助手](https://greasyfork.org/zh-CN/scripts/371938-知网下载助手)，就可以直接在 [https://cnki.net](https://cnki.net/) 下载 PDF 学位论文，油猴脚本使用方法可以参考 [这个简单的介绍](https://greasyfork.org/zh-CN)。
 
 **3. 浏览器插件 cnki 科研助手**
 

@@ -17,8 +17,8 @@ Here are some ideas to get you started:
 
 Contact me:
 
-- 📧 Email: [retompi@gmail.com](mailto:retompi@gmail.com)
-- 💬 Telegram: <https://t.me/tom_ben>
-- 📝 Homepage: <https://retompi.com>
-- 🐦 Twitter: <https://twitter.com/tombener>
-- ✍️ 少数派：<https://sspai.com/u/tomben>
+- 📝 [Homepage](https://retompi.com)
+- 📧 [Email](mailto:retompi@gmail.com)
+- 💬 [Telegram](https://t.me/tom_ben)
+- 🐦 [Twitter](https://twitter.com/tombener)
+- ✍️ [少数派](https://sspai.com/u/tomben)
