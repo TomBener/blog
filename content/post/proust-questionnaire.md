@@ -1,10 +1,14 @@
-# 普鲁斯特问卷
-https://zh.wikipedia.org/zh-cn/普鲁斯特问卷
+---
+title: 我的普鲁斯特问卷
+date: 2021-02-24
+slug: "my-proust-questionnaire"
+image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/proust-questionnaire-cover.png
+categories:
+    - Mindset
+---
 
-请回答，普鲁斯特 Podcast
-- https://www.ximalaya.com/renwen/29088626
 
-几个普鲁斯特问卷中出现的问题：
+## [普鲁斯特问卷](https://zh.wikipedia.org/zh-cn/普鲁斯特问卷)
 
 - 你认为最完美的快乐是怎样的？
 - 你最希望拥有哪种才华？
@@ -34,3 +38,5 @@ https://zh.wikipedia.org/zh-cn/普鲁斯特问卷
 - 如果你可以改变你的家庭一件事，那会是什么？
 - 如果你能选择的话，你希望让什么重现？
 - 你的座右铭是什么？
+
+[请回答，普鲁斯特](https://www.ximalaya.com/renwen/29088626)
