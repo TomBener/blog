@@ -5,6 +5,7 @@ slug: "my-proust-questionnaire"
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/proust-questionnaire-cover.png
 categories:
     - Mindset
+draft: true
 ---
 
 

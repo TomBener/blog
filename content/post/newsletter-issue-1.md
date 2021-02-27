@@ -1,14 +1,14 @@
 ---
-title: 为什么我要写 Newsletter?
+title: 为什么我要写 Newsletter？
 description: Newsletter 第 1 期
-date: 2021-02-23
+date: 2021-02-19
 slug: "newsletter-issue-1"
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/newsletter-1-cover.jpg
 categories:
     - Newsletter
 ---
 
-> 这是我的 Newsletter 第一期，欢迎 [订阅](https://newsletter.retompi.com) 👏
+> 这是我写的 Newsletter 第一期，欢迎 [订阅](https://newsletter.retompi.com) 👏
 
 ## 为什么我要写 Newsletter?
 
