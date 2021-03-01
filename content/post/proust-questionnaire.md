@@ -1,11 +1,10 @@
 ---
 title: 我的普鲁斯特问卷
 date: 2021-02-24
-slug: "my-proust-questionnaire"
+slug: my-proust-questionnaire
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/proust-questionnaire-cover.png
 categories:
     - Mindset
-draft: true
 ---
 
 

@@ -2,7 +2,7 @@
 title: 为什么我要写 Newsletter？
 description: Newsletter 第 1 期
 date: 2021-02-19
-slug: "newsletter-issue-1"
+slug: newsletter-issue-1
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/newsletter-1-cover.jpg
 categories:
     - Newsletter

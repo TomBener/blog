@@ -2,7 +2,7 @@
 title: 如何看视频来放空自己？
 description: Newsletter 第 2 期
 date: 2021-02-27
-slug: "newsletter-issue-2"
+slug: newsletter-issue-2
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/newsletter-2-cover.png
 categories:
     - Newsletter
@@ -90,4 +90,4 @@ DuckDuckGo Bang 特别有意思，用一个半角感叹号 ! 加上关键词，�
 
 - [Start something .new](https://whats.new)
 
-whats.new 是 Google 不久前推出的一项服务，可以通过在浏览器中输入特定 `.new` 域名，快速进入指定网站进行相关操作。例如，[https://repo.new](https://repo.new) 新建一个 GitHub 仓库、[https://docx.new](https://docx.new) 创建在线 Microsoft Word 文档、[https://image.new](https://image.new) 打开在线图片编辑器等等。
+whats.new 是 Google 不久前推出的一项服务，可以通过在浏览器中输入特定 `.new` 域名，快速进入指定网站进行相关操作。例如，[repo.new](https://repo.new) 新建一个 GitHub 仓库、[docx.new](https://docx.new) 创建在线 Microsoft Word 文档、[image.new](https://image.new) 打开在线图片编辑器等等。

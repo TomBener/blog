@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: 
+description: 
 date: {{ .Date }}
-slug: ""
-image: ""
+slug: {{ .Name }}
+image: 
 categories:
     - 
-draft: true
 ---
