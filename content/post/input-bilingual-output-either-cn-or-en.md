@@ -17,28 +17,7 @@ categories:
 
 [^fn3]: 在 Markdown 中，一行就是一段。
 
-```markdown
----
-bibliography: [ref.bib]
----
-
-
-# Heading 1
-
-There’s no reason to think the staircase doesn’t extend upwards forever.[^fnen] The red alien a few steps above us on the staircase would see human consciousness the same way we see that of an orangutan—they might think we’re pretty impressive for an animal, but that of course we don’t actually begin to understand anything. Our most brilliant scientist would be outmatched by one of their toddlers. [@ho2014] To the green alien up there higher on the staircase, the **red alien** might seem as intelligent and conscious as a chicken seems to us. And when the green alien looks at us, it sees the simplest little pre-programmed [ants](https://en.wikipedia.org/wiki/Ant).
-
-[^fnen]: This is a footnote.
-
-# 一级标题
-
-没有理由认为楼梯不会永远向上延伸[^fncn]。楼梯上比我们高几步的红色外星人看到人类的意识，就像我们看到猩猩的意识一样——他们可能认为我们对于动物来说相当令人印象深刻，但是当然我们实际上并没有开始理解任何东西。我们最聪明的科学家将会被他们的一个蹒跚学步的孩子击败 [@ho2014]。对于楼梯上那个绿色的外星人来说，这个**红色的外星人**看起来就像我们眼中的小鸡一样聪明和有意识。当绿色外星人看着我们的时候，它看到的是最简单的预先编程的小[蚂蚁](https://zh.wikipedia.org/wiki/蚂蚁)。
-
-[^fncn]: 这是一个脚注。
-
-> We can’t conceive of what life higher on the staircase would be like, but absorbing the fact that higher stairs exist and trying to view ourselves from the perspective of one of those steps is the key mindset we need to be in for this exercise.
-
-> 我们无法想象楼梯上的生活会是什么样子，但吸收高楼梯存在的事实，并试图从这些阶梯中的一个角度来看待我们自己，这是我们在这个练习中需要的关键心态。
-```
+![在 Markdown 中写中英双语文章](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-bilingual.png)
 
 著名的网页翻译插件 [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh) 的翻译结果就是原文和译文互相穿插的形式，可以在阅读过程中同时对照着查看原文与译文，兼顾了阅读速度和翻译的准确性，受到了不少好评。
 
