@@ -2,7 +2,7 @@
 title: 中英双语写作，输出指定语言
 description: 一个小脚本，实现这个小需求
 date: 2021-02-28T17:02:08+08:00
-lastmod: 2021-03-03T13:41:18
+lastmod: 2021-03-03T13:48:18
 slug: input-bilingual-output-either-en-or-cn
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bilingual-writing-markdown.jpg
 categories:
@@ -142,7 +142,7 @@ en: main.md
 	# Generate `en.tex`
 	$(PANX) $< -o en.tex
 
-	# Generate PDF via `en.tex` and `cn.tex`
+	# Generate PDF via `en.tex`
 	
 	# Restore to the original status
 	$(PERL) 's/(<!--- )(.*)( -->)/\2/g' $<
@@ -167,7 +167,7 @@ cn: main.md
 	# Generate `cn.tex`
 	$(PANX) $< -o cn.tex
 	
-	# Generate PDF via `en.tex` and `cn.tex`
+	# Generate PDF via `cn.tex`
 	
 	# Restore to the original status
 	$(PERL) 's/(<!--- )(.*)( -->)/\2/g' $<
