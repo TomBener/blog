@@ -2,7 +2,7 @@
 title: 中英双语写作，输出指定语言
 description: 一个小脚本，实现这个小需求
 date: 2021-02-28T17:02:08+08:00
-lastmod: 2021-03-03T12:58:18+08:00
+lastmod: 2021-03-03T21:10:18
 slug: input-bilingual-output-either-en-or-cn
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bilingual-writing-markdown.jpg
 categories:
