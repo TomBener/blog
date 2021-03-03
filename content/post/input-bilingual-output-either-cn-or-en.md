@@ -2,7 +2,7 @@
 title: 中英双语写作，输出指定语言
 description: 一个小脚本，实现这个小需求
 date: 2021-02-28T17:02:08+08:00
-lastmod: 2021-03-03T21:10:18
+lastmod: 2021-03-03T13:41:18
 slug: input-bilingual-output-either-en-or-cn
 image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bilingual-writing-markdown.jpg
 categories:
@@ -32,7 +32,7 @@ categories:
 
 ## 解决思路
 
-我们的需求是只输出一种语言，解决思路也就非常简单：在中英双语的 Markdown 文件中把不需要输出的另一种语言注释掉即可[^fn2]。尽管 [原生 Markdown](https://daringfireball.net/projects/markdown) 没有注释语法，很多网友提出了解决方案，其中 Stack Overflow 上的 [这个回答](https://stackoverflow.com/a/4829998) 很符合我的需求。
+我们的需求是只输出一种语言，解决思路也就非常简单：在中英双语的 Markdown 文件中把不需要输出的另一种语言注释掉即可[^fn2]。尽管 [原生 Markdown](https://daringfireball.net/projects/markdown) 没有注释语法，但很多网友提出了解决方案，其中 Stack Overflow 上的 [这个回答](https://stackoverflow.com/a/4829998) 很符合我的需求。
 
 [^fn2]: 直接删除肯定是不可取的。
 
@@ -155,7 +155,7 @@ cn: main.md
 	
 	# Uncomment Chinese paragraphs
 	$(PERL) 's/<!--- (.*\p{Han}+.*) -->/\1/g' $<
-
+	
 	# Uncomment paragraphs which contain Chinese character
 	# and the generic HTML comment symbol
 	$(PERL) 's/<!--- (.*\p{Han}+.*) -->/\1/g; \
@@ -166,7 +166,7 @@ cn: main.md
 	
 	# Generate `cn.tex`
 	$(PANX) $< -o cn.tex
-
+	
 	# Generate PDF via `en.tex` and `cn.tex`
 	
 	# Restore to the original status
@@ -174,7 +174,7 @@ cn: main.md
 
 .PHONY: clean
 clean:
-	rm *.docx *.tex 
+	rm *.docx *.tex
 ```
 
 使用方法如下：
