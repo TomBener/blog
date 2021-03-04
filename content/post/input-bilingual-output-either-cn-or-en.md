@@ -107,7 +107,7 @@ pandoc -C -N -M reference-section-title="参考文献" --bibliography ref.bib ma
 
 pandoc --natbib --wrap=none main.md -o cn.tex
 
-sed -i '' -e 's/<!-- //g; s/ -->//g' main.md
+perl -CSD -Mutf8 -i -pe 's/(<!--- )(.*)( -->)/\2/g' main.md
 ```
 
 上面的第一行命令与转换为 `en.docx` 相比，增加了 `--bibliography ref.bib`，这是因为在 `main.md` 中，YAML 块中的参考文献元数据信息被注释掉了，因此需要在命令行中指定，否则 Pandoc 无法找到引文数据。通过上面的命令，我们就得到了中文文件 `cn.docx` 和 `cn.tex`。
