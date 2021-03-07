@@ -17,7 +17,7 @@ categories:
 
 今年春节档的热门电影《你好，李焕英》中，李焕英的女儿贾晓玲不是一般意义上有出息的孩子，但李焕英却对她没有其他的要求，只希望她健健康康、快快乐乐，并且电影中不止一次地传达这样的观点。然而在现实中，却极少有父母能做到这一点，不然何来热词「[鸡娃](https://www.stovol.club/034)」？
 
-当下内卷的社会环境，每个人都不可避免地被卷入过度竞争之中，这是社会的大趋势，个人很难做出改变。但是，活在当下，听从内心，我们可以做到尽量不和他人比较：其他人的课程论文写了 10000 字，我写 3000 字为何不可？同学上发了十几篇 SCI/SSCI 期刊论文，不必因为自己一篇都没发而感到焦虑。曾经的同班同学月入 5 万，我月入 1000 同样生活很开心…… 不和他人比较，去做自己热爱的事情，享受生活。
+当下内卷的社会环境，每个人都不可避免地被卷入过度竞争之中，这是社会的大趋势，个人很难做出改变。但是，活在当下，听从内心，我们可以做到尽量不和他人比较：其他人的课程论文写了 10000 字，我写 3000 字为何不可？同学发了十几篇 SCI/SSCI 期刊论文，不必因为自己一篇都没发而感到焦虑。曾经的同班同学月入 50000，我月入 1000 同样生活很开心…… 不和他人比较，去做自己热爱的事情，享受生活。
 
 ## 播客
 
@@ -25,7 +25,7 @@ categories:
 
 捕蛇者说是 5 位程序员的播客，内容大多是编程相关，播客名称的来源就是编程语言 Python 的中文意思。如果你对编程不感兴趣，可以听一听**个人知识管理体系系列**的三期节目，特别是 [个人知识管理体系系列 - 内化篇](https://pythonhunter.org/episodes/ep24) 这一期，听 [张佳圆](https://twitter.com/tisoga) 介绍他如何使用 Roam Research，让其他主播连连称赞。与这三期类似的还有 [闭门造车](https://gulugulufm.github.io) 播客 [对 Linghao 的访谈](https://gulugulufm.github.io/podcasts/8/)。
 
-我目前使用 Roam Research 来记录几乎所有笔记，包括这封 Newsletter。我的本科好友曾调侃我不记笔记，但自从接触 Roam Research 之后，记笔记成为我每天必须完成的事。2020 年可以称为笔记工具大爆发的一年，[Roam Research](https://roamresearch.com)、[Obsidian](https://obsidian.md)、[RemNote](https://www.remnote.io) 等工具纷纷涌现，如果你苦于没有趁手的工具或者还在使用传统的 [印象笔记](https://www.yinxiang.com/)、[OneNote](https://www.onenote.com/)，不妨试一试这些工具。生活在数字时代，我们都应该找到合适的工具，构建自己的数字资产。
+我目前使用 Roam Research 来记录几乎所有的内容，包括这封 Newsletter。我的本科好友曾调侃我不记笔记，但自从接触 Roam Research 之后，记笔记成为我每天必须完成的事情。2020 年可以称为笔记工具大爆发的一年，[Roam Research](https://roamresearch.com)、[Obsidian](https://obsidian.md)、[RemNote](https://www.remnote.io) 等工具纷纷涌现，如果你苦于没有趁手的工具或者还在使用传统的 [印象笔记](https://www.yinxiang.com/)、[OneNote](https://www.onenote.com/)，不妨试一试这些新兴工具。生活在数字时代，我们都应该找到合适的工具，构建自己的数字资产。
 
 ## 视频
 
@@ -46,7 +46,7 @@ categories:
 3. link permanent notes together
 4. tag permanent notes
 
-- [点击「我不是机器人」后，网站到底怎么知道你真的是人？](https://mp.weixin.qq.com/s/N_f7jp4TlIozxGR-mYHEhg)，[备份地址](https://mp.weixin.qq.com/s/N_f7jp4TlIozxGR-mYHEhg)
+- [点击「我不是机器人」后，网站到底怎么知道你真的是人？](https://mp.weixin.qq.com/s/N_f7jp4TlIozxGR-mYHEhg)，[备份地址](https://ipfs.io/ipfs/QmdHddePNZLpD8mbwkdkEjLdSM3GAbsoMhLFi6wPurhibt)
 
 介绍验证码的原理与发展历史，顺便分享一张 [终极验证码](https://mastodon.gougere.fr/@PierreCol/105249097992224727) 😂
 
@@ -78,13 +78,13 @@ Tune Into Forests From Around The World 🌳🔈. 聆听世界各地森林的声
 
 作者以撰写简历入手，写了一份排版指南（巧的是作者 Xiao Hanyu 还是我的校友）。尽管更新于 2016 年，但这篇文章无论是对于写简历，还是了解一些排版知识，都有一定的帮助。
 
-- [学术写作指要——一个技术指导](https://chriszheng.science/essentials-of-academic-writing/)
+- [学术写作指要 —— 一个技术指导](https://chriszheng.science/essentials-of-academic-writing/)
 
 一位大学教师写的学术写作手册，适合本科生和刚进入研究生阶段的同学快速入门。
 
 - [flowchart-fun](https://flowchart.fun)
 
-输入文本来画流程图，很有趣，[代码开源](https://github.com/tone-row/flowchart-fun)。
+输入文本来绘制流程图，很有趣，[代码开源](https://github.com/tone-row/flowchart-fun)。
 
 - [Bruno Simon](https://bruno-simon.com)
 
