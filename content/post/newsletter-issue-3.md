@@ -29,11 +29,11 @@ categories:
 
 ## 视频
 
-- [Tiny Changes, Remarkable Results - Atomic Habits by James Clear Ali Abdaal](https://youtu.be/YT7tQzmGRLA)
+- [Tiny Changes, Remarkable Results - Atomic Habits by James Clear](https://youtu.be/YT7tQzmGRLA)
 
 {{< youtube YT7tQzmGRLA >}}
 
-著名效率类 YouTuber Ali Abdaal 关于 _Atomic Habits_ 这本书的总结视频。Ali 的视频一如既往的高质量，_Atomic Habits_ 这本书也非常畅销，值得一看。
+著名效率 YouTuber Ali Abdaal 关于 _Atomic Habits_ 这本书的总结视频。Ali 的视频一如既往的高质量，_Atomic Habits_ 这本书也非常畅销，值得一看。
 
 ## 文章
 
@@ -88,7 +88,7 @@ Tune Into Forests From Around The World 🌳🔈. 聆听世界各地森林的声
 
 - [Bruno Simon](https://bruno-simon.com)
 
-一个开源的 3D 博客项目，用户可通过操控一辆小汽车选择要阅读的文章，过程中还有汽车的声音和砖块碰撞的效果等，特别炫酷！快去体验下吧！
+一个 3D 博客项目，用户可通过操控一辆小汽车选择要阅读的文章，过程中还有汽车的声音和砖块碰撞的效果等，特别炫酷，快去体验一下吧！
 
 ## 数字技巧
 
@@ -113,4 +113,4 @@ Tune Into Forests From Around The World 🌳🔈. 聆听世界各地森林的声
 - [你可能并不会使用字体：样式篇](https://www.bilibili.com/video/BV1xV411v7M2)
 - [设计师与标点符号](https://www.bilibili.com/video/BV1AX4y1u7Ag)
 
-以上就是本期 Newsletter 的全部内容。除了通过邮件发送，我也将每期 Newsletter 发布在 [我的博客](https://blog.retompi.com) 上，欢迎访问。如果你觉得对你有所价值，欢迎向你的朋友分享这份 Newsletter。感谢阅读，欢迎来信 📧️
+以上就是本期 Newsletter 的全部内容。除了通过邮件发送，我也将每期 Newsletter 发布在 [我的博客](https://blog.retompi.com) 上，欢迎访问。如果你觉得对你有所价值，欢迎向你的朋友分享这份 Newsletter。感谢阅读，欢迎来信 📧️。
