@@ -56,7 +56,7 @@ categories:
 
 ## 网络资源
 
-- [Nomad List nomad travel](https://nomadlist.com)
+- [Nomad List](https://nomadlist.com)
 
 Explore the world. Join a global community of international travelers working remotely around the world. 做一名数字游民，为在世界各地的城市去旅游或工作提供参考。
 
@@ -68,7 +68,7 @@ Tune Into Forests From Around The World 🌳🔈. 聆听世界各地森林的声
 
 一个 [Chrome 插件](https://chrome.google.com/webstore/detail/send-as-podcast/fblchjbbkkaoobkhhbloehgkpdlomido)，可以将网页都转变成有声播客，支持中文，可参考 [少数派的介绍](https://sspai.com/post/65179)。另一个类似的工具是 Microsoft Edge 浏览器的内置朗读功能，效果出奇地好。
 
-{{< twitter_simple 1355726568857849856 >}}
+{{< twitter 1355726568857849856 >}}
 
 - [Circle 阅读模式](https://ranhe.xyz/circle/)
 
