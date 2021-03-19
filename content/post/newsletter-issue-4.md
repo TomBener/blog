@@ -16,19 +16,19 @@ categories:
 * 微信
 * Microsoft Word
 
-这里不谈 Word，只说微信。作为国民级应用，微信几乎是每一个使用互联网的中国人都安装在手机上的软件，甚至连生活在中国大陆的外国人都必须使用。作为想要教张晓龙做产品的 [1 亿人分之一](https://telegra.ph/张小龙演讲完整版每天有1亿人教我怎么做产品-用户-03-18)，我可以列举一万条不使用微信的 [理由](https://github.com/TomBener/stay-away-from-wechat)，然而，现实情况却是不得不使用微信。
+这里不谈 Word，只说微信。作为国民级应用，微信几乎是每一个使用互联网的中国人都安装在手机中的软件，甚至连生活在中国大陆的外国人都必须使用。作为想要教张晓龙做产品的 [1 亿人分之一](https://telegra.ph/张小龙演讲完整版每天有1亿人教我怎么做产品-用户-03-18)，我可以列举一万条不使用微信的 [理由](https://github.com/TomBener/stay-away-from-wechat)，然而，现实情况却是不得不使用微信。
 
 如何才能减少使用微信，或者说让微信不要干扰我？我的解决方案是**使用两个手机**，为了实现这个需求，我在 2021 年 2 月 20 日购买了 iPhone 12，与原来的 iPhone XR 同时使用。其中 iPhone XR 上安装微信，iPhone 12 上不安装微信[^uio]，把 iPhone XR 放在宿舍，白天只带 iPhone 12 出门，每天只在晚上回宿舍**使用一次微信**。
 
 [^uio]: 当然也没有安装淘宝等应用。
 
-经过近一个月的尝试，我发现一天只用一次微信，生活照常进行，甚至变得更好了。面对下列这些情况，我是这样解决的：
+经过近一个月的尝试，我发现一天只使用一次微信，生活照常进行，甚至变得更好了。面对下列这些情况，我是这样解决的：
 
 * **有人找我怎么办**？根据我的试验，根本没几个人在微信上找我，刚开始的几天，我晚上回宿舍还盼望着有人给我发消息，然而并没有。实在有人找我，就让他/她等着吧，我的回复周期是 24 小时。并且还有那句话广为流传的话：如果有人真有急事找你，他/她一定有微信之外的方式找到你，比如打电话、[Email](https://www.huhexian.com/3852.html)、[Telegram](https://telegram.org)、iMessage。
 
 * **我想看朋友圈怎么办**？我从去年 9 月起关闭了朋友圈（过年期间开过几天），也就不存在看朋友圈的需求了。朋友圈实际上没有几个朋友，实在关心朋友近况，也可以进入他/她的个人相册查看，当然更好的方式是打个电话、约个视频，或者面对面的交流。
 
-* **我想看公众号怎么办**？无论你是否相信，大多数微信公众号都没有阅读的价值，那已经成为一个追逐流量、[官方引导社会舆论](https://ipfs.io/ipfs/Qmbz57wjgVXT38gxqQu5Px9bfXMPSLeqi9vFMPsBSkhsR8) 的平台。如果想要阅读个别公众号的文章，可以使用 [轻芒杂志](https://qingmang.me)[^tyu] 订阅公众号。除了公众号之外，用 RSS、Newsletter 获取信息则是更好的方式。
+* **我想看公众号怎么办**？无论你是否相信，大多数微信公众号都没有阅读的价值，那已经成为一个追逐流量、[官方引导社会舆论](https://ipfs.io/ipfs/Qmbz57wjgVXT38gxqQu5Px9bfXMPSLeqi9vFMPsBSkhsR8) 的平台。如果你想要阅读个别公众号的文章，可以使用 [轻芒杂志](https://qingmang.me)[^tyu] 订阅公众号。除了公众号之外，通过 RSS、Newsletter 获取信息则是更好的方式。
 
 * **手机支付怎么办**？使用支付宝。能用微信支付的地方，支付宝基本上都没问题。
 
@@ -49,7 +49,7 @@ categories:
 
 - [A half billion apps are about to be created. We need more software builders, not just users.](https://blog.airtable.com/airtable-platform-launch-automations-sync-apps)
 
-    [Airtable](https://airtable.com) 创始人 Howie Liu 认为，无论科技如何影响人类生活，能够创造软件的都只是极少部分人，剩下的绝大部分人都只是使用软件的用户，而 Aritable 则可以让每一个人成为软件开发者（software builders）。虽然有人说，编程是每一个现代人都应该掌握的技能，但如今的编程其实大部分都是集成开发，即在其他人已封装好的库或包的基础上进行开发。除此之外，[NoCode](https://en.wikipedia.org/wiki/No-code_development_platform) 正在成为一种新的趋势，顾名思义，NoCode 就是不写代码实现同样的需求，Airtable、[Zapier](https://zapier.com)、[快捷指令](https://apps.apple.com/cn/app/快捷指令/id915249334) 就是典型的代表。
+    [Airtable](https://airtable.com) 创始人 Howie Liu 认为，无论科技如何影响人类生活，能够创造软件的都只是极少部分人，剩下的绝大部分人都只是使用软件的用户，而 Aritable 则可以让每一个人成为软件开发者（software builders）。虽然有人说，编程是每一个现代人都应该掌握的技能，但如今的编程其实大部分都是集成开发，即在其他人已封装好的库或包的基础上进行开发。除此之外，[NoCode](https://en.wikipedia.org/wiki/No-code_development_platform) 正在成为一个新的趋势，顾名思义，NoCode 就是不写代码实现同样的需求，Airtable、[Zapier](https://zapier.com)、[快捷指令](https://apps.apple.com/cn/app/快捷指令/id915249334) 就是典型的代表。
 
 - [Mac 笑脸、像素字体、微软纸牌…苹果第一代设计师有多厉害？](https://www.ifanr.com/1393371)
 
@@ -86,20 +86,20 @@ categories:
 
 - [Connected Papers](https://www.connectedpapers.com)
 
-从一篇论文出发，找到关联的论文。Connected Papers 的可视化做得很不错，也可以结合 Zotero 使用。具体使用方法可以参考下面这个简短的视频。
+从一篇论文出发，找到关联的论文。Connected Papers 的可视化做得很不错，也可以结合 [Zotero](https://www.zotero.org) 使用。具体使用方法可以参考下面这个简短的视频。
 
 {{< youtube cWJWfUaYmRc >}}
 
 - [简悦](http://ksria.com/simpread)
 
-{{< twitter_simple 1370623317112025088 >}}
+{{< twitter 1370623317112025088 >}}
 
 
 ## 网络资源
 
 - [Sounds of Earth](https://soundsofearth.eco)
 
-    了解关气候变化，以及保护和恢复我们环境的现有解决方案。并助你在大自然的环境音中放松/冥想。
+    了解关有气候变化，以及保护和恢复我们环境的现有解决方案。并助你在大自然的环境音中放松/冥想。
 
 - [Haikei](https://app.haikei.app)
 
@@ -115,7 +115,7 @@ categories:
 
 - [Nobelium](https://github.com/craigary/nobelium)
 
-    一个使用 NextJS + Notion 第三方 API 实现并部署在 Vercel 上的静态博客系统，实现用 Notion 快速建立自己的博客。这个项目应该是在 Spencer Woo 前段时间把他的博客 [迁移到 Notion](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion) 上的基础开发的。除此之外，Notion 的官方 API 将在今年春天推出，到时候应该会有更多的新玩法。Notion 就真的称得上 All in One 了。顺便一提，我在去年底也用 Notion 建了一个 [网站](https://webimar.retompi.me)，存放一个 Webinar 的视频及相关资料，不过这个网站的根域名 `retompi.me` 是送的，2021 年 4 月份就要过期了 😅️
+    一个使用 NextJS + Notion 第三方 API 实现，并部署在 Vercel 上的静态博客系统，可以实现用 Notion 快速建立自己的博客。这个项目应该是在 Spencer Woo 前段时间把他的博客 [迁移到 Notion](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion) 上的基础开发的。除此之外，Notion 的官方 API 将在今年春天推出，到时候应该会有更多的新玩法。Notion 真是一个 All in One 的应用。顺便一提，我在去年底也用 Notion 建了一个 [网站](https://webimar.retompi.me)，存放一个 Webinar 的视频及相关资料，不过这个网站的根域名 `retompi.me` 是送的，2021 年 4 月份就要过期了 😅️
 
 - [Computing History Hub](https://www.notion.so/be72f307fc2e4b05abe3dc67eb937521)
 
@@ -139,11 +139,11 @@ categories:
 
 - [Grammarly](https://www.grammarly.com)
 
-    大名鼎鼎的英语写作助手，在非英语母语写作者中使用非常广泛。但它的 [价格非常昂贵](https://www.grammarly.com/plans)，如果你觉得价格太贵，可以在 [AlternativeTo](https://alternativeto.net/software/grammarly-grammar-checker) 找一找替代品。当然，Grammarly 也不是完美的，比如经济学人 [这篇文章](https://www.economist.com/books-and-arts/2021/02/27/artificial-intelligence-has-a-problem-with-grammar)（有付费墙，[这里](https://telegra.ph/Artificial-intelligence-has-a-problem-with-grammar-03-14) 可阅读全文。）就指出了 Grammarly 的不足之处。
+    大名鼎鼎的英语写作助手，在非英语母语写作者中使用非常广泛。但它的 [价格非常昂贵](https://www.grammarly.com/plans)，如果你觉得价格太贵，可以在 [AlternativeTo](https://alternativeto.net/software/grammarly-grammar-checker) 找一找替代品。当然，Grammarly 也不是完美的，比如经济学人的 [这篇文章](https://www.economist.com/books-and-arts/2021/02/27/artificial-intelligence-has-a-problem-with-grammar)（有付费墙，[这里](https://telegra.ph/Artificial-intelligence-has-a-problem-with-grammar-03-14) 可阅读全文。）就指出了 Grammarly 的不足之处。
 
 - [Microsoft Editor](https://www.microsoft.com/en-us/microsoft-365/microsoft-editor)
 
-    Microsoft Editor 提供免费版和 Microsoft 365 订阅版。免费版能提供基础语法和单词拼写错误检测，订阅版则能带来更多高级文法修饰和语法加强功能。支持超过 20 种语言，以及 80 种语言的拼写检查。
+    Microsoft Editor 提供免费版和 Microsoft 365 订阅版。免费版提供基础语法和单词拼写错误检测，订阅版则能带来更多高级文法修饰和语法加强功能。支持超过 20 种语言，以及 80 种语言的拼写检查。
 
 - [Marked 2](https://marked2app.com)
 
