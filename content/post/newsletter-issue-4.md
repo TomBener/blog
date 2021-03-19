@@ -115,7 +115,7 @@ categories:
 
 - [Nobelium](https://github.com/craigary/nobelium)
 
-    一个使用 NextJS + Notion 第三方 API 实现，并部署在 Vercel 上的静态博客系统，可以实现用 Notion 快速建立自己的博客。这个项目应该是在 Spencer Woo 前段时间把他的博客 [迁移到 Notion](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion) 上的基础开发的。除此之外，Notion 的官方 API 将在今年春天推出，到时候应该会有更多的新玩法。Notion 真是一个 All in One 的应用。顺便一提，我在去年底也用 Notion 建了一个 [网站](https://webimar.retompi.me)，存放一个 Webinar 的视频及相关资料，不过这个网站的根域名 `retompi.me` 是送的，2021 年 4 月份就要过期了 😅️
+    一个使用 NextJS + Notion 第三方 API 实现，并部署在 Vercel 上的静态博客系统，可以实现用 Notion 快速建立自己的博客。这个项目应该是在 Spencer Woo 前段时间把他的博客 [迁移到 Notion](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion) 上的基础开发的。除此之外，Notion 的官方 API 将在今年春天推出，到时候应该会有更多的新玩法。Notion 真是一个 All in One 的应用。顺便一提，我在去年底也用 Notion 建了一个 [网站](https://webinar.retompi.me)，存放一个 Webinar 的视频及相关资料，不过这个网站的根域名 `retompi.me` 是送的，2021 年 4 月份就要过期了 😅️
 
 - [Computing History Hub](https://www.notion.so/be72f307fc2e4b05abe3dc67eb937521)
 
