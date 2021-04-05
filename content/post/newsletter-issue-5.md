@@ -56,11 +56,11 @@ categories:
 
 - [The Rise of Made-in-China Diplomacy Made in China](https://www.newyorker.com/magazine/2021/03/15/the-rise-of-made-in-china-diplomacy)
 
-    Peter Hessler（中文名：何伟）在纽约客发表的一篇文章，关于疫情期间的中国制造、中美关系等等。这是一篇 [中文翻译](https://mp.weixin.qq.com/s/OfmRyOm7ftoaKBRRFaS-YQ)（[备份地址](https://ipfs.io/ipfs/QmbazRCDu2PDfRz1Fg9yETVeHKUNHvzPCn341Fnt8sBGP7)）。何伟的文章虽然是非虚构写作，但他的文章读起来就像故事一样，比如去年非常火爆的这篇 [How China Controlled the Coronavirus](https://www.newyorker.com/magazine/2020/08/17/how-china-controlled-the-coronavirus)。
+    Peter Hessler（中文名：何伟）在纽约客发表的一篇文章，关于疫情期间的中国制造、中美关系等等。这是一篇 [中文翻译](https://mp.weixin.qq.com/s/OfmRyOm7ftoaKBRRFaS-YQ)（[备份地址](https://ipfs.io/ipfs/QmbazRCDu2PDfRz1Fg9yETVeHKUNHvzPCn341Fnt8sBGP7)）。何伟的文章虽然是非虚构写作，但读起来就像故事一样，比如去年非常火爆的这篇 [How China Controlled the Coronavirus](https://www.newyorker.com/magazine/2020/08/17/how-china-controlled-the-coronavirus)。
 
 - [How cotton is really made in Xinjiang](https://www.wearemeho.com/story/How-cotton-is-really-made-in-Xinjiang)
 
-    位于华盛顿的全球政策中心声称，每年有 50 万工人前往新疆强制采摘棉花，然而实际上，这些其他地区的过剩劳动力到新疆采摘棉花，只是他们谋生的一种方式。2015 年之后，机器采摘棉花逐渐代替人工采摘。无人机和远程传感器监控越来越多地应用于棉花种植，例如喷洒农药和杀虫剂。
+    位于华盛顿的全球政策中心声称，每年有 50 万工人前往新疆强制采摘棉花，然而实际上，这些其他地区的过剩劳动力到新疆采摘棉花，只是他们谋生的一种方式。2015 年之后，机器采摘棉花逐渐代替人工采摘，无人机和远程传感器监控越来越多地应用于棉花种植，例如喷洒农药和杀虫剂，人工采摘棉花逐渐减少。
 
     西方媒体断章取义的两个翻译，真是中文太差与不了解中华文化的表现：
 
@@ -79,7 +79,7 @@ categories:
 
 - [中文 Newsletter 导航](https://www.notion.so/852d696dc7cc44b7b0b39373dc067825)
 
-    方可成 老师做的中文 Newsletter 导航，你可以在其中订阅你感兴趣的 Newsletter。
+    方可成老师做的中文 Newsletter 导航，你可以在其中订阅你感兴趣的 Newsletter。
 
 - [☁️ Wormhole file sharing end-to-end encryption](https://wormhole.app)
 
@@ -100,11 +100,11 @@ categories:
 
 - [Street View of 1940s New York](https://1940s.nyc)
 
-    20 世纪 40 年代纽约的街景
+    20 世纪 40 年代纽约的街景。
 
 ## 数字技巧
 
-学术付费墙一般可以用 Sci-Hub 来突破，但很多新闻网站要求登录或付费才能阅读，如何移除新闻付费墙？
+面对学术网站的付费墙，我们一般可以用 Sci-Hub，但很多新闻网站要求登录或付费才能阅读，如何才能移除新闻网站的付费墙？
 
 - 开启浏览器「无痕模式」，来源于这条 [Tweet](https://twitter.com/bluebird0605/status/1375335381126668289)。
 
