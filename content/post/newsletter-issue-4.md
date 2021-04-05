@@ -69,10 +69,6 @@ categories:
 
 ## Tweets
 
-- 四张精美的图片
-
-{{< twitter 1371627317097869312 >}}
-
 - 用 [Procreate](https://procreate.art) 制作的有趣动画
 
 {{< twitter 1371861878360653828 >}}
