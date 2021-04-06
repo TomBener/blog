@@ -23,13 +23,13 @@ categories:
 
 以上方法似乎都不足以解决逝者的数字遗产问题，因为目前确实没有什么完美的方案。只能寄希望于法律法规的完善，相关平台的改进措施。与此同时，这也可能是一个互联网创业的热点领域。
 
-不过，对于公开的数字遗产，我认为目前的 [解决方案](https://laike9m.com/blog/people-die-but-long-live-github,122/) 已经存在，那就是 [GitHub](https://github.com)。因为 GitHub 保存的是作为互联网基础设施的代码，是为数不多可以在百年尺度上存在的互联网服务，同时基于 [Git](https://git-scm.com)，还保存了数据的所有历史记录，根植于 GitHub 的开源精神，让其他用户还可以 fork 逝者的数字遗产，进行维护或再创造。例如，在 Joe Armstrong 逝世后，我们仍然可以访问 [他的博客](https://joearms.github.io/) —— 托管在 GitHub Pages 上的一个 [TiddlyWiki](https://tiddlywiki.com)。
+不过，对于公开的数字遗产，我认为目前的 [解决方案](https://laike9m.com/blog/people-die-but-long-live-github,122/) 已经存在，那就是 [GitHub](https://github.com)。因为 GitHub 保存的是作为互联网基础设施的代码，是为数不多可以在百年尺度上存在的互联网服务，同时基于 [Git](https://git-scm.com)，还保存了数据的所有历史记录，与此同时，GitHub 还将该平台上的开源代码备份到 [北极](https://archiveprogram.github.com)，可以保存 1000 年。根植于 GitHub 的开源精神，让其他用户还可以 fork 逝者的数字遗产，进行维护或再创造。例如，在 Joe Armstrong 逝世后，我们仍然可以访问 [他的博客](https://joearms.github.io/) —— 托管在 GitHub Pages 上的一个 [TiddlyWiki](https://tiddlywiki.com)。
 
 ## 播客
 
 [故事 FM](https://storyfm.cn)
 
-相信你曾听过这个播客节目，因为故事 FM 可以算中文播客届的头部了，在故事 FM 中，你可以听到各种各样的故事。我非常喜欢故事 FM 改版前的开场白：
+相信你曾听过这个播客节目，因为故事 FM 可以算中文播客界的头部了，在这里，你可以听到各种各样的故事。我非常喜欢故事 FM 改版前的开场白：
 
 > 你好，欢迎收听故事 FM，我是爱哲，一个收集故事的人。在这里，我会用声音纪录片的形式，带你跨过田埂，穿过胡同，收集那些动人的真实故事。
 
@@ -77,7 +77,7 @@ categories:
 
 ## 网络资源
 
-- [中文 Newsletter 导航](https://www.notion.so/852d696dc7cc44b7b0b39373dc067825)
+- [中文 Newsletter 导航](https://www.notion.so/Newsletter-68ee46c0a4574f659fb8a873ead438c6)
 
     方可成老师做的中文 Newsletter 导航，你可以在其中订阅你感兴趣的 Newsletter。
 
@@ -92,7 +92,7 @@ categories:
 
 - [Zero Width Shortener](https://zws.im)
 
-    用零宽度字符缩短超链接，使短链接看上去独一无二，[代码开源](https://github.com/zws-im/zws)。也可以看看很久以前 [我写的介绍](https://retompi.com/archived-blog/posts/2019/08/07/cheat-poeple.html#zws-短链接)。
+    用零宽度字符缩短超链接，使短链接看上去非常简洁但又独一无二，[代码开源](https://github.com/zws-im/zws)。也可以看看很久以前 [我写的介绍](https://retompi.com/archived-blog/posts/2019/08/07/cheat-poeple.html#zws-短链接)。
 
 - [Infrapedia](https://www.infrapedia.com/app) 
 
@@ -104,7 +104,7 @@ categories:
 
 ## 数字技巧
 
-面对学术网站的付费墙，我们一般可以用 Sci-Hub，但很多新闻网站要求登录或付费才能阅读，如何才能移除新闻网站的付费墙？
+面对学术网站的付费墙，我们一般可以用 Sci-Hub，但很多新闻网站要求登录或付费才能阅读，如何才能移除新闻网站的付费墙？以下是几种可能的方法：
 
 - 开启浏览器「无痕模式」，来源于这条 [Tweet](https://twitter.com/bluebird0605/status/1375335381126668289)。
 
