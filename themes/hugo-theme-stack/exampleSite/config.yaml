@@ -11,7 +11,7 @@ disqusShortname: hugo-theme-stack
 googleAnalytics:
 
 # Theme i18n support
-# Available values: en, fr, id, ja, ko, pt-br, zh-cn
+# Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
 DefaultContentLanguage: en
 
 permalinks:
@@ -42,6 +42,7 @@ params:
 
     article:
         math: false
+        toc: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
@@ -59,6 +60,30 @@ params:
             host:
             site:
             locale:
+
+        vssue:
+            platform:
+            owner:
+            repo:
+            clientId:
+            clientSecret:
+            autoCreateIssue: false
+
+        # Waline client configuration see: https://waline.js.org/en/reference/client.html
+        waline:
+            serverURL:
+            lang:
+            visitor:
+            avatar:
+            emoji:
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+            requiredMeta:
+                - name
+                - email
+                - url
+            placeholder:
+            locale:
+                admin: Admin
 
     widgets:
         enabled:
@@ -99,6 +124,9 @@ params:
         content:
             enabled: true
 
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
         - identifier: home
@@ -106,24 +134,6 @@ menu:
           url: /
           weight: -100
           pre: home
-
-        - identifier: about
-          name: About
-          url: about
-          weight: -90
-          pre: user
-
-        - identifier: archives
-          name: Archives
-          url: archives
-          weight: -70
-          pre: archives
-
-        - identifier: search
-          name: Search
-          url: search
-          weight: -60
-          pre: search
 
 related:
     includeNewer: true
@@ -137,5 +147,9 @@ related:
           weight: 200
 
 markup:
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
     highlight:
         noClasses: false
