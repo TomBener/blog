@@ -1,10 +1,11 @@
 ---
 title: 中英对照｜理解宣传：你每天如何被愚弄的历史
+description: Understanding Propaganda - A History of How You Get Fooled Daily
 author: Matt DB Harper
 date: 2021-10-16
 image: https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1000/MTc0NDMzMDQ4OTU0MTUyMjk2/the-rise-donald-trump-or-understanding-propaganda.webp
 slug: understanding-propaganda
-keywords:
+categories:
     - Translation
 ---
 
