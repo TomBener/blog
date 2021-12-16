@@ -12,7 +12,7 @@ keywords:
 
 *noun* (U) (usually *disapproving*) ideas or statements that may be false or exaggerated and that are used in order to gain support for a political leader, party, etc. 宣传；鼓吹：enemy propaganda 敌方的宣传 a propaganda campaign 系列宣传活动
 
-📖️ 阅读[中文翻译](https://telegra.ph/understanding-propaganda-12-15)，下载 [PDF](http://retompi.com/files/pdf/understanding-propaganda.pdf)
+📖️ [原文链接](https://owlcation.com/humanities/The-Rise-Donald-Trump-or-Understanding-Propaganda)，阅读[中文翻译](https://telegra.ph/understanding-propaganda-12-15)，下载 [PDF](http://retompi.com/files/pdf/understanding-propaganda.pdf)
 
 ---
 

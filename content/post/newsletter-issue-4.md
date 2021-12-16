@@ -71,11 +71,11 @@ categories:
 
 - 用 [Procreate](https://procreate.art) 制作的有趣动画
 
-{{< tweet user="Procreate" id="1371861878360653828" >}}
+{{< twitter 1371861878360653828 >}}
 
 - 将 π 的前 1000 位数字可视化。以及一个与之相关的 [π walk](https://nbremer.github.io/freshdatashapes/#/pi-walk)。
 
-{{< tweet user="acoolyou" id="1371070437845700615" >}}
+{{< twitter 1371070437845700615 >}}
 
 
 ## 学术利器
@@ -88,7 +88,7 @@ categories:
 
 - [简悦](http://ksria.com/simpread)
 
-{{< tweet user="TomBener" id="1370623317112025088" >}}
+{{< twitter 1370623317112025088 >}}
 
 
 ## 网络资源
