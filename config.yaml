@@ -14,6 +14,10 @@ googleAnalytics: UA-139205906-1
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
 DefaultContentLanguage: zh-cn
 
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: true
+
 permalinks:
     post: /post/:slug/
     page: /:slug/
@@ -35,14 +39,16 @@ params:
 
     sidebar:
         emoji: 🏄‍♂️️
-        subtitle: 我的自留地
+        subtitle: 写字儿
         avatar:
+            enabled: true
             local: true
             src: img/avatar.png
 
     article:
         math: true
-        toc: false
+        toc: true
+        readingTime: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
@@ -101,6 +107,9 @@ params:
         content:
             enabled: true
 
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
         - identifier: home
@@ -145,5 +154,13 @@ related:
           weight: 200
 
 markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
     highlight:
         noClasses: false
