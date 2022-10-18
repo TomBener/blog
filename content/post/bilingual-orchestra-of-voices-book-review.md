@@ -2,8 +2,6 @@
 title: 中英对照｜Orchestra of Voices
 description: Making the Argument for Greater Speech and Press Freedom in the People’s Republic of China
 date: 2021-07-10
-slug: bilingual-orchestra-of-voices-book-review
-image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/freedom-of-speech-cover.jpg
 categories:
     - Freedom
 ---
@@ -11,6 +9,8 @@ categories:
 > 本文是 2001 年发表在 The Journal of Asian Studies 上的一篇书评的中英对照版，作者是明尼苏达大学（University of Minnesot）李金銓（Chin Chuan Lee），评论的书籍是中国学者孙旭培所著的 An Orchestra of Voices: Making the Argument for Greater Speech and Press Freedom in the People's Republic of China。这篇书评的 PDF 可以在 [Sci-Hub](https://sci-hub.se/10.2307/2700130) 上免费下载。
 > 
 > 参考引用格式：Lee, Chin-Chuan. 2001. “An Orchestra of Voices: Making the Argument for Greater Speech and Press Freedom in the People’s Republic of China. By Sun Xupei. Edited by Elizabeth C. Michel. Westport, Conn.: Praeger, 2000, 143 PP. $49.95 (Cloth).” The Journal of Asian Studies 60 (3): 848–49. https://doi.org/10.2307/2700130.
+
+![](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/freedom-of-speech-cover.jpg)
 
 The first theoretical treatise by a People’s Republic of China media scholar to appear in English translation, this volume presents the work of a committed, courageous, and thoughtful intellectual who fights for "socialist press freedom" within severely imposed limits. Arguably China’s most eloquent media scholar, Sun provides a key to understanding the advances and setbacks of China's news reform in the past two decades.
 

@@ -1,12 +1,17 @@
 ---
 title: "批量下载、处理图片和 PDF，这些任务你可以在命令行中完成"
-description: "日常工作和学习中有很多需要重复操作的任务。稍微了解一些命令行的解决方案，就能起到事半功倍的效果。本文从日常使用需求出发，介绍了从互联网上批量下载文件、处理图片和处理 PDF 三方面的命令行应用。"
 date: "2022-10-10"
-image: "https://p15.p3.n0.cdn.getcloudapp.com/items/P8u7955R/76e246e7-fdec-443a-9f80-894a2f89f2ac.jpg"
-slug: "cli-utils-for-ordinary-tasks"
+categories:
+    - Productivity
+tags:
+  - CLI
+  - PDF
+  - macOS
 ---
 
 > 📝 [本文首发于少数派](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)
+
+![](https://p15.p3.n0.cdn.getcloudapp.com/items/P8u7955R/76e246e7-fdec-443a-9f80-894a2f89f2ac.jpg)
 
 ## 为什么使用命令行？
 

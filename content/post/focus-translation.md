@@ -2,10 +2,8 @@
 title: 译文｜如何充分利用你的时间
 description: How To Make The Most Out Of Your Time And Your Life
 date: 2021-04-27
-slug: focus
-image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/focus-cover.jpg
 categories:
-    - 精力管理
+    - Energy Management
 ---
 
 
@@ -18,7 +16,13 @@ categories:
 [^1]: Mihaly Csikszentmihalyi, Flow: The Psychology of Optimal Experience (New York: Harper Row, 2009), 217.
 
 - [为什么我们不能集中注意力？](#为什么我们不能集中注意力)
+  - [陷入不健康的习惯](#陷入不健康的习惯)
+  - [不知道如何专注于自己不喜欢的事情](#不知道如何专注于自己不喜欢的事情)
+  - [你总是告诉自己「我没时间」](#你总是告诉自己我没时间)
 - [如何才能保持专注](#如何才能保持专注)
+  - [更好地抱怨](#更好地抱怨)
+  - [安排你的放纵](#安排你的放纵)
+  - [了解分心的诱因](#了解分心的诱因)
 
 <!--- ## I can’t focus. Why? -->
 

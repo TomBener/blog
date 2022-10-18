@@ -2,8 +2,6 @@
 title: 为什么我的博客外链会被重定向？
 description: 尊重隐私，拒绝追踪
 date: 2021-03-04T09:34:25+08:00
-slug: the-network-was-hijacked-by-disqus
-image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/the-network-was-hijacked-by-disqus-cover.jpg
 categories:
     - Privacy
 ---

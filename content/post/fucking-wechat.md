@@ -2,7 +2,6 @@
 title: 朋友圈被微信屏蔽之后
 description: 去 ™ 的微信
 date: 2021-05-09T20:20:30+08:00
-slug: fucking-wechat
 ---
 
 > **天下苦微信久矣！**

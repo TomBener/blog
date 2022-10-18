@@ -3,8 +3,6 @@ title: 中英双语写作，输出指定语言
 description: 一个小脚本，实现这个小需求
 date: 2021-02-28T17:02:08+08:00
 lastmod: 2021-03-03T13:48:18
-slug: input-bilingual-output-either-en-or-cn
-image: https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bilingual-writing-markdown.jpg
 categories:
     - Writing
 ---
@@ -54,7 +52,7 @@ categories:
 
 其中 `.*` 表示任意内容（不包括空行），`\p{Han}+` 表示至少一个中文字符，翻译成自然语言就是：查找包括中文字符的段落。有了这个正则表达式，下面就可以使用 Perl 执行查找替换的操作：
 
-```sh
+```shell
 perl -CSD -Mutf8 -i -pe 's/(.*\p{Han}+.*)/<!--- \1 -->/g' main.md
 ```
 
@@ -68,13 +66,13 @@ perl -CSD -Mutf8 -i -pe 's/(.*\p{Han}+.*)/<!--- \1 -->/g' main.md
 
 这样在转换时，最后一个 `-->` 会被输出，因此需要移除多余的注释符号：
 
-```sh
+```shell
 perl -CSD -Mutf8 -i -pe 's/(<!--- <!-- )(.*)( --> -->)/<!-- \2 -->/g' main.md
 ```
 
 接下来就可以运行 Pandoc，得到英文内容的文件（DOCX 和 LaTeX）：
 
-```sh
+```shell
 pandoc -C -N -M reference-section-title="References" main.md -o en.docx
 
 pandoc --natbib --wrap=none main.md -o en.tex
@@ -90,19 +88,19 @@ perl -CSD -Mutf8 -i -pe 's/(<!--- )(.*)( -->)/\2/g' main.md
 
 首先将 Markdown 中全部非空行的段落注释掉：
 
-```sh
+```shell
 perl -CSD -Mutf8 -i -pe 's/(.*\S)/<!--- \1 -->/g' main.md
 ```
 
 然后将其中的中文段落和本就是注释行的段落取消注释：
 
-```sh
+```shell
 perl -CSD -Mutf8 -i -pe 's/<!--- (.*\p{Han}+.*) -->/\1/g; s/(<!--- <!-- )(.*)( --> -->)/<!-- \2 -->/g' main.md
 ```
 
 接着运行 Pandoc，得到中文文件：
 
-```sh
+```shell
 pandoc -C -N -M reference-section-title="参考文献" --bibliography ref.bib main.md -o cn.docx
 
 pandoc --natbib --wrap=none main.md -o cn.tex
@@ -185,7 +183,7 @@ Unix 类操作系统（macOS、Linux）能够直接运行 Makefile，如果你�
 
 需要指出的是，我目前很少在中英双语文档中使用 Markdown 表格和代码块，因此没有专门针对两种特殊格式进行测试。此外，如果你想知道在 Microsoft Word 中写作，如何实现「中英双语写作，输出指定语言」？我的回答是用 Pandoc 将你的 DOCX 文件转换为 Markdown 🤣️：
 
-```sh
+```shell
 pandoc --wrap=none input.docx -o output.md
 ```
 

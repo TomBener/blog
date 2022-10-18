@@ -2,7 +2,7 @@ baseurl: https://blog.retompi.com/
 languageCode: zh-cn
 title: "TomBen’s Blog"
 theme: "hugo-tania"
-paginate: 6
+paginate: 10
 
 # GA Tracking ID
 googleAnalytics: UA-139205906-1
@@ -19,7 +19,7 @@ params:
   titleEmoji: 🏄‍♂️️
 
   # Logo will show before the blog title on site navbar.
-  titleLogo: favicon.ico
+  # titleLogo: favicon.ico
   avatar:
         enabled: true
         local: true
@@ -29,7 +29,7 @@ params:
   # Default to true
   enableFootnotes: false
   
-  siteName: "写字儿"
+  siteName: ""
   siteDesc: ""
   author: "Tom Ben"
 
@@ -60,12 +60,12 @@ params:
     twitter:
     twitch:
     whatsapp:
-  
-  # Comments settings
-  comments:
-    enabled: true
-    provider: disqus
-    disqusShortname: tomben
+
+# Comments settings
+comments:
+  enabled: true
+  provider: disqus
+  disqusShortname: tomben
 
 menu:
   header:
