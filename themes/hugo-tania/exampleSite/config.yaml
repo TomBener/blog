@@ -1,37 +1,25 @@
-baseurl: https://blog.retompi.com/
-languageCode: zh-cn
-title: "TomBen’s Blog"
+baseurl: "https://example.com"
+languageCode: "en-us"
+title: "Hugo Tania"
 theme: "hugo-tania"
 paginate: 6
 
-# GA Tracking ID
-googleAnalytics: UA-139205906-1
-
-# Theme i18n support
-DefaultContentLanguage: zh-cn
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: true
+disqusShortname: https-hugo-tania-netlify-app
 
 params:
   # Emoji will show before the blog title on site navbar.
-  titleEmoji: 🏄‍♂️️
+  titleEmoji:
 
   # Logo will show before the blog title on site navbar.
   titleLogo: favicon.ico
-  avatar:
-        enabled: true
-        local: true
-        src: avatar.png
   
   # Enable float footnotes.
   # Default to true
-  enableFootnotes: false
+  enableFootnotes: true
   
-  siteName: "写字儿"
-  siteDesc: ""
-  author: "Tom Ben"
+  siteName: "Hugo Tania is Amazing"
+  siteDesc: "Hugo is Absurdly Fast!"
+  author: "Hugo Tania"
 
   colorScheme:
     # Enable toggle colorScheme
@@ -64,8 +52,14 @@ params:
   # Comments settings
   comments:
     enabled: true
-    provider: disqus
-    disqusShortname: tomben
+    provider: giscus
+
+    giscus:
+      repo: WingLim/hugo-tania
+      id: MDEwOlJlcG9zaXRvcnkzMTYyNjQzMDc=
+      category:
+        name: Comments
+        id: DIC_kwDOEtnPc84B_WKP
 
 menu:
   header:
