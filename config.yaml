@@ -63,17 +63,22 @@ params:
 
 # Comments settings
 comments:
-  enabled: true
+  enabled: false
   provider: disqus
   disqusShortname: tomben
 
 menu:
   header:
-    - name: Articles
-      url: "/articles/"
-  footer:
+    - name: Archives
+      url: "/archives/"
+      weight: 10
+    - name: About
+      url: "/about/"
+      weight: 20
     - name: RSS
       url: "/index.xml"
+  footer:
+    - name: © 2022 Tom Ben
 
 markup:
   highlight:
