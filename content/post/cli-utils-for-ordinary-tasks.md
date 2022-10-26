@@ -25,7 +25,7 @@ tags:
 
 如果说图形化应用通过鼠标点击带来的收益是直观而便捷的操作方式，那么其背后的成本则是 [工作流程难以复用](https://plain-text.co/reproduce-work.html)（[A non-reproducible workflow](https://www.youtube.com/watch?v=s3JldKoA0zw)）。举个例子，假设你需要将 100 个 DOCX 文件转换为 PDF，那么按照 GUI 的处理方式，你必须在 Microsoft Word 中重复「另存为 PDF」的动作 100 次，如果之后这些文件的内容都发生了变化，那么你还需要再重复 100 次此前的操作，用软件开发领域的话来说，这种做法违背了「一次且仅一次」原则（[Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), DRY）。而与图形化应用正好相反，命令行工具则把需要重复的操作用文本的形式记录下来，如果之后还会用到，只需再次执行此前的命令，边际人力成本为零或非常小。针对这个「DOCX 转 PDF」的具体例子，使用命令行工具 [docx2pdf](https://github.com/AlJohri/docx2pdf)，只需一行命令即可完成：`docx2pdf myfolder/`。
 
-![Is It Worth the Time? 对于重复的任务，值得花时间来提高效率吗？（[图片来源](https://xkcd.com/1205/)）](https://p15.p3.n0.cdn.getcloudapp.com/items/Jru8GkNn/987cc023-d2d7-4876-b481-a19080e29173.png)
+{{< imgcap title="Is It Worth the Time? 对于重复的任务，值得花时间来提高效率吗？图片来源：https://xkcd.com/1205/" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Jru8GkNn/987cc023-d2d7-4876-b481-a19080e29173.png" >}}
 
 在我的日常工作和学习中，有很多任务需要重复操作，比如批量下载文件、转换文件格式等，在不堪忍受图形化应用中繁琐重复的操作之后，我将目光转向了命令行。经过一段时间的摸索，总结了一些用命令行工具处理日常工作任务的方法，具体包括从互联网上批量下载文件、对图片和 PDF 进行处理三方面。
 
@@ -242,7 +242,7 @@ sed -i '' -E 's/(!\[.*\]\()(https*.*)(\/)/\1..\/..\/images\3/g; s/imgs%2F.*%2F//
 
 在 iOS/iPadOS 中，将相册中由相机拍摄的图片隔空投送（AirDrop）到 Mac 上时，都会是 HEIF 格式。尽管可以制作一个简单的 [快捷指令](https://www.icloud.com/shortcuts/916f143f07b745a59e0f7ffd7d8a6dd1)，将隔空投送的图片格式改为 JPEG，但在一次性分享多张图片时，这种传输方式的效率就会大打折扣。
 
-![一个快捷指令，在隔空投送前将 HEIF 格式改为 JPEG 格式。](https://p15.p3.n0.cdn.getcloudapp.com/items/12uz4A4z/6636edd0-24ce-41bd-8aa7-ea7697014b36.png)
+{{< imgcap title="一个快捷指令，在隔空投送前将 HEIF 格式改为 JPEG 格式。" src="https://p15.p3.n0.cdn.getcloudapp.com/items/12uz4A4z/6636edd0-24ce-41bd-8aa7-ea7697014b36.png" >}}
 
 命令行特别适合转换图片格式这种流程化的操作，而其中首屈一指的工具就是 [ImageMagick](https://imagemagick.org) —— 一个用于查看、编辑位图文件以及进行图像格式转换的命令行软件。
 
@@ -295,7 +295,7 @@ convert 1.png 2.png -append image.png
 
 上面的两行命令中，`+append` 表示水平拼接图片，`-append` 表示垂直拼接图片。当然，拼接的图片可以不止 2 张。如果输入的图片较多，懒得手动输入，可以使用通配符来匹配图片，比如 `*.png`  会匹配同一目录下所有的 PNG 图片，对于既有 JPEG 又有 PNG 的情况，则可以使用 `*g` 来匹配。
 
-![使用 ImageMagick 将 3 张屏幕截图横向拼接在一起](https://p15.p3.n0.cdn.getcloudapp.com/items/Kou1Y0D6/f1fc2025-f21d-4d94-9fad-6b1e41734fa9.png)
+{{< imgcap title="使用 ImageMagick 将 3 张屏幕截图横向拼接在一起" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Kou1Y0D6/f1fc2025-f21d-4d94-9fad-6b1e41734fa9.png" >}}
 
 ### 用 TinyPNG 和 ImageMagick 压缩图片
 
@@ -350,7 +350,7 @@ mogrify -layers 'optimize' -fuzz 10% test.gif
 
 这行命令中，`-layers` [参数](https://www.imagemagick.org/script/command-line-options.php#layers) 表示处理动画帧，使用 `optimize` 方法优化 GIF 动画，再通过 `-fuzz 10%` [参数](https://www.imagemagick.org/script/command-line-options.php#fuzz)，将 RGB 空间中目标颜色 10% 距离内的颜色视为相等的，最终达到压缩 GIF 的目的。需要注意的是，这行命令会替换掉原有的 GIF 图片，使用前请小心。
 
-![将一个 27.2 MB 的 GIF 图片压缩到 9.5 MB，肉眼几乎分辨不出二者的区别（[GIF 图片来源](https://twitter.com/ScottDuncanWX/status/1561040349535113217)）。](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uZAYj2/4351ca26-abf7-4acf-a9c8-0b2e13954733.png)
+{{< imgcap title="将一个 27.2 MB 的 GIF 图片压缩到 9.5 MB，肉眼几乎分辨不出二者的区别，GIF 图片来源：https://twitter.com/ScottDuncanWX/status/1561040349535113217" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uZAYj2/4351ca26-abf7-4acf-a9c8-0b2e13954733.png" >}}
 
 除此之外，也有一些其他的命令行工具可以用于压缩图片，比如 [ImageOptim-CLI](https://github.com/JamieMason/ImageOptim-CLI)，以及专门用于处理 GIF 图片的命令行工具
 [Gifsicle](https://www.lcdf.org/gifsicle/)，如果你有需要，可以前往下载使用。
@@ -416,6 +416,16 @@ mkdir -p images && pdftoppm -png -r 300 input.pdf images/page
 
 上面的命令中，首先用 `mkdir` 命令创建一个文件夹 `images`，其中 `-p` 表示如果文件夹已存在的话则不报错，根据需要创建父目录，然后将 `input.pdf` 转换为图片（`-jpeg` 或 `-png`），每页保存为一张，`-r 300` 表示分辨率设置为 300 DPI（默认为 150 DPI），转换后得到的图片名称为 `page-1.jpg`、`page-2.jpg`……
 
+如果需要将同一目录下的所有 PDF 文件转换为 JPEG 图片，并保存到同名的文件夹中，可以使用下面的脚本：
+
+```shell
+for file in *.pdf
+do
+    folder=$(basename "$file" ".pdf")
+    mkdir -p "${folder}" && pdftoppm -jpeg -jpegopt quality=100 -r 300 "${folder}".pdf "${folder}"/page
+done
+```
+
 ### 用 PDFtk 合并 PDF
 
 与「图片转 PDF」类似，合并 PDF 的目的之一也是为了方便打印。除此之外，我也会在合并书籍章节时用到，因为不少出版社出版的书籍（例如 [剑桥大学出版社](https://www.cambridge.org/core/what-we-publish/books)），每个章节是一个单独的 PDF 文件，如果需要得到一本完整的书籍，就需要将各个章节的 PDF 全部合并到一起。
@@ -438,7 +448,7 @@ pdftk *.pdf cat output merged.pdf
 
 分割 PDF 是指将双栏或多栏 PDF 的每一栏单独成页。在处理一些扫描版 PDF 书籍时，为了方便在电子屏幕上阅读或打印成纸质版，同时也为了使用 [DEVONthink](https://www.devontechnologies.com/apps/devonthink)（或其他软件）提取 PDF 批注时得到正确的页码，这个步骤必不可少。
 
-![一本扫描版的双栏 PDF 书籍](https://p15.p3.n0.cdn.getcloudapp.com/items/geuygbAz/4206649e-8cf6-4dcf-9fac-505e7b00c2c3.png)
+{{< imgcap title="一本扫描版的双栏 PDF 书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuygbAz/4206649e-8cf6-4dcf-9fac-505e7b00c2c3.png" >}}
 
 如果你得到的 PDF 是电子排版的双栏或多栏，或者页面基本规整的扫描版 PDF，可以用 [MuPDF](https://mupdf.com) 来分割 PDF 页面。执行下面这行命令，就可以将双栏 PDF 转换为单栏 PDF：
 
@@ -448,13 +458,13 @@ mutool poster -x 2 input.pdf output.pdf
 
 其中，`mutool poster` [命令](https://www.mupdf.com/docs/manual-mutool-poster.html) 读入 `input.pdf` 准备将其分割，`-x 2` 表示将 PDF 的每一页从垂直方向的正中间分割为两部分（`-y` 表示从水平方向上分割，紧接着后面的数字 `n` 表示分割成 `n` 部分），输出为 `output.pdf`。
 
-![Elsevier 旗下的学术期刊大多采用双栏排版，你可以用上面的命令将其转换为单栏，不过这也会将通栏排版的标题、摘要、表格等分割开。[PDF](https://doi.org/10.1016/j.paid.2022.111723) 表示：我裂开了。](https://p15.p3.n0.cdn.getcloudapp.com/items/OAujQPnN/1d5d9a94-fdc8-41ae-a401-814d195423eb.png)
+{{< imgcap title="Elsevier 旗下的学术期刊大多采用双栏排版，你可以用上面的命令将其转换为单栏，不过这也会将通栏排版的标题、摘要、表格等分割开。[PDF](https://doi.org/10.1016/j.paid.2022.111723) 表示：我裂开了。" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAujQPnN/1d5d9a94-fdc8-41ae-a401-814d195423eb.png" >}}
 
 尽管使用 MuPDF 分割 PDF 非常简单，不需要手动操作，但如果 PDF 页面偏转角度过大，同时有横向（Landscape）和纵向（Portrait）页面的情况，MuPDF 的处理方式就难以令人满意。好在另一个工具 [Briss](https://briss.sourceforge.net) 可以帮助我们更精细地进行调整。
 
 安装 Briss 后，在终端中输入 `briss`，会自动打开 Briss 的 GUI 窗口，然后点击选择需要处理的 PDF 文件，加载完成后输入需要排除的页面的页码，如果没有的话，就直接点击 `OK`，接下来拖动鼠标选择矩形覆盖需要裁剪的区域，完成之后可以选择预览（快捷键 `P`）或直接保存裁剪后的文件（快捷键 `C`）。动态的操作步骤可以参考 [这个视频](https://www.youtube.com/watch?v=4Wp4RIYUqC8)。根据我的试验，一次性可能无法将全部 PDF 页面都分割成功，如果你也遇到了这种情况，可以对首次分割后的 PDF 再用 Briss 处理第二次。
 
-![在 Briss 中选择裁剪的 PDF 页面](https://p15.p3.n0.cdn.getcloudapp.com/items/NQujow7D/3bef339e-8bbb-4443-88d0-82402ded2e34.png)
+{{< imgcap title="在 Briss 中选择裁剪的 PDF 页面" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQujow7D/3bef339e-8bbb-4443-88d0-82402ded2e34.png" >}}
 
 严格来说，Briss 不算是一个命令行工具，而应该是一个结合了 CLI 和 GUI 的软件。M1 芯片的 Mac 使用 Homebrew 安装的 Briss 路径为 `/opt/homebrew/Cellar/briss/0.9/bin/briss`，其他类型的设备可以在命令行中输入 `which briss` 或 `whereis briss` 找到 Briss 的安装路径），这是一个 Unix 可执行文件，你可以鼠标双击来打开它，这相当于在终端中输入 `briss`。如此操作的话，Briss 就可以完全当作一个图形化软件来使用。
 
@@ -470,7 +480,7 @@ mutool poster -x 2 input.pdf output.pdf
 ocrmypdf -l chi_sim input.pdf output.pdf
 ```
 
-![使用 OCRmyPDF 识别扫描版 PDF 中的文字，识别文字后的 PDF 变得更小。](https://p15.p3.n0.cdn.getcloudapp.com/items/lludN5kX/4bfb18af-3012-4513-8701-0e8eb90f20c1.png)
+{{< imgcap title="使用 OCRmyPDF 识别扫描版 PDF 中的文字，识别文字后的 PDF 变得更小。" src="https://p15.p3.n0.cdn.getcloudapp.com/items/lludN5kX/4bfb18af-3012-4513-8701-0e8eb90f20c1.png" >}}
 
 一些 PDF 文件的页面不全是扫描版，可能其中有页面本身就有文字，这种情况下 OCRmyPDF [会报错](https://ocrmypdf.readthedocs.io/en/latest/errors.html#common-error-messages)，你可以尝试加上 `--force-ocr`, `--skip-text`, `--redo-ocr` 这三个参数之一。
 
@@ -490,7 +500,7 @@ convert -density 150 input.pdf -colorspace gray +noise Gaussian -rotate -0.5 -de
 
 这行命令中，`-density 150` 设置 PDF 分辨率为 150，使之看上去比较模糊。`-colorspace gray` [参数](https://www.imagemagick.org/script/command-line-options.php#colorspace) 设置图像颜色空间为灰度，`+noise Gaussian` [参数](https://www.imagemagick.org/script/command-line-options.php#noise) 为图像添加高斯噪声，`-rotate -0.5` [参数](https://www.imagemagick.org/script/command-line-options.php#rotate) 将图像顺时针旋转 0.5°，最后，`-depth 2` [参数](https://www.imagemagick.org/script/command-line-options.php#depth) 设置颜色深度为 2，输出为 `scanned.pdf`。
 
-![原始 PDF 与经 ImageMagick「扫描」后的 PDF](https://p15.p3.n0.cdn.getcloudapp.com/items/12uz4APn/90e566c8-7526-4481-8d22-ba2e072c5815.png)
+{{< imgcap title="原始 PDF 与经 ImageMagick「扫描」后的 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/12uz4APn/90e566c8-7526-4481-8d22-ba2e072c5815.png" >}}
 
 如果你对上面这行命令得到的「扫描版 PDF」不够满意，可以查阅 ImageMagick 手册，增加其他参数，例如下面这行略显复杂的 [命令](https://gist.github.com/andyrbell/25c8632e15d17c83a54602f6acde2724?permalink_comment_id=3206269#gistcomment-3206269)：
 
@@ -547,7 +557,7 @@ ps2pdf -dPDFSETTINGS=/ebook input.pdf output.pdf
 
 知识分子之间存在文人相轻的现象，计算机领域也有各种由使用工具而带来的 [鄙视链](https://vinta.ws/blog/695)。大概是因为使用命令行给人一种「[充满力量的感觉](https://www.reddit.com/r/ProgrammerHumor/comments/xbxvds/modal_editing/)」，从而让 CLI 使用者看不上 GUI 用户，这种鄙视现象经常被做成各种 [meme](https://www.google.com/search?q=cli+gui+meme&tbm=isch)，流传甚广。
 
-![GUI vs CLI（[图片来源](https://www.reddit.com/r/ProgrammerHumor/comments/g7ck8h/gui_vs_cli/)）](https://p15.p3.n0.cdn.getcloudapp.com/items/Jru8Gkvn/d94f5688-07d8-4a41-81f2-5fbb7997de64.jpg)
+{{< imgcap title="GUI vs CLI，图片来源：https://www.reddit.com/r/ProgrammerHumor/comments/g7ck8h/gui_vs_cli/" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Jru8Gkvn/d94f5688-07d8-4a41-81f2-5fbb7997de64.jpg" >}}
 
 尽管如此，我们应该意识到，与图形化应用相比，命令行工具并不必然「高人一等」，交互新颖、UI 出彩的图形化应用同样非常具有吸引力。在这方面，我的观点是，不一定非要局限于某一类应用，各取所长，怎么好用怎么来，正如一位 [Reddit](https://www.reddit.com/r/programming/comments/axtsiw/comment/ehw856s) 网友所说：
 

@@ -27,9 +27,9 @@ date: 2021-05-09T20:20:30+08:00
 > 
 > 讽刺的是，一条号召大家逃离微信的消息居然通过微信发出。
 > 
-> ![Stay Away from WeChat](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/stay-away-from-wechat.png)
-> ![GFW FAQ](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/gfw-faq.png)
-> ![Blocked GitHub](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/blocked-github.png)
+> {{< imgcap title="Stay Away from WeChat" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/stay-away-from-wechat.png" >}}
+> {{< imgcap title="GFW FAQ" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/gfw-faq.png" >}}
+> {{< imgcap title="Blocked GitHub" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/blocked-github.png" >}}
 
 尽管我已多次领教了专断的微信审查，并且在这条朋友圈中提到该消息存在的时间可能不长，但直到今天下午通过询问微信好友，我才意识到，他们压根没有看见我发的这条朋友圈，也就是说，微信把它屏蔽了。这与加拿大多伦多大学公民实验室的 [研究发现](https://citizenlab.ca/2016/12/一app两制：微信如何区别审查中国及海外用户/) 一致：**微信不会阻止用户发出消息，但会阻止别人看到它，并且不会有任何提示。**
 

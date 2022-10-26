@@ -4,9 +4,6 @@ title: "TomBen’s Blog"
 theme: "hugo-tania"
 paginate: 10
 
-# GA Tracking ID
-googleAnalytics: UA-139205906-1
-
 # Theme i18n support
 DefaultContentLanguage: zh-cn
 

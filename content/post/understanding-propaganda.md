@@ -36,7 +36,7 @@ Conversely, the word “Propaganda” is a relatively new term and is most often
 
 相反，「宣传」这个词是一个相对较新的词，往往与二十世纪的意识形态斗争联系在一起。美国传统词典给出了一个相对简单的定义：宣传是信息的系统传播，反映了那些主张这种教条或观点的人的观点和利益。换句话说，那些支持他们的人给出的论断。
 
-![政治攻击广告 —— 马可·卢比奥、希拉里·克林顿、唐纳德·特朗普、巴拉克·奥巴马、米特·罗姆尼、约翰·卡西奇](https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1069/MTc0NjQ0NzYxNTgyNDQ2MzUx/the-rise-donald-trump-or-understanding-propaganda.webp)
+{{< imgcap title="政治攻击广告 —— 马可·卢比奥、希拉里·克林顿、唐纳德·特朗普、巴拉克·奥巴马、米特·罗姆尼、约翰·卡西奇" src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1069/MTc0NjQ0NzYxNTgyNDQ2MzUx/the-rise-donald-trump-or-understanding-propaganda.webp" >}}
 
 The first documented use of the word ‘propaganda’ was in 1622, when Pope Gregory XV attempted to increase church membership by strengthening belief (Pratkanis & Aronson, 1992). Whether for the betterment of the congregation or the institution, Pope Gregory XV sought to directly influence theological “belief”. The relevance of this event lies in the fact that the focus of modern propaganda, as we speak of it, is a manipulation of belief. Beliefs, those things known or believed to be true, were realized even in the seventeenth century to be important foundations for both attitudes and behavior and therefore the essential target of modification.
 
@@ -46,7 +46,7 @@ In Europe propaganda was quite impartial during the eighteenth and nineteenth ce
 
 在欧洲，18 世纪和 19 世纪的宣传是相当公正的，它描述各种政治信仰、宗教福音传道和商业广告。然而，在大西洋的另一边，伴随着托马斯·杰斐逊所写的《独立宣言》。文学性宣传的流行已经遍及全球，这种媒介因为路德、斯威夫特、伏尔泰、马克思和许多其他人的著作而闻名。在大多数情况下，这一时期宣传的最终目标是提高对作者真正认为的真理的认识。直到第一次世界大战，所谓的关注「真相」才被重新考虑。在全世界范围内，战争技术的进步和战斗规模的扩大，使得传统的招募士兵的方法不再足够。因此，**报纸、海报和电影作为大众传播的各种媒介，每天都被用来呼吁公众采取行动**，讲述鼓舞人心的事迹 —— 但失败的战役、经济损失和死亡人数闭口不谈。因此，**宣传逐渐与审查制度和错误信息联系在一起，因为它不再是一个国家与其人民之间的沟通方式，而是一种对敌人进行心理战的武器**。
 
-![美国、爱尔兰和加拿大号召行动宣传海报](https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1044/MTc0NjQ0NzYxNTgyMzgwODE1/the-rise-donald-trump-or-understanding-propaganda.webp)
+{{< imgcap title="美国、爱尔兰和加拿大号召行动宣传海报" src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1044/MTc0NjQ0NzYxNTgyMzgwODE1/the-rise-donald-trump-or-understanding-propaganda.webp" >}}
 
 The tremendous importance of propaganda was soon realized and the United States organized the Committee on Public Information, an official propaganda agency, whose goal was to raise public support of the war. With the rise of mass media, it soon became apparent to the elite that film would prove to be one of the most important methods of persuasion. The Germans regarded it as the very first and most vital weapon in political management and military achievement (Grierson, CP). By World War II, propaganda was adopted by most countries - except those democratic countries who avoided the negative connotation the term, and instead cleverly distributed information through the guise of “information services” or “public education.” Even in the US today, the methods of providing and the learning of knowledge are deemed “education” if we believe and agree with those propagating the information, and considered “propaganda” if we do not. Not coincidently, central to both education and propaganda are the roles of the fact, the statistic, and that which the target believes to be true.
 
@@ -68,7 +68,7 @@ One person who had full knowledge and took full advantage of man’s inherent vu
 
 **阿道夫·希特勒是一个充分了解并充分利用人类固有弱点的人，被约翰·格里尔森称作我们这个时代最伟大的科学宣传大师**。希特勒直截了当地说道，「…… 堑壕战中的步兵，将来会被宣传所占领…… 精神混乱、感情矛盾、优柔寡断、恐慌，这些就是我们的武器。孙子说，不战而屈人之兵是最高的技能，希特勒拥有这样的技能，通过使用他的「武器」，希特勒能够预测并导致 1934 年法国的沦陷，同时在其他国家的眼中制造恐惧，同时唤醒内部崛起的军队的内心和勇气。
 
-![1940 年上映的《永恒的犹太人》是一部反犹太主义的纳粹宣传片，被宣传为纪录片。由约瑟夫·戈培尔制片，弗里茨·希普勒导演。](https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_945/MTc0NjQ0NzYxNTgyNTExODg3/the-rise-donald-trump-or-understanding-propaganda.webp)
+{{< imgcap title="1940 年上映的《永恒的犹太人》是一部反犹太主义的纳粹宣传片，被宣传为纪录片。由约瑟夫·戈培尔制片，弗里茨·希普勒导演。" src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_945/MTc0NjQ0NzYxNTgyNTExODg3/the-rise-donald-trump-or-understanding-propaganda.webp" >}}
 
 Propaganda relies heavily on different tactics of persuasion to manufacture a specific belief in the mind of the viewer. Depending on who you ask there ranges anywhere from two to over ninety tactics that exist on many levels and degrees of intensity. To be effective, propaganda has to make a complex idea simple as its success is based on the manipulation and repetition of these ideas. In looking directly at Hitler’s use of propaganda film we will put our focus towards its reliance on confusion of fantasy and reality through the style of realism and extratextual conditions.
 
@@ -90,7 +90,7 @@ Although this passing off of fiction footage as documented truth is today simply
 
 虽然这种将虚构的镜头作为真实记录的做法在今天看来是令人尴尬和完全无效的，但这在当时并不是一个全新的概念。事实上，从其他电影中截取镜头以增强自身说服力的方法已经变得相当普遍。例如，在美国，官员们担心反战和排外情绪在战争时期占据上风，而普通美国人对希特勒的态度不屑一顾 (Rowen, 2002)。美国陆军实际上已经制作了数百部训练影片，但参谋长乔治·C·马歇尔在寻找一些不同的东西。他制定了目标，并聘请好莱坞导演弗兰克·卡普拉拍摄他提出的《我们为何而战》系列电影，本质上是为了证明参与这样一场旷日持久、耗资巨大的战争是正当合理的。但是，在完成马歇尔的 6 个目标计划的艰巨任务的同时，卡普拉也承担了一个或许是最基本也最根本的目标，这个目标是一部用于军队信息会议的电影所具备的：吸引观众的注意力。因此，有必要拍摄一些不仅能振奋人心，而且可以展示「我们的孩子们」对战争积极看法的镜头，不管来源如何。这就是为什么《纳粹的攻击》和《我们为何而战》系列通常被描述为汇编影片而不是纪录片的一个主要原因，因此，这是一项非常有效的编辑工作。为了达到增强士气的目标，卡普拉雇佣了好莱坞演员沃尔特·休斯顿作为解说员，通过与政府的协议委托迪斯尼制作地图和动画，剪辑美国联邦节目的镜头和宣传杰作、莱尼·瑞芬斯塔尔的《意志的胜利》 ，以保持一个快节奏和有趣的系列电影。
 
-![希特勒在《意志的胜利》中的标志性形象。雷尼·莱芬斯泰尔运用娴熟的电影技巧，将希特勒塑造成一个强大的人民救世主。](https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTc0NjQ0NzYxNTgyMzgwNDEw/the-rise-donald-trump-or-understanding-propaganda.webp)
+{{< imgcap title="希特勒在《意志的胜利》中的标志性形象。雷尼·莱芬斯泰尔运用娴熟的电影技巧，将希特勒塑造成一个强大的人民救世主。" src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTc0NjQ0NzYxNTgyMzgwNDEw/the-rise-donald-trump-or-understanding-propaganda.webp" >}}
 
 Upon its release in 1935, Leni Reifenstahl’s *Triumph of the Will*, a documentary of the sixth Nazi Party Congress at Nuremberg, displayed beyond doubt the power of propaganda film. Hitler’s descent from the sky in a shiny silver airplane presents him as a deity on the helm of technological achievement. Always looking down upon the people he so cares for, his demeanor is always pleasant. In fact the only time he gets riled up is for a speech, and then we get see just how energetic and passionate he can be when it comes to achieving the best for his country and its people. Through an extraordinary choreography of images and sounds, from marching men, swastikas, cheering women and children, and folksongs, the film inspired some, terrified others, and ultimately rallied many to the Hitler cause. No film was more widely used by opposing forces to vividly display the wicked nature of its enemy than *Triumph of the Will*. Striking a blow against the opposition by provoking fear while at the same time calling to arms the loyalty of thousands upon thousands, this tremendous outpour of emotion and action as a result of masterful imagery and film editing is the epitome of what propaganda stands for.
 
@@ -125,28 +125,3 @@ Dr. Kelton Rhoades delivers the example to television watchers old enough to rem
 The word “propaganda” is often invoked when it is obvious that objectivity in a film has ceased. The irony is that the term is invoked precisely when the film has failed as propaganda. When the choices please us, we do not mention it. In a sense, all film makers are propagandists as they try to create a mood for the viewer and invoke feelings to draw you into the story. Yet in all fiction, the viewer must maintain a willingness of disbelief. It is not a healthy mind that can watch the Terminator films and not realize that what they are seeing is fiction, no matter how realistic it looks and sounds. “Documentary” and “propaganda” on the other hand, and this is why they can be such manipulative tools, use supposed images of reality to create a story and therefore is seen by the viewer as not requiring that willingness of disbelief. You don’t have to constantly remind yourself that it isn’t real, because it is in fact, in one way or another, “real”, and that is enough to make you believe. As long as you think yourself insusceptible, there will be someone just above you pulling on a string; there will be someone there to pull a coin from behind your ear when you are not doing what you are supposed to.
 
 「宣传」这个词经常被用来形容一部电影明显已经失去客观性。具有讽刺意味的是，这个词恰恰在一部电影作为宣传失败的时候被使用。当选择使我们高兴时，我们不会提及它。在某种意义上说，所有的电影制作人都是宣传者，他们试图在观众中营造一种情绪，并唤起情感来吸引你进入故事。然而，**在所有的虚构场景中，观众必须保持一种怀疑的意愿，不管看起来和听起来多么真实**。如果你看了《终结者》电影却没有意识到，你所看到的是虚构的，那么你就没有一个健康的头脑。另一方面，「纪录片」和「宣传」利用假定的现实图像来创作故事，因此被观众视为不需要怀疑的意愿，这就是为什么它们可以成为操纵工具的原因。你不需要不断地提醒自己这不是真实的，因为事实上，无论如何，这是「真实的」，就足以让你相信。只要你认为自己不受影响，就会有人在你上方拉着绳子；当你没有做你应该做的事情时，就会有人在你耳朵后面拔一枚硬币。
-
-
-*Bibiliography*
-
-**参考书目**
-
-Barnouw, Erik (1993) Documentary: a history of the non-fiction film. Oxford: New York
-
-Delwiche, Aaron (1995) Wartime Propaganda: World War I: *The Drift Towards War* <http://carmen.artsci.washington.edu/propaganda/war1.htm>
-
-Ellal, Jaques. The Psichic Dissassociation Effect of Propaganda. CP pg. 31-33
-
-Grierson, John. The Nature of Propaganda. CP, pg. 13-19
-
-Hornshoj-Moller, Stig. (1998) On ‘The Eternal Jew’ <http://www.holocaust-history.org/der-ewige-jude/>
-
-Hornshøj-Møller, Stig, (1997) Paper presented at the conference “Genocide and the Modern World,” Montreal, Canada
-
-Pratkanis, A. & Aronson, E. (1992). Age of Propaganda. Freedman: New York.
-
-Rhoads, Kelton Ph.D. “Introduction to Influence” <www.workingpsychology.com>, 1997/2002
-
-Wistrich, Robert S. (1996) Weekend in Munich: Art, Propaganda and Terror in the Third
-
-Reich. Trafalgar Square

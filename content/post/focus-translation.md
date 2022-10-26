@@ -42,7 +42,7 @@ Csikszentmihalyi 认为，只有当人们有明确的目标，并且有能力完
 
 在 [伦敦大学学院的一项研究](https://www.sciencedaily.com/releases/2017/02/170221101016.htm) 中，参与者被要求坐在电脑前指挥一团圆点[^3]，他们的任务很简单：如果这团圆点向右移动，他们就将杠杆也向右移动，如果圆点向左移动，就将杠杆也向左移动，参与者都非常准确地完成了此项任务。然而，当研究人员在杠杆的一侧增加一个单位的重量使其难以单向移动之后，参与者们开始将杠杆朝着错误的但更容易的方向移动。也就是说，随着任务难度的提高，参与者下意识地改变了其参与游戏的方式。这项研究支持了进化生物学家的研究，他们认为**人类的进化让我们总是通过阻力最小的方式来避免消耗能量的任务**[^4]。完成自己应该做的事情通常是困难的，如果习惯于通过不停的休息来避免不适，我们会发现打破专注的状态比完成应该做的事情更加容易，正如圆点实验的结果那样，我们很快就学会了如何通过改变游戏规则来避免不适。亨利 · 福特说过「思考是最难的工作，这可能就是为什么很少有人从事这项工作的原因」，如果花几分钟查看邮件可以暂时摆脱繁琐工作的压力，并且没有工具帮助你意识到并处理工作中的困难，你就会一直点击邮件。如果不改变这种工作方式，你很快就会形成一种思维定势，这种定势会让大脑自动逃避困难的工作，而不是主动去解决它。
 
-[^3]: Nobuhiro Hagura, “Humans Are Hard-wired to Follow the Path of Least Resistance,” Science Direct, February 21, 2017, https://www.sciencedaily.com/releases/2017/02/170221101016.htm
+[^3]: Nobuhiro Hagura, “[Humans Are Hard-wired to Follow the Path of Least Resistance](https://www.sciencedaily.com/releases/2017/02/170221101016.htm),” Science Direct, February 21, 2017
 
 [^4]: Luke Strotz et al., “Metabolic Rates, Climate and Macroevolution: A Case Study Using Neogene Molluscs,” Proceedings of the Royal Society B: Biological Sciences, August 22, 2018.
 
@@ -64,17 +64,17 @@ Csikszentmihalyi 认为，只有当人们有明确的目标，并且有能力完
 
 在一项月度劳动评估研究中，每周工作 65-74 小时的参与者将他们的工作时间高估了大约 20 小时[^6]，这说明在很多情况下，人们把高效和忙碌混为一谈[^7]。然而，有证据表明，「太忙」导致不能按时完成任务表明你缺少专注力，而不是缺少时间。亨利 · 福特曾说「据我观察，大多数人都是在别人浪费掉的时间里获得成功。」每天，我们都在选择如何度过时间，早点起床，还是按下闹钟接着睡觉？立即去参加兼职课程，还是下个月再去？把衣服收拾整齐，还是让它们堆在那里？既然每个人每天都有相同的 24 小时，为什么有些人能够完成如此多的工作？研究表明，时间管理的秘密可能根本就不是什么秘密。时间管理者和生产力作家 Laura Vanderkam 发现，最高效的人并不是时间管理大师，相反，他们非常善于设定优先事项[^8]，高效率的人有一个有限的重点清单，记录着他们想要完成的任务，并分配相应的时间。她认为「我没时间的借口」是一种承认「这不是我优先考虑的事情」的一种被动方式。
 
-[^6]: “Monthly Labor Review,” U.S. Department of Labor 134, no. 6 (June 2011): , https://www.bls.gov/opub/mlr/2011/06/mlr201106.pdf
+[^6]: “[Monthly Labor Review](https://www.bls.gov/opub/mlr/2011/06/mlr201106.pdf),” U.S. Department of Labor 134, no. 6 (June 2011).
 
 [^7]: Jennifer Cbe ohen, “Busy Vs. Productive: Which One Are You?” Forbes, June 25, 2018.
 
-[^8]: Laura Vanderkam, TED, 2016, , accessed April 15, 2019, https://www.ted.com/talks/laura_vanderkam_how_to_gain_control_of_your_free_time?language=en#t-274983
+[^8]: Laura Vanderkam, [TED](https://www.ted.com/talks/laura_vanderkam_how_to_gain_control_of_your_free_time?language=en#t-274983), 2016, , accessed April 15, 2019
 
 <!--- In a 2018 study on the top productivity technique, researchers found that the number one secret to time management was deciding what you want to do and when you want to do it. This method of time management is frequently referred to as “timeboxing.” By designated parts of your day for certain tasks, you become more likely to use your time the way you intended. You replace time that you’re likely to get distracted by with meaningful activities that propel you towards your goals. Effective timeboxing starts with allocating time for what matters most. In the next sections, we’ll dive into how to get and stay focused. -->
 
 在 2018 年一项关于高效率技巧的研究中，研究人员发现，时间管理的首要秘诀是决定你想做什么以及什么时候去做[^9]，这种时间管理方法通常被称为「时间块」（timeboxing）。通过指定一天中特定时间段内完成特定任务，你就更有可能按照预期的方式利用时间。通过这种方式，你可以把富有意义的活动分配到那些可能让你分心的时间段里，这些活动能够推动你朝着目标前进，有效的时间块始于为最重要的事情分配时间。接下来，我们将深入探讨如何才能保持专注。
 
-[^9]: “The Definitive 100 Most Useful Productivity Hacks,” Filtered, November 26, 2018, https://learn.filtered.com/hubfs/Definitive%20100%20Most%20Useful%20Productivity%20Hacks.pdf
+[^9]: “[The Definitive 100 Most Useful Productivity Hacks](https://learn.filtered.com/hubfs/Definitive%20100%20Most%20Useful%20Productivity%20Hacks.pdf),” Filtered, November 26, 2018
 
 <!--- ## How to Get (and Stay) Focused -->
 
@@ -92,7 +92,7 @@ Csikszentmihalyi 认为，只有当人们有明确的目标，并且有能力完
 
 Emotional Intelligence 2.0 的作者 Travis Bradberry 博士认为，经常抱怨是一种有害的习惯，这种习惯可以而且应该被打破。抱怨会释放压力荷尔蒙皮质醇，它会对情绪产生负面影响，降低能量水平，讽刺的是，这会导致我们通过分心来逃避不舒服的情绪[^10]。
 
-[^10]: Travis Bradberry, “How Complaining Rewires Your Brain For Negativity,” HuffPost, December 28, 2017, https://www.huffpost.com/entry/how-complaining-rewires-y_n_13634470.
+[^10]: Travis Bradberry, “[How Complaining Rewires Your Brain For Negativity](https://www.huffpost.com/entry/how-complaining-rewires-y_n_13634470),” HuffPost, December 28, 2017.
 
 <!--- It’s time to learn how to complain better. Instead of complaining by focusing on the problem, Bradberry suggests adopting a “solution-oriented” approach. -->
 
@@ -126,7 +126,7 @@ Emotional Intelligence 2.0 的作者 Travis Bradberry 博士认为，经常抱�
 
 [^14]: Kristin Wong, “How Long It Takes to Get Back on Track After a Distraction,” Lifehacker, July 29, 2015.
 
-![Triggers prompt both traction and distraction.](https://www.nirandfar.com/wp-content/uploads/2019/05/Indistractable-traction-distraction-triggers-diagram-1024x1024.jpg)
+{{< imgcap title="Triggers prompt both traction and distraction." src="https://www.nirandfar.com/wp-content/uploads/2019/05/Indistractable-traction-distraction-triggers-diagram-1024x1024.jpg" >}}
 
 <!--- _External Triggers:_ Cellphones, work colleagues, and even our kids, can all take us off track when we planned to focus. These triggers in our environment are called “external triggers.” External triggers are relatively easy to control – turn your phone off, logout of social media, put a sign on your computer monitor telling colleagues you’re busy, and so on. Internal triggers, on the other hand, are more difficult to recognize and correct. _Internal Triggers:_ Internal triggers come from within. They are uncomfortable emotional states you seek to escape. Understanding the internal triggers driving you to distraction is critical to staying focused. When do you feel the urge to check your phone? Do you check it when you feel lonely? Bored? Anxious? Overwhelmed? If so, what’s the source of these negative emotions? Reflecting on why you get distracted and learning healthier ways to respond is an integral part of developing sustained focus. While you may be unable to control what you feel, you are able to put practices in place to help guide what you do in response to the desire to escape into distraction. Is your habit of falling out of focus when you feel a negative emotion helping or hampering your ability to stay focused? If you are honest about why you become distracted and understand your negative emotions, you can respond in a healthier way in line with your values and goals. -->
 
