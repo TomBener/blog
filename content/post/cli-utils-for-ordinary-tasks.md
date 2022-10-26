@@ -293,6 +293,7 @@ convert 1.png 2.png +append image.png
 convert 1.png 2.png -append image.png
 ```
 
+
 上面的两行命令中，`+append` 表示水平拼接图片，`-append` 表示垂直拼接图片。当然，拼接的图片可以不止 2 张。如果输入的图片较多，懒得手动输入，可以使用通配符来匹配图片，比如 `*.png`  会匹配同一目录下所有的 PNG 图片，对于既有 JPEG 又有 PNG 的情况，则可以使用 `*g` 来匹配。
 
 {{< imgcap title="使用 ImageMagick 将 3 张屏幕截图横向拼接在一起" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Kou1Y0D6/f1fc2025-f21d-4d94-9fad-6b1e41734fa9.png" >}}
@@ -458,7 +459,7 @@ mutool poster -x 2 input.pdf output.pdf
 
 其中，`mutool poster` [命令](https://www.mupdf.com/docs/manual-mutool-poster.html) 读入 `input.pdf` 准备将其分割，`-x 2` 表示将 PDF 的每一页从垂直方向的正中间分割为两部分（`-y` 表示从水平方向上分割，紧接着后面的数字 `n` 表示分割成 `n` 部分），输出为 `output.pdf`。
 
-{{< imgcap title="Elsevier 旗下的学术期刊大多采用双栏排版，你可以用上面的命令将其转换为单栏，不过这也会将通栏排版的标题、摘要、表格等分割开。[PDF](https://doi.org/10.1016/j.paid.2022.111723) 表示：我裂开了。" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAujQPnN/1d5d9a94-fdc8-41ae-a401-814d195423eb.png" >}}
+{{< imgcap title="Elsevier 旗下的学术期刊大多采用双栏排版，你可以用上面的命令将其转换为单栏，不过这也会将通栏排版的标题、摘要、表格等分割开。PDF 表示：我裂开了：https://doi.org/10.1016/j.paid.2022.111723" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAujQPnN/1d5d9a94-fdc8-41ae-a401-814d195423eb.png" >}}
 
 尽管使用 MuPDF 分割 PDF 非常简单，不需要手动操作，但如果 PDF 页面偏转角度过大，同时有横向（Landscape）和纵向（Portrait）页面的情况，MuPDF 的处理方式就难以令人满意。好在另一个工具 [Briss](https://briss.sourceforge.net) 可以帮助我们更精细地进行调整。
 
