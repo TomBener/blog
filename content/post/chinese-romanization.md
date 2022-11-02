@@ -21,19 +21,19 @@ categories:
 
 ## 需求
 
-很多英文学术期刊在投稿指南中要求，文章中所引用的中文参考文献须转换为拼音、翻译为英文，或者二者的混合。一方面，这是「英语中心主义」的表现 [^E9F]，另一方面，这可能也是一个计算机排版领域的「历史遗留问题」，因为与处理拉丁文字相比，处理中文这样的东亚文字（CJK）是一个老大难问题，直到今天也仍然有各种各样的问题。
+很多英文学术期刊在投稿指南中要求，文章中所引用的中文参考文献须转换为拼音、翻译为英文，或者二者的混合。一方面，这是「英语中心主义」的表现 [^E9F]，另一方面，这可能也是一个计算机排版领域的「历史遗留问题」，因为与处理拉丁文字相比，处理中文这样的东亚文字（CJK）是一个老大难问题，直到今天也仍然面临着各种各样的问题。
 
 [^E9F]: 对于英文期刊来说，这本身并没有什么问题。
 
 {{< imgcap title="谁也不想看见这样的中英混排吧……" src="https://p15.p3.n0.cdn.getcloudapp.com/items/ApuD2qX5/c58ace87-a147-4f1b-b568-85197ddd3100.png" >}}
 
-一般情况下，英文论文的中文文献不会太多，手动转换或翻译并不难，似乎不会耗费太多时间，但是作为一个懒人，我不想把时间浪费在这种事情上。此外，我的所有参考文献数据都保存在一个 BibLaTeX 文件中，其中有 2400 多条文献条目，从其中把引用过的中文参考文献找出来，也是一个不小的工作量。有没有工具可以自动实现这个功能呢？我在网上搜索了半天，似乎并没有，于是花了两三天时间，自己动手写了一个。下面是主要步骤拆解，如果你不感兴趣，可以直接跳转到最后的代码块部分，复制之后保存为 `Makefile`。
+一般情况下，英文论文的中文文献不会太多，手动转换或翻译并不难，似乎不会耗费太多时间，但是作为一个懒人，我不想把时间浪费在这种事情上。此外，我的所有参考文献数据都保存在一个 BibLaTeX 文件中，其中有 2400 多条文献条目，从其中把引用过的中文参考文献找出来，也是一个不小的工作量。有没有工具可以自动实现这个功能呢？我在网上搜索了半天，似乎并没有，于是花了两三天时间，自己动手写了一个。下面是主要步骤拆解，如果你不感兴趣，可以直接跳转到最后的代码块部分，复制之后粘贴到文本编辑器中，保存为 `Makefile`。
 
-## 提取引用过参考文献
+## 提取引用过的参考文献
 
-我的所有文献数据由 Zotero 插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 导出为一个 `.bib` 文件，大概有 3.5 MB，其中有超过 2400 条文献，无论我写什么论文，引文数据都来自这一个文件。如果我写的一篇文章引用了 50 篇文献，如何将它们单独保存为一个单独的 BibTeX 文件？幸运的是，全能的 [Pandoc](https://pandoc.org) 可以通过 Lua Filter 来实现。
+我的所有文献数据由 Zotero 插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 导出为一个 `.bib` 文件，大概有 3.5 MB，其中有超过 2400 条文献，无论我写什么论文，引文数据都来自这一个文件。如果我写的一篇文章中引用了 50 篇文献，如何将它们单独保存为一个单独的 BibLaTeX 文件？幸运的是，全能的 [Pandoc](https://pandoc.org) 可以通过 Lua Filter 来实现。
 
-首先，需要在电脑中 [安装 Pandoc](https://pandoc.org/installing.html)，在 macOS 中可以使用 `brew install pandoc` 来安装。
+首先，需要在电脑中 [安装 Pandoc](https://pandoc.org/installing.html)，在 macOS 中可以使用 `brew install pandoc` 来快速安装。
 
 接下来，将下面这 5 行 Lua 代码复制，保存为 `getbib.lua`：
 
@@ -55,17 +55,17 @@ pandoc --bibliography bibliography.bib \
  --output citation.bib
 ```
 
-就可以得到引用过的 50 篇文献，保存为 `citation.bib`。其中 `bibliography.bib` 是保存所有引文数据的 BibTeX 文件，`--wrap none` 表示不折行，`sections/*.md` 是 `‌ sections` 文件夹下论文的所有正文文件，格式是扩展名为 `.md` 的 Markdown。
+就可以得到引用过的 50 篇文献，并保存为 `citation.bib`。其中 `bibliography.bib` 是保存所有引文数据的 BibLaTeX 文件，`--wrap none` 表示不折行，`sections/*.md` 是 `sections` 文件夹下论文的所有正文文件，格式是扩展名为 `.md` 的 Markdown。
 
-## 删除英文文献，保留中文文献
+## 只保留中文文献
 
-在得到论文引用过的文献后，下一步需要将英文文献移除，只保留中文文献，这是下一步转换为拼音的前置步骤，命令如下：
+在得到论文引用过的文献后，然后需要将英文文献移除，只保留中文文献，这是下一步转换为拼音的前置步骤，命令如下：
 
 ```shell
 perl -0777 -i -pe 's/@[\w\n\s\p{P}—=“”‘’]*\}\n\}//g'
 ```
 
-需要注意的是，这里的 `-0777` 告诉 Perl 跨行查找替换。
+值得注意的是，这里的 `-0777` 告诉 Perl 跨行查找替换。
 
 ## 中文转换为拼音
 
@@ -137,7 +137,7 @@ Translate Chinese into English
 paste -d "\0" pinyin.bib trans.bib | perl -pe 's/(\stitle.*)(\},*)(.*)/\1 \(\3\)\2/g' > cnbib.bib
 ```
 
-`paste` 命令将 `pinyin.bib` 和 `trans.bib` 逐行合并在一起，`-d "\0"‌` 表示不添加分界符，然后用正则表达式匹配多余的元素并移除，保存为 `cnbib.bib`。
+`paste` 命令将 `pinyin.bib` 和 `trans.bib` 逐行合并在一起，`-d "\0"` 表示不添加分界符，然后用正则表达式匹配多余的元素并移除，保存为 `cnbib.bib`。
 
 ## 转换为 Word
 
@@ -145,17 +145,17 @@ paste -d "\0" pinyin.bib trans.bib | perl -pe 's/(\stitle.*)(\},*)(.*)/\1 \(\3\)
 
 ```shell
 pandoc --citeproc --number-sections \
---bibliography bibliography.bib \
---bibliography cnbib.bib \
---metadata title="This is the title" \
---metadata author="author name" \
---metadata date="`date`" \
---metadata reference-section-title="References" \
---metadata link-citations=true \
-main.md --output main.docx
+	--bibliography bibliography.bib \
+	--bibliography cnbib.bib \
+	--metadata title="This is the title" \
+	--metadata author="author name" \
+	--metadata date="`date`" \
+	--metadata reference-section-title="References" \
+	--metadata link-citations=true \
+	sections/*.md --output main.docx
 ```
 
-需要注意的是，这里使用了两次 `--bibliography`，而 `cnbib.bib` 是转换/翻译后的中文参考文献，与 `bibliography.bib` 中的 citation key 是相同的。但是非常好的是，如果有重复的 citation key，Pandoc 会使用最后加载的那一个，这正满足了我们的需要。因此，`‌cnbib.bib` 一定要放在 `‌bibliography.bib` 之后。
+需要注意的是，这里使用了两次 `--bibliography`，而 `cnbib.bib` 是转换/翻译后的中文参考文献，与 `bibliography.bib` 中的 citation key 是相同的。但是非常妙的是，如果有重复的 citation key，Pandoc 会使用最后加载的那一个，这正满足了我们的需要。因此，`cnbib.bib` 一定要放在 `bibliography.bib` 之后。
 
 最后，附上以上所有命令组合在一起的 Makefile，其中包括上面没有提到的格式调整等其他细节， `make.sh` 中的内容是上面生成 Microsoft Word 文件的命令。
 
