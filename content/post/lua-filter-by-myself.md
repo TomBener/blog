@@ -1,5 +1,5 @@
 ---
-title: 写 Lua Filter：自己提出问题，自己解决它
+title: 写 Lua Filter：自己提出问题并解决它
 date: 2022-11-18
 categories:
     - Pandoc
