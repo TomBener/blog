@@ -2,7 +2,7 @@
     :root {
         --base-font-family: 'Noto Serif', 'Noto Serif SC', serif;
       }
-    </style>
+</style>
 
   {{/*  --code-font-family: "JetBrains Mono", monospace;  */}}
   <!-->This script use to load font from outside<-->
@@ -10,7 +10,7 @@
     (function () {
         const customFont = document.createElement('link');
         {{/*  customFont.href = "https://fonts.bunny.net/css?family=jetbrains-mono:400,600,700|noto-serif:400,400i,700,700i|noto-serif-sc:500,700";  */}}
-        customFont.href = "https://fonts.bunny.net/css?family=noto-serif:400,400i,700,700i|noto-serif-sc:500,700";
+        customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap";
   
         customFont.type = "text/css";
         customFont.rel = "stylesheet";

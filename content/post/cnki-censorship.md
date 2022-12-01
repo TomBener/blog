@@ -6,19 +6,17 @@ categories:
 ---
 
 
-众所周知，中国政府拥有世界上其他国家难以望其项背的网络防火墙（[GFW](https://zh.wikipedia.org/zh-cn/防火长城)），可以轻易屏蔽掉他们不想让普通中国人看见的内容。另一方面，党国对国内的社交媒体有着极其严酷的审查制度，并且愈来愈丧心病狂。然而，这还远远不够，It [reaches](https://www.nytimes.com/2022/03/18/business/chinas-russia-information.html) everything that touches human minds, and [inserts](https://www.wsj.com/articles/chinas-communist-party-quietly-inserts-itself-into-everyday-life-11643644801) itself into everyday life。因此，作为追求真理的学术，自然也难逃厄运。
+众所周知，中国政府拥有世界上其他国家难以望其项背的网络防火墙 ([GFW](https://zh.wikipedia.org/zh-cn/防火长城))，可以轻易屏蔽掉他们不想让普通中国人看见的内容。另一方面，党国对国内的社交媒体有着极其严酷的审查制度，并且愈来愈丧心病狂。然而，这还远远不够，It [reaches](https://www.nytimes.com/2022/03/18/business/chinas-russia-information.html) everything that touches human minds, and [inserts](https://www.wsj.com/articles/chinas-communist-party-quietly-inserts-itself-into-everyday-life-11643644801) itself into everyday life。因此，作为追求真理的学术，自然也难逃厄运。
 
-不知你是否曾留意过这样一条新闻：2022 年 6 月 24 日，中国网信办 [^D8F] [宣布](http://www.cac.gov.cn/2022-06/24/c_1657686783575480.htm) 对中国知网（[CNKI](https://www.cnki.net)）启动网络安全审查，原因是他们惯用的万金油理由：维护国家安全 [^5A5]。
+不知你是否曾留意过这样一条新闻：2022 年 6 月 24 日，网信办 [^D8F] 网络安全审查办公室 [宣布](http://www.cac.gov.cn/2022-06/24/c_1657686783575480.htm) 对中国知网 ([CNKI](https://www.cnki.net)) 启动网络安全审查，原因是他们惯用的万金油理由：维护国家安全 [^5A5]：
 
 [^5A5]: 在今天的中国，这毫不意外。Today, everything has become a matter of [national security](https://pca.st/1bx2y097) in China.
 
-[^D8F]: 平常所说的网信办实际上有两块牌子：「中共中央网络安全和信息化委员会办公室」和「中华人民共和国国家互联网信息办公室」，这是一个非常神秘的机构，可参考斯坦福大学 [DigiChina Project](https://digichina.stanford.edu/work/behind-the-facade-of-chinas-cyber-super-regulator/) 的报告。
+[^D8F]: 平常所指的网信办实际上有两块牌子：「中共中央网络安全和信息化委员会办公室」和「中华人民共和国国家互联网信息办公室」，这是一个非常神秘的机构，可参考斯坦福大学 [DigiChina Project](https://digichina.stanford.edu/work/behind-the-facade-of-chinas-cyber-super-regulator/) 的报告。
 
-> 据悉，知网掌握着大量个人信息和涉及国防、工业、电信、交通运输、自然资源、卫生健康、金融等重点行业领域重要数据，以及我重大项目、重要科技成果及关键技术动态等敏感信息。
+> 网络安全审查办公室有关负责人表示，为防范国家数据安全风险，维护国家安全，保障公共利益，依据《国家安全法》《网络安全法》《数据安全法》，按照《网络安全审查办法》，2022 年 6 月 23 日，网络安全审查办公室约谈同方知网（北京）技术有限公司负责人，宣布对知网启动网络安全审查。据悉，知网掌握着大量个人信息和涉及国防、工业、电信、交通运输、自然资源、卫生健康、金融等重点行业领域重要数据，以及我重大项目、重要科技成果及关键技术动态等敏感信息。
 
-如果你经常在中国知网上下载资料的话，应该会明白这段话背后的含义。我在看到这条消息后，写下了这样一句话：
-
-> 中国知网上有大量今天中国主流意识形态容不下的东西，下载那些文章的时候就预料到会有这一天，真来了还是感到震惊。
+如果你经常在中国知网上下载资料的话，应该会明白这段话背后的含义。在看到这条消息后，我写道：中国知网上有大量今天中国主流意识形态容不下的东西，下载那些文章的时候就预料到会有这一天，真来了还是感到震惊。
 
 下面就让我举两个例子，介绍一下我所遇到的中国知网的审查情况。
 
@@ -60,19 +58,21 @@ categories:
 
 {{< imgcap title="《丝绸之路》2005 第 3 期消失的页码，其中就包括第 57–58 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNgqdP/011979aa-ba0a-42c8-a9c5-af0e7ea5b074.png" >}}
 
-为什么我会在 10 月份再次想起这篇记录「旧社会」穷苦百姓的文章？因为我当时读到了一篇文章《[逃离新疆的 24 小时，我看到人生百态](https://archive.ph/J2Gb3)》，作者记录了她在极端非人道的新冠疫情防控之下，从乌鲁木齐返回武汉的艰辛历程，而就是这样一篇文章，被微信公众平台以「内容违反《互联网用户公众账号信息服务管理规定》」而屏蔽。
+为什么我会在 10 月份再次想起这篇记录「旧社会」穷苦百姓的文章？因为我当时读到了一篇微信公众号文章《[逃离新疆的 24 小时，我看到人生百态](https://archive.ph/J2Gb3)》，作者记录了她在极端非人道的新冠疫情防控政策之下，从乌鲁木齐返回武汉的艰辛历程，而就是这样一篇文章，被微信公众平台以「内容违反《互联网用户公众账号信息服务管理规定》」而屏蔽。
 
-每一个在中国大陆接受教育的人，都会被告诉「旧社会黑暗无比，今天的生活史无前例地幸福，我们要倍加珍惜」。然而事实真是这样的吗？在「中国特色社会主义新时代」下，在伟大领袖的「正确领导」下，在丧心病狂的「动态清零」政策之下，普通老百姓依然在受穷受苦，嘴上喊着「人民至上、生命至上」，实际上却是「以人民为代价」。20 世纪 40 年代是「出口」苦，21 世纪 20 年代是「入口」苦，正如 [米华健](https://cup.columbia.edu/book/eurasian-crossroads/9780231204552) 所说：All PRC citizens suffered from the effects of unwise policies and power struggles。[^785] 只能说如今的「老爷们心太善了，见不得穷人受一点苦」，喊出来也不被允许。
+每一个在中国大陆接受教育的人，都会被告诉「旧社会黑暗无比，今天的生活史无前例地幸福，我们要倍加珍惜」。然而事实真的是这样的吗？在「中国特色社会主义新时代」下，在伟大领袖的「正确领导」下，在毫不动摇的「动态清零」政策之下，普通老百姓依然在受穷受苦，甚至连生病也 [无法就医](https://chinadigitaltimes.net/chinese/689242.html)，发生火灾 [无法逃生](https://chinadigitaltimes.net/chinese/690102.html)，普通人 [被逼跳楼](https://chinadigitaltimes.net/chinese/689324.html)。喉舌们嘴上不断重复着「人民至上、生命至上」，实际上却是「以人民为代价」。
+
+20 世纪 40 年代是「出口」苦，21 世纪 20 年代是「入口」苦，正如 [米华健](https://cup.columbia.edu/book/eurasian-crossroads/9780231204552) 所说：All PRC citizens suffered from the effects of unwise policies and power struggles [^785]。只能说如今的「老爷们心太善了，见不得穷人受一点苦」，喊出来也不被允许。
 
 [^785]: 书中这句话表达的完整意思是，所有的中国人都在愚蠢的政策和权力斗争下受苦受难，但边疆地区的少数民族更甚，而对他们来说，这些动荡是由外来者造成的。
 
 ## 晚清的卖国贼
 
-阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，感觉这个标题很有意思，于是我去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报（哲学社会科学版）](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上有这一期的其他论文，但缺少了第 106–128 页。
+阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，感觉这个标题很有意思，于是我去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报 (哲学社会科学版)](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上的目录显示，这一期缺少了第 106–128 页。
 
-{{< imgcap title="《清华大学学报（哲学社会科学版）》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
+{{< imgcap title="《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
 
-就像微信公众号文章被删除后可以在其他渠道找到一样，我在 [国家哲学社会科学学术期刊数据库](https://www.nssd.cn) 下载到了这篇论文。阅读全文之后，我大概发现了它被下架的原因，因为作者在文中指出，传统西域观认为「新疆并不属于中央王朝」，清代不少著名人士都持有此观点，因此对新疆问题的争论一直没有平息。
+就像微信公众号文章被删除后可以在其他渠道找到一样，我在 [国家哲学社会科学学术期刊数据库](https://www.nssd.cn) 下载到了这篇论文。阅读全文之后，我大概猜出了它被下架的原因，因为作者在文中指出，传统西域观认为「新疆并不属于中央王朝」，清代不少著名人士都持有此观点，因此对新疆问题的争论一直没有平息。
 
 清朝初期，西域只是存在于历史记载中的一种映像，时人以嘉峪关为界，陕甘或河西为西北重地，对西域则视之无足轻重。尽管乾隆中期统一新疆，但文化的巨大差异导致扩大的疆域并未被很多人所接受，新疆一般被中原人士视为蛮荒之地。清朝后期，新疆作为中央政府的财政负担，一些著名人物并不主张清朝统治新疆，例如，李鸿章认为：
 
@@ -82,19 +82,19 @@ categories:
 
 > 试为今之时势筹之，已割之地不必论矣。益当尽卖新疆于俄罗斯，尽卖西藏于英吉利，以偿清二万万之欠款。以二境方数万里之大，我之力终不能守，徒为我之累赘，而卖之则不止值二万万，仍可多取值为变法之用，兼请英俄保护中国十年。费如不足，则满洲、蒙古缘边之地亦皆可卖，统计所卖之地之值，当近十万万。而吾情愿少得价者，以为十年保护之资地。且价亦不必皆要现钱，凡铁甲船、铁路之钢条、木板、精枪、快炮及应用之一切机器，均可作抵。于是广兴学校，无一乡一村不有学校；大开议院，有一官一邑即有议院。
 
-在今天的民族主义者看来，这种「卖地换钱」的言论简直就是典型的卖国贼行径，一定会被钉在历史的耻辱柱上，尽管实际并未付诸实施，但说一说也是不被允许的。
+在今天的民族主义者看来，这种「卖地换钱」的主张简直就是典型的卖国贼行径，一定会被钉在历史的耻辱柱上。尽管实际并未付诸实施，但说出来也是不被允许的。
 
 虽然贾建飞总体上坚持了「正确」的历史观，但在论证过程中不可避免地说了一些「不正确」的话，而这些观点与如今的 [官方叙事](http://www.xinjiang.gov.cn/xinjiang/lsyg/201912/186b405ef42a444d8ff269cc88b94eb8.shtml) 相冲突，这可能就是它被下架的原因吧。
 
 ---
 
-尽管我没有直接证据表明，这两篇文章的下架与网信办的所谓「安全审查」直接相关，但毋庸置疑的事实是它们的确消失了。而中国知网作为中文学术圈最大的论文获取平台，审查的后果无疑是灾难性的，成千上万的文章被悄然下架，遑论学术自由，就连学术本身都无从谈起。
+尽管我没有直接证据表明，这两篇文章的下架与网信办的所谓「安全审查」直接相关，但毋庸置疑的事实是它们的确消失了，而这就是中国特色的审查制度——毫无依据地被删除，静悄悄地被消失。中国知网作为中文学术圈最大的论文获取平台，审查的后果无疑是灾难性的，成千上万的文章被悄然下架，遑论学术自由，就连学术本身都无从谈起。
 
 中国当局一方面极力限制 [国外学者](https://www.thewirechina.com/2022/01/16/open-source) [^26B] 获取研究中国的资料，另一方面下架国内「敏感信息」，或许以后真的 [Nobody knows anything about China](https://foreignpolicy.com/2018/03/21/nobody-knows-anything-about-china)。
 
-[^26B]: 关于中国政府变得越来越不透明，另请参考 [大西洋月刊](https://www.theatlantic.com/international/archive/2022/08/china-xi-jinping-biography-opacity/671195/)、[洛杉矶时报](https://www.latimes.com/world-nation/story/2022-06-23/china-great-firewall-foreign-domestic-virtual-censorship)、[华尔街日报](https://www.wsj.com/articles/china-data-security-law-ships-ports-court-cases-universities-11638803230)、[金融时报](https://www.ft.com/content/43bea201-ff6c-4d94-8506-e58ff787802c) 等媒体的报道。
+[^26B]: 关于中国政府变得越来越不透明，另请参见 [大西洋月刊](https://www.theatlantic.com/international/archive/2022/08/china-xi-jinping-biography-opacity/671195/)、[洛杉矶时报](https://www.latimes.com/world-nation/story/2022-06-23/china-great-firewall-foreign-domestic-virtual-censorship)、[华尔街日报](https://www.wsj.com/articles/china-data-security-law-ships-ports-court-cases-universities-11638803230)、[金融时报](https://www.ft.com/content/43bea201-ff6c-4d94-8506-e58ff787802c) 等媒体的报道。
 
-在一个遍地都是谎言的地方，掩盖谎言的最好方式就是不让说话、不让书写、不让表达。而如果已经表达出来了，那就只有被删除的命运，即使十年前被允许言说，今天也可能会被戴上「历史虚无主义」的帽子，这就是这片土地的悲哀。
+在一个遍地都是谎言的地方，掩盖谎言的最好方式就是不让说话、不让书写、不让表达。而如果已经表达出来了，那就只有被删除的命运，即使十年前被允许言说，今天也可能会被戴上「[历史虚无主义](https://foreignpolicy.com/2022/05/01/xi-jinping-is-fighting-a-war-for-chinas-history)」的帽子，这就是这片土地的悲哀。
 
 今天，前任中国最高领导人 [江泽民](http://www.gov.cn/xinwen/2022-11/30/content_5729659.htm) 去世，许多人在怀念他时，都提到他是一个真实而丰富的领导人，但恐怕更多人怀念的是江领导中国的那个时代吧，尽管它并不完美，但正如网友调侃所说的那样「全靠同行衬托」，那是一个相对开放自由的时代，而**自由是多么宝贵啊！**
 
