@@ -3,6 +3,7 @@ title: 学术不自由——审查中国知网
 date: 2022-11-30
 categories:
     - CNKI
+    - Censorship
 ---
 
 
@@ -70,7 +71,9 @@ categories:
 
 阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，感觉这个标题很有意思，于是我去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报 (哲学社会科学版)](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上的目录显示，这一期缺少了第 106–128 页。
 
-{{< imgcap title="《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
+{{< imgcap title="中国知网上的《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
+
+{{< imgcap title="来自维普期刊的完整目录，可以发现 CNKI 上还消失了另一篇论文《论业主自治与小区善治》" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0q58/bd0259ae-38e5-4143-9c5d-abbed5bd5373.jpg" >}}
 
 就像微信公众号文章被删除后可以在其他渠道找到一样，我在 [国家哲学社会科学学术期刊数据库](https://www.nssd.cn) 下载到了这篇论文。阅读全文之后，我大概猜出了它被下架的原因，因为作者在文中指出，传统西域观认为「新疆并不属于中央王朝」，清代不少著名人士都持有此观点，因此对新疆问题的争论一直没有平息。
 
@@ -90,7 +93,7 @@ categories:
 
 尽管我没有直接证据表明，这两篇文章的下架与网信办的所谓「安全审查」直接相关，但毋庸置疑的事实是它们的确消失了，而这就是中国特色的审查制度——毫无依据地被删除，静悄悄地被消失。中国知网作为中文学术圈最大的论文获取平台，审查的后果无疑是灾难性的，成千上万的文章被悄然下架，遑论学术自由，就连学术本身都无从谈起。
 
-中国当局一方面极力限制 [国外学者](https://www.thewirechina.com/2022/01/16/open-source) [^26B] 获取研究中国的资料，另一方面下架国内「敏感信息」，或许以后真的 [Nobody knows anything about China](https://foreignpolicy.com/2018/03/21/nobody-knows-anything-about-china)。
+中国当局一方面极力限制 [国外学者](https://www.thewirechina.com/2022/01/16/open-source) [^26B] 获取研究中国的资料，另一方面下架国内「敏感信息」，或许以后真的 [Nobody knows anything about China](https://foreignpolicy.com/2018/03/21/nobody-knows-anything-about-china)。以前人们常说，很多纸质资料在文化大革命时期被损毁，以后恐怕得说，更多电子资料在网信办的审查下被消失。
 
 [^26B]: 关于中国政府变得越来越不透明，另请参见 [大西洋月刊](https://www.theatlantic.com/international/archive/2022/08/china-xi-jinping-biography-opacity/671195/)、[洛杉矶时报](https://www.latimes.com/world-nation/story/2022-06-23/china-great-firewall-foreign-domestic-virtual-censorship)、[华尔街日报](https://www.wsj.com/articles/china-data-security-law-ships-ports-court-cases-universities-11638803230)、[金融时报](https://www.ft.com/content/43bea201-ff6c-4d94-8506-e58ff787802c) 等媒体的报道。
 
