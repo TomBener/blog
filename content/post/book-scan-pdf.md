@@ -5,7 +5,7 @@ categories:
     - PDF
 ---
 
-> 本文首发于少数派
+> 本文首发于 [少数派](https://sspai.com/post/77118)
 
 为了方便地保存与分享书籍，我们往往需要将纸质书电子化，而最常见的方式则是通过扫描将其保存为 [数字世界的纸张](https://sspai.com/post/47092)——PDF。选择合适的扫描工具与方法，可以提高 PDF 的扫描质量。此外，与直接得到的原版 PDF 相比，扫描版 PDF 一般没有书签，页码往往也不正确，需要进行调整。为了提高处理扫描版书籍的效率，得到一本「功能完备」的 PDF 书籍，下面分享一些我的技巧。
 
@@ -21,7 +21,7 @@ categories:
 - **自动去除手指**：在需要用手指将书籍平铺的场景下，可以移除书籍边缘的手指印记。
 - **双页捕获**：自动捕捉书籍的左右页，分割为两页保存。
 
-{{< imgcap title="vFlat Scan 自动识别双页并自动保存为两页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/bLuOpEqv/13d90b9f-8993-4149-8a0a-099dd1dbd432.png" >}}
+{{< imgcap title="vFlat Scan 自动识别双页并保存为两页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/bLuOpEqv/13d90b9f-8993-4149-8a0a-099dd1dbd432.png" >}}
 
 值得一提的是，vFlat Scan 的「双页捕获」功能在扫描书籍时非常实用，能够有效减少扫描的工作量。当然，如果某些场景 vFlat Scan 识别双页不准确，你也可以关闭这个功能，在后期处理时使用 MuPDF 或 Briss 分割扫描得到的 PDF。
 
@@ -33,7 +33,7 @@ categories:
 
 由于各种原因，扫描过程中难免会产生一些噪点甚至黑边，虽然这些细节「无伤大雅」，但对于我这样的强迫症来说，是无法忍受的。如果有这种情况，我一般会使用 [PDF Expert](https://pdfexpert.com) 的 [隐藏工具](https://pdfexpert.com/how-to-redact-pdf) 将其移除，具体使用方式见下图。
 
-{{< imgcap title="使用 PDF Expert 移除 PDF 中多余的元素" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQu4e67w/53b2d69c-7bc5-44cc-ad14-3f9b619ae2db.gif" >}}
+{{< imgcap title="使用 PDF Expert 移除 PDF 中多余的元素" src="https://p15.p3.n0.cdn.getcloudapp.com/items/wbuvenXL/14e1e681-a0c3-4f49-af16-aad792b4ea05.gif" >}}
 
 ## 识别 PDF 文字
 
@@ -78,6 +78,8 @@ PDFtk 是一个处理 PDF 文件的工具，包括 PDFtk Free、PDFtk Pro 和 PD
 PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏制民族主义》这本书中，`第一章 民族主义的困惑` 是一级标题，`民族主义的界定` 则是二级标题。为了对不同的标题层级进行区分，我们借用 Markdown 的语法，将其改写为：
 
 ```text
+# 出版说明
+# 目录
 # 第一章 民族主义的困惑
 ## 民族主义的界定
 ## 治理单元
@@ -111,7 +113,7 @@ PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏
 
 尽管豆瓣等网站提供了书籍的目录，但一般没有提供对应的页码，需要单独制作。这一步我们将目光转向扫描版 PDF 书籍中已有的目录，通过 OCR 将目录页码提取出来，可以参考下图使用 [Clean Shot X](https://cleanshot.com/) OCR 页码的示例。
 
-{{< imgcap title="使用 OCR 提取目录中的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/qGuZz2rr/c69b70d7-da75-40ae-a37a-514152fccffb.gif" >}}
+{{< imgcap title="使用 Clean Shot X 的 OCR 功能提取目录中的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/2Nu6AG7A/c58e1a4c-3bee-45a1-ae47-df24610daf2a.gif" >}}
 
 按照如上方式将页码全部提取出来，并保存为 `pagenumber.txt`。对于其中的空行，不必一个个手动移除，之后会在命令行中批量移除。
 
@@ -157,7 +159,7 @@ cat pagenumber.txt | awk NF | while read line; do echo $((${line}+9)); done > re
 
 上面这行命令，首先使用 `cat` 命令读取 `pagenumber.txt` 的内容，然后使用 `awk NF` 移除其中所有的空行，再将每行的数字加上 9（这个数字需要根据正文之前的页数确定），输出为 `realpage.text`。
 
-1. **合并标题和页码**
+### 合并标题和页码
 
 将上面的目录标题和对应页码这两个文件合并到一起：
 
@@ -362,7 +364,7 @@ pdftk output.pdf output uncompress.pdf uncompress
 
 粘贴完成之后，按下 `Esc` 键退出 Insert Mode，进入 Normal Mode，然后输入 `:wq` 保存更改并退出 Vim。
 
-{{< imgcap title="使用 Vim 打开与编辑 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDvxrA/ceaa04a9-3946-4182-8edc-fec0c2e79b6c.gif" >}}
+{{< imgcap title="使用 Vim 打开与编辑 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/DOukGbrq/4cdec087-fd3d-4e40-9ebc-570a99ae35ed.gif" >}}
 
 最后，再使用 PDFtk 将 `uncompress.pdf` 压缩回去 [^530]：
 
