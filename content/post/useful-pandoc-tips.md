@@ -6,13 +6,13 @@ categories:
 ---
 
 
-> 本文首发于是 [少数派](https://sspai.com/post/77206)
+> 本文首发于 [少数派](https://sspai.com/post/77206)
 
 ## Pandoc 简介
 
 如果你需要在不同的文件格式之间相互转换，多半听说或使用过文档转换的瑞士军刀——[Pandoc](https://pandoc.org)。事实上，不仅人类知道 Pandoc，最近很火的人工智能 [ChatGPT](https://chat.openai.com/chat) 也知道「将 Markdown 转换为 docx」，首选方案是使用 Pandoc。
 
-![如何「将 Markdown 转换为 docx」，ChatGPT 回答使用 Pandoc，并给出了转换命令](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRz2QA/c0c5ce42-c1ad-4a20-be57-f575ee3d20f5.png)
+{{< imgcap title="如何「将 Markdown 转换为 docx」，ChatGPT 回答使用 Pandoc，并给出了转换命令" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRz2QA/c0c5ce42-c1ad-4a20-be57-f575ee3d20f5.png" >}}
 
 Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源的免费命令行软件，由加州大学伯克利分校哲学系教授 [John MacFarlane](https://www.johnmacfarlane.net/) 使用 [Haskell](https://www.haskell.org/) 语言开发，目前另一位核心开发者是来自德国的 [Albert Krewinkel](https://tarleb.com/)。截止 2022 年 12 月 10 日，Pandoc 的 [GitHub](https://github.com/jgm/pandoc) 仓库拥有超过 27,000 个 Star，3,000 次 Fork。
 
@@ -26,7 +26,7 @@ Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.h
 
 作为一个始于 [2006](https://johnmacfarlane.net/BayHac2014/) 年的个人项目，经过 16 年的发展，现在的 Pandoc 已经变得非常庞杂，拥有相当丰富的功能，可以实现 [几十种](https://pandoc.org/diagram.svgz?v=20220825090929) 文件格式的转换，各种调整细节的选项也不计其数，除此之外，还能通过 [Lua](https://pandoc.org/lua-filters.html)、[Python](https://github.com/sergiocorreia/panflute) 等脚本语言实现高度自定义的文档转换。正因如此，它的功能非常复杂，仅 [PDF 版用户手册](https://pandoc.org/MANUAL.pdf) 就超过了 150 页。一方面，这使得 Pandoc 上手门槛比较高，容易劝退新手，但另一方面，丰富的功能也让它具有无限的可能性，甚至不仅限用于文档格式转换，还能实现一些「意料之外」的功能。
 
-需要指出的是，Pandoc 不仅仅是一个文档转换工具，还包括了它定义的一系列标准，而 [Pandoc’s Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) 就是这样这样的标准之一。众所周知，诞生于 2004 年的 [标准 Markdown](https://daringfireball.net/projects/markdown/) 有不少局限性，这导致后来的 [Markdown 方言](https://yihui.org/cn/2017/08/markdown-flavors/) 层出不穷，而在这些 Markdown 方言中，Pandoc’s Markdown 作为少有的「业界良心」，可以说是最为规范、功能最全面的，它主要包括了以下扩展语法：
+需要指出的是，Pandoc 不仅仅是一个文档转换工具，还包括了它定义的一系列标准，而 [Pandoc’s Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) 就是这样的标准之一。众所周知，诞生于 2004 年的 [标准 Markdown](https://daringfireball.net/projects/markdown/) 有不少局限性，这导致后来的 [Markdown 方言](https://yihui.org/cn/2017/08/markdown-flavors/) 层出不穷，而在这些 Markdown 方言中，Pandoc’s Markdown 作为少有的「业界良心」，可以说是最为规范、功能最全面的，它主要包括了以下扩展语法：
 
 - 表格：简单表格、多行表格、网格表、管道表格
 - 列表：多种多样的有序列表和无序列表
@@ -113,7 +113,7 @@ echo 'hello world' | pandoc
 iconv -t utf-8 input.txt | pandoc | iconv -f utf-8
 ```
 
-再举个例子，[少数派创作手册](https://manual.sspai.com/rules/style/#pangu) 指出：汉字与英文字母、数字间应手动追加一个空格。实际上，这基本上是 [中文文案排版](https://github.com/sparanoid/chinese-copywriting-guidelines) 的通用习惯。尽管手动在中英文、数字之间加一个空格是一个好习惯，然而由于这 [只是习惯，不是规范](https://www.zhihu.com/question/19587406)，很多情况下打开别人发来的文档，中文、英文和数字「坐排排」挤在一起，实在是 [让人坐立难安](https://chrome.google.com/webstore/detail/%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2%EF%BC%9F/paphcfdffjnbcgkokihcdjliihicmbpd)。如何在不破坏源文件的情况下，在转换为其他格式时自动在汉字与英文字母、数字间之间加上一个空格？我们可以结合 [AutoCorrect](https://github.com/huacnlee/autocorrect) 和 Pandoc，实现这一需求：
+再举个例子，[少数派创作手册](https://manual.sspai.com/rules/style/#pangu) 指出：汉字与英文字母、数字间应手动追加一个空格。实际上，这基本上是 [中文文案排版](https://github.com/sparanoid/chinese-copywriting-guidelines) 的通用习惯。尽管手动在中英文、数字之间加一个空格是一个好习惯，然而由于这 [只是习惯，不是规范](https://www.zhihu.com/question/19587406)，很多情况下打开别人发来的文档，中文、英文和数字「坐排排」挤在一起，实在是 [让人坐立难安](https://chrome.google.com/webstore/detail/%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2%EF%BC%9F/paphcfdffjnbcgkokihcdjliihicmbpd)。如何在不修改源文件的情况下，在转换为其他格式时自动在汉字与英文字母、数字间之间加上一个空格？我们可以结合 [AutoCorrect](https://github.com/huacnlee/autocorrect) 和 Pandoc，实现这一需求：
 
 ```shell
 echo 'hello世界你好world，这是一段中文和English以及数字123夹杂在一起的文字。' | autocorrect --stdin | pandoc
@@ -136,9 +136,11 @@ pandoc -f html https://pandoc.org -t commonmark-raw_html -o pandoc.md
 
 ## 忽略东亚文字换行符
 
-众所周知，Markdown 文件中连续两个换行，在生成的 HTML 文件中会产生一个新的段落，而单个换行则会产生一个空格。我派对此有一篇文章专门介绍了 [为什么你应该试试一句话换一行](https://sspai.com/post/73957)，这种写作方式可以让你像写大纲或写诗一样来写文章，好处非常明显，对我也非常受用。对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 PlatyHsu 提供了使用正则表达式来清理标点符号后多余的空格，但若不在标点符号处换行，而在任意地方换行，使用正则表达式就相对比较复杂，显得不那么优雅。
+众所周知，Markdown 文件中连续两个换行，在生成的 HTML 文件中会产生一个新的段落，而单个换行则会产生一个空格。我派对此有一篇文章专门介绍了 [为什么你应该试试一句话换一行](https://sspai.com/post/73957)，这种写作方式可以让你像写大纲或写诗一样来写文章，好处非常明显，对我也非常受用。如果你打开 Pandoc 用户手册的 [源文件](https://github.com/jgm/pandoc/blob/master/MANUAL.txt)，就会发现它也是这样写的，不得不说好的写作习惯是相通的。
 
-对此，我们可以开启 Pandoc 专门针对处理东亚文字（包括中文、日文和韩文，一般统称为 [CJK](https://en.wikipedia.org/wiki/CJK_characters)）的 [扩展](https://pandoc.org/MANUAL.html#extension-east_asian_line_breaks) `east_asian_line_breaks`（`+extension` 表示使用扩展），它的作用是忽略东亚文字中一个空行所产生的空格。
+对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 PlatyHsu 提供了使用正则表达式来清理标点符号后多余的空格，但若不在标点符号处换行，而在任意地方换行，使用正则表达式就相对比较复杂，显得不那么优雅。
+
+对此，我们可以开启 Pandoc 专门针对处理东亚文字（包括中文、日文和韩文，一般统称为 [CJK](https://en.wikipedia.org/wiki/CJK_characters)）的 [扩展](https://pandoc.org/MANUAL.html#extension-east_asian_line_breaks) `east_asian_line_breaks`（`+extension` 表示使用扩展），它的作用是忽略东亚文字中一个换行所产生的空格。
 
 例如，将 Markdown 转换为 HTML，其中的 `\n` 表示换行：
 
@@ -217,7 +219,7 @@ I’m a sentence with both “double quotes” and ‘single quotes’.
 - 将 `...` 转换为 [Ellipsis](https://en.wikipedia.org/wiki/Ellipsis)（省略号）
 - 在某些缩写之后插入不换行空格（[non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space)），例如 `Mr.`
 
-除此之外，Pandoc Markdown 也会对一些特殊字符进行 [转义](https://pandoc.org/MANUAL.html#extension-all_symbols_escapable)，例如将 `*` 转换为 `\*`。尽管 `smart` 扩展不仅仅把直引号转换为弯引号，还有其他一些「副作用」，有点不符合 [DOTADIW](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well) 的原则，但好在这些都是 [英文文案](https://www.govinfo.gov/app/details/GPO-STYLEMANUAL-2016/) 或 [Markdown](https://daringfireball.net/projects/markdown/syntax#backslash) 排版领域事实上的标准。而如果是转换为其他文件类型的话，Pandoc 则会完美地处理这些细节。
+除此之外，Pandoc 也会对一些特殊字符进行 [转义处理](https://pandoc.org/MANUAL.html#extension-all_symbols_escapable)，例如将 `*` 转换为 `\*`。尽管 `smart` 扩展不仅仅把直引号转换为弯引号，还有其他一些「副作用」，有点不符合 [DOTADIW](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well) 的原则，但好在这些都是 [英文文案](https://www.govinfo.gov/app/details/GPO-STYLEMANUAL-2016/) 或 [Markdown](https://daringfireball.net/projects/markdown/syntax#backslash) 排版领域事实上的标准。而如果是转换为其他文件类型的话，Pandoc 则会完美地处理这些细节。
 
 ## 转换标题层级
 
@@ -244,7 +246,7 @@ echo '## 二级标题变成一级标题\n\n### 三级标题变成二级标题\n\
 可以看到，Markdown 中原本的二级标题 `##` 变成了 HTML 中的一级标题 `h1`，原本的三级标题 `###` 变成了二级标题 `h2`。而如果把输出格式改为 Markdown，也有类似的效果：
 
 ```shell
-echo '## 二级标题变成一级标题\n\n### 三级标题变成二级标题\n\n开始正文' | pandoc --shift-heading-level-by=-1 --to markdown
+echo '## 二级标题变成一级标题\n\n### 三级标题变成二级标题\n\n开始正文' | pandoc --wrap=preserve --shift-heading-level-by=-1 --to markdown
 ```
 
 输出结果为：
@@ -314,7 +316,7 @@ Pandoc is really awesome!
 
 其中的 `rId20.png` 和 `rId21.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 SHA1 哈希值构建的。
 
-通过 Word 文件的中转，我们成功地将 Markdown 中的图床链接替换成了本地图片，这是因为 Pandoc 在转换为二进制文件格式如 `.docx`, `.odt`, `.epub` 时，会自动将远程图片下载到本地，然后再进行转换。在接下来将 Word 转换为 Markdown 时，开启 `--extract-media=DIR` 选项，Pandoc 将 Word 转换为 Markdown，并自动处理图片的本地链接，而不需要自己编写复杂的正则表达式来查找替换。
+通过 Word 文件的中转，我们成功地将 Markdown 中的图床链接替换成了本地图片，这是因为 Pandoc 在转换为二进制文件格式如 `.docx`, `.odt`, `.epub` 时，会自动将远程图片下载到本地，然后再进行转换。在接下来将 Word 转换为 Markdown 时，开启 `--extract-media=DIR` 选项，Pandoc 将 Word 转换为 Markdown，并自动处理图片的本地链接，而不再需要编写复杂的正则表达式来查找替换。
 
 ## 转换参考文献
 
@@ -322,7 +324,7 @@ Pandoc 使用 `--citeproc` (或 `-C`) [选项](https://pandoc.org/MANUAL.html#op
 
 在使用 Pandoc 处理参考文献之前，首先需要明确，能这样做的前提是**文献数据一定要单独保存**，而不能混在其他文件中，比如使用 [Zotero 的 Word 插件](https://github.com/zotero/zotero-word-for-mac-integration) 插入 Word 文件中的文献信息就无法被 Pandoc 处理。
 
-我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BiblaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇文章从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 当然可以做到，不过这一步需要借助 Lua Filter 来实现。
+我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BiblaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇论文从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 当然可以做到，不过这一步需要借助 Lua Filter 来实现。
 
 首先将下面这 5 行 [Lua 代码](https://pandoc.org/lua-filters.html#pandoc.references) 复制，粘贴到文本编辑器中并保存为 `getbib.lua`，移动到工作目录中：
 
@@ -358,12 +360,12 @@ pandoc --citeproc bibliography.bib --csl apa.csl -o bibliography.docx
 
 ## 小结
 
-本文分享了我使用 Pandoc 的一些技巧，希望对你有所帮助。但是对于使用熟练使用 Pandoc 来说，这些技巧还远远不够。如果你在使用过程中遇到了问题，一定记得**首先去阅读 Pandoc 的用户手册**（[Pandoc User’s Guide](https://pandoc.org/MANUAL.html)）。一般来说，大多数人使用 Pandoc 的目的都是为了快速转换文档格式，往往看一下 Quick Start，或者直接复制互联网其他人分享的命令，不会花很多时间与精力去仔细阅读 Pandoc 用户手册，尽管这无可非议，但不阅读 Pandoc 用户手册是十分不明智的，正如 [R Markdown](https://rmarkdown.rstudio.com/) 开发者 [谢益辉](https://yihui.org/en/2018/09/target-blank/) 所说：
+本文分享了我使用 Pandoc 的一些技巧，希望对你有所帮助。但是对于熟练使用 Pandoc 来说，这些技巧还远远不够，如果你在使用过程中遇到了问题，一定记得**首先去阅读 Pandoc 的用户手册**（[Pandoc User’s Guide](https://pandoc.org/MANUAL.html)）。一般来说，大多数人使用 Pandoc 的目的都是为了快速转换文档格式，往往看一下 Quick Start，或者直接复制互联网其他人分享的命令，不会花很多时间与精力去仔细阅读 Pandoc 用户手册，尽管这无可非议，但不阅读 Pandoc 用户手册是十分不明智的，正如 [R Markdown](https://rmarkdown.rstudio.com/) 开发者 [谢益辉](https://yihui.org/en/2018/09/target-blank/) 所说：
 
 > No matter how many times I have recommended R Markdown users to read the full Pandoc manual at least once, I still want to recommend it again. You won’t really appreciate how powerful Pandoc’s Markdown is until you read the full manual once.
 
 对此我非常赞同，很多时候我遇到使用 Pandoc 的问题时，查阅 Pandoc 用户手册往往都会带给我惊喜。
 
-如果阅读 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也会犯错。
+如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也会犯错。
 
-毫不夸张地说，Pandoc 是我最喜欢的工具之一，尽管它是一个免费软件，我还是在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常高兴，颇有一种把「压箱底的宝贝」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍能希望让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
+毫不夸张地说，Pandoc 是我最喜欢的工具之一，尽管它是一个免费软件，我还是在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍能希望让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
