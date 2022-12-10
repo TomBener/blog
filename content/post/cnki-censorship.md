@@ -7,7 +7,7 @@ categories:
 ---
 
 
-众所周知，中国政府拥有世界上其他国家难以望其项背的网络防火墙 ([GFW](https://zh.wikipedia.org/zh-cn/防火长城))，可以轻易屏蔽掉他们不想让普通中国人看见的内容。另一方面，党国对国内的社交媒体有着极其严酷的审查制度，并且愈来愈丧心病狂。然而，这还远远不够，It [reaches](https://www.nytimes.com/2022/03/18/business/chinas-russia-information.html) everything that touches human minds, and [inserts](https://www.wsj.com/articles/chinas-communist-party-quietly-inserts-itself-into-everyday-life-11643644801) itself into everyday life。因此，作为追求真理的学术，自然也难逃厄运。
+众所周知，中国政府拥有世界上其他国家难以望其项背的网络防火墙 ([GFW](https://zh.wikipedia.org/zh-cn/防火长城))，可以轻易屏蔽掉他们不想让普通中国人看见的内容。另一方面，党国对国内的社交媒体有着极其严酷的审查制度，并且愈来愈丧心病狂。然而，这还远远不够，It [reaches](https://www.nytimes.com/2022/03/18/business/chinas-russia-information.html) everything that touches human minds, and [inserts](https://www.wsj.com/articles/chinas-communist-party-quietly-inserts-itself-into-everyday-life-11643644801) itself into everyday life。因此，作为追求真理的学术研究，自然也难逃厄运。
 
 不知你是否曾留意过这样一条新闻：2022 年 6 月 24 日，网信办 [^D8F] 网络安全审查办公室 [宣布](http://www.cac.gov.cn/2022-06/24/c_1657686783575480.htm) 对中国知网 ([CNKI](https://www.cnki.net)) 启动网络安全审查，原因是他们惯用的万金油理由：维护国家安全 [^5A5]：
 
@@ -59,7 +59,7 @@ categories:
 
 {{< imgcap title="《丝绸之路》2005 第 3 期消失的页码，其中就包括第 57–58 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNgqdP/011979aa-ba0a-42c8-a9c5-af0e7ea5b074.png" >}}
 
-为什么我会在 10 月份再次想起这篇记录「旧社会」穷苦百姓的文章？因为我当时读到了一篇微信公众号文章《[逃离新疆的 24 小时，我看到人生百态](https://archive.ph/J2Gb3)》，作者记录了她在极端非人道的新冠疫情防控政策之下，从乌鲁木齐返回武汉的艰辛历程，而就是这样一篇文章，被微信公众平台以「内容违反《互联网用户公众账号信息服务管理规定》」而屏蔽。
+为什么我会在 10 月份再次想起这篇记录「旧社会」穷苦百姓的文章？因为当时我读到了一篇微信公众号文章《[逃离新疆的 24 小时，我看到人生百态](https://archive.ph/J2Gb3)》，作者记录了她在极端非人道的新冠疫情防控政策之下，从乌鲁木齐返回武汉的艰辛历程，而就是这样一篇文章，被微信公众平台以「内容违反《互联网用户公众账号信息服务管理规定》」而屏蔽。
 
 每一个在中国大陆接受教育的人，都会被告诉「旧社会黑暗无比，今天的生活史无前例地幸福，我们要倍加珍惜」。然而事实真的是这样的吗？在「中国特色社会主义新时代」下，在伟大领袖的「正确领导」下，在毫不动摇的「动态清零」政策之下，普通老百姓依然在受穷受苦，甚至连生病也 [无法就医](https://chinadigitaltimes.net/chinese/689242.html)，发生火灾 [无法逃生](https://chinadigitaltimes.net/chinese/690102.html)，普通人 [被逼跳楼](https://chinadigitaltimes.net/chinese/689324.html)。喉舌们嘴上不断重复着「人民至上、生命至上」，实际上却是「以人民为代价」。
 
@@ -69,11 +69,11 @@ categories:
 
 ## 晚清的卖国贼
 
-阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，感觉这个标题很有意思，于是我去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报 (哲学社会科学版)](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上的目录显示，这一期缺少了第 106–128 页。
+阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，我感觉这个标题很有意思，于是去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报 (哲学社会科学版)](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上的目录显示，这一期缺少了第 106–128 页。
 
 {{< imgcap title="中国知网上的《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
 
-{{< imgcap title="来自维普期刊的完整目录，可以发现 CNKI 上还消失了另一篇论文《论业主自治与小区善治》" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0q58/bd0259ae-38e5-4143-9c5d-abbed5bd5373.jpg" >}}
+{{< imgcap title="来自维普期刊的完整目录，对比发现 CNKI 上还消失了另一篇论文《论业主自治与小区善治》" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0q58/bd0259ae-38e5-4143-9c5d-abbed5bd5373.jpg" >}}
 
 就像微信公众号文章被删除后可以在其他渠道找到一样，我在 [国家哲学社会科学学术期刊数据库](https://www.nssd.cn) 下载到了这篇论文。阅读全文之后，我大概猜出了它被下架的原因，因为作者在文中指出，传统西域观认为「新疆并不属于中央王朝」，清代不少著名人士都持有此观点，因此对新疆问题的争论一直没有平息。
 
@@ -91,7 +91,7 @@ categories:
 
 ---
 
-尽管我没有直接证据表明，这两篇文章的下架与网信办的所谓「安全审查」直接相关，但毋庸置疑的事实是它们的确消失了，而这就是中国特色的审查制度——毫无依据地被删除，静悄悄地被消失。中国知网作为中文学术圈最大的论文获取平台，审查的后果无疑是灾难性的，成千上万的文章被悄然下架，遑论学术自由，就连学术本身都无从谈起。
+尽管我没有直接证据表明，这两篇文章的下架与网信办的所谓「安全审查」直接相关，但毋庸置疑的事实是它们的确消失了，而这就是中国特色的审查制度——毫无依据地被删除，静悄悄地被消失。中国知网作为最大的中文论文获取平台，审查的后果无疑是灾难性的，成千上万的文章被悄然下架，遑论学术自由，就连学术本身都无从谈起。
 
 中国当局一方面极力限制 [国外学者](https://www.thewirechina.com/2022/01/16/open-source) [^26B] 获取研究中国的资料，另一方面下架国内「敏感信息」，或许以后真的 [Nobody knows anything about China](https://foreignpolicy.com/2018/03/21/nobody-knows-anything-about-china)。以前人们常说，很多纸质资料在文化大革命时期被损毁，以后恐怕得说，更多电子资料在网信办的审查下被消失。
 
@@ -99,6 +99,8 @@ categories:
 
 在一个遍地都是谎言的地方，掩盖谎言的最好方式就是不让说话、不让书写、不让表达。而如果已经表达出来了，那就只有被删除的命运，即使十年前被允许言说，今天也可能会被戴上「[历史虚无主义](https://foreignpolicy.com/2022/05/01/xi-jinping-is-fighting-a-war-for-chinas-history)」的帽子，这就是这片土地的悲哀。
 
-今天，前任中国最高领导人 [江泽民](http://www.gov.cn/xinwen/2022-11/30/content_5729659.htm) 去世，许多人在怀念他时，都提到他是一个真实而丰富的领导人，但恐怕更多人怀念的是江领导中国的那个时代吧，尽管它并不完美，但正如网友调侃所说的那样「全靠同行衬托」，那是一个相对开放自由的时代，而**自由是多么宝贵啊！**
+今天，前任中国最高领导人 [江泽民](http://www.gov.cn/xinwen/2022-11/30/content_5729659.htm) 去世，许多人在怀念他时，都提到他是一个真实而丰富的领导人，但恐怕更多人怀念的是江领导中国的那个时代吧，尽管它并不完美，但正如网友调侃所说的那样「全靠同行衬托」，那是一个相对开放自由的时代，而**自由是多么宝贵啊！**[^7AC]
+
+[^7AC]: 语出 2021 年我在新疆遇到的一位蒙古族大叔。
 
 {{< imgcap title="社会主义核心价值观中的「自由」" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQu4bQpZ/995e1892-f888-4308-a50f-99f7255566fd.jpeg" >}}

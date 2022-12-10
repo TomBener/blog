@@ -31,7 +31,7 @@ categories:
 
 ## 提取引用过的参考文献
 
-我的所有文献数据由 Zotero 插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 导出为一个 `.bib` 文件，大概有 3.5 MB，其中有超过 2400 条文献，无论我写什么论文，引文数据都来自这一个文件。如果我写的一篇文章中引用了 50 篇文献，如何将它们单独保存为一个单独的 BibLaTeX 文件？幸运的是，全能的 [Pandoc](https://pandoc.org) 可以通过 Lua Filter 来实现。
+我的所有文献数据由 Zotero 插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 导出为一个 `.bib` 文件，大概有 3.5 MB，其中有超过 2400 条文献，无论我写什么论文，引文数据都来自这一个文件。如果我写的一篇文章中引用了 50 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件？幸运的是，全能的 [Pandoc](https://pandoc.org) 可以通过 Lua Filter 来实现。
 
 首先，需要在电脑中 [安装 Pandoc](https://pandoc.org/installing.html)，在 macOS 中可以使用 `brew install pandoc` 来快速安装。
 
