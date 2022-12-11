@@ -284,12 +284,11 @@ pandoc test.docx --extract-media=. -o test.md
 但说实话，这个方法稍微有点复杂，还很容易出错，不具有真正意义上的普适性，而使用 Pandoc 就简单多了。例如，我们有一个 Markdown 文件 `input.md`，其中的内容如下，包括两个少数派图床链接：
 
 ```markdown
-使用 Pandoc，将 Markdown
-中的图床链接保存为**本地图片链接**。
+使用 Pandoc 将 Markdown 中的图床链接替换为**本地图片链接**。
 
-![](https://cdn.sspai.com/editor/u_/ce6s4jlb34tf62m34nug)
+![这是一张 PNG 图片的标题](https://cdn.sspai.com/editor/u_/ce6s4jlb34tf62m34nug)
 
-![](https://cdn.sspai.com/2022/12/05/668a00e70f1a76220d858d1377a7c64e.gif)
+![这是一张 GIF 图片的标题](https://cdn.sspai.com/2022/12/05/668a00e70f1a76220d858d1377a7c64e.gif)
 
 Pandoc is really *awesome*!
 ```
@@ -297,26 +296,26 @@ Pandoc is really *awesome*!
 执行下面的命令：
 
 ```shell
-pandoc input.md -o output.docx && pandoc --wrap=preserve output.docx --extract-media=. -t commonmark-raw_html -o output.md
+pandoc --wrap=preserve -f markdown input.md --extract-media=media -t markdown -o output.md
 ```
 
-在这行命令中，首先使用 Pandoc 将 `input.md` 转换为 Word 文件 `output.docx`，然后再将 `output.docx` 转换为 `output.md`，这样就达到了将 Markdown 中的图床链接替换为本地图片链接的目的，`input.md` 中的图片是远程图片链接，`output.md` 中的图片是本地图片链接。需要说明的是，使用 `commonmark-raw_html` 是为了避免转换为 Markdown 后图片链接中 [多余的图片尺寸参数](https://stackoverflow.com/a/74742023/19418090)。
+[这行命令中](https://stackoverflow.com/questions/74759201/disable-pandoc-convert-the-image-s-alt-text-to-a-paragraph-when-docx-to-markdown/74759299#74759299)，由于开启了 `--extract-media=DIR` 选项，Pandoc 会新建一个文件夹 `media`，将图床中的远程图片下载到本地并保存在该文件夹中，然后再转换为 Markdown，并自动把原本的图床链接替换为本地图片链接。
 
 得到 `output.md` 的内容如下：
 
 ```markdown
-使用 Pandoc，将 Markdown 中的图床链接保存为**本地图片链接**。
+使用 Pandoc 将 Markdown 中的图床链接替换为**本地图片链接**。
 
-![](./media/rId20.png)
+![这是一张 PNG 图片的标题](media/ab9f7f9b3b7s92a6ded08sh62hi9ao066b7ed44b.png)
 
-![](./media/rId21.gif)
+![这是一张 GIF 图片的标题](media/8q6y9r7o9u8h9k1u4l1y70a5f7c2aa1a04d4f1b0.gif)
 
 Pandoc is really *awesome*!
 ```
 
-其中的 `rId20.png` 和 `rId21.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 SHA1 哈希值构建的。
+其中的 `ab9f7f9b3b7s92a6ded08sh62hi9ao066b7ed44b.png` 和 `8q6y9r7o9u8h9k1u4l1y70a5f7c2aa1a04d4f1b0.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 [SHA1](https://en.wikipedia.org/wiki/SHA-1) 哈希值构建的。值得注意的是，Pandoc 支持多种 Markdown 变种，比如 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)、[GitHub-Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)，相互之间略有差异，如果你对输出的 `output.md` 不满意，可是修改 `-t markdown`，试试其他 Markdown 种类。
 
-通过 Word 文件的中转，我们成功地将 Markdown 中的图床链接替换成了本地图片，这是因为 Pandoc 在转换为二进制文件格式如 `.docx`、 `.odt`、`.epub` 时，会自动将远程图片下载到本地，然后再进行转换。在接下来将 Word 转换为 Markdown 时，开启 `--extract-media=DIR` 选项，Pandoc 将 Word 转换为 Markdown，并自动处理图片的本地链接，而不再需要编写复杂的正则表达式来查找替换。
+利用 Pandoc 的 `--extract-media=DIR` 选项，可以非常简单地将 Markdown 中的图床链接替换成本地图片，而不再需要编写复杂的正则表达式来查找替换。
 
 ## 转换参考文献
 
