@@ -8,6 +8,18 @@ categories:
 
 > 本文首发于 [少数派](https://sspai.com/post/77206)
 
+<h2>目录</h2>
+
+- [Pandoc 简介](#pandoc-简介)
+- [安装 Pandoc 与使用方法](#安装-pandoc-与使用方法)
+- [不只能处理文件](#不只能处理文件)
+- [忽略东亚文字换行符](#忽略东亚文字换行符)
+- [直引号转换为弯引号](#直引号转换为弯引号)
+- [转换标题层级](#转换标题层级)
+- [提取媒体文件](#提取媒体文件)
+- [转换参考文献](#转换参考文献)
+- [小结](#小结)
+
 ## Pandoc 简介
 
 如果你需要在不同的文件格式之间相互转换，多半听说或使用过文档转换的瑞士军刀——[Pandoc](https://pandoc.org)。事实上，不仅人类知道 Pandoc，最近很火的人工智能 [ChatGPT](https://chat.openai.com/chat) 也知道「将 Markdown 转换为 docx」，首选方案是使用 Pandoc。
@@ -306,14 +318,14 @@ pandoc --wrap=preserve -f markdown input.md --extract-media=media -t markdown -o
 ```markdown
 使用 Pandoc 将 Markdown 中的图床链接替换为**本地图片链接**。
 
-![这是一张 PNG 图片的标题](media/ab9f7f9b3b7s92a6ded08sh62hi9ao066b7ed44b.png)
+![这是一张 PNG 图片的标题](media/ab9f7f9.png)
 
-![这是一张 GIF 图片的标题](media/8q6y9r7o9u8h9k1u4l1y70a5f7c2aa1a04d4f1b0.gif)
+![这是一张 GIF 图片的标题](media/8q6y9r7.gif)
 
 Pandoc is really *awesome*!
 ```
 
-其中的 `ab9f7f9b3b7s92a6ded08sh62hi9ao066b7ed44b.png` 和 `8q6y9r7o9u8h9k1u4l1y70a5f7c2aa1a04d4f1b0.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 [SHA1](https://en.wikipedia.org/wiki/SHA-1) 哈希值构建的。值得注意的是，Pandoc 支持多种 Markdown 变种，比如 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)、[GitHub-Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)，相互之间略有差异，如果你对输出的 `output.md` 不满意，可是修改 `-t markdown`，试试其他 Markdown 种类。
+其中的 `ab9f7f9.png` 和 `8q6y9r7.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 [SHA1](https://en.wikipedia.org/wiki/SHA-1) 哈希值构建的。值得注意的是，Pandoc 支持多种 Markdown 变种，比如 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)、[GitHub-Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)，相互之间略有差异，如果你对输出的 `output.md` 不满意，可是修改 `-t markdown`，试试其他 Markdown 种类。
 
 利用 Pandoc 的 `--extract-media=DIR` 选项，可以非常简单地将 Markdown 中的图床链接替换成本地图片，而不再需要编写复杂的正则表达式来查找替换。
 
