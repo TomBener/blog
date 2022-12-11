@@ -16,15 +16,15 @@ categories:
 
 Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源的免费命令行软件，由加州大学伯克利分校哲学系教授 [John MacFarlane](https://www.johnmacfarlane.net/) 使用 [Haskell](https://www.haskell.org/) 语言开发，目前另一位核心开发者是来自德国的 [Albert Krewinkel](https://tarleb.com/)。截止 2022 年 12 月 10 日，Pandoc 的 [GitHub](https://github.com/jgm/pandoc) 仓库拥有超过 27,000 个 Star，3,000 次 Fork。
 
+根据 John MacFarlane 教授的 [介绍](https://www.youtube.com/watch?v=T9uZJFO54iM&t=2750s)，Pandoc 这个名称是一个组合单词：[Pan](https://en.wikipedia.org/wiki/Pan_(god)) 是希腊神话里的牧神，指的是一切掌管树林、田地和羊群的神，doc 则是 document 的缩写，意为文档。因此从字面意思来看，可以说 Pandoc 是一个「无所不能的文档利器」 (universal markup converter)，而它的确也拥有名副其实的功能。
+
+作为一个始于 [2006](https://johnmacfarlane.net/BayHac2014/) 年的个人项目，经过 16 年的发展，现在的 Pandoc 已经变得非常庞杂，拥有相当丰富的功能，可以实现 [几十种](https://pandoc.org/diagram.svgz?v=20220825090929) 文件格式的转换，各种调整细节的选项也不计其数，除此之外，还能通过 [Lua](https://pandoc.org/lua-filters.html)、[Python](https://github.com/sergiocorreia/panflute) 等脚本语言实现高度自定义的文档转换。正因如此，它的功能非常复杂，仅 [PDF 版用户手册](https://pandoc.org/MANUAL.pdf) 就超过了 150 页。一方面，这使得 Pandoc 上手门槛比较高，容易劝退新手，但另一方面，丰富的功能也让它具有极强的可玩性和无限的可能性，甚至可以不仅限用于文档格式转换，还能实现一些「意料之外」的功能。
+
 > 关联阅读：
 >
 > - [从 Markdown 到 Pandoc，这是我的学术写作流程](https://sspai.com/post/64842)
 > - [用 Pandoc 和 Sigil，将 Markdown 文档做成电子书](https://sspai.com/post/72536)
 > - [用 Ulysses 搞定学术文档](https://sspai.com/post/45314)
-
-根据 John MacFarlane 教授的 [介绍](https://www.youtube.com/watch?v=T9uZJFO54iM&t=2750s)，Pandoc 这个名称是一个组合单词：[Pan](https://en.wikipedia.org/wiki/Pan_(god)) 是希腊神话里的牧神，意为一切掌管树林、田地和羊群的神，doc 则是文档（document）的缩写，因此从字面意思来看，可以说 Pandoc 是一个「无所不能的文档利器」，而它的确也拥有名副其实的功能。
-
-作为一个始于 [2006](https://johnmacfarlane.net/BayHac2014/) 年的个人项目，经过 16 年的发展，现在的 Pandoc 已经变得非常庞杂，拥有相当丰富的功能，可以实现 [几十种](https://pandoc.org/diagram.svgz?v=20220825090929) 文件格式的转换，各种调整细节的选项也不计其数，除此之外，还能通过 [Lua](https://pandoc.org/lua-filters.html)、[Python](https://github.com/sergiocorreia/panflute) 等脚本语言实现高度自定义的文档转换。正因如此，它的功能非常复杂，仅 [PDF 版用户手册](https://pandoc.org/MANUAL.pdf) 就超过了 150 页。一方面，这使得 Pandoc 上手门槛比较高，容易劝退新手，但另一方面，丰富的功能也让它具有无限的可能性，甚至不仅限用于文档格式转换，还能实现一些「意料之外」的功能。
 
 需要指出的是，Pandoc 不仅仅是一个文档转换工具，还包括了它定义的一系列标准，而 [Pandoc’s Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) 就是这样的标准之一。众所周知，诞生于 2004 年的 [标准 Markdown](https://daringfireball.net/projects/markdown/) 有不少局限性，这导致后来的 [Markdown 方言](https://yihui.org/cn/2017/08/markdown-flavors/) 层出不穷，而在这些 Markdown 方言中，Pandoc’s Markdown 作为少有的「业界良心」，可以说是最为规范、功能最全面的，它主要包括了以下扩展语法：
 
@@ -40,7 +40,7 @@ Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.h
 
 ## 安装 Pandoc 与使用方法
 
-Pandoc 的官网详细介绍了在各个操作系统上的 [安装方法](https://pandoc.org/installing.html)，你可以根据自己使用的操作系统下载安装包进行安装，或者下载源代码 [自行编译](https://pandoc.org/installing.html#getting-the-pandoc-source-code)。当然，也可以使用包管理器进行安装。例如，在 Windows 上使用 [Chocolatey](https://chocolatey.org/) 安装：
+Pandoc 的官网详细介绍了在各个操作系统上的 [安装方法](https://pandoc.org/installing.html)，你可以根据自己使用的操作系统下载安装包进行安装，或者下载源代码 [自行编译](https://pandoc.org/installing.html#compiling-from-source)。当然，也可以使用包管理器进行安装。例如，在 Windows 上使用 [Chocolatey](https://chocolatey.org/) 安装：
 
 ```shell
 choco install pandoc
@@ -113,13 +113,13 @@ echo 'hello world' | pandoc
 iconv -t utf-8 input.txt | pandoc | iconv -f utf-8
 ```
 
-再举个例子，[少数派创作手册](https://manual.sspai.com/rules/style/#pangu) 指出：汉字与英文字母、数字间应手动追加一个空格。实际上，这基本上是 [中文文案排版](https://github.com/sparanoid/chinese-copywriting-guidelines) 的通用习惯。尽管手动在中英文、数字之间加一个空格是一个好习惯，然而由于这 [只是习惯，不是规范](https://www.zhihu.com/question/19587406)，很多情况下打开别人发来的文档，中文、英文和数字「坐排排」挤在一起，实在是 [让人坐立难安](https://chrome.google.com/webstore/detail/%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2%EF%BC%9F/paphcfdffjnbcgkokihcdjliihicmbpd)。如何在不修改源文件的情况下，在转换为其他格式时自动在汉字与英文字母、数字间之间加上一个空格？我们可以结合 [AutoCorrect](https://github.com/huacnlee/autocorrect) 和 Pandoc，实现这一需求：
+再举个例子，[少数派创作手册](https://manual.sspai.com/rules/style/#pangu) 指出：汉字与英文字母、数字间应手动追加一个空格。实际上，这基本上是 [中文文案排版](https://github.com/sparanoid/chinese-copywriting-guidelines) 的通用习惯。尽管手动在中英文、数字之间加一个空格是一个好习惯，然而由于这 [只是习惯，不是规范](https://www.zhihu.com/question/19587406)，很多情况下，我打开别人发来的文档，中文、英文和数字「坐排排」挤在一起，实在是 [让人坐立难安](https://chrome.google.com/webstore/detail/%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2%EF%BC%9F/paphcfdffjnbcgkokihcdjliihicmbpd)。如何在不修改源文件的情况下，在转换为其他格式时自动在汉字与英文字母、数字间之间加上一个空格？我们可以结合 [AutoCorrect](https://github.com/huacnlee/autocorrect) 和 Pandoc，实现这一需求：
 
 ```shell
 echo 'hello世界你好world，这是一段中文和English以及数字123夹杂在一起的文字。' | autocorrect --stdin | pandoc
 ```
 
-输出的 HTML 文件中，汉字与英文字母、数字之间成功地加上了一个空格：
+输出的 HTML 中，汉字与英文字母、数字之间成功地加上了一个空格：
 
 ```html
 <p>hello 世界你好 world，这是一段中文和 English 以及数字 123
@@ -138,7 +138,7 @@ pandoc -f html https://pandoc.org -t commonmark-raw_html -o pandoc.md
 
 众所周知，Markdown 文件中连续两个换行，在生成的 HTML 文件中会产生一个新的段落，而单个换行则会产生一个空格。我派对此有一篇文章专门介绍了 [为什么你应该试试一句话换一行](https://sspai.com/post/73957)，这种写作方式可以让你像写大纲或写诗一样来写文章，好处非常明显，对我也非常受用。如果你打开 Pandoc 用户手册的 [源文件](https://github.com/jgm/pandoc/blob/master/MANUAL.txt)，就会发现它也是这样写的，不得不说好的写作习惯是相通的。
 
-对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 PlatyHsu 提供了使用正则表达式来清理标点符号后多余的空格，但若不在标点符号处换行，而在任意地方换行，使用正则表达式就相对比较复杂，显得不那么优雅。
+对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 PlatyHsu 提供了使用正则表达式来清理标点符号后多余空格的方法，但若不在标点符号处换行，而在任意地方换行，使用正则表达式就相对比较复杂，显得不那么优雅。
 
 对此，我们可以开启 Pandoc 专门针对处理东亚文字（包括中文、日文和韩文，一般统称为 [CJK](https://en.wikipedia.org/wiki/CJK_characters)）的 [扩展](https://pandoc.org/MANUAL.html#extension-east_asian_line_breaks) `east_asian_line_breaks`（`+extension` 表示使用扩展），它的作用是忽略东亚文字中一个换行所产生的空格。
 
@@ -170,7 +170,7 @@ echo '忽略\n\n中文段落里\n单个换行符。ignore the newline\n within\n
 <p>a paragraph</p>
 ```
 
-尽管这个扩展对于中文写作非常实用，但我在习惯「一句话换一行」的写作方式之后，发现并非任何场景都能使用 Pandoc，比如写博客。那么在这种情况下，可以先使用 Pandoc 将文档处理一下，例如，我们可以**将输入与输出都设置为 Markdown，这样就可以在不转换文件格式的同时处理文档内容**：
+尽管这个扩展对于中文写作非常实用，但我在习惯「一句话换一行」的写作方式之后，发现并非任何场景都能使用 Pandoc，比如写博客。那么在这种情况下，可以先使用 Pandoc 将文档处理一下，例如，我们可以**将输入与输出都设置为 Markdown**，这样就可以在不转换文件格式的同时处理文档内容：
 
 ```shell
 echo '忽略\n\n中文段落里\n单个换行符。ignore the newline\n within\n\na paragraph' | pandoc --wrap=preserve --from markdown+east_asian_line_breaks --to markdown
@@ -192,11 +192,11 @@ a paragraph
 
 ## 直引号转换为弯引号
 
-在正式的英文写作中，[引号](https://practicaltypography.com/straight-and-curly-quotes.html) 应该使用弯引号 `“”`（U+201C & U+201D）、`‘’`（U+2018 & U+2019）而不是直引号 `"`（U+0022）、`'`（U+0027），所有格或缩略词的撇号应是 `’`（U+2019）而不是 `'`。但是，由于打字机时代遗留下来的 [习惯](https://practicaltypography.com/typewriter-habits.html)，在键盘上打出直引号要方便得多，因此，在最终呈现的文档中，需要将直引号转换为弯引号。
+在正式的英文写作中，[引号](https://practicaltypography.com/straight-and-curly-quotes.html) 应该使用弯引号 `“”`（U+201C & U+201D）、`‘’`（U+2018 & U+2019）而不是直引号 `"`（U+0022）、`'`（U+0027），所有格或缩略词的撇号应是 `’`（U+2019）而不是 `'`。但是，由于打字机时代遗留下来的 [习惯](https://practicaltypography.com/typewriter-habits.html)，在键盘上打出直引号要方便得多，因此，在最终呈现的文档中，需要将直引号转换为弯引号，也就是使用 [Smart Quotes](https://smartquotesforsmartpeople.com)。
 
 > 关联阅读：[如何在 macOS 上精准输入左引号和右引号 | 一日一技](https://sspai.com/post/38342)
 
-很多工具都内置了 Smart Quotes 的功能，也就是把直引号转换为弯引号，能够在打字的过程中实现自动转换，比如 [Drafts](https://docs.getdrafts.com/docs/editor/editorsettings#editor-settings-1)、[iA Writer](https://ia.net/writer/support/mac/special-characters)、[Microsoft Word](https://support.microsoft.com/en-us/office/smart-quotes-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343)。但如果你已经有了一个使用直引号的文档，如何将其中所有的直引号快速地转换为弯引号？这个时候我们就可以使用 Pandoc：
+很多工具都内置了 Smart Quotes 的功能，能够在打字的过程中实现自动转换，比如 [Drafts](https://docs.getdrafts.com/docs/editor/editorsettings#editor-settings-1)、[iA Writer](https://ia.net/writer/support/mac/special-characters)、[Microsoft Word](https://support.microsoft.com/en-us/office/smart-quotes-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343)。但如果你已经有了一个使用直引号的文档，如何将其中所有的直引号快速地转换为弯引号？这个时候我们就可以使用 Pandoc：
 
 ```shell
 echo I\'m a sentence with both \"double quotes\" and \'single quotes\'. | pandoc --wrap=preserve --to markdown-smart
@@ -284,14 +284,14 @@ pandoc test.docx --extract-media=. -o test.md
 但说实话，这个方法稍微有点复杂，还很容易出错，不具有真正意义上的普适性，而使用 Pandoc 就简单多了。例如，我们有一个 Markdown 文件 `input.md`，其中的内容如下，包括两个少数派图床链接：
 
 ```markdown
-使用 Pandoc，将 *Markdown*
+使用 Pandoc，将 Markdown
 中的图床链接保存为**本地图片链接**。
 
 ![](https://cdn.sspai.com/editor/u_/ce6s4jlb34tf62m34nug)
 
 ![](https://cdn.sspai.com/2022/12/05/668a00e70f1a76220d858d1377a7c64e.gif)
 
-Pandoc is really awesome!
+Pandoc is really *awesome*!
 ```
 
 执行下面的命令：
@@ -300,23 +300,23 @@ Pandoc is really awesome!
 pandoc input.md -o output.docx && pandoc --wrap=preserve output.docx --extract-media=. -t commonmark-raw_html -o output.md
 ```
 
-在这行命令中，首先使用 Pandoc 将 `input.md` 转换为 Word 文件 `output.docx`，然后再将 `output.docx` 转换为 `output.md`，这样就达到了将 Markdown 中的图床链接替换为本地图片链接的目的，`input.md` 中的图片是远程图片链接，`output.md` 中的图片是本地图片链接。需要说明的是，使用 `commonmark-raw_html` 是为了 [避免转换为 Markdown](https://stackoverflow.com/a/74742023/19418090) 后图床链接中多余的图片尺寸参数。
+在这行命令中，首先使用 Pandoc 将 `input.md` 转换为 Word 文件 `output.docx`，然后再将 `output.docx` 转换为 `output.md`，这样就达到了将 Markdown 中的图床链接替换为本地图片链接的目的，`input.md` 中的图片是远程图片链接，`output.md` 中的图片是本地图片链接。需要说明的是，使用 `commonmark-raw_html` 是为了避免转换为 Markdown 后图片链接中 [多余的图片尺寸参数](https://stackoverflow.com/a/74742023/19418090)。
 
 得到 `output.md` 的内容如下：
 
 ```markdown
-使用 Pandoc，将 *Markdown* 中的图床链接保存为**本地图片链接**。
+使用 Pandoc，将 Markdown 中的图床链接保存为**本地图片链接**。
 
 ![](./media/rId20.png)
 
 ![](./media/rId21.gif)
 
-Pandoc is really awesome!
+Pandoc is really *awesome*!
 ```
 
 其中的 `rId20.png` 和 `rId21.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 SHA1 哈希值构建的。
 
-通过 Word 文件的中转，我们成功地将 Markdown 中的图床链接替换成了本地图片，这是因为 Pandoc 在转换为二进制文件格式如 `.docx`, `.odt`, `.epub` 时，会自动将远程图片下载到本地，然后再进行转换。在接下来将 Word 转换为 Markdown 时，开启 `--extract-media=DIR` 选项，Pandoc 将 Word 转换为 Markdown，并自动处理图片的本地链接，而不再需要编写复杂的正则表达式来查找替换。
+通过 Word 文件的中转，我们成功地将 Markdown 中的图床链接替换成了本地图片，这是因为 Pandoc 在转换为二进制文件格式如 `.docx`、 `.odt`、`.epub` 时，会自动将远程图片下载到本地，然后再进行转换。在接下来将 Word 转换为 Markdown 时，开启 `--extract-media=DIR` 选项，Pandoc 将 Word 转换为 Markdown，并自动处理图片的本地链接，而不再需要编写复杂的正则表达式来查找替换。
 
 ## 转换参考文献
 
@@ -324,7 +324,7 @@ Pandoc 使用 `--citeproc` (或 `-C`) [选项](https://pandoc.org/MANUAL.html#op
 
 在使用 Pandoc 处理参考文献之前，首先需要明确，能这样做的前提是**文献数据一定要单独保存**，而不能混在其他文件中，比如使用 [Zotero 的 Word 插件](https://github.com/zotero/zotero-word-for-mac-integration) 插入 Word 文件中的文献信息就无法被 Pandoc 处理。
 
-我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BiblaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇论文从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 当然可以做到，不过这一步需要借助 Lua Filter 来实现。
+我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BiblaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇论文从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 自然可以做到，不过这一步需要借助 Lua Filter 来实现。
 
 首先将下面这 5 行 [Lua 代码](https://pandoc.org/lua-filters.html#pandoc.references) 复制，粘贴到文本编辑器中并保存为 `getbib.lua`，移动到工作目录中：
 
@@ -342,7 +342,7 @@ end
 pandoc --bibliography bibliography.bib --lua-filter getbib.lua --to biblatex input.md --output citation.bib
 ```
 
-这行命令中，`--bibliography bibliography.bib`  [告诉](https://pandoc.org/MANUAL.html#option--bibliography) Pandoc 从 `bibliography.bib` 中读取引文数据（可能需要调整文件所在路径），`--lua-filter getbib.lua` 表示使用上面已保存的 Lua filter `getbib.lua`，`--to biblatex` 表示转换为 BibLaTeX 格式。
+这行命令中，`--bibliography bibliography.bib`  告诉 Pandoc 从 `bibliography.bib` 中读取 [引文数据](https://pandoc.org/MANUAL.html#option--bibliography)（可能需要调整文件所在路径），`--lua-filter getbib.lua` 表示使用上面已保存的 Lua filter `getbib.lua`，`--to biblatex` 表示转换为 BibLaTeX 格式。
 
 得到所有引用过的 100 篇文献之后，如果需要单独提交参考文献，就可以把这个 `citation.bib` 文件分享给其他人。但考虑到 BibLaTeX 格式并不通用，大多数情况下对方往往需要我们提供 Word 文件，为了解决这个问题，我们可以使用 Pandoc 将 BibLaTeX 文件转换为 Word 文件：
 
@@ -368,4 +368,4 @@ pandoc --citeproc bibliography.bib --csl apa.csl -o bibliography.docx
 
 如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也会犯错。
 
-毫不夸张地说，Pandoc 是我最喜欢的工具之一，尽管它是一个免费软件，我还是在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍能希望让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
+毫不夸张地说，Pandoc 是我最喜欢的工具之一，尽管它是一个免费软件，我还是在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍希望能让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
