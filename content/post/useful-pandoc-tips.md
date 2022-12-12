@@ -339,13 +339,13 @@ pandoc --wrap=preserve -f markdown input.md --extract-media=media -t markdown -o
 Pandoc is really *awesome*!
 ```
 
-其中的 `ab9f7f9.png` 和 `8q6y9r7.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 [SHA1](https://en.wikipedia.org/wiki/SHA-1) 哈希值构建的。值得注意的是，Pandoc 支持很多 [Markdown 变种](https://pandoc.org/MANUAL.html#markdown-variants)，比如 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)、[GitHub-Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)、[PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)，相互之间略有差异，如果你对输出的 `output.md` 不满意，可是通过修改 `-t markdown`，试试其他类型的 Markdown。
+其中的 `ab9f7f9.png` 和 `8q6y9r7.gif` 是下载到 `media` 文件夹中的本地图片，图片名称是根据内容的 [SHA1](https://en.wikipedia.org/wiki/SHA-1) 哈希值构建的。值得注意的是，Pandoc 支持很多 [Markdown 变种](https://pandoc.org/MANUAL.html#markdown-variants)，比如 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/)、[GitHub-Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)、[PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)，相互之间略有差异，如果你对输出的 `output.md` 不满意，可以通过修改 `-t markdown`，试试其他类型的 Markdown。
 
 ## 转换参考文献
 
 Pandoc 使用 `--citeproc` (或 `-C`) [选项](https://pandoc.org/MANUAL.html#option--citeproc) 来处理参考文献，这是它的看家本领之一，甚至可以说是无出其右，仅支持的文献类型格式就包括 [BibTeX](https://ctan.org/pkg/bibtex)、[BibLaTeX](https://ctan.org/pkg/biblatex)、[CSL JSON](https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html)、[EndNote XML](https://support.clarivate.com/Endnote/s/article/EndNote-XML-Document-Type-Definition) 和 [RIS](https://en.wikipedia.org/wiki/RIS_(file_format)) 这 5 种。在使用 Pandoc 处理参考文献之前，首先需要明确，能这样做的前提是**文献数据一定要单独保存**，而不能混在其他文件中，比如使用 [Zotero 的 Word 插件](https://github.com/zotero/zotero-word-for-mac-integration) 插入 Word 文档中的文献信息就无法被 Pandoc 处理。
 
-与 [LaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex) 相比，在 Markdown 中 [引用文献](https://pandoc.org/MANUAL.html#citations) 简单得多。假设你的文章存储在一个 Markdown 文件 `input.md` 中，参考文献数据存储在一个 BibTeX 文件 `bib.bib` 中，那么就可以在 `input.md` 中通过 `[@citekey]` 的方式来引用文献，其中的 `citekey` 是 BibTeX 文件中对应的 [Citation Key](https://retorque.re/zotero-better-bibtex/citing/)。在论文写好之后，然后就可以通过 Pandoc 将其转换为其他文件格式，例如转换为 Word 文档：
+与 [LaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex) 相比，在 Markdown 中 [引用文献](https://pandoc.org/MANUAL.html#citations) 要简单得多。假设你的文章存储在一个 Markdown 文件 `input.md` 中，参考文献数据存储在一个 BibTeX 文件 `bib.bib` 中，那么就可以在 `input.md` 中通过 `[@citekey]` 的方式来引用文献，其中的 `citekey` 是 BibTeX 文件中对应的 [Citation Key](https://retorque.re/zotero-better-bibtex/citing/)。在论文写好之后，然后就可以通过 Pandoc 将其转换为其他文件格式，例如转换为 Word 文档：
 
 ```shell
 pandoc --citeproc --bibliography bib.bib input.md -o output.docx
@@ -371,7 +371,7 @@ pandoc --bibliography bibliography.bib --lua-filter getbib.lua --to biblatex inp
 
 这行命令中，`--bibliography bibliography.bib`  告诉 Pandoc 从 `bibliography.bib` 中读取 [引文数据](https://pandoc.org/MANUAL.html#option--bibliography)（可能需要调整文件所在路径），`--lua-filter getbib.lua` 表示使用上面已保存的 Lua filter `getbib.lua`，`--to biblatex` 表示转换为 BibLaTeX 格式。
 
-得到所有引用过的 100 篇文献之后，如果需要单独提交参考文献，就可以把这个 `citation.bib` 文件分享给其他人。但考虑到 BibLaTeX 格式并不通用，大多数情况下对方往往需要我们提供 Word 文档，为了解决这个问题，可以使用 Pandoc 将 BibLaTeX 文件转换为 Word 文档：
+得到所有引用过的 100 篇文献之后，如果需要单独提交参考文献，就可以把这个 `citation.bib` 文件分享给其他人。但考虑到 BibLaTeX 格式并不通用，大多数情况下对方需要我们提供 Word 文档，为了解决这个问题，可以使用 Pandoc 将 BibLaTeX 文件转换为 Word 文档：
 
 ```shell
 pandoc --citeproc citation.bib -o bibliography.docx
@@ -393,10 +393,10 @@ pandoc --citeproc citation.bib --csl=https://www.zotero.org/styles/apa -o biblio
 > 
 > ---
 > 
-> 无论我已推荐 R Markdown 用户至少完整阅读一遍 Pandoc 手册多少次，我仍然想再次推荐它。只有完整阅读一遍用户手册，你才会惊叹于 Pandoc’s Markdown 是多么强大。
+> 无论我已推荐了 R Markdown 用户多少次，应该至少完整阅读一遍 Pandoc 手册，我仍然想再次推荐它。只有完整阅读一遍用户手册，你才会惊叹于 Pandoc’s Markdown 是多么强大。
 
 对此我非常赞同，很多时候我遇到使用 Pandoc 的问题时，查阅 Pandoc 用户手册往往都会带给我惊喜。
 
-如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也可能会犯错。
+如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题都会有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也可能会犯错。
 
 毫不夸张地说，Pandoc 是我最喜欢的一个工具，尽管它是一个免费软件，我仍然在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍希望能让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
