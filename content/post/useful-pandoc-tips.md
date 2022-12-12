@@ -18,7 +18,7 @@ categories:
 - [转换标题层级](#转换标题层级)
 - [提取媒体文件](#提取媒体文件)
 - [转换参考文献](#转换参考文献)
-- [小结](#小结)
+- [结语](#结语)
 
 ## Pandoc 简介
 
@@ -335,7 +335,7 @@ Pandoc 使用 `--citeproc` (或 `-C`) [选项](https://pandoc.org/MANUAL.html#op
 
 在使用 Pandoc 处理参考文献之前，首先需要明确，能这样做的前提是**文献数据一定要单独保存**，而不能混在其他文件中，比如使用 [Zotero 的 Word 插件](https://github.com/zotero/zotero-word-for-mac-integration) 插入 Word 文件中的文献信息就无法被 Pandoc 处理。
 
-我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BiblaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇论文从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 自然可以做到，不过这一步需要借助 Lua Filter 来实现。
+我的 [Zotero](https://www.zotero.org/) 数据库中有两千条多条文献条目，使用插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex/) 将它们全部导出为 `Better BibLaTeX` [格式](https://retorque.re/zotero-better-bibtex/installation/preferences/export/#biblatex)，存储在一个名为 `bibliography.bib` 的文件中，大概有 3.5 MB。无论我写什么论文，引文数据都来自这一个文件，假设我写的一篇论文从中引用了 100 篇文献，如何将它们保存为一个单独的 BibLaTeX 文件呢？全能的 Pandoc 自然可以做到，不过这一步需要借助 Lua Filter 来实现。
 
 首先将下面这 5 行 [Lua 代码](https://pandoc.org/lua-filters.html#pandoc.references) 复制，粘贴到文本编辑器中并保存为 `getbib.lua`，移动到工作目录中：
 
@@ -355,7 +355,7 @@ pandoc --bibliography bibliography.bib --lua-filter getbib.lua --to biblatex inp
 
 这行命令中，`--bibliography bibliography.bib`  告诉 Pandoc 从 `bibliography.bib` 中读取 [引文数据](https://pandoc.org/MANUAL.html#option--bibliography)（可能需要调整文件所在路径），`--lua-filter getbib.lua` 表示使用上面已保存的 Lua filter `getbib.lua`，`--to biblatex` 表示转换为 BibLaTeX 格式。
 
-得到所有引用过的 100 篇文献之后，如果需要单独提交参考文献，就可以把这个 `citation.bib` 文件分享给其他人。但考虑到 BibLaTeX 格式并不通用，大多数情况下对方往往需要我们提供 Word 文件，为了解决这个问题，我们可以使用 Pandoc 将 BibLaTeX 文件转换为 Word 文件：
+得到所有引用过的 100 篇文献之后，如果需要单独提交参考文献，就可以把这个 `citation.bib` 文件分享给其他人。但考虑到 BibLaTeX 格式并不通用，大多数情况下对方往往需要我们提供 Word 文件，为了解决这个问题，可以使用 Pandoc 将 BibLaTeX 文件转换为 Word 文件：
 
 ```shell
 pandoc --citeproc bibliography.bib -o bibliography.docx
@@ -369,7 +369,7 @@ pandoc --citeproc bibliography.bib --csl apa.csl -o bibliography.docx
 
 更多参考文献样式，可以前往 [Zotero Style Repository](https://www.zotero.org/styles) 下载。
 
-## 小结
+## 结语
 
 本文分享了我使用 Pandoc 的一些技巧，希望对你有所帮助。但是对于熟练使用 Pandoc 来说，这些技巧还远远不够，如果你在使用过程中遇到了问题，一定记得**首先去阅读 Pandoc 的用户手册**（[Pandoc User’s Guide](https://pandoc.org/MANUAL.html)）。一般来说，大多数人使用 Pandoc 的目的都是为了快速转换文档格式，往往看一下 Quick Start，或者直接复制互联网其他人分享的命令，不会花很多时间与精力去仔细阅读 Pandoc 用户手册，尽管这无可非议，但不阅读 Pandoc 用户手册是十分不明智的，正如 [R Markdown](https://rmarkdown.rstudio.com/) 开发者 [谢益辉](https://yihui.org/en/2018/09/target-blank/) 所说：
 
@@ -377,6 +377,6 @@ pandoc --citeproc bibliography.bib --csl apa.csl -o bibliography.docx
 
 对此我非常赞同，很多时候我遇到使用 Pandoc 的问题时，查阅 Pandoc 用户手册往往都会带给我惊喜。
 
-如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也会犯错。
+如果查阅 Pandoc 用户手册仍然没有解决问题，你也可以在 [Stack Overflow](https://stackoverflow.com/) 上搜索或提问，开发者 Albert Krewinkel 在上面非常活跃，基本上 Pandoc 的相关问题下都有他的回答或评论，或者在 Pandoc 的 [Google Groups](https://groups.google.com/g/pandoc-discuss) 中讨论和求助。除此之外，你也可以关注 Pandoc 的 [长毛象帐号](https://fosstodon.org/@pandoc)，Albert Krewinkel 会在上面分享很多实用技巧。当然，如果你想偷懒，也可以问问 ChatGPT 应该怎么使用 Pandoc，不过需要小心，它也可能会犯错。
 
-毫不夸张地说，Pandoc 是我最喜欢的工具之一，尽管它是一个免费软件，我还是在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍希望能让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
+毫不夸张地说，Pandoc 是我最喜欢的一个工具，尽管它是一个免费软件，我仍然在 GitHub 上赞助了两位核心开发者，在感谢他们开发了如此优秀的软件的同时，也希望能为项目开发尽一点绵薄之力。写下这篇介绍 Pandoc 的文章，让更多人了解并使用它，我同样感到非常开心，颇有一种把「压箱底的宝贝儿」拿出来分享的兴奋感觉。尽管无法面面俱到，甚至可能遗漏了非常基础的部分，但仍希望能让你感受到 Pandoc 的魅力，如果可以使用并分享它就更好了。
