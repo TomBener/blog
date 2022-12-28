@@ -13,7 +13,7 @@ shown that the absolute power without supervision is always a disaster.
 
 Zhai Shanying, a former Chinese businessman, whose grandfather was a general of
 the People’s Liberation Army (PLA). Nevertheless, he now is a criticizer of CCP
-and has *run* out of China to the U.S. Zhai [summarized][zhai] three fundamental
+and has *run* to the U.S. from China. Zhai [summarized][zhai] three fundamental
 defects of the Chinese Communist Party that cannot be refuted:
 
 - In CCP’s hierarchical system, subordinates must submit to the consciousness of
