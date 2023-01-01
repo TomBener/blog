@@ -80,7 +80,7 @@ PDF 书籍动辄几百页，为其添加书签有助于在不同章节之间方�
 
 PDFtk 是一个处理 PDF 文件的工具，包括 PDFtk Free、PDFtk Pro 和 PDFtk Server，其中的命令行工具 PDFtk Server 可以免费使用，适用于 macOS、Linux 和 Windows。PDFtk 没有被 Homebrew 的官方源所收录，因此在 macOS 上使用 Homebrew 安装之前，需要先添加一个 [Tap](https://github.com/zph/homebrew-cervezas) ([Third-Party Repository](https://docs.brew.sh/Taps)) `brew tap zph/cervezas`，然后执行 `brew install zph/cervezas/pdftk`，就可以安装了。
 
-下面以《[遏制民族主义](https://ipfs.io/ipfs/bafykbzacea7xaqakzslgdytxo4p6nqbvq7bke3junl6gb7o2ion2jn4pdwzpq?filename=%E9%81%8F%E5%88%B6%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89_%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7%E8%B5%AB%E5%85%8B%E7%89%B9.pdf)》这本书为例，说明如何为 PDF 书籍制作书签。
+下面以《[遏制民族主义](https://cloudflare-ipfs.com/ipfs/bafykbzacea7xaqakzslgdytxo4p6nqbvq7bke3junl6gb7o2ion2jn4pdwzpq)》这本书为例，说明如何为 PDF 书籍制作书签。
 
 ### 制作目录标题
 
