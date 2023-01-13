@@ -13,7 +13,7 @@ categories:
 {{< youtube g8jihjmrvqU >}}
 <br>
 
-2022 年 12 月 31 日，微信公众号「晓题大作」发布了一篇标题为《[2022 年死去的朋友圈]》的文章，回顾了自己的微信朋友圈中转载的文章，点开其中的链接，大抵都是红色的感叹号：此内容因违规无法查看、此帐号已被屏蔽、已停止访问该网页、视频因违规无法播放、内容不存在或被删除、该内容已被发布者删除…… 意料之中，这篇文章已被删除，该公众号也在此文发布之后被封号。
+2022 年 12 月 31 日，微信公众号「晓题大作」发布了一篇标题为《[2022 年死去的朋友圈]》的文章，作者回顾了自己的微信朋友圈中转载的文章，点开其中的链接，大抵都是红色的感叹号：此内容因违规无法查看、此帐号已被屏蔽、已停止访问该网页、视频因违规无法播放、内容不存在或被删除、该内容已被发布者删除…… 意料之中，这篇文章已被删除，该公众号也在此文发布之后被封号。
 
   [2022 年死去的朋友圈]: https://chinadigitaltimes.net/chinese/691489.html
 
@@ -60,7 +60,8 @@ Vox 在 2022 年 12 月 27 日发布了一个 7 分钟的视频《2022, in 7 min
 
   [06:54]: https://youtu.be/PLDFgKzWy3o?t=414
 
-> History is not about statistics and memorizing dates and boring quotations. History is about people. It’s about human beings.
+> History is not about statistics and memorizing dates and boring quotations.
+> History is about people. It’s about human beings.
 > 
 > ---
 > 

@@ -163,7 +163,7 @@ pandoc -f html https://pandoc.org -t commonmark-raw_html -o pandoc.md
 
 众所周知，Markdown 文件中连续两个换行，在生成的 HTML 文件中会产生一个新的段落，而单个换行则会产生一个空格。我派对此有一篇文章专门介绍了 [为什么你应该试试一句话换一行](https://sspai.com/post/73957)，这种写作方式可以让你像写大纲或写诗一样来写文章，好处非常明显，对我也非常受用。如果你打开 Pandoc 用户手册的 [源文件](https://github.com/jgm/pandoc/blob/master/MANUAL.txt)，就会发现它也是这样写的，不得不说好的写作习惯是相通的。
 
-对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 PlatyHsu 提供了使用正则表达式来清理标点符号后多余空格的方法，但若不在标点符号处换行，而在任意位置换行，使用正则表达式就相对比较复杂，显得不那么优雅。
+对于英文写作来说，「一句话换一行」的写作方式是非常自然的，因为每个英文单词之间都有空格，但对于汉字之间不存在空格的中文来说则不同。尽管作者 \@PlatyHsu 提供了使用正则表达式来清理标点符号后多余空格的方法，但若不在标点符号处换行，而在任意位置换行，使用正则表达式就相对比较复杂，显得不那么优雅。
 
 对此，我们可以开启 Pandoc 专门针对处理东亚文字（包括中文、日文和韩文，一般统称为 [CJK](https://en.wikipedia.org/wiki/CJK_characters)）的 [扩展](https://pandoc.org/MANUAL.html#extension-east_asian_line_breaks) `east_asian_line_breaks`（`+extension` 表示使用扩展），它的作用是忽略东亚文字中一个换行所产生的空格。
 
