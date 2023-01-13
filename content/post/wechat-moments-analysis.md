@@ -116,7 +116,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 # Load the data
-df = pd.read_csv("moment.csv")
+df = pd.read_csv("moments.csv")
 text = " ".join(key for key in df.keywords.astype(str))
 
 # Create the wordcloud
@@ -143,7 +143,7 @@ wordcloud.to_file("keywords.png")
 [Python] 运行环境，并安装另外两个
 Python 库 [pandas] 和 [Matplotlib]。除此之外，这里还用到了字体
 [LXGW WenKai]（霞鹜文楷），需要单独安装，当然你也可以替换为系统中的其他字体。用于生成词云图的数据保存在
-`moment.csv` 中，是从 Notion 中导出的。
+`moments.csv` 中，是从 Notion 中导出的。
 
   [制作词云图]: https://cran.r-project.org/web/packages/wordcloud/index.html
   [Python]: https://www.python.org/
@@ -283,14 +283,14 @@ font_add("lxgw", "LXGWWenKai-Regular.ttf")
 showtext_auto()
 
 # Load the data
-data <- read.csv("moment.csv")
+data <- read.csv("moments.csv")
 sepdata <- separate_rows(data, medium, sep = ",\\s")
 ```
 
 请注意，运行后文所有的 R 代码片段都需要依赖上面这段代码，否则会报错，你可以将它们写在一个文件中，或者前往
 [这里](https://gist.github.com/TomBener/c3ebeb2c4da66d2a9a146c6925fe077b) 下载完整的 R 代码文件。
 
-由于所有的数据都保存在 `moment.csv` 中，这里使用 R 内置的
+由于所有的数据都保存在 `moments.csv` 中，这里使用 R 内置的
 `read.csv()` 函数来读取它并保存为 `data` 变量。如果有些
 R 包没有安装，可以在终端中进入 R 环境，使用命令
 `install.packages("package-name")` 来安装对应的包，例如使用命令
@@ -314,7 +314,7 @@ R 包没有安装，可以在终端中进入 R 环境，使用命令
   [tidyr]: https://tidyr.tidyverse.org
 
 ```yaml
-title: "An Analysis of the WeChat Moment"
+title: "An Analysis of the WeChat Moments"
 subtitle: "An Implementation in R Markdown"
 author: "Tom Ben"
 date: "`r Sys.Date()`"
