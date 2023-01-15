@@ -996,9 +996,14 @@ problems）。但与此同时，人类又是一种群居动物，我们永远有
 >
 > 令人感到不快的事实是，即使在最好的情况下，友谊的褪色也是正常的，而真正的不正常是试图挽留它们。
 
-随着时间的流逝，我们每个人的朋友圈都在经历着这个「褪色」的过程，而我在
+事实上，通过微信朋友圈等社交媒体来留住曾经的友谊，在某种程度上是一种违反客观规律的
+[不健康行为]，也是一个几乎
+[不可能实现的目标]。因为随着时间的流逝，我们每个人的朋友圈都在经历着「友谊褪色」的过程，而我在
 2022 年的一大变化就是试着去认识并接纳它，尽管这会让人感到有一点
-unhappy。而通过微信朋友圈来留住褪色的友谊，实际上是一个 [不可能实现的目标]，也许，我们的确需要一种创新性的网络社交方式，来重塑自己的「朋友圈」，而它应该是什么样的呢？我也不知道，这大概需要一点 [想象力]。
+unhappy。
+面对这样的困境，也许我们的确需要一种创新性的网络社交方式，来重塑自己的「朋友圈」。在我看来，这种社交模式下我们既可以
+[connect with people]，又可以
+[lose touch with people]，而它到底应该是什么样的呢？我也不知道，这大概需要一点 [想象力]。
 
   [逻辑哲学论]: https://book.douban.com/subject/1005354/
   [魏武挥]: http://weiwuhui.com/8618.html
@@ -1008,5 +1013,8 @@ unhappy。而通过微信朋友圈来留住褪色的友谊，实际上是一个 
   [低成本]: https://geekplux.zhubai.love/posts/2171646849340497920
   [Jennifer Senior]: https://jennifersenior.net/bio
   [It’s Your Friends Who Break Your Heart]: https://www.theatlantic.com/magazine/archive/2022/03/why-we-lose-friends-aging-happiness/621305/
+  [不健康行为]: https://world.hey.com/dhh/growing-apart-and-losing-touch-is-human-and-healthy-f0f962a8
   [不可能实现的目标]: https://www.wsj.com/articles/being-a-parent-is-lonelyheres-how-to-find-and-keep-friends-in-2022-11643465968
+  [connect with people]: https://mebassett.info/human-attention-commodity
+  [lose touch with people]: https://critter.blog/2021/09/16/lose-touch-with-people/
   [想象力]: https://www.youtube.com/watch?v=y6VPp_AekPw
