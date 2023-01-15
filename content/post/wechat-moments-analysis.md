@@ -988,7 +988,7 @@ problems）。但与此同时，人类又是一种群居动物，我们永远有
 不可否认，以上这些问题都是客观存在的，但本质上它们大都不是微信朋友圈的原因，而更多的是使用朋友圈的用户的人生境况发生了变化，从而导致了社交关系的变化甚至恶化，甚至出现「朋友伤了我的心」的情况，不得已而选择退出微信朋友圈，正如 2022 年普利策奖获得者
 [Jennifer Senior] 在 The Atlantic 发表的文章所写的那样：*[It’s Your Friends Who Break Your Heart]*，她在文中写道：
 
-> The unhappy truth of the matter is that it is normal for friendships to fade, even under the best of circumstances. The real aberration is keeping them.
+> The unhappy truth of the matter is that it is normal for friendships to fade, even under the best of circumstances. The real aberration is *keeping* them.
 >
 > ---
 >
