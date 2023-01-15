@@ -6,7 +6,9 @@ categories:
 ---
 
 
-> 本文首发于 [少数派](https://sspai.com/post/77206)
+{{< admonition type=note title="🔖 Note" >}}
+本文首发于 [少数派](https://sspai.com/post/77206)
+{{< /admonition >}}
 
 <h2>目录</h2>
 

@@ -5,19 +5,18 @@ categories:
     - Productivity
 ---
 
-> **TL;DR 太长不看版**
-> 
-> 英文学术期刊一般要求将论文所引用的中文参考文献转换为拼音、翻译为英文，或者二者的混合。为了避免重复的手动操作，「一劳永逸」地解决这个问题，尝试通过 Makefile 来自动实现这个需求。本文中的 Makefile 提供了 6 个命令选项：
-> 
-> - `make citation`: 将 Markdown 文件中所引用的参考文献去重后提取为 BibLaTeX 文件，保存为 `citation.bib`。
-> - `make pinyin`: 将文章中引用的所有中文参考文献转换为没有音调的汉语拼音，并按照短语进行分组，保存为 `pinyin.bib`。
-> - `make trans`: 将中文参考文献的标题翻译为英文，使用 Google 翻译的 API，需要联网，中国大陆用户需要让终端网络通过代理连接，保存为 `trans.bib`。
-> - `make transall`: 将中文参考文献全文翻译为英文，使用 Apple 翻译的 API，本地运行，无需联网，但只能在 macOS 中使用，保存为 `transall.bib`。
-> - `make cnbib`: 逐行合并 `pinyin.bib` 和 `trans.bib`，用于拼音和翻译混合使用的场景，保存为 `cnbib.bib`。
-> - `make docx`: 生成最终的 Microsoft Word 文件 `main.docx` 及其辅助文件 `main.md`。
-> 
-> 另外，也可以使用 `make` 或 `make all` 同时执行以上 6 个命令，`make clean` 将会删除所有生成的文件（`cnbib.bib` 除外）。
+{{< admonition type=abstract title="📑 TL;DR 太长不看版" >}}
+英文学术期刊一般要求将论文所引用的中文参考文献转换为拼音、翻译为英文，或者二者的混合。为了避免重复的手动操作，「一劳永逸」地解决这个问题，尝试通过 Makefile 来自动实现这个需求。本文中的 Makefile 提供了 6 个命令选项：
 
+- `make citation`: 将 Markdown 文件中所引用的参考文献去重后提取为 BibLaTeX 文件，保存为 `citation.bib`。
+- `make pinyin`: 将文章中引用的所有中文参考文献转换为没有音调的汉语拼音，并按照短语进行分组，保存为 `pinyin.bib`。
+- `make trans`: 将中文参考文献的标题翻译为英文，使用 Google 翻译的 API，需要联网，中国大陆用户需要让终端网络通过代理连接，保存为 `trans.bib`。
+- `make transall`: 将中文参考文献全文翻译为英文，使用 Apple 翻译的 API，本地运行，无需联网，但只能在 macOS 中使用，保存为 `transall.bib`。
+- `make cnbib`: 逐行合并 `pinyin.bib` 和 `trans.bib`，用于拼音和翻译混合使用的场景，保存为 `cnbib.bib`。
+- `make docx`: 生成最终的 Microsoft Word 文件 `main.docx` 及其辅助文件 `main.md`。
+
+另外，也可以使用 `make` 或 `make all` 同时执行以上 6 个命令，`make clean` 将会删除所有生成的文件（`cnbib.bib` 除外）。
+{{< /admonition >}}
 
 ## 需求
 

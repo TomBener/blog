@@ -8,11 +8,13 @@ categories:
 ---
 
 
-> 本文参与少数派 [2022 年度征文活动]，你可以在 [少数派] 上阅读本文，也可以阅读使用 [Tufte][G9K] 样式排版的版本。
+{{< admonition type=note title="🔖 Note" >}}
+本文参与少数派 [2022 年度征文活动]，你可以在 [少数派] 上阅读本文，也可以阅读使用 [Tufte][G9K] 样式排版的版本。
 
   [2022 年度征文活动]: https://sspai.com/post/77562
   [少数派]: https://sspai.com/post/77815
   [G9K]: https://up.retompi.com/wechat-moments-analysis/tufte
+{{< /admonition >}}
 
 <h2>目录</h2>
 
