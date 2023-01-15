@@ -544,7 +544,7 @@ df %>%
 
 众所周知，微信是一个对开放互联网极度不友好的平台，它的公众号不支持跳转外部链接，内容无法被搜索引擎索引，还会无故屏蔽所谓的「有害链接」，这无疑会极大降低用户分享外部链接的意愿，甚至会潜移默化地改变用户使用互联网的方式，而这导致的后果是非常糟糕的 [^177]，正如 [Yiqin Fu](https://twitter.com/yiqinfu/status/1578082198594367489) 所说：
 
-[^177]: 极度悲观的后果是，一出生就开始接触微信的年轻人可能不再知道超链接是什么，这不是危言耸听，成长在智能手机时代的千禧一代已不知道 [文件管理](https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z) 是怎么回事。
+[^177]: 极度悲观的后果是，一出生就开始接触微信的年轻人可能不再知道超链接是什么，这不是危言耸听，成长在智能手机时代的 Z 世代（Generation Z）已不知道 [文件管理](https://www.theverge.com/22684730/students-file-folder-directory-structure-education-gen-z) 是怎么回事。
 
 > WeChat, by not allowing external links and not allowing content published on their platform to be indexed, did permanent damage to at least two generations of Chinese people.
 >
