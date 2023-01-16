@@ -30,7 +30,7 @@ categories:
 
 Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源的免费 [命令行软件](https://en.wikipedia.org/wiki/Command-line_interface)，由加州大学伯克利分校哲学系教授 [John MacFarlane](https://www.johnmacfarlane.net/) 使用 [Haskell](https://www.haskell.org/) 语言开发，目前另一位核心开发者是来自德国的 [Albert Krewinkel](https://tarleb.com/)。截止 2022 年 12 月 10 日，Pandoc 的 [GitHub](https://github.com/jgm/pandoc) 仓库拥有超过 27,000 个 Star，3,000 次 Fork。
 
-根据 John MacFarlane 教授的 [介绍](https://www.youtube.com/watch?v=T9uZJFO54iM&t=2750s)，Pandoc 这个名称是一个组合单词：[Pan](https://en.wikipedia.org/wiki/Pan_(god)) 是希腊神话里的牧神，指的是一切掌管树林、田地和羊群的神，doc 则是 document 的缩写，意为文档。因此从字面意思来看，可以说 Pandoc 是一个「无所不能的文档转换利器」 (universal markup converter)，而它的确也拥有名副其实的功能。
+根据 John MacFarlane 教授的 [介绍](https://www.youtube.com/watch?v=T9uZJFO54iM&t=2750s)，Pandoc 这个名称是一个组合单词：[Pan](https://en.wikipedia.org/wiki/Pan_(god)) 是希腊神话里的牧神，指的是一切掌管树林、田地和羊群的神，doc 则是 document 的缩写，意为文档。因此从字面意思来看，可以说 Pandoc 是一个「无所不能的文档转换利器」 (a universal document converter)，而它的确也拥有名副其实的功能。
 
 {{< admonition type=info title="📖 关联阅读" >}}
 
@@ -295,7 +295,7 @@ echo '## 二级标题变成一级标题\n\n### 三级标题变成二级标题\n\
 
 ## 提取媒体文件
 
-如果需要将 Microsoft Word 或 Epub 中的所有图片提取出来，单独保存在一个文件夹中，你会怎么做？最直接的方式当然是打开文件，在其中选中图片「另存为」或拖拽出来。一些同学可能觉得这种方式过于麻烦，并且知道 `.docx` 和 `.epub` 实际上是一类压缩文件，可以通过解压缩的方式得到其中的所有图片。以 Word 文件为例，执行以下命令：
+如果需要将 Microsoft Word 或 EPUB 中的所有图片提取出来，单独保存在一个文件夹中，你会怎么做？最直接的方式当然是打开文件，在其中选中图片「另存为」或拖拽出来。一些同学可能觉得这种方式过于麻烦，并且知道 `.docx` 和 `.epub` 实际上是一类压缩文件，可以通过解压缩的方式得到其中的所有图片。以 Word 文件为例，执行以下命令：
 
 ```shell
 unzip test.docx -d unzipped

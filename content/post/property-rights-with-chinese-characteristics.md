@@ -77,7 +77,7 @@ There is a widespread saying circulated in the Chinese-language internet:
 The pattern is equally true for private property rights. Without the protection
 of private property rights, your [corgi puppy][corgi] could be killed by “Dabai”
 mercilessly; without the protection of private property rights, your [cherish
-home][home] could be destroyed by the name of eradicating the virus; Without the
+home][home] could be destroyed by the name of eradicating the virus; without the
 protection of private property rights, [your phone][phone] could be checked
 arbitrarily by the police on the street. As Frank Dikötter said again:
 
