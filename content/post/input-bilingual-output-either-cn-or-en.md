@@ -22,7 +22,9 @@ categories:
 
 {{< imgcap title="彩云小译网页翻译效果" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/caiyun-xiaoyi-translation.png" >}}
 
-> 关联阅读：[如何在浏览英文网页时获得更好的阅读体验？](https://sspai.com/post/54697)
+{{< admonition type=info title="📖 关联阅读" >}}
+[如何在浏览英文网页时获得更好的阅读体验？](https://sspai.com/post/54697)
+{{< /admonition >}}
 
 尽管在 Markdown 中可以中英对照进行写作或翻译，但在输出为 DOCX 或 PDF 分享给他人时，往往只需要一种语言的内容，或者一种语言一份文件单独保存。那么如何才能双语写作，输出指定的某一种语言的文件呢？
 

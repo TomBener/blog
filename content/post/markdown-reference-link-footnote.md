@@ -46,15 +46,15 @@ This is [an example] [id] reference-style link.
 > 
 > 引用式链接的意义并不在于它们更容易书写，关键在于使用引用式链接可以大大提高 Markdown 源文件的可读性。
 
-的确，在 Markdown 源文件中有大量链接，并且这些链接非常冗长且不够美观的情况下，行内链接不仅会明显降低源文件的可读性，甚至还会干扰我们的写作思路，而引用式链接则可以在很大程度避免这个问题。除此之外，写作过程中，我们往往不想打断写作思路去网上搜索链接，这种情况下就可以先放置一个引用式链接占位符，方便后续进行补充。如果忘记填写链接也没有关系，[Markdown 语法检查器][948] 会以错误的形式标注出来，提醒我们修改。
-
-[948]: https://sspai.com/prime/story/markdown-linter-a-primer
+的确，在 Markdown 源文件中有大量链接，并且这些链接非常冗长且不够美观的情况下，行内链接不仅会明显降低源文件的可读性，甚至还会干扰我们的写作思路，而引用式链接则可以在很大程度避免这个问题。除此之外，写作过程中，我们往往不想打断写作思路去网上搜索链接，这种情况下就可以先放置一个引用式链接占位符，方便后续进行补充。如果忘记填写链接也没有关系，Markdown 语法检查器会以错误的形式标注出来，提醒我们修改。
 
 {{< imgcap title="一份 Markdown 文件，分别使用行内链接和引用式链接的效果对比，很明显右侧引用式链接的可读性更强" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNr12n/279a1895-23fb-489e-a65c-9571020b5aaa.png" >}}
 
-> 关联阅读：[给你的 Markdown 挑挑刺——语法检查器入门与进阶][9F7]
+{{< admonition type=info title="📖 关联阅读" >}}
+[给你的 Markdown 挑挑刺——语法检查器入门与进阶][9F7]
 
 [9F7]: https://sspai.com/prime/story/markdown-linter-a-primer
+{{< /admonition >}}
 
 ### 使用 Keyboard Maestro 插入引用式链接
 
@@ -110,9 +110,11 @@ See [my website].
 
 [D1A]: https://pandoc.org/MANUAL.html#extension-spaced_reference_links
 
-> 关联阅读：[Pandoc 从入门到精通，你也可以学会这一个文本转换利器][582]
+{{< admonition type=info title="📖 关联阅读" >}}
+[Pandoc 从入门到精通，你也可以学会这一个文本转换利器][582]
 
 [582]: https://sspai.com/post/77206
+{{< /admonition >}}
 
 ## 引用式脚注
 

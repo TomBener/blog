@@ -44,7 +44,9 @@ categories:
 
 值得一提的是，vFlat Scan 的「双页捕获」功能在扫描书籍时非常实用，能够有效减少扫描的工作量。当然，如果某些场景 vFlat Scan 识别双页不准确，你也可以关闭这个功能，在后期处理时使用 MuPDF 或 Briss 分割扫描得到的 PDF。
 
-> 关联阅读：[批量下载、处理图片和 PDF，这些任务你可以在命令行中完成](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)
+{{< admonition type=info title="📖 关联阅读" >}}
+[批量下载、处理图片和 PDF，这些任务你可以在命令行中完成](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)
+{{< /admonition >}}
 
 {{< imgcap title="使用 vFlat Scan 扫描得到的两页 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu47oPA/b9bb0d59-dd2a-46a2-bb53-07c5aa74f400.jpg" >}}
 
@@ -68,7 +70,10 @@ Adobe 作为 [PDF](https://en.wikipedia.org/wiki/PDF) 标准的创立者，旗�
 
 除了 Adobe Acrobat 和 DEVONthink 这两种付费方式外，也可以使用 [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) 这个开源的命令行工具免费对 PDF 进行 OCR。
 
-> 关联阅读：[通过 OCRmyPDF 实现在扫描版 PDF 中检索文字](https://sspai.com/post/44045)
+{{< admonition type=info title="📖 关联阅读" >}}
+[通过 OCRmyPDF 实现在扫描版 PDF 中检索文字](https://sspai.com/post/44045)
+{{< /admonition >}}
+
 
 另外值得一提的是，在 Apple Silicon Mac 上，macOS 自带的预览（[Preview](https://support.apple.com/en-hk/guide/preview/welcome/mac)）可以像识别图片中的 [实况文本](https://support.apple.com/zh-cn/HT212630) 那样，识别扫描版 PDF 中的文本，iOS 自带的「文件 App」也有类似的功能 [^7C7]。在轻量使用的场景下，比如从 PDF 中复制一些文字，这个功能非常实用，而不需要对整个 PDF 全部 OCR。
 
@@ -126,7 +131,9 @@ PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏
 
 为了提高效率，上述操作可以借用 [正则表达式](https://en.wikipedia.org/wiki/Regular_expression) 进行批量查找替换，或者在 [iA Writer](https://ia.net/writer) 或 [Typora](https://typora.io/) 中使用快捷键操作。
 
-> 关联阅读：[多种实际使用场景，正则表达式带来丰富可能性](https://sspai.com/post/60650)
+{{< admonition type=info title="📖 关联阅读" >}}
+[多种实际使用场景，正则表达式带来丰富可能性](https://sspai.com/post/60650)
+{{< /admonition >}}
 
 ### 制作目录页码
 
