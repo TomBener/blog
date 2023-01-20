@@ -9,6 +9,18 @@ categories:
 本文首发于 [少数派](https://sspai.com/post/77870)
 {{< /admonition >}}
 
+<h2>目录</h2>
+
+- [切换输入法](#切换输入法)
+  - [根据应用切换输入法](#根据应用切换输入法)
+  - [在浏览器地址栏切换为 ABC](#在浏览器地址栏切换为-abc)
+- [切换浏览器](#切换浏览器)
+  - [切换默认浏览器](#切换默认浏览器)
+  - [在另一个浏览器打开当前标签页](#在另一个浏览器打开当前标签页)
+- [小结](#小结)
+
+---
+
 <br>
 
 美国作家 [H. Jackson Brown Jr.][1] 说过一句很有名的话：
@@ -237,7 +249,7 @@ Keyboard Maestro 是 macOS 上一个非常强大的自动化应用，如果善�
 [26]:	https://www.microsoft.com/edge
 [27]:	https://github.com/kerma/defaultbrowser/issues/3#issuecomment-319434425
 [28]:	https://wiki.keyboardmaestro.com/Conflict_Palette
-[29]:	http://www.macbartender.com
+[29]:	https://www.macbartender.com
 [30]:	https://iboysoft.com/magic-menu/
 [31]:	https://folivora.ai/
 [32]:	https://community.folivora.ai/t/how-to-do-a-bartender3-like-action-with-btt/18723
