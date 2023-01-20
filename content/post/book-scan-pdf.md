@@ -3,9 +3,10 @@ title: 如何制作一本扫描版 PDF 电子书
 date: 2022-12-05
 categories:
     - PDF
+    - eBook
 ---
 
-{{< admonition type=note title="🔖 Note" >}}
+{{< admonition title="🔖 Note" >}}
 本文首发于 [少数派](https://sspai.com/post/77118)
 {{< /admonition >}}
 

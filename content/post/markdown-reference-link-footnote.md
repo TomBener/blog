@@ -5,6 +5,7 @@ categories:
     - Markdown
     - Pandoc
     - Keyboard Maestro
+    - Writing
 ---
 
 
@@ -111,9 +112,7 @@ See [my website].
 [D1A]: https://pandoc.org/MANUAL.html#extension-spaced_reference_links
 
 {{< admonition type=info title="📖 关联阅读" >}}
-[Pandoc 从入门到精通，你也可以学会这一个文本转换利器][582]
-
-[582]: https://sspai.com/post/77206
+[我的 Pandoc 使用技巧](/post/useful-pandoc-tips)
 {{< /admonition >}}
 
 ## 引用式脚注
@@ -148,4 +147,4 @@ note.]
 
 ## 小结
 
-\@PlatyHsu 说：「会写 Markdown 的人很多，但写得好 Markdown 的人却很少」，的确，尽管 Markdown 简单易上手，但写好它还是需要不断学习的。而在 Markdown 中使用引用式链接和脚注，可以算是一种值得学习的写作习惯，因为这可以让你的 Markdown 文档的易读性大大提高，更有利于后续的编辑和修订。本文介绍了这两种「引用式写作方式」，以及如何借助 Keyboard Maestro 或 Pandoc 来快速插入或转换引用式链接和脚注，以提高写作效率。如果你有更好的方法或者想要补充的内容，欢迎在评论区分享。
+\@PlatyHsu 说：「会写 Markdown 的人很多，但写得好 Markdown 的人却很少」，的确如此，尽管 Markdown 简单易上手，但写好它还是需要不断学习的。而在 Markdown 中使用引用式链接和脚注，可以算是一种值得学习的写作习惯，因为这可以让你的 Markdown 文档的易读性大大提高，更有利于后续的编辑和修订。本文介绍了这两种「引用式写作方式」，以及如何借助 Keyboard Maestro 或 Pandoc 来快速插入或转换引用式链接和脚注，以提高写作效率。如果你有更好的方法或者想要补充的内容，欢迎在评论区分享。

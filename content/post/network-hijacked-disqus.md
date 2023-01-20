@@ -11,7 +11,7 @@ categories:
 
 3 月的第一天晚上，我更新完上一篇博客文章 [中英双语写作，输出指定语言](https://blog.retompi.com/post/input-bilingual-output-either-en-or-cn/) 后，饶有兴致地在 iPhone 上的 Safari 浏览器上进行阅读的过程中，意外发现文章中的外链会经过地址为 `redirect.viglink.com` 和 `cdn.viglink.com`，然后重定向到目标网址，其链接形如：
 
-```
+```text
 https://redirect.viglink.com/?format=go&jsonp=vglnk_161464852211413&key=cfdfcf52dffd0a702a61bad27507376d&libId=klrc0l970103ci3q000MAgzia7d3b&subId=6626339&loc=https%3A%2F%2Fblog.retompi.com%2Fpost%2Finput-bilingual-output-either-en-or-cn%2F%23%25e6%2580%25bb%25e7%25bb%2593&v=1&out=https%3A%2F%2Fsspai.com%2Fpost%2F64842&ref=https%3A%2F%2Fblog.retompi.com%2F&title=中英双语写作，输出指定语言&txt=写作流程
 ```
 

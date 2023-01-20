@@ -3,10 +3,11 @@ title: 我的 Pandoc 使用技巧
 date: 2022-12-10
 categories:
     - Pandoc
+    - Command Line
 ---
 
 
-{{< admonition type=note title="🔖 Note" >}}
+{{< admonition title="🔖 Note" >}}
 本文首发于 [少数派](https://sspai.com/post/77206)
 {{< /admonition >}}
 
@@ -295,7 +296,7 @@ echo '## 二级标题变成一级标题\n\n### 三级标题变成二级标题\n\
 
 ## 提取媒体文件
 
-如果需要将 Microsoft Word 或 EPUB 中的所有图片提取出来，单独保存在一个文件夹中，你会怎么做？最直接的方式当然是打开文件，在其中选中图片「另存为」或拖拽出来。一些同学可能觉得这种方式过于麻烦，并且知道 `.docx` 和 `.epub` 实际上是一类压缩文件，可以通过解压缩的方式得到其中的所有图片。以 Word 文件为例，执行以下命令：
+如果需要将 Microsoft Word 或 ePub 中的所有图片提取出来，单独保存在一个文件夹中，你会怎么做？最直接的方式当然是打开文件，在其中选中图片「另存为」或拖拽出来。一些同学可能觉得这种方式过于麻烦，并且知道 `.docx` 和 `.epub` 实际上是一类压缩文件，可以通过解压缩的方式得到其中的所有图片。以 Word 文件为例，执行以下命令：
 
 ```shell
 unzip test.docx -d unzipped

@@ -4,9 +4,12 @@ description: 去 ™ 的微信
 date: 2021-05-09T20:20:30+08:00
 categories:
     - WeChat
+    - Censorship
 ---
 
-> **天下苦微信久矣！**
+{{< admonition type=bug title="👎" >}}
+**天下苦微信久矣！**
+{{< /admonition >}}
 
 昨天晚上（2021 年 5 月 8 日），我发了一条微信朋友圈，内容如下：
 

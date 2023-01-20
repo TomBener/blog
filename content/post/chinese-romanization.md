@@ -2,7 +2,7 @@
 title: 汉字罗马化——转拼音与汉译英
 date: 2022-11-01
 categories:
-    - Productivity
+    - Command Line
 ---
 
 {{< admonition type=abstract title="📑 TL;DR 太长不看版" >}}

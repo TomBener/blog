@@ -8,8 +8,8 @@ categories:
 ---
 
 
-{{< admonition type=note title="🔖 Note" >}}
-本文参与少数派 [2022 年度征文活动]，你可以在 [少数派] 上阅读本文，也可以阅读使用 [Tufte][G9K] 样式排版的版本。
+{{< admonition title="🔖 Note" >}}
+本文是少数派 [2022 年度征文活动] 的入围文章，你可以在 [少数派] 上阅读本文，也可以阅读使用 [Tufte][G9K] 样式排版的版本。
 
   [2022 年度征文活动]: https://sspai.com/post/77562
   [少数派]: https://sspai.com/post/77815
@@ -173,7 +173,7 @@ Python 库 [pandas] 和 [Matplotlib]。除此之外，这里还用到了字体
 {{< imgcap title="使用《兰亭集序》生成的词云图" src="https://p15.p3.n0.cdn.getcloudapp.com/items/mXub2KWY/620ee116-8377-4e38-a37b-3f3d3e6a9851.png" >}}
 
 <details>
-<summary>展开《兰亭集序》</summary>
+<summary>点击展开《兰亭集序》</summary>
 
 ```text
 keywords
@@ -377,7 +377,7 @@ header-includes:
 {{< imgcap title="朋友圈可见时长比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJKmxg/4daa07ca-f023-4934-83a8-48d19f4315c9.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 data0 <- distinct(data, name, time_of_visibility)
@@ -422,7 +422,7 @@ df %>%
 {{< imgcap title="朋友圈活跃人群" src="https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDWgq6/8db28349-563e-417b-bedf-a961db703ad8.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <-
@@ -466,7 +466,7 @@ relationship-based 而不是 interest-based
 {{< imgcap title="发朋友圈次数分布情况" src="https://p15.p3.n0.cdn.getcloudapp.com/items/WnuZDDjl/bd33cde8-3d61-4937-9d5b-dee29a914f8e.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
@@ -511,7 +511,7 @@ ggplot(data = df,
 {{< imgcap title="发布的媒介类型" src="https://p15.p3.n0.cdn.getcloudapp.com/items/llugdj1K/6558b388-3385-433a-b375-03df0cc4d189.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <-
@@ -569,7 +569,7 @@ df %>%
 {{< imgcap title="按发布次数排列，按时间顺序排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKyv/8c68d651-ba06-4d03-8d3f-bf3486f58740.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
@@ -616,7 +616,7 @@ ggplot(data = df, aes(x = day,
 {{< imgcap title="一天中发朋友圈的时间分布，按时间顺序排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4ePey/925b4520-3b99-45b1-8f93-1c6500e670c4.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
@@ -662,7 +662,7 @@ ggplot(data = df,
 {{< imgcap title="朋友圈是否具有背景信息" src="https://p15.p3.n0.cdn.getcloudapp.com/items/8Lug1DWx/442adb56-79f4-4e12-83d7-264323b9c3c7.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <-
@@ -705,7 +705,7 @@ df %>%
 {{< imgcap title="朋友圈的属性" src="https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOxqkj/4fe343d2-c8ba-4b93-8e85-d8c613d2054e.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <-
@@ -744,7 +744,7 @@ df %>%
 {{< imgcap title="朋友圈透露出的情绪" src="https://p15.p3.n0.cdn.getcloudapp.com/items/2Nu67zQ8/cb2d9669-c84f-435b-899c-be254928c76e.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <-
@@ -781,7 +781,7 @@ df %>%
 {{< imgcap title="朋友圈中的图片数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/d5uyn6nq/07a14b46-a464-481a-9d89-d4a4a52c4211.png?v=6872f066c8dcdec9f11c2c5a4f7ab231" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
@@ -828,7 +828,7 @@ df %>%
 点赞（like）最早是由 Facebook（现已改名为 [Meta](https://about.meta.com)）发明的，被认为是 Facebook
 最成功、最具标志性的功能。Facebook 的点赞功能在 2009 年推出，不久之后，Twitter、Instagram
 以及中文互联网上的各种社交媒体纷纷抄袭了这个功能，如今点赞已遍布互联网的各个角落。开发这一功能的主要工程师 Justin Rosenstein
-接受 [The Guardian](https://www.theguardian.com/technology/2017/oct/05/smartphone-addiction-silicon-valley-dystopia) 采访时说：
+在接受 [The Guardian](https://www.theguardian.com/technology/2017/oct/05/smartphone-addiction-silicon-valley-dystopia) 采访时说：
 
 > Facebook’s “like” feature was, Rosenstein says, “wildly” successful: engagement soared as people enjoyed the short-term boost they got from giving or receiving social affirmation, while Facebook harvested valuable data about the preferences of users that could be sold to advertisers.
 >
@@ -851,7 +851,7 @@ df %>%
 {{< imgcap title="点赞数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKR6/c57fe412-42cf-46dd-95e8-5786405b3bf0.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
@@ -912,7 +912,7 @@ df %>%
 {{< imgcap title="评论数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4eP4y/85a30a11-81cc-4bbb-be69-08427790b692.png" >}}
 
 <details>
-<summary>展开代码</summary>
+<summary>点击展开代码</summary>
 
 ```r
 df <- data %>%
