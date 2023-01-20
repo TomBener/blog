@@ -55,7 +55,7 @@ categories:
 
 由于各种原因，扫描过程中难免会产生一些噪点甚至黑边，虽然这些细节「无伤大雅」，但对于我这样的强迫症来说，是无法忍受的。如果有这种情况，我一般会使用 [PDF Expert](https://pdfexpert.com) 的 [隐藏工具](https://pdfexpert.com/how-to-redact-pdf) 将其移除，具体使用方式见下图。
 
-{{< imgcap title="使用 PDF Expert 移除 PDF 中多余的元素" src="https://p15.p3.n0.cdn.getcloudapp.com/items/wbuvenXL/14e1e681-a0c3-4f49-af16-aad792b4ea05.gif" >}}
+{{< imgcap title="使用 PDF Expert 移除 PDF 中多余的元素" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu2bYpD/f85f96e9-f755-4d03-9674-458d88019e70.gif" >}}
 
 ## 识别 PDF 文字
 
@@ -140,7 +140,7 @@ PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏
 
 尽管豆瓣等网站提供了书籍的目录，但一般没有提供对应的页码，需要单独制作。这一步我们将目光转向扫描版 PDF 书籍中已有的目录，通过 OCR 将目录页码提取出来，可以参考下图使用 [Clean Shot X](https://cleanshot.com/) OCR 页码的示例。
 
-{{< imgcap title="使用 Clean Shot X 的 OCR 功能提取目录中的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/2Nu6AG7A/c58e1a4c-3bee-45a1-ae47-df24610daf2a.gif" >}}
+{{< imgcap title="使用 Clean Shot X 的 OCR 功能提取目录中的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrWD/eecb1628-beb4-4d10-be4c-9d563c1dafcd.gif" >}}
 
 按照如上方式将页码全部提取出来，并保存为 `pagenumber.txt`。对于其中的空行，不必一个个手动移除，之后会在命令行中批量移除。
 
@@ -391,7 +391,7 @@ pdftk output.pdf output uncompress.pdf uncompress
 
 粘贴完成之后，按下 `Esc` 键退出 Insert Mode，进入 Normal Mode，然后输入 `:wq` 保存更改并退出 Vim。
 
-{{< imgcap title="使用 Vim 打开与编辑 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/DOukGbrq/4cdec087-fd3d-4e40-9ebc-570a99ae35ed.gif" >}}
+{{< imgcap title="使用 Vim 打开与编辑 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrkD/0a13b7e5-042b-4d72-aa9e-ac5719cba1b6.gif" >}}
 
 最后，再使用 PDFtk 将 `uncompress.pdf` 压缩回去 [^530]：
 

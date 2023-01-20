@@ -79,7 +79,7 @@ This is [an example] [id] reference-style link.
 
 [33B]: https://www.vim.org
 
-{{< imgcap title="使用 Keyboard Maestro 动作快速插入引用式链接" src="https://p15.p3.n0.cdn.getcloudapp.com/items/04uy2DG9/699f2f6d-4d6c-4648-a323-e93cf079afdc.gif" >}}
+{{< imgcap title="使用 Keyboard Maestro 动作快速插入引用式链接" src="https://p15.p3.n0.cdn.getcloudapp.com/items/o0u9Kejw/d81c7dbd-3ea4-491a-bded-d16a63205890.gif" >}}
 
 ### 在 Pandoc’s Markdown 中使用引用式链接
 
@@ -143,7 +143,7 @@ note.]
 
 这个 Keyboard Maestro 动作的思路与插入引用式链接的动作类似，此处不再赘述。它的使用方式同样非常简单，你只需将光标定位到需要插入脚注的位置，然后按下快捷键 `⌥ + ⇧ + J`，它就会自动插入脚注标识符，并将光标定位到填写脚注内容的位置。
 
-{{< imgcap title="使用 Keyboard Maestro 动作插入引用式脚注" src="https://p15.p3.n0.cdn.getcloudapp.com/items/JruyDYKQ/55c7b6bd-cf5f-43ac-9355-74f5c7d81bfa.gif" >}}
+{{< imgcap title="使用 Keyboard Maestro 动作插入引用式脚注" src="https://p15.p3.n0.cdn.getcloudapp.com/items/nOu1QPW5/0f0e8480-64b1-4185-a514-4ecbb51b7410.gif" >}}
 
 ## 小结
 
