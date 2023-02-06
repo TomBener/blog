@@ -66,11 +66,11 @@ comments:
 
 menu:
   header:
-    - name: Archives
-      url: "/archives/"
-      weight: 10
     - name: About
       url: "/about/"
+      weight: 10
+    - name: Posts
+      url: "/posts/"
       weight: 20
     - name: RSS
       url: "/index.xml"

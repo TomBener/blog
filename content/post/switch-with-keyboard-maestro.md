@@ -105,7 +105,7 @@ Keyboard Maestro 中有一个叫作「Set Keyboard Layout」的动作，用于�
 
 ### 切换默认浏览器
 
-Keyboard Maestro 论坛上有一位网友分享了一个切换系统默认浏览器的 [宏][20]，但它需要安装 [Xcode][21]，看起来非常复杂，因此我没有使用它。
+Keyboard Maestro 论坛上有一位网友分享了一个切换系统默认浏览器的 [宏][20]，但它需要安装硕大无朋的 [Xcode][21]，看起来非常复杂，因此我没有使用它。
 
 {{< imgcap title="Keyboard Maestro 论坛中的一个切换浏览器的复杂的宏" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuO1oLP/d797b461-c1b4-4d49-a175-1e319fe7c1d4.png" >}}
 
