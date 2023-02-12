@@ -90,7 +90,7 @@ categories:
 
 Markdown 由 [John Gruber](https://twitter.com/gruber) 和 [Aaron Swartz](http://www.aaronsw.com) 于 2004 年开发，是一种轻量级标记语言，它的语法非常简单，[15 分钟即可快速上手](https://sspai.com/topic/185)。
 
-{{< imgcap title="Markdown 基本语法，来源于 https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-syntax-cheatsheet.png" >}}
+{{< imgcap title="Markdown 基本语法" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-syntax-cheatsheet.png" >}}
 
 John Gruber 坚持 Markdown 应该保持极简，没有制定一个统一的标准，导致 Markdown 有很多「[方言](https://yihui.org/cn/2017/08/markdown-flavors)」，并且原生 Markdown 不支持脚注、表格等形式，因此，Markdown 作为一种纯文本格式（Plain Text），确实显得平平无奇。不过，时间已来到 2021 年，在许多人的努力下，Markdown 已经变得相当酷。正如 [Markdown.app](https://markdown.app) 的作者 [\@海波](https://sspai.com/u/6igq4sw3) [所说](https://markdown.app/video)：
 
@@ -349,7 +349,7 @@ perl -CSD -Mutf8 -i -pe 's/([z-zA-Z]\s)(等)/\1et al./g' word/footnotes.xml
 
 ### 移除多余的空格 [^D1C]
 
-[^D1C]: 2023 年 2 月 6 日更新，由于 Pandoc 的更新，中文标点符号后无需手动追加一个空格也可转换 citekey。因此，一般情况下，这一步已不再需要了。
+[^D1C]: 2023 年 2 月 6 日更新，[Pandoc 3.0](https://github.com/jgm/pandoc/releases/tag/3.0) 更新后，中文标点符号后无需手动追加一个空格也可转换 citekey。因此，一般情况下，这一步已不再需要了。
 
 Pandoc 的句中引用语法前必须要有一个空格，也即是没有中括号包裹的 citekey 前一定要有一个空格（段落开头除外），这对于英文写作完全没有问题，因为每个英语单词之前都有空格。但是在中文排版中，汉字之间一般没有空格。如果在 Markdown 中这样引用：
 

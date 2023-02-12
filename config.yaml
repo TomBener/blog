@@ -75,7 +75,7 @@ menu:
     - name: RSS
       url: "/index.xml"
   footer:
-    - name: © 2022-2023 Tom Ben
+    - name: © 2021–2023 Tom Ben
 
 markup:
   highlight:
