@@ -1,11 +1,11 @@
 ---
 title: 如何在互联网上获取电子书
-date: 2023-02-12
+date: 2023-02-12T22:34:20+08:00
 categories:
     - eBook
 ---
 
-信息自由是每个人都应享有的基本权利，与个人发展密切相关，而人类社会的很多领域，都是由于信息封闭导致的不开放甚至寻租腐败。为什么今天人们可以相对容易地转行软件工程师，一个非常重要的原因就在于计算机领域 [知识的开放](https://t.me/bluebird_channel/705)。不过遗憾的是，这并不具备普遍性，尽管我们的社会应该尽可能降低知识获取的门槛，然而这面临着各种各样的阻碍，并不容易实现。
+信息自由是每个人都应享有的基本权利，与个人发展密切相关，而人类社会的很多领域，都是由于信息封闭导致的不开放甚至寻租腐败。为什么今天人们可以相对容易地转行软件工程师？一个非常重要的原因就在于计算机领域 [知识的开放](https://t.me/bluebird_channel/705)。不过遗憾的是，这并不具备普遍性，尽管我们的社会应该尽可能降低知识获取的门槛，然而这面临着各种各样的阻碍，并不容易实现。
 
 在学术论文领域，存在着各种各样的学术出版商，比如 [ScienceDirect](https://www.sciencedirect.com/)、[Springer](https://www.springer.com/)、[Taylor Francis](https://www.tandfonline.com)、[Wiley](https://www.wiley.com/)、[CNKI](https://www.cnki.net) 等，人类几乎所有的论文都可以在世界几大学术论文出版商处获得，尽管往往需要支付高得离谱的费用，不过好在我们有 [Sci-Hub](https://sci-hub.ru/)。因此，在一些学术论文互助群中，会有人抛出这样的问题「怎么会有下载不到的论文？」
 
@@ -58,7 +58,7 @@ Telegram 官方机器人 [1lib](https://t.me/zlibrary2bot) 仍然可用。但为
 - https://zlibrary.shuziyimin.org
 - https://zlibsearch.1kbtool.com
 
-请不要在墙内公开传播这些实例，否则可能导致 `https://zlib.cydiar.com` 一样的后果，[因「不可抗力」而不再可用](https://twitter.com/Cydiar404/status/1622581797384224775)。除了直接在浏览器中访问外，还可以 [下载桌面客户端](https://github.com/tw93/Pake/releases/tag/V1.0.4-beta)（基于 <https://x.zeuslib.com> 的套壳应用）。
+请不要在墙内公开传播这些实例，否则可能导致 `https://zlib.cydiar.com` 一样的后果——[因「不可抗力」而不再可用](https://twitter.com/Cydiar404/status/1622581797384224775)。除了直接在浏览器中访问外，还可以 [下载桌面客户端](https://github.com/tw93/Pake/releases/tag/V1.0.4-beta)（基于 <https://x.zeuslib.com> 的套壳应用）。
 
 ## 超星/全国图书馆参考咨询联盟
 

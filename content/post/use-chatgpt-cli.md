@@ -1,6 +1,6 @@
 ---
 title: 一日一技｜在命令行中使用 ChatGPT
-date: 2023-02-12
+date: 2023-02-12T18:01:41+08:00
 categories:
     - ChatGPT
 ---
@@ -109,7 +109,7 @@ module.exports = {
 };
 ```
 
-由于现在无法直接使用 OpenAI 的 API，这个项目（[1.15.1](https://github.com/waylaidwanderer/node-chatgpt-api/commit/06117e6321de6bb3d177ae8c8a7d97097a4ecd98)）目前使用反向代理的方式来调用 OpenAI API。在浏览器中成功登录 ChatGPT 网页版之后，你需要访问 <https://chat.openai.com/api/auth/session> 获取登录 session 的 `accessToken` [^477] ，然后用复制得到的一长串字符替换上面代码第 3 行中的 `accessToken`。最后，将第 7 行取消注释，也就是将这一行最前面的 `//` 删除。
+由于现在无法直接使用 OpenAI 的 API，这个项目（[1.15.1](https://github.com/waylaidwanderer/node-chatgpt-api/commit/06117e6321de6bb3d177ae8c8a7d97097a4ecd98)）目前使用反向代理的方式来调用 OpenAI API。在浏览器中成功登录 ChatGPT 网页版之后，你需要访问 <https://chat.openai.com/api/auth/session> 获取登录 session 的 `accessToken` [^477]，然后用复制得到的一长串字符替换上面代码第 3 行中的 `accessToken`。最后，将第 7 行取消注释，也就是将这一行最前面的 `//` 删除。
 
 [^477]: 需要注意的是，这会将你的 API key 暴露给第三方服务器，如果你介意的话，可以使用 `text-davinci-003` 模型，但需要付费，效果也比不上 `text-chat-davinci-002` 模型。
 
@@ -131,7 +131,7 @@ npm run cli
 
 ![](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRkml5/28e31929-9857-4252-911a-e8f0805feb14.png)
 
-然后你就可以开始愉快地和 ChatGPT 在命令行中聊天了，它的回复内容会自动复制到剪切板中，还可以使用 `!` 调出相关命令。
+然后你就可以开始愉快地和 ChatGPT 在命令行中聊天了，它的回复内容会自动复制到剪切板中，还可以使用 `!` 调出 6 个快捷命令。
 
 ![](https://p15.p3.n0.cdn.getcloudapp.com/items/yAuAOnox/f147d69f-9f72-4029-b5d3-c8d1b07084c6.png)
 
