@@ -13,9 +13,9 @@ shown that the absolute power without supervision is always a disaster.
 
 Zhai Shanying, a former Chinese businessman, whose grandfather was a general of
 the People’s Liberation Army (PLA). So he can be seen as a “red generation”,
-nevertheless, he now is a criticizer of CCP and has *run* to the U.S. from China.
-Zhai [summarized][zhai] three fundamental
-defects of the Chinese Communist Party that cannot be refuted:
+nevertheless, he now is a criticizer of CCP and has *run* to the U.S. from
+China. Zhai [summarized][zhai] three fundamental defects of the Chinese
+Communist Party that cannot be refuted:
 
 - In CCP’s hierarchical system, subordinates must submit to the consciousness of
   superiors.
