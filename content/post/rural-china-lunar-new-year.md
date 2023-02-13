@@ -60,7 +60,7 @@ issues prevalent in contemporary China.
 
 Firstly, the video highlights the plight of migrant workers. It is not uncommon
 for migrant workers to experience wage defaults, as evidenced by the video
-uploader's father, and this is not a solitary case. I have been privy to similar
+uploader's father, and this is not an isolated case. I have been privy to similar
 stories since childhood, from my father and some relatives.
 
 The lack of social security exacerbates the insecurity and vulnerability of
@@ -116,7 +116,7 @@ Chinese Communist Party, it seems that under the leadership of Xi Jinping, the
 party has lost sight of its true purpose and is solely focused on maintaining
 its grip on power. It is clear that the the video I watched on Bilibili
 demonstrated the widespread problems facing Chinese society as a result of
-current public policy. Although the Chinese government has committed to more
+current public policy. Although the Chinese government has committed to provide more
 prosperous life for its citizens, the zero-covid policy has had disastrous
 consequences, leading to widespread job losses, rising unemployment rates and an
 ailing economy.
