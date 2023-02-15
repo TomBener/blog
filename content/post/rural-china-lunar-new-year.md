@@ -77,7 +77,7 @@ but this is not a secure arrangement. The current generation of young people in
 China is already under immense pressure, so it is unlikely they will be able to
 provide the necessary support to their aging parents. Despite this, having
 children is still considered important in rural communities and young people are
-often encouraged to have children, whether by their parents or the government.
+often encouraged to have children, either by their parents or the government.
 However, the question remains: is having children truly valuable if one is
 unable to provide for oneself? Can their children support them in their old age?
 The answer in many rural areas is frequently a resounding no.
