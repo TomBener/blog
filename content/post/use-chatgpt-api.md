@@ -5,10 +5,6 @@ categories:
     - ChatGPT
 ---
 
-{{< admonition title="🔖 Note" >}}
-本文首发于 [少数派](https://sspai.com/post/78631)
-{{< /admonition >}}
-
 <h2>目录</h2>
 
 - [图形化应用](#图形化应用)
@@ -26,6 +22,7 @@ categories:
 - [其他使用方式](#其他使用方式)
   - [PopClip](#popclip)
   - [Bob](#bob)
+  - [Drafts](#drafts)
   - [快捷指令](#快捷指令)
 - [小结](#小结)
 
@@ -34,7 +31,9 @@ categories:
 
 此前我介绍了 [在命令行中使用 ChatGPT](/post/use-chatgpt-cli) 的方法，但当时使用的开源项目 [waylaidwanderer/node-chatgpt-api](https://github.com/waylaidwanderer/node-chatgpt-api) 没有使用官方 API，经常出现失效的情况。尽管该项目已更新了好几个版本，但是想要使用它，完全取决于是否有可用的「[小道 API](https://github.com/waylaidwanderer/node-chatgpt-api#updates)」，可以说是相当艰难。
 
-好消息是 OpenAI 在 2023 年 3 月 1 日发布了基于 `gpt-3.5-turbo` 模型的官方 [ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)，这个模型与 [ChatGPT 网页版](https://chat.openai.com/chat) 完全相同，但优势非常明显，一是响应速度快得多，几乎不会出现意外断开连接的情况，二是 API 对用户登录网络的限制非常少，这对于中国大陆网友非常友好，能够极大地拓展应用场景。
+好消息是 OpenAI 在 2023 年 3 月 1 日发布了基于 `gpt-3.5-turbo` 模型的官方 [ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)，这个模型与 [ChatGPT 网页版](https://chat.openai.com/chat) 完全相同，但优势非常明显，一是响应速度快得多，几乎不会出现意外断开连接的情况，二是 API 对用户登录网络的限制非常少，这对于中国大陆用户非常友好[^080]，能够极大地拓展应用场景。
+
+[^080]: 尽管 ChatGPT API 一经推出便获得了 [GFW 的认证](https://github.com/noobnooc/noobnooc/discussions/9)。
 
 ChatGPT API 的价格为每 1000 个 tokens 0.002 美元，根据 [OpenAI 的介绍](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)，1 个 token 约等于 4 个英语字母，或者 0.75 个单词，换句话说，1 个英语单词约等于 1.33 tokens（1 个汉字约等于 2.33 个 tokens）。新注册的 OpenAI 账号会自动获得 18 美元的余额，拥有 900 万个 tokens 的请求量，你可以在注册或登录 OpenAI 账号之后，在 [这里](https://platform.openai.com/account/api-keys) 生成自己的 API key。
 
@@ -68,7 +67,7 @@ OpenAI 提供了一个 [Playground](https://platform.openai.com/playground?mode=
 
 ### Python 脚本
 
-OpenAI 官方提供了一个 Python 库 [openai](https://github.com/openai/openai-python)，可以使用 `pip` 安装：
+OpenAI 官方提供了一个 Python 库 [openai](https://github.com/openai/openai-python)，可以使用 `pip` 命令安装：
 
 ```shell
 pip install openai
@@ -259,13 +258,23 @@ PopClip 是一款通过简单的鼠标点击或手势，快速地完成剪贴板
 
 [Bob](https://bobtranslate.com) 是一款 macOS 平台的翻译和 OCR 软件，同样支持插件。除了通过快捷键使用外，也可以通过 [PopClip 调用 Bob](https://bobtranslate.com/guide/integration/popclip.html)。
 
-网友 yetone 制作了两个 Bob 插件，一个是基于 ChatGPT 的 [文本翻译](https://github.com/yetone/bob-plugin-openai-translator) 插件，可以全面替代 [DeepL](https://www.deepl.com/translator)，另一个是对句子进行 [润色和语法修改](https://github.com/yetone/bob-plugin-openai-polisher) 的插件，可以全面替代 [Grammarly](https://www.grammarly.com/)（心疼 DeepL 和 Grammarly 两秒钟 😂）。
+网友 yetone 制作了两个 Bob 插件，一个是基于 ChatGPT 的 [文本翻译](https://github.com/yetone/bob-plugin-openai-translator) 插件，可以全面替代 [DeepL](https://www.deepl.com/translator)，另一个是对句子进行 [润色和语法修改](https://github.com/yetone/bob-plugin-openai-polisher) 的插件，可以全面替代 [Grammarly](https://www.grammarly.com/)[^D3A]。
+
+[^D3A]: 心疼 DeepL 和 Grammarly 两秒钟 😂
 
 {{< imgcap title="通过 Bob 插件使用 ChatGPT 润色文字" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGu7vOyW/1f563682-fba7-4daf-8587-bda2a863a22e.gif" >}}
 
+### Drafts
+
+[Drafts](https://getdrafts.com/) 是一款运行在 Apple 设备上的文字处理软件，拥有强大的自动化功能，可以快速执行多步骤的复杂操作，极大地提高文字处理效率。
+
+[reorx](https://forums.getdrafts.com/t/chatgpt-conversation-action/14042) 制作了一个 [Drafts action](https://directory.getdrafts.com/a/2HJ)，输入自己的 API key，就可以在 Drafts 中和 ChatGPT 对话，非常方便。
+
+{{< imgcap title="在 Drafts 使用 ChatGPT" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Kou9yxRq/7bcc6665-85f6-40e8-bf39-93ff83763943.gif" >}}
+
 ### 快捷指令
 
-苹果的快捷指令（Shortcuts）同样也可以用来调用 ChatGPT API，使用非常方便。比如 [吴秉儒](https://pinchlime.com/blog/chatgpt-api-shortcut/) 制作了一个简单的 Shortcuts，用 [快捷指令](https://www.icloud.com/shortcuts/a9ba455466774e4299c1077659fda7b3) 来使用 ChatGPT。
+苹果的快捷指令（[Shortcuts](https://support.apple.com/guide/shortcuts/welcome/ios)）同样也可以用来调用 ChatGPT API，使用非常方便。比如 [吴秉儒](https://pinchlime.com/blog/chatgpt-api-shortcut/) 制作了一个简单的 Shortcuts，用 [快捷指令](https://www.icloud.com/shortcuts/a9ba455466774e4299c1077659fda7b3) 来使用 ChatGPT。
 
 {{< imgcap title="使用 ChatGPT 的快捷指令" src="https://p15.p3.n0.cdn.getcloudapp.com/items/7Kuzd7wA/2e960384-bd7f-48b2-b008-e80c86e6156e.png" >}}
 
@@ -273,6 +282,6 @@ PopClip 是一款通过简单的鼠标点击或手势，快速地完成剪贴板
 
 ## 小结
 
-模型更好，价格更低的 ChatGPT API 一经推出，便迅速引爆网络，沉寂已久的 Twitter 似乎也因此恢复了往日的热闹，时间线上的推文几乎都在讨论，有不少网友已经做出了很好玩的应用。本文基于我这两天上网冲浪的见闻，分享了一些个人用户使用 ChatGPT API 的方法，希望可以让你尝尝鲜，快速体验一番 ChatGPT 在日常学习和工作中应用的魅力。
+模型更好、价格更低的 ChatGPT API 一经推出，便迅速引爆网络，沉寂已久的 Twitter 似乎也因此恢复了往日的热闹，时间线上的推文几乎都在讨论，有不少网友已经做出了很好玩的应用。本文基于我这两天上网冲浪的见闻，分享了一些个人用户使用 ChatGPT API 的方法，希望可以让你尝尝鲜，快速体验一番 ChatGPT 在日常学习和工作中应用的魅力。
 
 如果说去年 12 月初的 ChatGPT 预览版开启了一扇小门，展现了它在自然语言处理方面的巨大潜力，让人们可以到门口一睹人工智能时代的惊艳，那么 ChatGPT API 的问世，则更像把这扇门移到了普通人的跟前，让我们无需走到门前就可以轻松地使用它。面对正在悄然改变我们生活方式的 ChatGPT，让我们共同期待并积极拥抱一个全新时代的到来吧！
