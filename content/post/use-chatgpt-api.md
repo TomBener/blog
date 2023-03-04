@@ -206,9 +206,9 @@ completion = openai.ChatCompletion.create(
 print(completion.choices[0].message.content)
 ```
 
-将这几行代码保存在 `chat.py` 中，保存在任意位置。然后制作一个下图中的 Keyboard Maestro 宏来运行这段 Python 代码，其中 `pbpaste` 是 macOS 自带的命令行工具，用来粘贴剪切板中的内容，你需要将下面的 `~/Library/CloudStorage/Dropbox/code/chat.py` 替换为你的系统中 Python 脚本的保存路径。另外，还要确保 Python 的安装路径在 Keyboard Maestro 的 [环境变量](https://wiki.keyboardmaestro.com/action/Execute_a_Shell_Script#Path_in_Shell_Scripts) 中，否则需要指明 Python 的绝对路径。
+将这几行代码保存在 `chat.py` 中，保存在任意位置。然后制作一个下图中的 Keyboard Maestro 宏来运行这段 Python 代码，其中 `pbpaste` 是 macOS 自带的命令行工具，用来粘贴剪切板中的内容，你需要将下图中的 `~/code/chat.py` 替换为你的系统中 Python 脚本的保存路径。另外，还要确保 Python 的安装路径在 Keyboard Maestro 的 [环境变量](https://wiki.keyboardmaestro.com/action/Execute_a_Shell_Script#Path_in_Shell_Scripts) 中，否则需要指明 Python 的绝对路径。
 
-{{< imgcap title="在 Keyboard Maestro 中运行 Python 脚本使用 ChatGPT" src="https://p15.p3.n0.cdn.getcloudapp.com/items/7KuzdEl2/e7a3c6a8-e367-4554-b473-27a0b7af71ae.png" >}}
+{{< imgcap title="在 Keyboard Maestro 中运行 Python 脚本使用 ChatGPT" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Z4unJb2d/39f4b9c9-acf0-4efc-9505-a4fd7dcb98f5.png" >}}
 
 ### 方式二
 
