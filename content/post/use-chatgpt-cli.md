@@ -6,7 +6,7 @@ categories:
 ---
 
 {{< admonition type=warning title="⚠️ 注意" >}}
-由于 OpenAI 可能会关闭或改变 API，本文介绍的方法随时可能失效。
+OpenAI 已于 2023 年 3 月 1 日发布基于 `gpt-3.5-turbo` 模型的 [ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)，本文介绍的方法已失效，最新使用方法请参考 [个人用户如何使用 ChatGPT API](/post/use-chatgpt-api)。
 {{< /admonition >}}
 
 <br>
