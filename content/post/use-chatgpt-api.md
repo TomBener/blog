@@ -214,14 +214,14 @@ print(completion.choices[0].message.content)
 由于 `openai` 提供了命令行工具，我们可以直接在 Keyboard Maestro 中执行 Shell 脚本，这种方式不依赖外部文件，因此更加推荐：
 
 ```shell
-pbpaste && openai api chat_completions.create -m gpt-3.5-turbo -g user $(pbpaste)
+pbpaste && openai -k YOUR_API_KEY api chat_completions.create -m gpt-3.5-turbo -g user "$(pbpaste)"
 ```
 
 这行代码中，通过 `$(pbpaste)` 将剪切板内容转换为命令行的标准输入，而最前面的 `pbpaste` 是为了一并把问题粘贴回来。
 
-{{< imgcap title="在 Keyboard Maestro 中执行 Shell 脚本使用 ChatGPT API 的命令行工具" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQuWz7L9/8c796a72-97c3-4a22-9ae5-41a9bfed93cb.png" >}}
+{{< imgcap title="在 Keyboard Maestro 中执行 Shell 脚本使用 ChatGPT API 的命令行工具" src="https://p15.p3.n0.cdn.getcloudapp.com/items/12u75e1l/379297f5-2f1d-4573-9fb5-c4fd88180cbe.png" >}}
 
-当选中一段文字后，按下快捷键 `⇧ + ⌃ + C` 两次，便可以向 ChatGPT 提问，然后同时返回问题和答案。
+你可以在 [这里](https://p15.p3.n0.cdn.getcloudapp.com/items/geuEZvwA/aeed10cb-a35d-404f-a17f-da1d46c9c9c7.kmmacros) 下载上图中的这个 macro。当选中一段文字后，按下快捷键 `⇧ + ⌃ + C` 两次，便可以向 ChatGPT 提问，然后同时返回问题和答案。
 
 {{< imgcap title="在 macOS 上通过快捷键使用 ChatGPT" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Blub0xnJ/794b2dbc-2e67-43ab-b03e-68723e2b736d.gif" >}}
 
@@ -242,7 +242,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 {{< imgcap title="在 Keyboard Maestro 中执行 Curl 命令使用 ChatGPT" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAuoO06g/34827d79-f6dc-4117-94ba-da715fc4373b.png" >}}
 
-以上三种通过 Keyboard Maestro 使用 ChatGPT 的方式，最为推荐的是第二种，你可以根据需要选择合适自己的任意一种方式。除了以上使用 ChatGPT 的基本方式，即鼠标选中文字向 ChatGPT 提问，你还可以利用 Keyboard Maestro 的 [Conflict Palette](https://wiki.keyboardmaestro.com/manual/Palettes#Conflict_Palette)，制作在特定应用场景下使用的宏，比如对文字进行翻译、润色、总结、解释等，可以参考 [吴秉儒](https://twitter.com/WuPingJu/status/1631646790079635457) 的推文。
+以上三种通过 Keyboard Maestro 使用 ChatGPT 的方式，最为推荐的是第二种，你可以根据需要选择合适自己的任意一种方式。除了以上使用 ChatGPT 的基本方式，即鼠标选中文字向 ChatGPT 提问，你还可以利用 Keyboard Maestro 的 [Conflict Palette](https://wiki.keyboardmaestro.com/manual/Palettes#Conflict_Palette)，制作在特定应用场景下使用的宏，比如对文字进行翻译、润色、总结、解释等，可以参考 [P.J. Wu 吳秉儒](https://twitter.com/WuPingJu/status/1631646790079635457) 的推文。
 
 ## 其他使用方式
 
@@ -276,7 +276,7 @@ PopClip 是一款通过简单的鼠标点击或手势，快速地完成剪贴板
 
 ### 快捷指令
 
-苹果的快捷指令（[Shortcuts](https://support.apple.com/guide/shortcuts/welcome/ios)）同样也可以用来调用 ChatGPT API，使用非常方便。比如 [吴秉儒](https://pinchlime.com/blog/chatgpt-api-shortcut/) 制作了一个简单的 Shortcuts，用 [快捷指令](https://www.icloud.com/shortcuts/a9ba455466774e4299c1077659fda7b3) 来使用 ChatGPT。
+苹果的快捷指令（[Shortcuts](https://support.apple.com/guide/shortcuts/welcome/ios)）同样也可以用来调用 ChatGPT API，使用非常方便。比如 [P.J. Wu 吳秉儒](https://pinchlime.com/blog/chatgpt-api-shortcut/) 制作了一个简单的 Shortcuts，用 [快捷指令](https://www.icloud.com/shortcuts/a9ba455466774e4299c1077659fda7b3) 来使用 ChatGPT。
 
 {{< imgcap title="使用 ChatGPT 的快捷指令" src="https://p15.p3.n0.cdn.getcloudapp.com/items/7Kuzd7wA/2e960384-bd7f-48b2-b008-e80c86e6156e.png" >}}
 
