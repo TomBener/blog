@@ -35,7 +35,7 @@ categories:
 
 [^080]: 尽管 ChatGPT API 一经推出便获得了 [GFW 的认证](https://github.com/noobnooc/noobnooc/discussions/9)。
 
-ChatGPT API 的价格为每 1000 个 tokens 0.002 美元，根据 [OpenAI 的介绍](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)，1 个 token 约等于 4 个英语字母，或者 0.75 个单词，换句话说，1 个英语单词约等于 1.33 tokens（1 个汉字约等于 2.33 个 tokens）。新注册的 OpenAI 账号会自动获得 18 美元的余额，拥有 900 万个 tokens 的请求量，你可以在注册或登录 OpenAI 账号之后，在 [这里](https://platform.openai.com/account/api-keys) 生成自己的 API key。
+ChatGPT API 的价格为每 1000 个 tokens 0.002 美元，根据 [OpenAI 的介绍](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)，1 个 token 约等于 4 个英语字母，或者 0.75 个单词，换句话说，1 个英语单词约等于 1.33 个 tokens（1 个汉字约等于 2.33 个 tokens）。新注册的 OpenAI 账号会自动获得 18 美元的余额，有效期三个月，拥有 900 万个 tokens 的请求量。你可以在注册或登录 OpenAI 账号之后，在 [这里](https://platform.openai.com/account/api-keys) 生成自己的 API key。
 
 毫无疑问，企业用户将会是 ChatGPT API 的主要客户，可以预见，一大批基于 ChatGPT API 的应用将会迅速出现，未来处处是 ChatGPT 的应用场景 [正在到来](https://www.bensbites.co/p/wave-chatgpt-apps)。
 
@@ -53,7 +53,7 @@ OpenAI 提供了一个 [Playground](https://platform.openai.com/playground?mode=
 
 ### ChatGPT API 网页版
 
-除了 OpenAI 官方的示例，有网友利用自己的 ChatGPT API 制作了专属的网页版，可以像 ChatGPT 预览版一样，直接在浏览器中使用，比如 [这个](https://freegpt.one/)。与 ChatGPT 的官方页面相比，它的优势是完全免费、无需登录、速度超快、打开即用。
+除了 OpenAI 官方的示例，有网友利用自己的 ChatGPT API 制作了专属的网页版，可以像 ChatGPT 预览版一样，直接在浏览器中使用，比如 [这个页面](https://freegpt.one/)。与 ChatGPT 的官方页面相比，它的优势是完全免费、无需登录、速度超快、打开即用。
 
 {{< imgcap title="基于 ChatGPT API 的网页应用" src="https://p15.p3.n0.cdn.getcloudapp.com/items/wbuDrjPY/8f79484a-35b7-498a-a6a1-364d7470d802.png" >}}
 
@@ -131,7 +131,7 @@ Python 库 `openai` 也提供了一个命令行工具，可以直接使用，而
 openai api chat_completions.create -m gpt-3.5-turbo -g user "Hello ChatGPT!"
 ```
 
-这行代码中，通过 `$(pbpaste)` 将剪切板内容转换为命令行的标准输入，而最前面的 `pbpaste` 是为了一并把问题粘贴回来。`openai` 是调用 Python 库的命令行工具，`api chat_completions.create` 是指创建一个 ChatGPT 对话，`-m gpt-3.5-turbo` 是指使用 `gpt-3.5-turbo` 模型，`-g user` 是指提问者角色为 `user`。
+这行命令中，`openai` 是调用 Python 库的命令行工具，`api chat_completions.create` 是指创建一个 ChatGPT 对话，`-m gpt-3.5-turbo` 是指使用 `gpt-3.5-turbo` 模型，`-g user` 是指提问者角色为 `user`。
 
 需要注意的是，上面这行命令没有提供 API key，这是因为我将它保存在了 `.zshrc` 中，方便全局调用。你可以在 `.bashrc` 或 `.zshrc` 中添加一行命令：
 
@@ -216,6 +216,8 @@ print(completion.choices[0].message.content)
 ```shell
 pbpaste && openai api chat_completions.create -m gpt-3.5-turbo -g user $(pbpaste)
 ```
+
+这行代码中，通过 `$(pbpaste)` 将剪切板内容转换为命令行的标准输入，而最前面的 `pbpaste` 是为了一并把问题粘贴回来。
 
 {{< imgcap title="在 Keyboard Maestro 中执行 Shell 脚本使用 ChatGPT API 的命令行工具" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQuWz7L9/8c796a72-97c3-4a22-9ae5-41a9bfed93cb.png" >}}
 
