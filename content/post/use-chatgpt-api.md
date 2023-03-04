@@ -142,7 +142,7 @@ export OPENAI_API_KEY='YOUR_API_KEY'
 然后就可以全局调用。如果没有将 API key 保存在环境变量中，则需要修改上面的命令为：
 
 ```shell
-pbpaste && openai -k YOUR_API_KEY api chat_completions.create -m gpt-3.5-turbo -g user "$(pbpaste)"
+openai -k YOUR_API_KEY api chat_completions.create -m gpt-3.5-turbo -g user "Hello ChatGPT!"
 ```
 
 ### Curl
