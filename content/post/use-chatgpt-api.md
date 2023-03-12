@@ -5,10 +5,6 @@ categories:
     - ChatGPT
 ---
 
-{{< admonition title="🔖 Note" >}}
-本文首发于 [少数派](https://sspai.com/post/78631)
-{{< /admonition >}}
-
 <h2>目录</h2>
 
 - [图形化应用](#图形化应用)

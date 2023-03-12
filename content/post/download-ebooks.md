@@ -5,6 +5,22 @@ categories:
     - eBook
 ---
 
+<h2>目录</h2>
+
+- [已订阅数据库](#已订阅数据库)
+- [Google Books](#google-books)
+- [Internet Archive](#internet-archive)
+- [Z-Library](#z-library)
+  - [访问暗网](#访问暗网)
+  - [Telegram Bot](#telegram-bot)
+  - [登录专属域名](#登录专属域名)
+  - [Book Searcher](#book-searcher)
+- [超星/全国图书馆参考咨询联盟](#超星全国图书馆参考咨询联盟)
+- [其他渠道](#其他渠道)
+
+---
+<br>
+
 信息自由是每个人都应享有的基本权利，与个人发展密切相关，而人类社会的很多领域，都是由于信息封闭导致的不开放甚至寻租腐败。为什么今天人们可以相对容易地转行软件工程师？一个非常重要的原因就在于计算机领域 [知识的开放](https://t.me/bluebird_channel/705)，不过遗憾的是，这并不具备普遍性。尽管我们的社会应该尽可能降低知识获取的门槛，然而这面临着各种各样的阻碍，并不容易实现。
 
 在学术论文领域，存在着各种各样的学术出版商，比如 [ScienceDirect](https://www.sciencedirect.com/)、[Springer](https://www.springer.com/)、[Taylor Francis](https://www.tandfonline.com)、[Wiley](https://www.wiley.com/)、[CNKI](https://www.cnki.net) 等，人类几乎所有的论文都可以在世界几大学术论文出版商处获得，尽管往往需要支付高得离谱的费用，不过好在我们有 [Sci-Hub](https://sci-hub.ru/)。因此，在一些学术论文互助群中，经常会有人抛出这样的问题「怎么会有下载不到的论文？」
@@ -20,6 +36,33 @@ categories:
 {{< imgcap title="通过机构 IP 登录 Springer 可以免费下载一些书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuOL10w/3ca35bc9-bfb6-4b1c-bf9e-8500f871cb73.png" >}}
 
 如果你所在的机构没有购买所需数据库，可以到公共图书馆去碰碰运气，例如 [浙江图书馆](https://www.zjlib.cn/)、[贵州图书馆](http://www.gzlib.org/)、[广西壮族自治区图书馆](http://www.gxlib.org.cn/) 等。
+
+除了机构已订阅的数据库外，也可以考虑它们的馆藏书籍，尽管这并非本文所涉及的电子书，但可以通过借阅得到纸质书，如果有需要的话，也可以扫描成电子书。
+
+## Google Books
+
+[Google Books](https://books.google.com) 是 Google 提供的一项服务，可以搜索到大量的书籍，不过由于版权问题，很多书籍并不是完整的，只能预览部分内容。如果你不需要一本完整的书籍，并且需要的页面正好能够预览，可以将它们下载下来。
+
+GitHub 上的一个开源项目 [JavaScript Google Books Preview Pages Downloader](https://github.com/mcdxn/google-books-preview-pages-downloader) 可以将 Google Books 上可预览的页面下载为图片。使用方法非常简单：
+
+1. 在 Google Chrome 或其他基于 Chromium 内核的浏览器打开书籍的页面
+2. 进入正在预览的书籍的起始页面，右键单击预览页面并选择「Inspect」打开 JavaScript 控制台
+3. 将下面的代码粘贴进去之后，然后按下回车键：
+
+    ```javascript
+    var gbppd=function(){let e=document.getElementById("viewport"),t=null,n=[],o=[],l=document.getElementsByClassName("overflow-scrolling"),i=l[0].scrollHeight,r=0,c="",s=function(e,t){for(let t of e)if("childList"==t.type&&(o=t.target.getElementsByTagName("img")))for(let e of o)n.push(e.src)},a=function(){(r+=700)<i?l[0].scrollBy(0,700):clearInterval(c)};return{start:function(){(t=new MutationObserver(s)).observe(e,{attributes:!0,childList:!0,subtree:!0}),c=setInterval(a,500)},finish:function(){{let e=new Set(n),o=window.open(),l=0;for(let t of e)o.document.write('<a href="'+t+'" download="page-0'+l+'">'+t+"</a><br>"),l+=1;!function(e){!function t(n){n>=e.length||(e[n].href.match(/books.google./)&&e[n].click(),setTimeout(function(){t(n+1)},500))}(0)}(o.document.getElementsByTagName("a")),t&&(t.disconnect(),t=null)}}}}();
+    ```
+
+4. 粘贴 `gbppd.start()`，然后按下回车键，开始获取图片链接
+5. 在需要停止的页面后，粘贴 `gbppd.finish()`，然后按下回车键
+
+之后会在一个新标签页中打开一个页面，里面包含了所有获取到的图片链接，点击链接即可下载。
+
+除此之外，也可以使用另一个类似的项目 [GoBooDo](https://github.com/vaibhavk97/GoBooDo)，它可以将 Google Books 上的书籍下载为 PDF 并对其进行 OCR，不过无法直接在浏览器中使用，需要安装 Python 环境。
+
+## Internet Archive
+
+[Internet Archive](https://archive.org/details/internetarchivebooks) 上有很多书籍的扫描版，少部分书籍可以免费下载。对于大部分无法直接下载的书籍，你可以免费借阅（Borrow）1 小时或 14 天，需要有一个 Internet Archive 账号。如果需要将借阅的书籍下载为 PDF 保存到本地，可以参考这个 [文字教程](https://www.reddit.com/r/Piracy/comments/l9exis/how_to_download_books_from_archive_org_and_how_to/) 或这个 [视频教程](https://www.youtube.com/watch?v=w21AoTx0ztk)。
 
 ## Z-Library
 
@@ -40,7 +83,7 @@ Telegram 官方机器人 [1lib](https://t.me/zlibrary2bot) 仍然可用。但为
 
 同样的，打开 <https://singlelogin.me> 登录后，会看到你的专属域名。记得不要泄漏出去！
 
-### Z-Library Searcher
+### Book Searcher
 
 在 Z-Library 被封禁期间，出现了一个基于 IPFS 的项目 Zlib Searcher，它是用 Rust 语言写的，本身并不存储书籍，只提供 Z-Library 上的书籍在 IPFS 网络中的链接，搜索速度极快。不过现在它为了规避潜在的法律风险，已改名为 [Book Searcher](https://github.com/book-searcher-org/book-searcher)，不再提供索引文件，好消息是还有一些此前基于该项目的实例可以使用：
 
