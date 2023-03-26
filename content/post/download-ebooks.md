@@ -16,6 +16,7 @@ categories:
   - [登录专属域名](#登录专属域名)
   - [Book Searcher](#book-searcher)
 - [超星/全国图书馆参考咨询联盟](#超星全国图书馆参考咨询联盟)
+- [Google](#google)
 - [其他渠道](#其他渠道)
 
 ---
@@ -106,14 +107,18 @@ Telegram 官方机器人 [1lib](https://t.me/zlibrary2bot) 仍然可用。但为
 
 超星早年间承担了国内大学图书馆藏书数字化的工作，有一大批独家的 PDF 格式的扫描版电子书，Z-Library 上的中文书籍基本来自于这种渠道，淘宝上的「[找书服务](https://mp.weixin.qq.com/s/7SX-Oztgx2q76AN5YpntTA)」基本上也是基于超星的。
 
-超星不直接对用户提供服务，但也有一些免费的 [超星接口](https://freembook.com/)，可以直接用书名搜索，也可以用 SS/DX 号搜索，得到的结果是秒传链接，按照网站的提示下载书籍即可。除此之外，还可以使用 Telegram 机器人 [秒传书库](https://t.me/mcbooksbot) 搜索书籍的秒存直链。
+超星不直接对用户提供服务，但也有一些免费的 [超星接口](https://freembook.com/)，可以直接用书名搜索，也可以用 SS/DX 号搜索，得到的结果是秒传链接，按照网站的提示下载书籍即可。除此之外，还可以使用 Telegram 机器人 [秒传书库](https://t.me/mcbooksbot) 搜索书籍的秒存直链，使用方法见 [这篇文章](https://blog.yibook.org/post/mcbook/)。
 
 如果通过这些免费方式无法获取到你需要的书籍，可以试试付费的方式：
 
-- [互助联盟](https://u.xueshu86.com/)：1 元/本
-- [一元图书](https://1yuanbook.com/)：2 元/本
+- [互助联盟](https://u.xueshu86.com/)：2 元/本
+- [一元图书](https://1yuanbook.com/)：1 元/本
 
 关于如何下载全国图书馆参考咨询联盟的书籍，也可以参考 [超星书籍简明下载流程](https://ssdown.org/blog/quick/)。
+
+## Google
+
+如果以上渠道都尝试过了，还是没有找到你需要的书籍，别忘了尝试一下在 Google 上搜索。尽管这种方法看上去有点「低级」，但有时候可能会有意想不到的收获。当然，掌握一点搜索引擎技巧也是很有必要的，比如搜索 PDF 的时候，可以在关键词后面加上 `filetype:pdf`，这样可以过滤掉一些不是 PDF 格式的结果。
 
 ## 其他渠道
 
@@ -122,3 +127,4 @@ Telegram 官方机器人 [1lib](https://t.me/zlibrary2bot) 仍然可用。但为
 - [Z-Library 中文书](https://bk.hallowlib.org)
 - [Project Gutenberg](https://www.gutenberg.org)
 - [中国哲学书籍电子化计划](https://ctext.org/zh)
+- [史料文献馆](http://ab678.cn)
