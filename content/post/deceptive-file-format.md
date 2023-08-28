@@ -11,9 +11,9 @@ date: 2023-08-28
 
 ## PDG
 
-尽管有在线工具可以将 PDG 文件格式转换为 PDF，但由于这本书的体积过大，超过了网站的限制，无法实现在线转换。既然无法在线转换，我就决定来研究一下 PDG 格式，看看能不能实现在本地转换。搜索一番之后，发现 PDG 文件是超星公司特有的电子书格式，需要专门的阅读器才能打开。在 Windows 平台上，可以使用 [Pdg2Pic](https://www.cnblogs.com/stronghorse/p/17406168.html) 这款软件将 PDG 转换为 PDF，然而 macOS 上没有类似的软件。不过我没有放弃，还是在 GitHub 上搜索了一下，想看看有没有什么开源的实现方案。
+尽管有在线工具可以将 PDG 文件格式转换为 PDF，但由于这本书的体积过大，超过了网站的限制，无法实现在线转换。既然如此，我就决定来研究一下 PDG 格式，看看能不能实现在本地转换。搜索一番之后，发现 PDG 文件是超星公司特有的电子书格式，需要专门的阅读器才能打开。在 Windows 平台上，可以使用 [Pdg2Pic](https://www.cnblogs.com/stronghorse/p/17406168.html) 这款软件将 PDG 转换为 PDF，然而 macOS 上没有类似的软件。
 
-在 GitHub 中搜索关键词 `pdg to pdf`，可以搜到 [3 个相关的仓库](https://github.com/search?q=pdg%20to%20pdf&type=repositories)，其中两个是用 Python 写的，还有一个是用 macOS 上的 Automator 实现的。它们的 README 中都提到「PDG 格式本质就是一种图片」，从代码实现思路来看，也证实了这一点。尽管受到了这一点的启发，但我并没有使用它们，而是参考 [这个仓库](https://github.com/nizaiwo/pdg2pdf) 的思路，通过 Shell 脚本将文件扩展名从 PDG 转换为 PDF，在 ChatGPT 的帮助下写了以下这几行代码：
+不过我没有放弃，还是在 GitHub 上搜索了一下，想看看有没有什么开源的实现方案。在 GitHub 中搜索关键词 [pdg to pdf](https://github.com/search?q=pdg%20to%20pdf&type=repositories)，可以搜到 3 个相关的仓库，其中两个是用 Python 写的，还有一个是用 macOS 上的 Automator 实现的。它们的 README 中都提到「PDG 格式本质就是一种图片」，从代码实现思路来看，也证实了这一点。尽管受到了这一点的启发，但我并没有使用它们，而是参考 [这个仓库](https://github.com/nizaiwo/pdg2pdf) 的思路，通过 Shell 脚本来将 PDG 转换为 PDF，在 ChatGPT 的帮助下写了以下这几行代码：
 
 ```shell
 # Rename all files with extension .pdg to .jpg
@@ -54,7 +54,7 @@ brew install rename
 brew install imagemagick
 ```
 
-事实上，这几行代码的作用与我此前介绍的「[图片转 PDF](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)」是类似的，只不过多了一个修改文件扩展名的步骤，不过，在弄明白 PDG 的真正面目之后，这一步也是可以省略的。
+事实上，这几行代码的作用与我此前介绍的「[图片转 PDF](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)」是类似的，只不过多了一个修改文件扩展名的步骤。不过，在弄清楚 PDG 的真正面目之后，这一步也是可以省略的。
 
 我们假设当前目录中有一个 `test.pdg` 的文件，在终端中输入 `file test.pdg`，按下回车之后会输出以下结果：
 
@@ -159,7 +159,7 @@ Archive:  test.ofd
 zip -r ../test.ofd *
 ```
 
-将其压缩回 OFD 文件格式，就可以轻松实现文件内容的修改[^3]，何谈「精准呈现、安全有保障」？就算 OFD 采用了额外的加密算法来防止篡改，仅采用 XML 描述文件这一点就已经被 PDF 甩开几条街了，更不用说普通消费者要想将 Word 文件转换为 OFD，还要先将其转换为 PDF 了。不得不说，标准制定者和开发者的脑回路实在是很清奇，难怪 [网友评论](https://zhuanlan.zhihu.com/p/150242512) 道「放着世界通用便捷的 PDF 不用，不知道为什么要搞这种小众格式，折腾」。
+将其压缩回 OFD 文件格式，就可以轻松实现文件内容的修改[^3]，何谈「精准呈现、安全有保障」？就算 OFD 采用了额外的加密算法来防止篡改，仅采用 XML 描述文件这一点就已经被 PDF 甩开几条街了，更不用说普通消费者要想将 Word 文件转换为 OFD，还要先将其转换为 PDF。不得不说，标准制定者和开发者的脑回路实在是很清奇，难怪 [网友评论](https://zhuanlan.zhihu.com/p/150242512) 道「放着世界通用便捷的 PDF 不用，不知道为什么要搞这种小众格式，折腾」。
 
 [^3]: 这与 Microsoft Word 文件是类似的。
 
