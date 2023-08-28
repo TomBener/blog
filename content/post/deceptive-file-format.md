@@ -100,7 +100,7 @@ convert $files output.pdf
 
 > 这样的做去，各人天生的聪明才力虽不平等，而各人的服务道德心发达，各就平等的出发点而尽量发展，以贡献于人群，也可算是平等了。这是真平等。
 
-{{< imgcap title="邹韬奋在 1929 年所说的「什么是真平等？」" src="https://p15.p3.n0.cdn.getcloudapp.com/items/yAu9dkLL/1e709c4c-0d4b-4a23-bf16-61a1cf8e8ac3.png" >}}
+{{< imgcap title="邹韬奋在 1927 年所说的「什么是真平等？」" src="https://p15.p3.n0.cdn.getcloudapp.com/items/yAu9dkLL/1e709c4c-0d4b-4a23-bf16-61a1cf8e8ac3.png" >}}
 
 ## OFD
 
@@ -155,7 +155,7 @@ Archive:  test.ofd
 
 可以发现，如 IT 之家的那篇文章所说，OFD 内部的确采用可扩展标记语言 XML 来描述数据和结构，但「体积精简，安全开放，易于扩展」就完全说不过去了。事实上，只要修改一下 XML 文件中的内容，然后再将文件夹 `unzip` 压缩回 OFD，就可以轻松实现文件内容的修改，何谈「精准呈现、安全有保障」？就算 OFD 采用了额外的加密算法来防止篡改，仅采用 XML 描述文件这一点就已经被 PDF 甩开几条街了，也难怪 [网友评论](https://zhuanlan.zhihu.com/p/150242512) 道「放着世界通用便捷的 PDF 不用，不知道为什么要搞这种小众格式，折腾」。
 
-前几天，数字广东网络建设有限公司发布的「CEC-IDE 软件研发工具」引起了不少 [讨论](https://github.com/microsoft/vscode/issues/191229)，因为基于开源的 VS Code 开发了一个套壳软件 CEC-IDE，并宣称这是「国企品牌，自主研发」。而这已不是第一次类似的案例了，去年 10 月，国内有人将免费的 VS Code 放在网上 [销售](https://github.com/microsoft/vscode/issues/163798)，「领取 20 元优惠券即可以超低价 39.7 元购买 VS Code 代码编辑器官方中文版」，实在是让人感到无语至极。
+前几天，数字广东网络建设有限公司发布的「CEC-IDE 软件研发工具」引起了不少 [讨论](https://github.com/microsoft/vscode/issues/191229)，因为基于开源的 VS Code 开发了一个套壳软件 CEC-IDE，并宣称这是「国企品牌，自主研发」。而这已不是第一次类似的案例了，去年 10 月，国内有人将免费的 VS Code 放在网上 [销售](https://github.com/microsoft/vscode/issues/163798)，「领取 20 元优惠券即可以超低价 39.7 元购买 VS Code 代码编辑器官方中文版」，实在是让人无语至极。
 
 以上这几个例子，只是软件开发领域所谓「自主研发」的冰山一角，如果从整个中国经济社会来看，这样的现象可能更加数不胜数。我不知作何评价，就用严复[^2] 的这段话来结尾吧：
 
