@@ -36,6 +36,8 @@ categories:
 
 {{< imgcap title="通过机构 IP 登录 Springer 可以免费下载一些书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuOL10w/3ca35bc9-bfb6-4b1c-bf9e-8500f871cb73.png" >}}
 
+{{< imgcap title="在 De Gruyter 下载机构购买的书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/JrueoY6Y/a95761ca-68d9-4e30-92b4-4b9763d31835.png" >}}
+
 如果你所在的机构没有购买所需数据库，可以到公共图书馆去碰碰运气，例如 [浙江图书馆](https://www.zjlib.cn/)、[贵州图书馆](http://www.gzlib.org/)、[广西壮族自治区图书馆](http://www.gxlib.org.cn/) 等。
 
 除了机构已订阅的数据库外，也可以考虑它们的馆藏书籍，尽管这并非本文所涉及的电子书，但可以通过借阅得到纸质书，如果有需要的话，也可以扫描成电子书。
@@ -111,8 +113,8 @@ Telegram 官方机器人 [1lib](https://t.me/zlibrary2bot) 仍然可用。但为
 
 如果通过这些免费方式无法获取到你需要的书籍，可以试试付费的方式：
 
-- [互助联盟](https://u.xueshu86.com/)：2 元/本
 - [一元图书](https://1yuanbook.com/)：1 元/本
+- [互助联盟](https://u.xueshu86.com/)：2 元/本
 
 关于如何下载全国图书馆参考咨询联盟的书籍，也可以参考 [超星书籍简明下载流程](https://ssdown.org/blog/quick/)。
 
