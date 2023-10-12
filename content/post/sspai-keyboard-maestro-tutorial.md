@@ -6,7 +6,7 @@ categories:
 ---
 
 {{< admonition title="🔖 Note" >}}
-本文节选自我在少数派上撰写的付费栏目《[生产力超频：Keyboard Maestro 拯救效率](https://sspai.com/series/350)》，如果你感兴趣，欢迎前往购买，感谢支持。
+本文节选自我在少数派撰写的付费栏目《[生产力超频：Keyboard Maestro 拯救效率](https://sspai.com/series/350)》，如果你感兴趣，欢迎前往购买，感谢支持。
 {{< /admonition >}}
 
 <h2>目录</h2>
@@ -70,6 +70,9 @@ Keyboard Maestro 最初由 [Michael Kamprath](https://wiki.keyboardmaestro.com/m
 Stairways Software 官网 [About](https://www.stairways.com/main/about) 页面有这样一句话介绍创始人 Peter N Lewis 的理念：
 
 > Peter’s goal was to bring high quality Internet and Unix tools to the Mac, combining the traditional Mac ease-of-use with the power of the Internet and Unix.
+> 
+> ---
+> 
 > Peter 的目标是将高质量的互联网和 Unix 工具带给 Mac 用户，同时结合 Mac 的易用性与互联网和 Unix 的强大功能。
 
 而在我看来，Keyboard Maestro 这款软件的设计理念确实恰到好处地体现了 [Unix 哲学](https://en.wikipedia.org/wiki/Unix_philosophy)。
@@ -527,6 +530,8 @@ pbpaste | xargs -n 1 curl -O
 在 macOS 上，一提到自动处理文件，就绕不开 [Hazel](https://www.noodlesoft.com/)。尽管 Hazel 的功能非常强大，但价格也同样不便宜，如果你不想额外花费 40 多美元购买并学习使用一款新软件，并且只需要用到一些常用的文件自动化功能，那么 Keyboard Maestro 就足以应对，正如一位网友[所说](https://talk.macpowerusers.com/t/can-this-be-done-with-keyboard-maestro/17740/6)：
 
 > There is an advantage for a KM user who isn’t really using Hazel - which would be me: You can get rid of Hazel and use the automation capabilities you’re already familiar with. It’s just the trigger that’s novel.
+> 
+> ---
 > 
 > 对于像我这样并不真正使用 Hazel 的用户来说，使用 Keyboard Maestro 有一个优势：你可以摆脱 Hazel，使用你已经熟悉的自动化功能，新颖的只是触发器而已。
 
