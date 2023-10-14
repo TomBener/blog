@@ -3,3 +3,14 @@
 *::after {
   box-sizing: border-box;
 }
+
+// Disable the overflow of inline code in mobile view
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
