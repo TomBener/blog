@@ -2,7 +2,7 @@ baseurl: "https://example.com"
 languageCode: "en-us"
 title: "Hugo Tania"
 theme: "hugo-tania"
-paginate: 6
+pagination.pagerSize: 6
 
 disqusShortname: https-hugo-tania-netlify-app
 

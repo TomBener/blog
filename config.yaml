@@ -2,7 +2,7 @@ baseurl: https://blog.retompi.com/
 languageCode: zh-cn
 title: "TomBen’s Blog"
 theme: "hugo-tania"
-paginate: 10
+pagination.pagerSize: 10
 
 # Theme i18n support
 DefaultContentLanguage: zh-cn
