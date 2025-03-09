@@ -216,7 +216,7 @@ def finalize(doc):
         if isinstance(elem, pf.Div) and "references" in elem.classes:
             # 按拼音排序中文参考文献条目，并将其附加到非中文条目的末尾
             # 交换加号前后的顺序可以改变中文和非中文参考文献条目的顺序
-            elem.content = doc.non_chinese_entries + doc.chinese_entries
+            elem.content = doc.chinese_entries + doc.non_chinese_entries
             break
 ```
 
