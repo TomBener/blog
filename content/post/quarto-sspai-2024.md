@@ -20,9 +20,9 @@ categories:
 
 几年前，我曾分享过基于 [Markdown 写作并使用 Pandoc 转换的纯文本学术写作流程](https://sspai.com/post/64842)，这篇文章是我在少数派发布的文章中点赞数量最多的一篇，时至今日仍能收到不少读者的反馈。，这也从侧面反映出，学术写作工具与流程的优化，是许多同学和研究者的共同需求。时光荏苒，四年过去了，技术在不断更新迭代，开源社区也在持续贡献着新的工具和方案。碰巧的是，在我发布那篇文章的同一个月，RStudio（现已更名为 Posit）团队发布了 [Quarto 的第一个版本](https://github.com/quarto-dev/quarto-cli/releases/tag/v0.1.13)——一个基于 Pandoc 的开源科学出版系统，进一步提升了学术写作的效率和体验。
 
-对于熟悉我上一篇文章的读者来说，可能会有疑问：既然 Pandoc 已经足够强大且能满足学术写作需求，为什么还要重复造轮子，开发 [Quarto](https://quarto.org/) 呢？这是因为 Quarto 在 Pandoc 的基础上提供了更多针对科学出版的功能和更加友好的使用体验。例如，Quarto 支持直接在文章中直接运行 [Python](https://quarto.org/docs/computations/python.html), [R](https://quarto.org/docs/computations/r.html), [Julia](https://quarto.org/docs/computations/julia.html) 等代码[^llm]，额外支持交叉引用、参考文献预览、可视化编辑等，可以非常便捷地生成可重复稿件（reproducible manuscripts）。如果说 Pandoc 是文档转换的瑞士军刀，那么 Quarto 则是专注于学术写作的利器[^quarto]。
+对于熟悉我上一篇文章的读者来说，可能会有疑问：既然 Pandoc 已经足够强大且能满足学术写作需求，为什么还要重复造轮子，开发 [Quarto](https://quarto.org/) 呢？这是因为 Quarto 在 Pandoc 的基础上提供了更多针对科学出版的功能和更加友好的使用体验。例如，Quarto 支持直接在文章中直接运行 [Python](https://quarto.org/docs/computations/python.html)、[R](https://quarto.org/docs/computations/r.html)、[Julia](https://quarto.org/docs/computations/julia.html) 等代码[^llm]，额外支持交叉引用、参考文献预览、可视化编辑等，可以非常便捷地生成可重复稿件（reproducible manuscripts）。如果说 Pandoc 是文档转换的瑞士军刀，那么 Quarto 则是专注于学术写作的利器[^quarto]。
 
-[^llm]: 这一功能来自于 Quarto 的前辈—— RStudio 开发的另一款工具 [R Markdown](https://rmarkdown.rstudio.com/)。如今，在大语言模型的加持下，这种类似于文学式编程（[literate programming](https://en.wikipedia.org/wiki/Literate_programming)）的写作方式，能够让学术写作变得更加高效和自然。
+[^llm]: 这一功能来自于 Quarto 的前辈——RStudio 开发的另一款工具 [R Markdown](https://rmarkdown.rstudio.com/)。如今，在大语言模型的加持下，这种类似于文学式编程（[literate programming](https://en.wikipedia.org/wiki/Literate_programming)）的写作方式，能够让学术写作变得更加高效和自然。
 
 [^quarto]: 值得一提的是，Quarto 命令行工具中包含 Pandoc，因此如果你已经安装了 Quarto，则不需要额外安装 Pandoc。目前 Quarto 正式版的最新版本是 [1.6.42](https://github.com/quarto-dev/quarto-cli/releases/tag/v1.6.42)，其中包括了 Pandoc 3.4。
 
@@ -234,7 +234,7 @@ def finalize(doc):
 
 为了解决不同文件格式中的中英文引号问题，我的解决方案是在 Markdown 中包裹中文的引号使用直角引号 `「`、`」`、`『`、`』`。这样做有两个好处：一是输入上方便明确，二是可以在纯文本里直观地区分出中文引号的语义范围。然后在输出不同格式时，通过以下三个 Lua filters 自动转换为对应格式下合适的引号：
 
-- [latex-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/latex-quotes.lua)：处理 LaTeX 中的引号，将中文直角引号转换为东欧语系的引号 `«`、`»`、`‹`、`›`（因为它们在中英文中基本上不会出现），然后在编译 LaTeX 时通过宏包 [newunicodechar](https://ctan.org/pkg/newunicodechar) 将其转换为蝌蚪引号，并对标题中的中文引号进行特别处理，使其在 PDF 书签中 [正确显示](https://tex.stackexchange.com/questions/592335/wrong-double-quotes-in-pdf-bookmarks)。
+- [latex-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/latex-quotes.lua)：处理 LaTeX 中的引号，将中文直角引号转换为东欧语系的引号 `«`、`»`、`‹`、`›` 作为中介（因为它们在中英文中基本上不会出现），然后在编译 LaTeX 时通过宏包 [newunicodechar](https://ctan.org/pkg/newunicodechar) 将其转换为蝌蚪引号，并对标题中的中文引号进行特别处理，使其在 PDF 书签中 [正确显示](https://tex.stackexchange.com/questions/592335/wrong-double-quotes-in-pdf-bookmarks)。
 - [docx-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/docx-quotes.lua)：处理 DOCX 中的引号，将直角引号转换为蝌蚪引号。
 - [cnbib-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/cnbib-quotes.lua)：处理 HTML 和 ePub 参考文献列表中的引号，将蝌蚪引号转换为直角引号。
 
