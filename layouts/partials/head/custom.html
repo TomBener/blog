@@ -28,4 +28,16 @@
     font-family: var(--code-font-family);
     font-display: swap;
   }
+
+  /* Fix inline code height and alignment */
+  :not(pre) > code {
+    font-size: 0.9em;
+    padding: 3px 5px;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    position: relative;
+    top: -0.05em;
+    border-radius: 3px;
+  }
 </style>

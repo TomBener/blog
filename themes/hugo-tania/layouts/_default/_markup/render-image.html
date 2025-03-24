@@ -5,7 +5,7 @@
       alt="{{ .Text }}" 
       {{ with .Title}} title="{{ . }}"{{ end }} />
     {{- if ne .Text "" -}}
-    <span class="caption-text">{{ .Text }}</span>
+    <span class="caption-text">{{ .Text | safeHTML }}</span>
     {{- end -}}
   </span>
 {{- else -}}
@@ -27,7 +27,7 @@
       width={{ $image.Width }} 
       height="{{ $image.Height }}" />
     {{- if ne .Text "" -}}
-    <span class="caption-text">{{ .Text }}</span>
+    <span class="caption-text">{{ .Text | safeHTML }}</span>
     {{- end -}}
   </span>
 {{- end -}}
