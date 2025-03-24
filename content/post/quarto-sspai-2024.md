@@ -18,7 +18,7 @@ categories:
 
 学术论文写作是一项繁琐而严谨的工作，但却是科研工作的核心环节。写好一篇学术论文，不仅需要有大量的文献阅读和扎实的实证研究，还需要有严谨的理论分析和精准的表达能力。除此之外，「用什么工具写」也是一个非常重要的问题，选择合适的写作工具，往往能起到事半功倍的效果。
 
-几年前，我曾分享过基于 [Markdown 写作并使用 Pandoc 转换的纯文本学术写作流程](https://sspai.com/post/64842)，这篇文章是我在少数派发布的文章中点赞数量最多的一篇，时至今日仍能收到不少读者的反馈。，这也从侧面反映出，学术写作工具与流程的优化，是许多同学和研究者的共同需求。时光荏苒，四年过去了，技术在不断更新迭代，开源社区也在持续贡献着新的工具和方案。碰巧的是，在我发布那篇文章的同一个月，RStudio（现已更名为 Posit）团队发布了 [Quarto 的第一个版本](https://github.com/quarto-dev/quarto-cli/releases/tag/v0.1.13)——一个基于 Pandoc 的开源科学出版系统，进一步提升了学术写作的效率和体验。
+几年前，我曾分享过基于 [Markdown 写作并使用 Pandoc 转换的纯文本学术写作流程](https://sspai.com/post/64842)，这篇文章是我在少数派发布的文章中点赞数量最多的一篇，时至今日仍能收到不少读者的反馈，这也从侧面反映出，学术写作工具与流程的优化，是许多同学和研究者的共同需求。时光荏苒，四年过去了，技术在不断更新迭代，开源社区也在持续贡献着新的工具和方案。碰巧的是，在我发布那篇文章的同一个月，RStudio（现已更名为 Posit）团队发布了 [Quarto 的第一个版本](https://github.com/quarto-dev/quarto-cli/releases/tag/v0.1.13)——一个基于 Pandoc 的开源科学出版系统，进一步提升了学术写作的效率和体验。
 
 对于熟悉我上一篇文章的读者来说，可能会有疑问：既然 Pandoc 已经足够强大且能满足学术写作需求，为什么还要重复造轮子，开发 [Quarto](https://quarto.org/) 呢？这是因为 Quarto 在 Pandoc 的基础上提供了更多针对科学出版的功能和更加友好的使用体验。例如，Quarto 支持直接在文章中直接运行 [Python](https://quarto.org/docs/computations/python.html)、[R](https://quarto.org/docs/computations/r.html)、[Julia](https://quarto.org/docs/computations/julia.html) 等代码[^llm]，额外支持交叉引用、参考文献预览、可视化编辑等，可以非常便捷地生成可重复稿件（reproducible manuscripts）。如果说 Pandoc 是文档转换的瑞士军刀，那么 Quarto 则是专注于学术写作的利器[^quarto]。
 
@@ -26,7 +26,7 @@ categories:
 
 [^quarto]: 值得一提的是，Quarto 命令行工具中包含 Pandoc，因此如果你已经安装了 Quarto，则不需要额外安装 Pandoc。目前 Quarto 正式版的最新版本是 [1.6.42](https://github.com/quarto-dev/quarto-cli/releases/tag/v1.6.42)，其中包括了 Pandoc 3.4。
 
-尽管如此，Quarto 也并非完美无缺。由于它主要是为英语写作开发的工具，对于中文写作的支持并不十分完善，比如中西文混排下的引号、空格，学术写作的参考文献排序、本地化字符等，都需要进行额外的配置和处理。在过去的一年，我全面转向使用 Quarto 来撰写包括期刊论文、学位论文、会议报告在内的所有学术相关的文档。从最初的摸索到后来的得心应手，这一路积累了不少实践心得，特别是针对多种输出格式的改进和中文写作的优化。本文将结合我过往使用 Markdown + Pandoc 的经验，分享我使用 Quarto 进行学术写作的技巧，实现通过一份 Markdown 源文件输出完美的 Word、PDF、HTML 和 ePub 等格式。
+尽管如此，Quarto 也并非完美无缺。由于它主要是为英语写作开发的工具，对于中文写作的支持并不十分完善，比如中西文混排下的引号、空格，学术写作的参考文献排序、本地化字符等，都需要进行额外的配置和处理。在过去的一年，我全面转向使用 Quarto 来撰写包括期刊论文、学位论文、会议报告在内的所有学术相关的文档。从最初的摸索到后来的得心应手，这一路积累了不少实践心得，特别是针对多种输出格式的改进和中文写作的优化。本文将结合我过往使用 Markdown + Pandoc 的经验，分享我使用 Quarto 进行学术写作的技巧，实现通过一份 Markdown 源文件输出完美的 Word、PDF、HTML 和 EPUB 等格式。
 
 为了更好地方便读者使用 Quarto 进行中文论文写作，我在 GitHub 上开源了 [quarto-cn-tools](https://github.com/TomBener/quarto-cn-tools) 项目，下文的内容也主要基于这个项目。
 
@@ -163,7 +163,7 @@ format:
 
 ### 中文参考文献按拼音排序
 
-在著者-年份制的参考文献表中，中文文献一般需要按照拼音排序。基于 GB/T 7714-2015 的 BibLaTeX 样式包 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 支持使用 `biber` 对中文文献按照排序，但 Pandoc 使用的 `citeproc` 不能区分中英文作者，无法实现对中文文献按拼音排序。对于 DOCX 输出来说，只能在 Word 中打开 Pandoc 或 Quarto 生成的文件，然后点击「排序」功能选择拼音排序，但对于 HTML 和 ePub 输出来说，则基本上束手无策。因此，中文参考文献的排序问题一直是一个令人十分头疼的问题。
+在著者-年份制的参考文献表中，中文文献一般需要按照拼音排序。基于 GB/T 7714-2015 的 BibLaTeX 样式包 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 支持使用 `biber` 对中文文献按照排序，但 Pandoc 使用的 `citeproc` 不能区分中英文作者，无法实现对中文文献按拼音排序。对于 DOCX 输出来说，只能在 Word 中打开 Pandoc 或 Quarto 生成的文件，然后点击「排序」功能选择拼音排序，但对于 HTML 和 EPUB 输出来说，则基本上束手无策。因此，中文参考文献的排序问题一直是一个令人十分头疼的问题。
 
 由于 Lua 语言没有完善的汉语拼音库，我选择使用 Python 语言来编写 [Pandoc filter](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/sort-cnbib.py) `sort-cnbib.py`，即利用 [pypinyin](https://github.com/mozillazg/python-pinyin) 来获取中文文献著者的汉语拼音，然后通过 Pandoc 的 Python 接口库 [Panflute](https://github.com/sergiocorreia/panflute) 来修改 AST，实现中文参考文献按照拼音排序的目的。为了对多音字进行正确的排序，这个 filter 还对以下常见的多音字姓氏进行了特殊处理：
 
@@ -234,17 +234,17 @@ def finalize(doc):
 
 ![Pandoc 3.2.1 及之后的版本中，Pandoc 优化了中文在 DOCX 中的排版，可以将包裹中文的引号渲染为宽字符，上图为 Pandoc 3.2 转换得到的 DOCX 文件，下图为 Pandoc 3.6.3 转换得到的 DOCX 文件](https://cdn.retompi.com/ce4e252e-2527-454d-b4b4-06e93cdfe9a1.png)
 
-除了 DOCX 外，LaTeX 中的引号也是十分棘手的问题，这同样是因为 Pandoc 没有将中文和英文区别对待。在 LaTeX 中，英文单引号为 `` `text' ``，输出结果为 `‘text’`，双引号为 ` ``text'' `，输出结果为 `“text”`。而中文引号直接使用 `“`、`”`、`‘`、`’` 表示就可以了。此外，对于 HTML 和 ePub 这两种格式来说，由于它们是基于网页排版的，所以需要使用直角引号 `「`、`」`、`『`、`』` 来包裹中文，因此也就不需要对正文进行处理，只需将参考文献列表中的蝌蚪引号转换为直角引号，确保全文引号使用一致。
+除了 DOCX 外，LaTeX 中的引号也是十分棘手的问题，这同样是因为 Pandoc 没有将中文和英文区别对待。在 LaTeX 中，英文单引号为 `` `text' ``，输出结果为 `‘text’`，双引号为 ` ``text'' `，输出结果为 `“text”`。而中文引号直接使用 `“`、`”`、`‘`、`’` 表示就可以了。此外，对于 HTML 和 EPUB 这两种格式来说，由于它们是基于网页排版的，所以需要使用直角引号 `「`、`」`、`『`、`』` 来包裹中文，因此也就不需要对正文进行处理，只需将参考文献列表中的蝌蚪引号转换为直角引号，确保全文引号使用一致。
 
 为了解决不同文件格式中的中英文引号问题，我的解决方案是在 Markdown 中包裹中文的引号使用直角引号 `「`、`」`、`『`、`』`。这样做有两个好处：一是输入上方便明确，二是可以在纯文本里直观地区分出中文引号的语义范围。然后在输出不同格式时，通过以下三个 Lua filters 自动转换为对应格式下合适的引号：
 
 - [latex-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/latex-quotes.lua)：处理 LaTeX 中的引号，将中文直角引号转换为东欧语系的引号 `«`、`»`、`‹`、`›` 作为中介（因为它们在中英文中基本上不会出现），然后在编译 LaTeX 时通过宏包 [newunicodechar](https://ctan.org/pkg/newunicodechar) 将其转换为蝌蚪引号，并对标题中的中文引号进行特别处理，使其在 PDF 书签中 [正确显示](https://tex.stackexchange.com/questions/592335/wrong-double-quotes-in-pdf-bookmarks)。
 - [docx-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/docx-quotes.lua)：处理 DOCX 中的引号，将直角引号转换为蝌蚪引号。
-- [cnbib-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/cnbib-quotes.lua)：处理 HTML 和 ePub 参考文献列表中的引号，将蝌蚪引号转换为直角引号。
+- [cnbib-quotes.lua](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/cnbib-quotes.lua)：处理 HTML 和 EPUB 参考文献列表中的引号，将蝌蚪引号转换为直角引号。
 
-通过这一套方案，我们就可以让 Quarto 输出的 DOCX、PDF、HTML 和 ePub 都各自使用符合其格式的引号，即在 DOCX 和 PDF 中使用看上去较宽的蝌蚪引号包裹中文，在 HTML 和 ePub 中使用直角引号包裹中文，而英文引号则保持不变。
+通过这一套方案，我们就可以让 Quarto 输出的 DOCX、PDF、HTML 和 EPUB 都各自使用符合其格式的引号，即在 DOCX 和 PDF 中使用看上去较宽的蝌蚪引号包裹中文，在 HTML 和 EPUB 中使用直角引号包裹中文，而英文引号则保持不变。
 
-![在不同格式下，中文引号被转换为不同的样式，DOCX 和 PDF 中使用蝌蚪引号，HTML 和 ePub 中使用直角引号](https://cdn.retompi.com/fe0d315b-2601-4607-85cc-75f87f141b47.png)
+![在不同格式下，中文引号被转换为不同的样式，DOCX 和 PDF 中使用蝌蚪引号，HTML 和 EPUB 中使用直角引号](https://cdn.retompi.com/fe0d315b-2601-4607-85cc-75f87f141b47.png)
 
 ### 中西文盘古之白
 
@@ -288,7 +288,7 @@ def load_config():
 
 ![使用 `auto-correct.py` 自动添加中西文之间的空格并纠正标点符号](https://cdn.retompi.com/ce1f0124-ec3d-438d-8030-e47b30eda43e.png)
 
-值得一提的是，在不同的输出格式下，对「中西文盘古之白」的处理存在着差异。对于通过 LaTeX 生成的 PDF 来说，用于中文排版的 [ctex](https://ctan.org/pkg/ctex) 宏包会自动处理中英文之间的空格，因此无需使用这个 Python filter。只有在转换为 HTML、ePub 等其他格式，才需要使用这个 filter。而对于 DOCX 来说，情况则比较特殊，这是因为 Microsoft Word 有自动调整中西文间距的功能。
+值得一提的是，在不同的输出格式下，对「中西文盘古之白」的处理存在着差异。对于通过 LaTeX 生成的 PDF 来说，用于中文排版的 [ctex](https://ctan.org/pkg/ctex) 宏包会自动处理中英文之间的空格，因此无需使用这个 Python filter。只有在转换为 HTML、EPUB 等其他格式，才需要使用这个 filter。而对于 DOCX 来说，情况则比较特殊，这是因为 Microsoft Word 有自动调整中西文间距的功能。
 
 ![Microsoft Word 中自动调整中西文间距的设置](https://cdn.retompi.com/6494e9fe-3356-4bcc-a415-23aa35c8a6f5.png)
 
