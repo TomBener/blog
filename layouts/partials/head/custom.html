@@ -10,16 +10,22 @@
     }
 </style>
 
-  <!-- This script use to load font from outside -->
-  <script>
-    (function () {
-        const customFont = document.createElement('link');
-        {{/*  customFont.href = "https://fonts.bunny.net/css?family=jetbrains-mono:400,600,700|noto-serif:400,400i,700,700i|noto-serif-sc:500,700";  */}}
-        customFont.href = "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap";
-  
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-  
-        document.head.appendChild(customFont);
-    }());
-  </script>
+<!-- Preconnect to Google Fonts to establish early connection -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Load fonts with font-display:swap for better rendering -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap&font-display=swap" rel="stylesheet">
+
+<!-- Fallback styles to ensure content is readable before font loads -->
+<style>
+  /* Apply system fonts as fallbacks with similar metrics */
+  body {
+    font-family: var(--base-font-family);
+    font-display: swap;
+  }
+  code, pre {
+    font-family: var(--code-font-family);
+    font-display: swap;
+  }
+</style>
