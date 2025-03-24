@@ -49,7 +49,7 @@ This is [an example] [id] reference-style link.
 
 的确，在 Markdown 源文件中有大量链接，并且这些链接非常冗长且不够美观的情况下，行内链接不仅会明显降低源文件的可读性，甚至还会干扰我们的写作思路，而引用式链接则可以在很大程度避免这个问题。除此之外，写作过程中，我们往往不想打断写作思路去网上搜索链接，这种情况下就可以先放置一个引用式链接占位符，方便后续进行补充。如果忘记填写链接也没有关系，Markdown 语法检查器会以错误的形式标注出来，提醒我们修改。
 
-{{< imgcap title="一份 Markdown 文件，分别使用行内链接和引用式链接的效果对比，很明显右侧引用式链接的可读性更强" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNr12n/279a1895-23fb-489e-a65c-9571020b5aaa.png" >}}
+![一份 Markdown 文件，分别使用行内链接和引用式链接的效果对比，很明显右侧引用式链接的可读性更强](https://p15.p3.n0.cdn.getcloudapp.com/items/6quNr12n/279a1895-23fb-489e-a65c-9571020b5aaa.png)
 
 {{< admonition type=info title="📖 关联阅读" >}}
 [给你的 Markdown 挑挑刺——语法检查器入门与进阶][9F7]
@@ -67,7 +67,7 @@ This is [an example] [id] reference-style link.
 
 [165]: https://p15.p3.n0.cdn.getcloudapp.com/items/OAu2Q1mJ/fc7518c1-b6d8-46cc-973c-776fbbf69cde.kmmacros
 
-{{< imgcap title="快速插入引用式链接的 Keyboard Maestro 动作" src="https://p15.p3.n0.cdn.getcloudapp.com/items/qGuZ54WW/1bb4bb6e-3eb7-4f1c-91d9-51deb48e2561.png" >}}
+![快速插入引用式链接的 Keyboard Maestro 动作](https://p15.p3.n0.cdn.getcloudapp.com/items/qGuZ54WW/1bb4bb6e-3eb7-4f1c-91d9-51deb48e2561.png)
 
 这个 Keyboard Maestro 动作的主要原理是生成一个随机链接标识符（这里设置的是 3 位数，UUID 由大写英文字母和阿拉伯数字组成），以避免手动编辑过程中可能出现重复的情况。然后按照引用式链接的格式，将标识符和 URL 插入到对应的位置。
 
@@ -79,7 +79,7 @@ This is [an example] [id] reference-style link.
 
 [33B]: https://www.vim.org
 
-{{< imgcap title="使用 Keyboard Maestro 动作快速插入引用式链接" src="https://p15.p3.n0.cdn.getcloudapp.com/items/o0u9Kejw/d81c7dbd-3ea4-491a-bded-d16a63205890.gif" >}}
+![使用 Keyboard Maestro 动作快速插入引用式链接](https://p15.p3.n0.cdn.getcloudapp.com/items/o0u9Kejw/d81c7dbd-3ea4-491a-bded-d16a63205890.gif)
 
 ### 在 Pandoc’s Markdown 中使用引用式链接
 
@@ -139,11 +139,11 @@ note.]
 
 [9C1]: https://p15.p3.n0.cdn.getcloudapp.com/items/JruyDYRv/585c8c91-e0b3-414d-bffc-b3c5b3042d07.kmmacros
 
-{{< imgcap title="用于插入引用式脚注的 Keyboard Maestro 动作" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuOgQmP/c72bc7ec-da35-48d8-a8a9-902127136b11.png" >}}
+![用于插入引用式脚注的 Keyboard Maestro 动作](https://p15.p3.n0.cdn.getcloudapp.com/items/geuOgQmP/c72bc7ec-da35-48d8-a8a9-902127136b11.png)
 
 这个 Keyboard Maestro 动作的思路与插入引用式链接的动作类似，此处不再赘述。它的使用方式同样非常简单，你只需将光标定位到需要插入脚注的位置，然后按下快捷键 `⌥ + ⇧ + J`，它就会自动插入脚注标识符，并将光标定位到填写脚注内容的位置。
 
-{{< imgcap title="使用 Keyboard Maestro 动作插入引用式脚注" src="https://p15.p3.n0.cdn.getcloudapp.com/items/nOu1QPW5/0f0e8480-64b1-4185-a514-4ecbb51b7410.gif" >}}
+![使用 Keyboard Maestro 动作插入引用式脚注](https://p15.p3.n0.cdn.getcloudapp.com/items/nOu1QPW5/0f0e8480-64b1-4185-a514-4ecbb51b7410.gif)
 
 ## 小结
 

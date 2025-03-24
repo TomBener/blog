@@ -57,7 +57,7 @@ categories:
 
 然而，当我今年十月再次想起此文的时候，它已从中国知网上消失了，我只能庆幸当初把 PDF 保存在了本地。
 
-{{< imgcap title="《丝绸之路》2005 第 3 期消失的页码，其中就包括第 57–58 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNgqdP/011979aa-ba0a-42c8-a9c5-af0e7ea5b074.png" >}}
+![《丝绸之路》2005 第 3 期消失的页码，其中就包括第 57–58 页](https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNgqdP/011979aa-ba0a-42c8-a9c5-af0e7ea5b074.png)
 
 为什么我会在 10 月份再次想起这篇记录「旧社会」穷苦百姓的文章？因为当时我读到了一篇微信公众号文章《[逃离新疆的 24 小时，我看到人生百态](https://archive.ph/J2Gb3)》，作者记录了她在极端非人道的新冠疫情防控政策之下，从乌鲁木齐返回武汉的艰辛历程，而就是这样一篇文章，被微信公众平台以「内容违反《互联网用户公众账号信息服务管理规定》」而屏蔽。
 
@@ -71,9 +71,9 @@ categories:
 
 阅读贾建飞的书《[清乾嘉道时期新疆的内地移民社会](https://book.douban.com/subject/10745947/)》时，他引用了自己的论文《清代中原士人西域观探微》，我感觉这个标题很有意思，于是去搜索了一下，却意外发现这篇论文也被中国知网下架了。该篇论文发表于《[清华大学学报 (哲学社会科学版)](https://navi.cnki.net/knavi/journals/QHDZ/detail)》2010 年第 3 期第 106–116 页，中国知网上的目录显示，这一期缺少了第 106–128 页。
 
-{{< imgcap title="中国知网上的《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png" >}}
+![中国知网上的《清华大学学报 (哲学社会科学版)》2010 年第 3 期，缺少第 106–128 页](https://p15.p3.n0.cdn.getcloudapp.com/items/5zu27q4R/e259f11c-0e98-49a7-a7f4-b36cee7bc945.png)
 
-{{< imgcap title="来自维普期刊的完整目录，对比发现 CNKI 上还消失了另一篇论文《论业主自治与小区善治》" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0q58/bd0259ae-38e5-4143-9c5d-abbed5bd5373.jpg" >}}
+![来自维普期刊的完整目录，对比发现 CNKI 上还消失了另一篇论文《论业主自治与小区善治》](https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0q58/bd0259ae-38e5-4143-9c5d-abbed5bd5373.jpg)
 
 就像微信公众号文章被删除后可以在其他渠道找到一样，我在 [国家哲学社会科学学术期刊数据库](https://www.nssd.cn) 下载到了这篇论文。阅读全文之后，我大概猜出了它被下架的原因，因为作者在文中指出，传统西域观认为「新疆并不属于中央王朝」，清代不少著名人士都持有此观点，因此对新疆问题的争论一直没有平息。
 
@@ -103,4 +103,4 @@ categories:
 
 [^7AC]: 语出 2021 年我在新疆遇到的一位蒙古族大叔。
 
-{{< imgcap title="社会主义核心价值观中的「自由」" src="https://p15.p3.n0.cdn.getcloudapp.com/items/NQu4bQpZ/995e1892-f888-4308-a50f-99f7255566fd.jpeg" >}}
+![社会主义核心价值观中的「自由」](https://p15.p3.n0.cdn.getcloudapp.com/items/NQu4bQpZ/995e1892-f888-4308-a50f-99f7255566fd.jpeg)

@@ -87,4 +87,4 @@ Vox 在 2022 年 12 月 27 日发布了一个 7 分钟的视频《2022, in 7 min
 
   [free]: https://streetartutopia.com/2021/07/18/because-sooner-or-later-we-will-be-free-again
 
-{{< imgcap title="Sooner or later, we will be free" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAu2nv8X/2167b5dd-97ec-48ed-a912-da7d57afdec7.jpg" >}}
+![Sooner or later, we will be free](https://p15.p3.n0.cdn.getcloudapp.com/items/OAu2nv8X/2167b5dd-97ec-48ed-a912-da7d57afdec7.jpg)

@@ -50,18 +50,18 @@ categories:
 [^D07]: 这一方式被 Kieran Healy 教授称为「办公室模式」（[The Office Model](https://plain-text.co/#the-office-model-and-the-engineering-model)）
 [^C3E]: 从 Word 中调出 Zotero 的引用面板，总感觉卡卡的 😔️
 
-{{< imgcap title="在 Word 中使用 Zotero 插入 Citation，图片来源于 https://phenotero.github.io" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/insert-citation-to-word-with-zotero.gif" >}}
+![在 Word 中使用 Zotero 插入 Citation，图片来源于 https://phenotero.github.io](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/insert-citation-to-word-with-zotero.gif)
 
 3. Word 的设计不符合 [Unix 哲学](https://sspai.com/post/58805)。作为 Mac 用户，我喜欢使用纯文本（Plain Text），并用 [Git](https://git-scm.com) 对其进行版本控制。虽然我曾尝试 [对 DOCX 文件进行「纯文本式」版本控制](https://sspai.com/post/58507)，但效果并不算满意。
 4. Word 在 macOS 上体验非常糟糕。这可以说是「压死骆驼的最后一根稻草」，让我不得不放弃使用它。姑且不谈 Word 打开长文档时的漫长等待与卡顿，仅仅是查看一下文档元数据、复制一段文字，就会询问我是否要保存，实在是难以理解 Word 的设计逻辑。
 
-{{< imgcap title="我讨厌使用 Microsoft Word，图片来源于视频 https://youtu.be/JG4fqd8pEgE 截图" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/i-do-not-like-microsoft-word-too.png" >}}
+![我讨厌使用 Microsoft Word，图片来源于视频 https://youtu.be/JG4fqd8pEgE 截图](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/i-do-not-like-microsoft-word-too.png)
 
 ### 为什么不选择 LaTeX？
 
 [LaTeX](https://www.latex-project.org) 非常酷，超级强大，能够精确控制文档的每一个细节，从第一次接触 LaTeX 起，我就深深被它的排版效果所折服，尽管诞生于上世纪 80 年代，但 LaTeX 至今仍是科学论文排版的最强工具。
 
-{{< imgcap title="在 VS Code 中结合插件 LaTeX Workshop 使用 LaTeX" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/latex-in-vs-code-with-latex-workshop.png" >}}
+![在 VS Code 中结合插件 LaTeX Workshop 使用 LaTeX](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/latex-in-vs-code-with-latex-workshop.png)
 
 {{< admonition type=info title="📖 关联阅读" >}}
 [使用 Neovim 和 vimtex 高效撰写 LaTeX 学术论文](https://sspai.com/post/64080)
@@ -73,24 +73,24 @@ categories:
 
 [^549]: 幸运的是，我的本科学校并没有强制要求提交 DOCX 格式的毕业论文，尽管后来要求提交一个缩写版的 DOCX 文件。
 
-{{< imgcap title="国家社会科学基金项目申报要求提供「WORD 文件格式，图片来源于 http://www.nopss.gov.cn/n1/2021/0106/c219469-31991309.html" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/nopss-requires-word-format.png" >}}
+![国家社会科学基金项目申报要求提供「WORD 文件格式，图片来源于 http://www.nopss.gov.cn/n1/2021/0106/c219469-31991309.html](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/nopss-requires-word-format.png)
 
 2. LaTeX 难以做到 [内容与格式分离](https://liam.page/2019/03/18/separation-of-content-and-presentation)。虽然 LaTeX 的基本设计原则之一就是内容与格式相分离，但就我的使用体验来说，这很难做到，因为 LaTeX 过于强大，任何一个细节都变得极具「把玩性」，往往陷入「写文章十分钟，调整样式两小时」的情况，逐渐偏离正题并且还乐在其中不自知 😂️。
 
 为了解决 Microsoft Word 和 LaTeX 存在的这些问题，接下来我将介绍以 Markdown 写作学术论文，用 Pandoc 将其转换为其他文件格式，并对参考文献和中文排版的一些细节进行调整。其中引文样式采用中文用户使用非常普遍的 [GB/T-7714-2015 信息与文献 参考文献著录规则](https://github.com/saccohuo/GBT-Standard/blob/master/GBT%207714-2015%20信息与文献%20参考文献著录规则.pdf) 的著者-出版年制，引文数据只使用一份文件 `ref.bib`，最终实现输出排版完美的 DOCX 和 PDF，主要流程见下图。
 
-{{< imgcap title="纯文本学术写作流程" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/overall-workflow-schematic.png" >}}
+![纯文本学术写作流程](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/overall-workflow-schematic.png)
 
 
 ## 使用 Markdown
 
 学术期刊 *PeerJ Computer Science* 过去五年里 [浏览量前五](https://twitter.com/labABI_Irapuato/status/1314208042112614401) 的一篇 [论文](https://doi.org/10.7717/peerj-cs.112) 里列举了 8 种当前科学出版的标准格式，包括我们熟悉的 DOCX、PDF 等，但最让我惊喜的是 [Markdown](https://daringfireball.net/projects/markdown) 也名列其中。
 
-{{< imgcap title="几种主流文件出版格式，来源于 https://doi.org/10.7717/peerjcs.112/table-1" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/current-standard-formats-for-scientific-publishing.png" >}}
+![几种主流文件出版格式，来源于 https://doi.org/10.7717/peerjcs.112/table-1](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/current-standard-formats-for-scientific-publishing.png)
 
 Markdown 由 [John Gruber](https://twitter.com/gruber) 和 [Aaron Swartz](http://www.aaronsw.com) 于 2004 年开发，是一种轻量级标记语言，它的语法非常简单，[15 分钟即可快速上手](https://sspai.com/topic/185)。
 
-{{< imgcap title="Markdown 基本语法" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-syntax-cheatsheet.png" >}}
+![Markdown 基本语法](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-syntax-cheatsheet.png)
 
 John Gruber 坚持 Markdown 应该保持极简，没有制定一个统一的标准，导致 Markdown 有很多「[方言](https://yihui.org/cn/2017/08/markdown-flavors)」，并且原生 Markdown 不支持脚注、表格等形式，因此，Markdown 作为一种纯文本格式（Plain Text），确实显得平平无奇。不过，时间已来到 2021 年，在许多人的努力下，Markdown 已经变得相当酷。正如 [Markdown.app](https://markdown.app) 的作者 [\@海波](https://sspai.com/u/6igq4sw3) [所说](https://markdown.app/video)：
 
@@ -100,7 +100,7 @@ John Gruber 坚持 Markdown 应该保持极简，没有制定一个统一的标�
 
 [^B3C]: 归根结底就是一句话：来用 Markdown 吧，准没错！😎️
 
-{{< imgcap title="在 VS Code 中写 Markdown 并进行版本控制" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-in-vs-code-version-trol.png" >}}
+![在 VS Code 中写 Markdown 并进行版本控制](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-in-vs-code-version-trol.png)
 
 
 ## 使用 Pandoc
@@ -170,7 +170,7 @@ man pandoc
 
 上面例子中的 `ho2014` 被称为 [citekey](https://retorque.re/zotero-better-bibtex/citing)。Zotero 插件 [Better BibTeX](https://retorque.re/zotero-better-bibtex) 可以非常方便地将文献导出为各种格式，例如下图，从 Zotero 中导出 BibLaTeX 格式的引文数据，并存储为 `ref.bib`。如果导出 Zotero 中的某一个文献目录，推荐勾选 `Keep updated` 选项，这样 Zotero 中条目信息更新，`ref.bib` 文件中的内容也会自动更新，避免手动进行添加或删除。
 
-{{< imgcap title="Better BibTeX for Zotero 导出为 BibLaTeX 格式的引文数据" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bbt-export-as-better-biblatex.png" >}}
+![Better BibTeX for Zotero 导出为 BibLaTeX 格式的引文数据](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/bbt-export-as-better-biblatex.png)
 
 作为纯文本的 BibTeX/BibLaTeX 不仅可以被 LaTeX、Markdown 等其他文件使用，在 Pandoc 的加持下，它还可以「自成一派」，独立生成格式化的参考文献，例如：
 
@@ -227,11 +227,11 @@ nocite: |
 
 大多数情况下，我在 [Visual Studio Code](https://code.visualstudio.com) 中写需要引用文献的 Markdown，[Pandoc Citer](https://marketplace.visualstudio.com/items?itemName=notZaki.pandocciter) 这个插件可以实现真正的 Cite While You Write，其效果如下图所示：
 
-{{< imgcap title="使用 Pandoc Citer 实现 Cite While You Write，图片来源于 https://github.com/notZaki/PandocCiter" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/exmple-pandoc-citer.gif" >}}
+![使用 Pandoc Citer 实现 Cite While You Write，图片来源于 https://github.com/notZaki/PandocCiter](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/exmple-pandoc-citer.gif)
 
 除此之外，[Zettlr](https://zettlr.com) 也可以实现类似的功能，但需要在 `Preference -> Export` 中指定引文数据存储路径，效果如下图：
 
-{{< imgcap title="在 Zettlr 中实现 Cite While You Write" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/cite-while-you-write-in-zettlr.png" >}}
+![在 Zettlr 中实现 Cite While You Write](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/cite-while-you-write-in-zettlr.png)
 
 关于 Cite While You Write，还有其他一些解决方案，如果你有需要，可以进一步研究：
 
@@ -239,7 +239,7 @@ nocite: |
 - [zotpick-applescript](https://github.com/davepwsmith/zotpick-applescript)：Apple Script 实现调出 Zotero 引用面板，使用方法可参考 [这篇文章](https://sspai.com/post/60825)
 - [ZotHero](https://github.com/deanishe/zothero)：一个 [Alfred](https://www.alfredapp.com) Workflow，用来全局搜索 Zotero 数据库，快速复制 citekey、citation、bibliography 等
 
-{{< imgcap title="在 Alfred 中用 ZotHero 搜索 Zotero 数据库" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/search-bib-in-zotero-with-alfred.png" >}}
+![在 Alfred 中用 ZotHero 搜索 Zotero 数据库](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/search-bib-in-zotero-with-alfred.png)
 
 
 ## Markdown 转换为 DOCX
@@ -281,7 +281,7 @@ pandoc --citeproc --number-sections \
 
 使用 Microsoft Word 打开转换得到的 `main.docx`，打开「高级查找和替换」，勾选「使用通配符」，在「查找内容」栏填入 `([a-zA-Z])(? )(等)`，「替换为」栏填入 `\1\2et al.`，然后点击「全部替换」，就可以同时把正文、脚注和参考文献表中所有英文作者名后的 `等` 替换为 `et al.`。
 
-{{< imgcap title="在 Microsoft Word 中使用通配符进行查找替换" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/find-replace-et-al-in-word.png" >}}
+![在 Microsoft Word 中使用通配符进行查找替换](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/find-replace-et-al-in-word.png)
 
 #### 使用正则表达式查找替换
 
@@ -469,7 +469,7 @@ chmod +x docx.sh
 
 [^B4A]: 参见 [Quotation mark - Wikipedia](https://en.wikipedia.org/wiki/Quotation_mark)。如果简体中文可以像 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md#简体中文使用直角引号) 建议的那样，使用直角引号「」和『』的话，那就省事多了。
 
-{{< imgcap title="Microsoft Word 中同样的引号，呈现出不同的形态，原因在于字体不同" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/quotation-mark-test-in-word.png" >}}
+![Microsoft Word 中同样的引号，呈现出不同的形态，原因在于字体不同](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/quotation-mark-test-in-word.png)
 
 {{< admonition type=info title="📖 关联阅读" >}}
 
@@ -481,7 +481,7 @@ chmod +x docx.sh
 
 调整包裹汉字的引号非常简单，只需要在 Microsoft Word 中将中文文本内容选中，点击最下方的语言选项，将所选文字标记为「中文(中国)」，最后点击「确定」即可。
 
-{{< imgcap title="在 Microsoft Word 中将所选文字标记为中文" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/change-texts-language-to-chinese-in-word.png" >}}
+![在 Microsoft Word 中将所选文字标记为中文](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/change-texts-language-to-chinese-in-word.png)
 
 2. **对中文参考文献表进行排序**
 
@@ -491,9 +491,9 @@ chmod +x docx.sh
 
 CSL 能够将参考文献表按文种集中，但它无法根据作者姓氏的拼音或笔画对中文文献进行排序，不得不在 Microsoft Word 中进行，不过好在步骤非常简单。只需选中参考文献表中所有的中文参考文献，然后点击「排序」，根据情况选择「拼音」或「笔画」排序。需要注意的是，按照拼音排序时需要检查一下是否存在多音字的情况，例如「曾」姓在排序中的拼音为 `ceng`，而正确的拼音应该为 `zeng`。
 
-{{< imgcap title="在 Microsoft Word 中对中文参考文献表排序" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/sort-chinese-bibliography-in-word.png" >}}
+![在 Microsoft Word 中对中文参考文献表排序](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/sort-chinese-bibliography-in-word.png)
 
-{{< imgcap title="最终得到的 DOCX 文件。上图为正文的截图，样式为「正文文本」，其中的蓝色字体可点击跳转至文末相应的文献；下图为参考文献表的截图，Pandoc 完美地将其转换为 Word 中的样式「书目」，而不是「正文文本」。" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/final-docx-citation-bibliography-preview.png" >}}
+![最终得到的 DOCX 文件。上图为正文的截图，样式为「正文文本」，其中的蓝色字体可点击跳转至文末相应的文献；下图为参考文献表的截图，Pandoc 完美地将其转换为 Word 中的样式「书目」，而不是「正文文本」。](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/final-docx-citation-bibliography-preview.png)
 
 
 ## Markdown 转换为 PDF
@@ -690,7 +690,7 @@ rm *.bbl *.xml *.xdv input.tex
 
 使用 [PDF Expert](https://pdfexpert.com) 打开编译后得到的 PDF，如下图所示，鼠标点击蓝色字体「Microsoft Word 文档」，`wordcount.docx` 就会在系统默认的应用程序中打开，除此之外，也可以在左侧「附件」栏看见 `wordcount`，双击即可打开。
 
-{{< imgcap title="使用 PDF Expert 打开嵌入 DOCX 附件的 PDF" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/open-pdf-with-embedded-docx-in-pdf-expert.png" >}}
+![使用 PDF Expert 打开嵌入 DOCX 附件的 PDF](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/open-pdf-with-embedded-docx-in-pdf-expert.png)
 
 需要注意的是，Navigator 与 BibLaTeX 会产生冲突，如果你需要同时使用这两个宏包，可参考这个 [回答](https://tex.stackexchange.com/a/511650) 打个补丁，就不会报错了。通过将 DOCX 文件作为附件嵌入 PDF 中，在很多场景下，你只需要给对方发送一份 PDF，他/她就会同时拥有 PDF 与 DOCX 了。
 

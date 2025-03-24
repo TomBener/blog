@@ -90,7 +90,7 @@ convert $files output.pdf
 
 将上述 Shell 脚本的最前面加上 `cd "$KMVAR_curr_folder_loc"`，用于进入工作目录，然后将整个 Shell 脚本添加到 Keyboard Maestro 中，就可以制作一个将 PDG 转换为 PDF 的 macro，如下图所示。
 
-{{< imgcap title="将 PDG 转换为 PDF 的 Keyboard Maestro macro" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Bluzkdyd/6ae13a24-237a-403f-8a9c-0cd6ff6d4962.png" >}}
+![将 PDG 转换为 PDF 的 Keyboard Maestro macro](https://p15.p3.n0.cdn.getcloudapp.com/items/Bluzkdyd/6ae13a24-237a-403f-8a9c-0cd6ff6d4962.png)
 
 激活这个 macro 之后，只需点击一下菜单栏中的图标，就可以轻松将访达中选中的文件所在目录中的所有 PDG 文件转换为一个 PDF[^1]。
 
@@ -100,7 +100,7 @@ convert $files output.pdf
 
 > 这样的做去，各人天生的聪明才力虽不平等，而各人的服务道德心发达，各就平等的出发点而尽量发展，以贡献于人群，也可算是平等了。这是真平等。
 
-{{< imgcap title="邹韬奋在 1927 年所说的「什么是真平等？」" src="https://p15.p3.n0.cdn.getcloudapp.com/items/yAu9dkLL/1e709c4c-0d4b-4a23-bf16-61a1cf8e8ac3.png" >}}
+![邹韬奋在 1927 年所说的「什么是真平等？」](https://p15.p3.n0.cdn.getcloudapp.com/items/yAu9dkLL/1e709c4c-0d4b-4a23-bf16-61a1cf8e8ac3.png)
 
 ## OFD
 

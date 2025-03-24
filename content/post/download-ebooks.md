@@ -34,9 +34,9 @@ categories:
 
 一般来说，大学或研究机构图书馆会订阅数据库，其中有可能就包括获取书籍的方式。这种方式的好处是获取的书籍格式完善，当然最重要的是免费。不过由于不具有普遍性，这里就不展开说明了。
 
-{{< imgcap title="通过机构 IP 登录 Springer 可以免费下载一些书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuOL10w/3ca35bc9-bfb6-4b1c-bf9e-8500f871cb73.png" >}}
+![通过机构 IP 登录 Springer 可以免费下载一些书籍](https://p15.p3.n0.cdn.getcloudapp.com/items/geuOL10w/3ca35bc9-bfb6-4b1c-bf9e-8500f871cb73.png)
 
-{{< imgcap title="在 De Gruyter 下载机构购买的书籍" src="https://p15.p3.n0.cdn.getcloudapp.com/items/JrueoY6Y/a95761ca-68d9-4e30-92b4-4b9763d31835.png" >}}
+![在 De Gruyter 下载机构购买的书籍](https://p15.p3.n0.cdn.getcloudapp.com/items/JrueoY6Y/a95761ca-68d9-4e30-92b4-4b9763d31835.png)
 
 如果你所在的机构没有购买所需数据库，可以到公共图书馆去碰碰运气，例如 [浙江图书馆](https://www.zjlib.cn/)、[贵州图书馆](http://www.gzlib.org/)、[广西壮族自治区图书馆](http://www.gxlib.org.cn/) 等。
 

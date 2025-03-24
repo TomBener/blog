@@ -27,7 +27,7 @@ categories:
 
 如果你需要在不同的文件格式之间相互转换，多半听说或使用过文档转换的瑞士军刀——[Pandoc](https://pandoc.org)。事实上，不仅人类知道 Pandoc，最近很火的人工智能 [ChatGPT](https://chat.openai.com/chat) 也知道「将 Markdown 转换为 docx」，首选方案是使用 Pandoc。
 
-{{< imgcap title="如何「将 Markdown 转换为 docx」，ChatGPT 回答使用 Pandoc，并给出了转换命令" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRz2QA/c0c5ce42-c1ad-4a20-be57-f575ee3d20f5.png" >}}
+![如何「将 Markdown 转换为 docx」，ChatGPT 回答使用 Pandoc，并给出了转换命令](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRz2QA/c0c5ce42-c1ad-4a20-be57-f575ee3d20f5.png)
 
 Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源的免费 [命令行软件](https://en.wikipedia.org/wiki/Command-line_interface)，由加州大学伯克利分校哲学系教授 [John MacFarlane](https://www.johnmacfarlane.net/) 使用 [Haskell](https://www.haskell.org/) 语言开发，目前另一位核心开发者是来自德国的 [Albert Krewinkel](https://tarleb.com/)。截止 2022 年 12 月 10 日，Pandoc 的 [GitHub](https://github.com/jgm/pandoc) 仓库拥有超过 27,000 个 Star，3,000 次 Fork。
 
@@ -45,7 +45,7 @@ Pandoc 是一个基于 [GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.h
 
 Pandoc 作为一个命令行工具，一个经常围绕它的问题是：为什么没有图形化界面（[GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)）？这是因为图形化应用虽然更加容易上手，但缺点也很明显——难以排列下数量庞大的参数。事实上，**对于拥有大量参数的软件，命令行界面的易用性其实要优于图形化界面**，这一点可以在网友设计的 [OpenSSL GUI](https://smallstep.com/blog/if-openssl-were-a-gui/) 中看出来。
 
-{{< imgcap title="如果命令行工具 OpenSSL 拥有图形化界面，将会是如此复杂的样子" src="https://p15.p3.n0.cdn.getcloudapp.com/items/qGuZKvPe/e00faf11-9c3d-4698-80a8-01d0e8dfdb5f.png" >}}
+![如果命令行工具 OpenSSL 拥有图形化界面，将会是如此复杂的样子](https://p15.p3.n0.cdn.getcloudapp.com/items/qGuZKvPe/e00faf11-9c3d-4698-80a8-01d0e8dfdb5f.png)
 
 当然，如果你非常偏爱图形化应用，可以使用 [PanWriter](https://panwriter.com)——一个基于 Pandoc 的 Markdown 编辑器，能够通过 GUI 的方式实现 Pandoc 的部分文档转换功能。
 

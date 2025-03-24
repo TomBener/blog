@@ -35,7 +35,7 @@ categories:
 
 macOS 提供了切换输入法和浏览器的系统级方法，比如通过快捷键「[轮换][2]」输入法，或者使用 Caps Lock 键切换输入法。
 
-{{< imgcap title="macOS 系统提供的切换输入法的方法" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4ROqm/da282f6a-6dd2-4c50-bb95-3249997bcf2b.png" >}}
+![macOS 系统提供的切换输入法的方法](https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4ROqm/da282f6a-6dd2-4c50-bb95-3249997bcf2b.png)
 
 然而，系统级的方案并不完美，基本上只是「还能用」的水平，当前使用的到底是哪种输入法，很多时候还是得靠「盲猜」，无法满足我的需求。正因如此，很多切换输入法的第三方应用应运而生，它们一般提供了更为丰富的功能，比如为每种输入法自定义一个快捷键，记住上次使用的输入法，显示当前的输入法，根据应用切换输入法等：
 
@@ -47,11 +47,11 @@ macOS 提供了切换输入法和浏览器的系统级方法，比如通过快�
 
 与切换输入法类似，切换系统默认浏览器也具有相同的问题。一般情况下，我们只能在 [系统设置][8] 中进行修改。
 
-{{< imgcap title="在系统设置中切换默认浏览器" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu2bdE9/3ace8ec6-bef8-400b-af13-e5271e6ebafb.png" >}}
+![在系统设置中切换默认浏览器](https://p15.p3.n0.cdn.getcloudapp.com/items/5zu2bdE9/3ace8ec6-bef8-400b-af13-e5271e6ebafb.png)
 
 与切换输入法不同的是，我们还可以直接在浏览器内的设置中将其设置为系统默认浏览器。
 
-{{< imgcap title="在 Google Chrome 中将其设置为系统默认浏览器" src="https://p15.p3.n0.cdn.getcloudapp.com/items/X6u5n01X/50e91f7b-8b5b-41c3-8b0d-cb203987de05.png" >}}
+![在 Google Chrome 中将其设置为系统默认浏览器](https://p15.p3.n0.cdn.getcloudapp.com/items/X6u5n01X/50e91f7b-8b5b-41c3-8b0d-cb203987de05.png)
 
 然而，这两种方法都需要打开特定的应用程序，操作起来很麻烦。大概正是基于这样的痛点，市面上同样也有专门用于切换 macOS 默认浏览器的应用，比如：
 
@@ -69,17 +69,17 @@ macOS 提供了切换输入法和浏览器的系统级方法，比如通过快�
 
 在使用 Keyboard Maestro 切换输入法之前，我用的是 macOS 上强大的改键工具 [Karabiner-Elements][13]，并搭配 GitHub 上的 [一个配置][14]，可以实现「短按左 ⌘ Command 键切换为中文输入法，短按左 ⌥ Option 键切换为英文输入法」。我很喜欢这种方式，因为它让英文和中文输入法分别有了一个对应的快捷键，让我不用盲猜当前是什么输入法。形成肌肉记忆之后，输入英文前，短按一下左 ⌥ Option 键，输入中文前，短按一下左 ⌘ Command 键，打字时基本上不会出错。
 
-{{< imgcap title="使用 Karabiner-Elements 切换输入法" src="https://p15.p3.n0.cdn.getcloudapp.com/items/rRu5m0YY/515fdb1b-a897-44fd-8c00-57b8c3d72d6e.png" >}}
+![使用 Karabiner-Elements 切换输入法](https://p15.p3.n0.cdn.getcloudapp.com/items/rRu5m0YY/515fdb1b-a897-44fd-8c00-57b8c3d72d6e.png)
 
 然而，如这个配置文件所写的那样，这个方法的问题在于「可能会出现切换失败的情况」，我在实际使用过程中也经常遇到切换失败或延迟的情况，非常影响打字效率。也正是由于存在这个问题，我一直在寻找**快捷准确地切换输入法**的方法，于是将目光转向了 Keyboard Maestro。
 
 Keyboard Maestro 中有一个叫作「Set Keyboard Layout」的动作，用于设置系统中已开启的输入法。与 Karabiner-Elements 相比，这个动作相当快速而且十分准确，我从没有遇到延迟或切换失败的情况。为了使用它，我们只需设置一个触发条件，就可以实现切换输入法的功能。你可以按照上面提到的 Kawa 那样，在 Keyboard Maestro 中选择触发条件为「Hot Key Trigger」，为每种输入法设置一个单独的快捷键（不仅限于英文和中文），但这种触发方式只能是组合快捷键，不能是单独的一个 ⌘ 或 ⌥ 等修饰键（Modifier Keys）。
 
-{{< imgcap title="使用 Keyboard Maestro 切换英文 ABC 和中文双拼输入法" src="https://p15.p3.n0.cdn.getcloudapp.com/items/RBuBzlEZ/4e396027-1540-4d20-8bc5-e132f46721ac.png" >}}
+![使用 Keyboard Maestro 切换英文 ABC 和中文双拼输入法](https://p15.p3.n0.cdn.getcloudapp.com/items/RBuBzlEZ/4e396027-1540-4d20-8bc5-e132f46721ac.png)
 
 由于切换输入法是一个相当高频的操作，为了找回熟悉的快捷切换方式，我没有使用快捷键触发，而选择的触发条件是「USB Device Key Trigger」，因为这样可以实现「**短按左 ⌘ Command 键，切换为中文双拼输入法，短按左 ⌥ Option 键，切换为英文 ABC 输入法**」，如下图所示。
 
-{{< imgcap title="短按左 ⌘ Command 键，切换为中文双拼输入法，短按左 ⌥ Option 键，切换为英文 ABC 输入法" src="https://p15.p3.n0.cdn.getcloudapp.com/items/QwujBAqW/39509ae7-db36-476c-8069-c2065fbf63d0.gif" >}}
+![短按左 ⌘ Command 键，切换为中文双拼输入法，短按左 ⌥ Option 键，切换为英文 ABC 输入法](https://p15.p3.n0.cdn.getcloudapp.com/items/QwujBAqW/39509ae7-db36-476c-8069-c2065fbf63d0.gif)
 
 需要提醒的是，上面的 Keyboard Maestro 宏之所以会显示「Karabiner DriverKit VirtualHIDKeyboard 1.6.0」，是因为我安装了 Karabiner-Elements。另外，由于 ⌘ Command 是组合快捷键的修饰键，按下其他快捷键的时候也会触发切换输入法的操作，比如按下左边的 ⌘ Command + A，也会将当前输入法切换为中文。也就是说，无论单独还是组合按下 ⌘ Command/ ⌥ Option 键，都会触发切换输入法的操作，不过，好消息是这并不会影响快捷键的正常工作，因此并没有什么「副作用」。当然，如果你不喜欢单个修饰键的触发方式，可以根据键盘布局和个人偏好，设置为其他按键触发。
 
@@ -87,7 +87,7 @@ Keyboard Maestro 中有一个叫作「Set Keyboard Layout」的动作，用于�
 
 不少切换输入法的 App 可以「根据应用切换输入法」，这对于一些只需使用特定输入法的应用来说，非常实用，比如在 [iTerm][15]、[VS Code][16] 中，一般不需要使用中文输入法，只需要使用 ABC 输入法。借助 Keyboard Maestro 的「Set Keyboard Layout」动作，我们只需将触发条件设置为「特定应用激活时」，就可以非常简单地实现「根据应用切换输入法」这个功能，如下图所示。
 
-{{< imgcap title="一打开 iTerm 就将输入法切换为 ABC" src="https://p15.p3.n0.cdn.getcloudapp.com/items/wbuv5KGW/7aff4711-c13d-4135-99dd-2de2a194e6f3.png" >}}
+![一打开 iTerm 就将输入法切换为 ABC](https://p15.p3.n0.cdn.getcloudapp.com/items/wbuv5KGW/7aff4711-c13d-4135-99dd-2de2a194e6f3.png)
 
 ### 在浏览器地址栏切换为 ABC
 
@@ -95,9 +95,9 @@ Keyboard Maestro 中有一个叫作「Set Keyboard Layout」的动作，用于�
 
 尽管 Keyboard Maestro 无法将「[光标定位到浏览器地址栏][17]」作为触发条件，但我们可以用快捷键山寨一个类似的操作。在 Safari、Chrome、Firefox 等主流浏览器中，定位到地址栏的快捷键是 ⌘ Command + L，它的名称一般叫作「Open Location…」，因此可以将触发条件设置为快捷键 Command + L，然后将输入法切换为 ABC，再模拟按下快捷键 Command + L，如下图所示。
 
-{{< imgcap title="在浏览器地址栏切换为 ABC 的 Keyboard Maestro 宏" src="https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDzQxZ/d4c14de7-eec4-41b5-beaa-fe04949bd882.png" >}}
+![在浏览器地址栏切换为 ABC 的 Keyboard Maestro 宏](https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDzQxZ/d4c14de7-eec4-41b5-beaa-fe04949bd882.png)
 
-{{< imgcap title="使用快捷键定位到浏览器地址栏时切换输入法为 ABC" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrme/a0be59f0-5c00-453e-af0e-f6297b8cc571.gif" >}}
+![使用快捷键定位到浏览器地址栏时切换输入法为 ABC](https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrme/a0be59f0-5c00-453e-af0e-f6297b8cc571.gif)
 
 关于切换输入法，还不得不提到 [Vim][18]，因为在 Vim 是基于英文开发的，在其中使用中文是一件非常痛苦的事。如果你在 Mac 上使用 Vim，想要提高使用中文输入的效率，推荐使用 [SmartIM][19] 这个插件，用于切换输入法。
 
@@ -107,7 +107,7 @@ Keyboard Maestro 中有一个叫作「Set Keyboard Layout」的动作，用于�
 
 Keyboard Maestro 论坛上有一位网友分享了一个切换系统默认浏览器的 [宏][20]，但它需要安装硕大无朋的 [Xcode][21]，看起来非常复杂，因此我没有使用它。
 
-{{< imgcap title="Keyboard Maestro 论坛中的一个切换浏览器的复杂的宏" src="https://p15.p3.n0.cdn.getcloudapp.com/items/geuO1oLP/d797b461-c1b4-4d49-a175-1e319fe7c1d4.png" >}}
+![Keyboard Maestro 论坛中的一个切换浏览器的复杂的宏](https://p15.p3.n0.cdn.getcloudapp.com/items/geuO1oLP/d797b461-c1b4-4d49-a175-1e319fe7c1d4.png)
 
 但也是在 Keyboard Maestro 论坛上相关的讨论中，我发现了 [defaultbrowser][22] 这个命令行工具——用于切换 macOS 系统中的默认浏览器，可以使用 [Homebrew][23] 来安装它：
 
@@ -147,7 +147,7 @@ defaultbrowser chrome
 
 按下回车键执行上面这行命令之后，Mac 会弹出一个二次确认窗口，询问你是否确定要切换默认浏览器，你需要手动点击切换或不切换。
 
-{{< imgcap title="切换默认浏览器时 Mac 弹出的二次确认窗口" src="https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNDmB4/adc51113-d7e1-499c-b6e0-afb92e12979a.png" >}}
+![切换默认浏览器时 Mac 弹出的二次确认窗口](https://p15.p3.n0.cdn.getcloudapp.com/items/P8uNDmB4/adc51113-d7e1-499c-b6e0-afb92e12979a.png)
 
 为了避免每次都要手动点击这个弹出式窗口，我们可以借助 [下面的 AppleScript][27] 来自动进行确认：
 
@@ -170,7 +170,7 @@ end tell
 
 为了方便快捷地执行这两个步骤，我在 Keyboard Maestro 中创建了一个切换浏览器的宏组，其中有 7 个宏，分别切换为我的 Mac 中可能会用到的浏览器。
 
-{{< imgcap title="Keyboard Maestro 中切换浏览器的宏" src="https://p15.p3.n0.cdn.getcloudapp.com/items/04uydNpb/f5e6a614-a4ff-4138-a2fe-271770a689cb.png" >}}
+![Keyboard Maestro 中切换浏览器的宏](https://p15.p3.n0.cdn.getcloudapp.com/items/04uydNpb/f5e6a614-a4ff-4138-a2fe-271770a689cb.png)
 
 这 7 个宏的动作基本一致，都只有两个步骤，第一步执行 Shell 脚本切换默认浏览器，第二步执行 AppleScript 进行确认。需要注意的是，在 Keyboard Maestro 中执行 Shell 脚本，需要指定可执行文件的绝对路径，否则无法运行成功。由于我在 M1 Mac 上使用 Homebrew 安装 defaultbrowser，因此第一栏中写的是：
 
@@ -180,11 +180,11 @@ end tell
 
 这 7 个宏设置的触发条件都是同一个快捷键 `⇧ + ⌥ + Right Arrow`，目的是为了利用 Keyboard Maestro 的 [Conflict Palette][28]，而这正是能实现快捷切换默认浏览器的关键。
 
-{{< imgcap title="通过 Keyboard Maestro 的 Conflict Palette 切换默认浏览器" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAu27QKE/afbaafb7-56c2-4ed4-8cd3-23cbb1c9a70f.gif" >}}
+![通过 Keyboard Maestro 的 Conflict Palette 切换默认浏览器](https://p15.p3.n0.cdn.getcloudapp.com/items/OAu27QKE/afbaafb7-56c2-4ed4-8cd3-23cbb1c9a70f.gif)
 
 在上面的演示图中，切换前的默认浏览器是 Safari，我一共按了两次键盘（有些按键没有被录制下来），将默认浏览器切换成了 Chrome。首先按下快捷键 `⇧ + ⌥ + Right Arrow`，由于这 7 个宏的触发方式都是这个快捷键，因此 Keyboard Maestro 会调出 Conflict Palette，将 7 个宏同时显示出来。
 
-{{< imgcap title="按下快捷键后弹出的 Conflict Palette" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Z4ump69r/83dff6ab-16ad-485d-8de1-5d3564c068b9.png" >}}
+![按下快捷键后弹出的 Conflict Palette](https://p15.p3.n0.cdn.getcloudapp.com/items/Z4ump69r/83dff6ab-16ad-485d-8de1-5d3564c068b9.png)
 
 注意到每个宏名称的首字母是灰色的，与其他字母的颜色不同，而这就是它们的快捷键。因此我们直接在键盘上按下对应的字母，比如 `c`，就可以将默认浏览器切换为 Chrome [^1]，而完全不需要使用鼠标进行点击，不得不说，Keyboard Maestro 不愧为名副其实的「键盘大师」。
 
@@ -192,7 +192,7 @@ end tell
 
 除了切换默认浏览器外，有时候我们也需要在特定浏览器中打开某些网页。例如，我主要使用 Safari，但为了在某些网页中使用 Chrome 浏览器上独有的插件，需要将 Safari 中当前打开的网页在 Chrome 中打开。当然，你可以选择在 Safari 中复制当前网页标签的链接，然后粘贴到 Chrome 的地址栏中打开，不过这显然不是一个高效的方法。借助 Keyboard Maestro，我们可以通过快捷键，一步实现「在另一个浏览器打开当前标签页」。
 
-{{< imgcap title="在另一个浏览器打开当前标签页的 Keyboard Maestro 动作" src="https://p15.p3.n0.cdn.getcloudapp.com/items/xQuONYyE/26e1e8ec-ddc5-4dc8-8560-31d9d2e31f7e.png" >}}
+![在另一个浏览器打开当前标签页的 Keyboard Maestro 动作](https://p15.p3.n0.cdn.getcloudapp.com/items/xQuONYyE/26e1e8ec-ddc5-4dc8-8560-31d9d2e31f7e.png)
 
 上图中的这个宏通过快捷键 `⌃ + ⌥ + ⇧ + ⌘ + J` 触发，然后执行下面这段 AppleScript：
 
@@ -209,7 +209,7 @@ end tell
 
 就可以将 Safari 中当前打开的网页窗口在 Chrome 中打开，当然，你也可以修改这段 AppleScript，用于其他浏览器。
 
-{{< imgcap title="在 Chrome 中打开 Safari 中的当前标签页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/OAu27Pk6/64a1162c-e59c-4e00-8488-8b4cceeba3d3.gif" >}}
+![在 Chrome 中打开 Safari 中的当前标签页](https://p15.p3.n0.cdn.getcloudapp.com/items/OAu27Pk6/64a1162c-e59c-4e00-8488-8b4cceeba3d3.gif)
 
 ## 小结
 

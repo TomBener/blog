@@ -19,7 +19,7 @@ Safari 地址栏的重定向过程不仅肉眼可见，通过网络代理工具 
 
 [^fn]: Mac 上的网络规则更完善，广告链接 `viglink` 会被拦截，除此之外，我安装了 [AdGuard](https://adguard.com)，也可能会阻止重定向的广告链接。但 iPad 上就很迷惑。
 
-{{< imgcap title="Quantumult X 中的网络日志" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/iphone-safari-viglink-log.png" >}}
+![Quantumult X 中的网络日志](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/iphone-safari-viglink-log.png)
 
 在浏览器地址栏中输入 [viglink.com](https://viglink.com)，发现这是一家广告推广公司。我费尽心思屏蔽各种广告，而自己的博客被插入广告，这怎么能忍呢？必须干掉它！
 
@@ -35,7 +35,7 @@ Safari 地址栏的重定向过程不仅肉眼可见，通过网络代理工具 
 
 由于我的 Quantumult X 引用了一大堆远程订阅链接，用于分流、重写和定时任务，不排除脚本作者为了赚点咖啡钱，在其中插入广告链接的可能性。
 
-{{< imgcap title="Quantumult X 中的重写资源列表" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/quantumultx-rewrite-list.png" >}}
+![Quantumult X 中的重写资源列表](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/quantumultx-rewrite-list.png)
 
 然而经过我点击一条又一条链接查看，也没有发现任何端倪，看来是我错怪了各位「为爱发电」的大佬 🙈️。
 
@@ -43,7 +43,7 @@ Safari 地址栏的重定向过程不仅肉眼可见，通过网络代理工具 
 
 我在苹果讨论社区搜索到一个类似的 [问题](https://discussions.apple.com/thread/251777815)，按照唯一一个回复的解决方案试了一下，没有作用。然后给苹果客服打电话，在客服的建议下，又重复进行了一次操作 ——「清除历史记录与网站数据」，并开启 Safari 浏览器的「阻止跨网站跟踪」和「阻止所有 Cookie」，依然没有用。
 
-{{< imgcap title="开启 Safari 浏览器的「阻止跨网站追踪」" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/iphone-safari-block-tracking.jpg" >}}
+![开启 Safari 浏览器的「阻止跨网站追踪」](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/iphone-safari-block-tracking.jpg)
 
 除此之外，我也在苹果客服的建议下删除了 Quantumult X 的描述文件，尽管删除之后确实解决了链接重定向的问题，但描述文件是必须要安装的，删除它并不能从根本上解决问题。
 
@@ -51,7 +51,7 @@ Safari 地址栏的重定向过程不仅肉眼可见，通过网络代理工具 
 
 在派友 [\@Brick 713](https://sspai.com/u/Brick713) 的提示下，我使用的评论系统 [Disqus](https://disqus.com) 会把数据 [卖给 Viglink](https://disqus.com/data-sharing-settings/)。于是前往 Disqus 后台看看有没有相关设置，意料之中果然有一个：Disqus 默认会在文章链接中加入推广链接。
 
-{{< imgcap title="Disqus 默认会在文章链接中加入推广链接" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/disqus-ads-settings.png" >}}
+![Disqus 默认会在文章链接中加入推广链接](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/disqus-ads-settings.png)
 
 没想到啊，Disqus 你这个浓眉大眼的家伙，竟然干这种事。果断关闭上图中的这个选项，果然就不再有重定向了。Disqus 作为一款流行的评论系统，通过广告赚点收入无可非议，不过好在提供选项关闭一部分广告。
 

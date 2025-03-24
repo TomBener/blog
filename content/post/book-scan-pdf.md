@@ -41,7 +41,7 @@ categories:
 - **自动去除手指**：在需要用手指将书籍平铺的场景下，可以移除书籍边缘的手指印记。
 - **双页捕获**：自动捕捉书籍的左右页，分割为两页保存。
 
-{{< imgcap title="vFlat Scan 自动识别双页并保存为两页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/bLuOpEqv/13d90b9f-8993-4149-8a0a-099dd1dbd432.png" >}}
+![vFlat Scan 自动识别双页并保存为两页](https://p15.p3.n0.cdn.getcloudapp.com/items/bLuOpEqv/13d90b9f-8993-4149-8a0a-099dd1dbd432.png)
 
 值得一提的是，vFlat Scan 的「双页捕获」功能在扫描书籍时非常实用，能够有效减少扫描的工作量。当然，如果某些场景 vFlat Scan 识别双页不准确，你也可以关闭这个功能，在后期处理时使用 MuPDF 或 Briss 分割扫描得到的 PDF。
 
@@ -49,13 +49,13 @@ categories:
 [批量下载、处理图片和 PDF，这些任务你可以在命令行中完成](https://sspai.com/prime/story/cli-utils-for-ordinary-tasks)
 {{< /admonition >}}
 
-{{< imgcap title="使用 vFlat Scan 扫描得到的两页 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu47oPA/b9bb0d59-dd2a-46a2-bb53-07c5aa74f400.jpg" >}}
+![使用 vFlat Scan 扫描得到的两页 PDF](https://p15.p3.n0.cdn.getcloudapp.com/items/4gu47oPA/b9bb0d59-dd2a-46a2-bb53-07c5aa74f400.jpg)
 
 除了选择趁手的软件外，扫描书籍的物理环境也很重要，推荐观看这几个非常专业的扫描书籍的 [视频教程](https://www.youtube.com/@bookscanning4246)。值得一提的是，光线对于扫描书籍来说非常重要，既要保证光线充足，又要考虑光线的角度以避免不必要的阴影，在尝试了很多方案之后，我发现「屏幕挂灯」较好地满足了这个需求，因为它特殊的照明角度，不会造成反光或阴影。
 
 由于各种原因，扫描过程中难免会产生一些噪点甚至黑边，虽然这些细节「无伤大雅」，但对于我这样的强迫症来说，是无法忍受的。如果有这种情况，我一般会使用 [PDF Expert](https://pdfexpert.com) 的 [隐藏工具](https://pdfexpert.com/how-to-redact-pdf) 将其移除，具体使用方式见下图。
 
-{{< imgcap title="使用 PDF Expert 移除 PDF 中多余的元素" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu2bYpD/f85f96e9-f755-4d03-9674-458d88019e70.gif" >}}
+![使用 PDF Expert 移除 PDF 中多余的元素](https://p15.p3.n0.cdn.getcloudapp.com/items/5zu2bYpD/f85f96e9-f755-4d03-9674-458d88019e70.gif)
 
 ## 识别 PDF 文字
 
@@ -63,11 +63,11 @@ categories:
 
 Adobe 作为 [PDF](https://en.wikipedia.org/wiki/PDF) 标准的创立者，旗下的 Acrobat 自然也是最 versatile 的 PDF 软件，缺点就是界面太丑且价格很贵。但如果你订阅了 Adobe，那么可以使用它对 PDF 进行 OCR，效果几乎可以说是无出其右。如下图所示，在 Acrobat 中打开一个扫描版 PDF，点击右侧的「Scan & OCR」，然后在上方点击「识别文字」，选择语言，确认之后，Acrobat 就会自动开始 OCR。
 
-{{< imgcap title="使用 Adobe Acrobat 对 PDF 进行 OCR" src="https://p15.p3.n0.cdn.getcloudapp.com/items/5zu25x92/354f2bb2-1877-4b5f-a827-56818afcf573.png" >}}
+![使用 Adobe Acrobat 对 PDF 进行 OCR](https://p15.p3.n0.cdn.getcloudapp.com/items/5zu25x92/354f2bb2-1877-4b5f-a827-56818afcf573.png)
 
 除 Adobe Acrobat 外，我也会使用 DEVONthink 对 PDF 进行 OCR。[DEVONthink](https://www.devontechnologies.com/apps/devonthink/editions#scanning) 使用的是著名的 OCR 引擎 [ABBYY](https://www.abbyy.com/ocr-sdk/)，效果同样也是非常不错的。使用方式也很简单，只需在 DEVONthink 中选中 PDF，右键选择「OCR -> to searchable PDF」即可。
 
-{{< imgcap title="在 DEVONthink 中对 PDF 进行 OCR" src="https://p15.p3.n0.cdn.getcloudapp.com/items/eDunLqg0/da5a46fc-94d2-49ab-aac9-6764637ade54.png" >}}
+![在 DEVONthink 中对 PDF 进行 OCR](https://p15.p3.n0.cdn.getcloudapp.com/items/eDunLqg0/da5a46fc-94d2-49ab-aac9-6764637ade54.png)
 
 除了 Adobe Acrobat 和 DEVONthink 这两种付费方式外，也可以使用 [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) 这个开源的命令行工具免费对 PDF 进行 OCR。
 
@@ -80,13 +80,13 @@ Adobe 作为 [PDF](https://en.wikipedia.org/wiki/PDF) 标准的创立者，旗�
 
 [^7C7]: 我没有找到苹果的官方介绍，不清楚此功能对设备和操作系统的要求。由于 [DEVONthink 3.8.6](https://www.devontechnologies.com/press/archive/devonthink-386-devonagent-3116) 也增加了此功能，推测是因为苹果开放了系统级的 OCR API。
 
-{{< imgcap title="在 Apple Silicon Mac 和 iOS 上，可以选中扫描版 PDF 中的文字" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0Y4G/6688fdf5-1e36-499c-9c80-3364d2f6a47a.png" >}}
+![在 Apple Silicon Mac 和 iOS 上，可以选中扫描版 PDF 中的文字](https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJ0Y4G/6688fdf5-1e36-499c-9c80-3364d2f6a47a.png)
 
 ## 制作 PDF 书签
 
 PDF 书签（[bookmark](https://helpx.adobe.com/hk_en/acrobat/using/page-thumbnails-bookmarks-pdfs.html)）是指导航窗格的书签面板中的超链接文本，对应着不同的页码，一般也叫作「目录」或「大纲」。
 
-{{< imgcap title="使用 PDF Expert 打开带有书签的 PDF，书签显示在左侧，如果 PDF 没有书签，此处则显示为空白" src="https://p15.p3.n0.cdn.getcloudapp.com/items/QwujQg4W/1db9c1e1-1dd1-492e-afbc-57f8f6123bb9.png" >}}
+![使用 PDF Expert 打开带有书签的 PDF，书签显示在左侧，如果 PDF 没有书签，此处则显示为空白](https://p15.p3.n0.cdn.getcloudapp.com/items/QwujQg4W/1db9c1e1-1dd1-492e-afbc-57f8f6123bb9.png)
 
 PDF 书籍动辄几百页，为其添加书签有助于在不同章节之间方便地跳转，让扫描后的 PDF 更加「电子化」。为 PDF 添加书签，看上去是一项略显复杂但又很常见的需求，有不少 [网友](https://www.bilibili.com/video/BV1fp4y1H71X) 提供了自己的解决方案，其中就包括 [派友](https://sspai.com/post/69601) 的分享。针对为书籍 PDF 增加书签这个需求，我的解决方案是使用命令行工具 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)。
 
@@ -98,7 +98,7 @@ PDFtk 是一个处理 PDF 文件的工具，包括 PDFtk Free、PDFtk Pro 和 PD
 
 制作 PDF 书签前，需要提供书签信息，即章节名称和对应的页码，以供 PDFtk 读取并写入 PDF 文件中。好消息是书籍的目录标题一般都很容易获取，不需要自己手动编辑，一般来说，豆瓣、Amazon 或出版社官网页的书籍介绍页都会提供目录，我们只需要复制它，然后将其保存为 `heading.txt`。
 
-{{< imgcap title="豆瓣读书上《遏制民族主义》的目录" src="https://p15.p3.n0.cdn.getcloudapp.com/items/nOu1Wj9e/6023906d-a7fb-4d48-b7af-4b12a779cc40.png" >}}
+![豆瓣读书上《遏制民族主义》的目录](https://p15.p3.n0.cdn.getcloudapp.com/items/nOu1Wj9e/6023906d-a7fb-4d48-b7af-4b12a779cc40.png)
 
 PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏制民族主义》这本书中，`第一章 民族主义的困惑` 是一级标题，`民族主义的界定` 则是二级标题。为了对不同的标题层级进行区分，我们借用 Markdown 的语法，将其改写为：
 
@@ -140,13 +140,13 @@ PDF 书签和 Markdown 中的标题一样，也是有层级的，比如在《遏
 
 尽管豆瓣等网站提供了书籍的目录，但一般没有提供对应的页码，需要单独制作。这一步我们将目光转向扫描版 PDF 书籍中已有的目录，通过 OCR 将目录页码提取出来，可以参考下图使用 [Clean Shot X](https://cleanshot.com/) OCR 页码的示例。
 
-{{< imgcap title="使用 Clean Shot X 的 OCR 功能提取目录中的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrWD/eecb1628-beb4-4d10-be4c-9d563c1dafcd.gif" >}}
+![使用 Clean Shot X 的 OCR 功能提取目录中的页码](https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrWD/eecb1628-beb4-4d10-be4c-9d563c1dafcd.gif)
 
 按照如上方式将页码全部提取出来，并保存为 `pagenumber.txt`。对于其中的空行，不必一个个手动移除，之后会在命令行中批量移除。
 
 需要注意的是，通过 OCR 得到的页码是书籍页眉或页脚中注明的页码，并非 PDF 文件中的真实页码，这是由于书籍的第 1 页通常是从正文第一页开始计算的，在正文之前还有序言、致谢、目录等部分，而 PDF 的页码则总是从第 1 页开始计算的。在《遏制民族主义》这本书中，从 PDF 第 1 页开始计算，正文第 1 页实际上位于第 10 页，前面的 9 页是前言部分。
 
-{{< imgcap title="页脚第 1 页实际上是 PDF 的第 10 页" src="https://p15.p3.n0.cdn.getcloudapp.com/items/DOukGpml/098288b4-e370-448f-bc08-d098c6661091.png" >}}
+![页脚第 1 页实际上是 PDF 的第 10 页](https://p15.p3.n0.cdn.getcloudapp.com/items/DOukGpml/098288b4-e370-448f-bc08-d098c6661091.png)
 
 由于 PDF 书签的页码总是从第 1 页开始计算的，因此，通过 OCR 得到的每一个页码都需要加上 9。如果需要对正文之前的部分制作书签，可以在 `pagenumber.txt` 中手动输入对应页码减去前言部分的页码数。对于《遏制民族主义》这本书来说，「出版说明」和「目录」分别在第 4 和 7 页，减去 9 后分别是 -5 和 -2。下面的例子中，第一列数字是我们 OCR 和手动编辑后的结果，第二列数字是它们在 PDF 中对应的页码：
 
@@ -291,7 +291,7 @@ BookmarkPageNumber: 14
 
 做好以上准备工作，下面就可以将 `bookmark.text` 写入 PDF 中。但是在进行这一步之前，如果该 PDF 本身就有书签信息，需要先将其移除。
 
-{{< imgcap title="PDF 已存在书签，但这并没有什么用……" src="https://p15.p3.n0.cdn.getcloudapp.com/items/d5uyboNZ/a2f493c2-45f4-407e-a7a0-60570f5a0940.png" >}}
+![PDF 已存在书签，但这并没有什么用……](https://p15.p3.n0.cdn.getcloudapp.com/items/d5uyboNZ/a2f493c2-45f4-407e-a7a0-60570f5a0940.png)
 
 首先使用 PDFtk 将 `input.pdf` 的元数据提取出来，保存为 `metadata.text`：
 
@@ -362,7 +362,7 @@ clean:
 - 小写英文字母 (a, b, c, …)
 - 大写英文字母 (A, B, C, …)
 
-{{< imgcap title="在 Adobe Acrobat 中调整 PDF 页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOvrqZ/0d501385-198a-4370-8516-07ce5c13a180.png" >}}
+![在 Adobe Acrobat 中调整 PDF 页码](https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOvrqZ/0d501385-198a-4370-8516-07ce5c13a180.png)
 
 考虑到 Adobe Acrobat 需要付费使用，且体验不是太好，这里提供另外一种调整页码的方式——[直接编辑 PDF 源文件](https://superuser.com/a/430628/1724072)。
 
@@ -391,7 +391,7 @@ pdftk output.pdf output uncompress.pdf uncompress
 
 粘贴完成之后，按下 `Esc` 键退出 Insert Mode，进入 Normal Mode，然后输入 `:wq` 保存更改并退出 Vim。
 
-{{< imgcap title="使用 Vim 打开与编辑 PDF" src="https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrkD/0a13b7e5-042b-4d72-aa9e-ac5719cba1b6.gif" >}}
+![使用 Vim 打开与编辑 PDF](https://p15.p3.n0.cdn.getcloudapp.com/items/6quNwrkD/0a13b7e5-042b-4d72-aa9e-ac5719cba1b6.gif)
 
 最后，再使用 PDFtk 将 `uncompress.pdf` 压缩回去 [^530]：
 
@@ -403,7 +403,7 @@ pdftk uncompress.pdf output output.pdf compress
 
 打开压缩之后得到的 `output.pdf`，可以看到，页码显示效果与预期一致，修改成功。
 
-{{< imgcap title="调整后的页码" src="https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDvxrk/c4d84b24-0fbd-473f-a3c0-2f68a15e6fe3.png" >}}
+![调整后的页码](https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDvxrk/c4d84b24-0fbd-473f-a3c0-2f68a15e6fe3.png)
 
 ## 小结
 

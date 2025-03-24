@@ -18,11 +18,11 @@ categories:
 
 [^fn3]: 在 Markdown 中，一行就是一段。
 
-{{< imgcap title="在 Markdown 中写中英双语文章" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-bilingual.png" >}}
+![在 Markdown 中写中英双语文章](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/markdown-bilingual.png)
 
 著名的网页翻译插件 [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh) 的翻译结果就是原文和译文互相穿插的形式，可以在阅读过程中同时对照着查看原文与译文，兼顾了阅读速度和翻译的准确性，受到了不少好评。
 
-{{< imgcap title="彩云小译网页翻译效果" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/caiyun-xiaoyi-translation.png" >}}
+![彩云小译网页翻译效果](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/caiyun-xiaoyi-translation.png)
 
 {{< admonition type=info title="📖 关联阅读" >}}
 [如何在浏览英文网页时获得更好的阅读体验？](https://sspai.com/post/54697)
@@ -38,7 +38,7 @@ categories:
 
 [^fn2]: 直接删除肯定是不可取的。
 
-{{< imgcap title="能被 Pandoc 识别的特定 Markdown 注释语法" src="https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/stack-overflow-markdown-comment.png" >}}
+![能被 Pandoc 识别的特定 Markdown 注释语法](https://cdn.jsdelivr.net/gh/TomBener/image-hosting/images/stack-overflow-markdown-comment.png)
 
 请注意，这不是常规的 [HTML 注释语法](https://www.w3schools.com/html/html_comments.asp) `<!--`、`-->`，而是 `<!---`、`-->`（多了一个 dash）。为什么要使用这种注释方式？有两方面原因：一是在转换为 HTML 时，这种特定的注释语法不会被 Pandoc 转换为注释块嵌入 HTML 中，二是常规 HTML 的注释语法需要保留，在手动编辑文章时使用[^fn4]。
 

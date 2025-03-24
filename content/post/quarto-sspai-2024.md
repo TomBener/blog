@@ -8,7 +8,7 @@ categories:
 ---
 
 {{< admonition title="🔖 Note" >}}
-本文参与少数派 [2024 年度征文活动] 的入围文章，你可以在 [少数派] 上阅读本文。
+本文参与少数派 [2024 年度征文活动]，你也可以在 [少数派] 上阅读本文。
 
   [2024 年度征文活动]: https://sspai.com/post/95877
   [少数派]: https://sspai.com/post/97056
@@ -40,7 +40,7 @@ Quarto 官方文档中提到，Quarto 文档（`.qmd` 文件）是 Markdown 和�
 
 [^footnote]: Ulysses 会强制将脚注编号转换为阿拉伯数字，按照 Markdown 文件中的出现顺序从 `1` 递增。
 
-{{< imgcap title="在 Ulysses 中读取外部 Markdown 文件夹中的多个文件，并开启「创建引用式链接」选项" src="https://cdn.retompi.com/580715d7-a740-4b88-9029-97c68fc7b4b0.png" >}}
+![在 Ulysses 中读取外部 Markdown 文件夹中的多个文件，并开启「创建引用式链接」选项](https://cdn.retompi.com/580715d7-a740-4b88-9029-97c68fc7b4b0.png)
 
 为了最大限度地保持不同 Markdown 编辑器的兼容性，我编写了一个简单的 [Python 脚本](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/format-md.py) 来预处理 Markdown 文件：
 
@@ -159,7 +159,7 @@ format:
 
 需要注意，本项目中的 [gb-author-date.csl](https://github.com/TomBener/quarto-cn-tools/blob/main/_styles/gb-author-date.csl) 和 [gb-numeric.csl](https://github.com/TomBener/quarto-cn-tools/blob/main/_styles/gb-numeric.csl) 是我根据 [Zotero Styles](https://www.zotero.org/styles) 网站下载的 CSL 样式文件修改而来的。与原始样式文件相比，修改之后的样式文件更加符合 GB/T 7714-2015 的标准，而 `localize-cnbib.lua` 也是根据这两个样式文件的格式来编写的，因此它可能对其他 CSL 样式文件不起作用。另外，如果在 Quarto 中使用，无法在 YAML 文件中指定这个 Lua filter，只能在命令行中使用 `-L _extensions/localize-cnbib.lua`，这是因为 Quarto 目前 [不支持](https://github.com/quarto-dev/quarto-cli/issues/7888) 在 `citeproc` 之后执行 Lua filter。
 
-{{< imgcap title="使用 `localize-cnbib.lua` 前后的对比，可以看到下图中中文参考文献的 `et al.` 被替换为 `等`" src="https://cdn.retompi.com/11797189-d676-4ef1-8994-8a069234eed8.png" >}}
+![使用 `localize-cnbib.lua` 前后的对比，可以看到下图中中文参考文献的 `et al.` 被替换为 `等`](https://cdn.retompi.com/11797189-d676-4ef1-8994-8a069234eed8.png)
 
 ### 中文参考文献按拼音排序
 
@@ -207,7 +207,7 @@ def special_pinyin(text):
         return None
 ```
 
-{{< imgcap title="使用 `sort-cnbib.py` 排序前后的对比，可以看到右图中中文参考文献的顺序被修改为按照著者的拼音排序" src="https://cdn.retompi.com/241339c0-6cf5-420d-9070-706af3146668.png" >}}
+![使用 `sort-cnbib.py` 排序前后的对比，可以看到右图中中文参考文献的顺序被修改为按照著者的拼音排序](https://cdn.retompi.com/241339c0-6cf5-420d-9070-706af3146668.png)
 
 对于参考文献表中中文和英文文献哪个在前的问题，各个学校和期刊的要求不尽相同，有的要求中文在前，有的要求英文在前，`sort-cnbib.py` 默认英文在前，如果你需要将中文文献排在前面，可以将其中对应的代码修改为：
 
@@ -232,7 +232,7 @@ def finalize(doc):
 
 在 [Pandoc 3.2.1](https://github.com/jgm/pandoc/releases/tag/3.2.1) 之前，我编写了一个 Lua filter 来处理 DOCX 输出中的中文引号，但它无法处理参考文献表中的引号。尽管有 AI 的帮助，但囿于自身代码水平的限制，我无法完全解决这个问题，只能向 Pandoc 的作者 John MacFarlane 教授提交了一个 [issue](https://github.com/jgm/pandoc/issues/9817)。幸运的是，他采纳了我的建议，在 Pandoc 3.2.1 中为 DOCX 文件中的 `w:r` 元素添加了 `eastAsia` 字体提示，也就是为中日韩（CJK）文字添加了字体提示，以确保在包含中文字符的 `w:r` 元素中，引号会被渲染为宽字符，在 Word 中更宽一些（只是看上去更宽，实际宽度和英文引号是一样的）。
 
-{{< imgcap title="Pandoc 3.2.1 及之后的版本中，Pandoc 优化了中文在 DOCX 中的排版，可以将包裹中文的引号渲染为宽字符，上图为 Pandoc 3.2 转换得到的 DOCX 文件，下图为 Pandoc 3.6.3 转换得到的 DOCX 文件" src="https://cdn.retompi.com/ce4e252e-2527-454d-b4b4-06e93cdfe9a1.png" >}}
+![Pandoc 3.2.1 及之后的版本中，Pandoc 优化了中文在 DOCX 中的排版，可以将包裹中文的引号渲染为宽字符，上图为 Pandoc 3.2 转换得到的 DOCX 文件，下图为 Pandoc 3.6.3 转换得到的 DOCX 文件](https://cdn.retompi.com/ce4e252e-2527-454d-b4b4-06e93cdfe9a1.png)
 
 除了 DOCX 外，LaTeX 中的引号也是十分棘手的问题，这同样是因为 Pandoc 没有将中文和英文区别对待。在 LaTeX 中，英文单引号为 `` `text' ``，输出结果为 `‘text’`，双引号为 ` ``text'' `，输出结果为 `“text”`。而中文引号直接使用 `“`、`”`、`‘`、`’` 表示就可以了。此外，对于 HTML 和 ePub 这两种格式来说，由于它们是基于网页排版的，所以需要使用直角引号 `「`、`」`、`『`、`』` 来包裹中文，因此也就不需要对正文进行处理，只需将参考文献列表中的蝌蚪引号转换为直角引号，确保全文引号使用一致。
 
@@ -244,7 +244,7 @@ def finalize(doc):
 
 通过这一套方案，我们就可以让 Quarto 输出的 DOCX、PDF、HTML 和 ePub 都各自使用符合其格式的引号，即在 DOCX 和 PDF 中使用看上去较宽的蝌蚪引号包裹中文，在 HTML 和 ePub 中使用直角引号包裹中文，而英文引号则保持不变。
 
-{{< imgcap title="在不同格式下，中文引号被转换为不同的样式，DOCX 和 PDF 中使用蝌蚪引号，HTML 和 ePub 中使用直角引号" src="https://cdn.retompi.com/fe0d315b-2601-4607-85cc-75f87f141b47.png" >}}
+![在不同格式下，中文引号被转换为不同的样式，DOCX 和 PDF 中使用蝌蚪引号，HTML 和 ePub 中使用直角引号](https://cdn.retompi.com/fe0d315b-2601-4607-85cc-75f87f141b47.png)
 
 ### 中西文盘古之白
 
@@ -286,11 +286,11 @@ def load_config():
     autocorrect.load_config(config_str)
 ```
 
-{{< imgcap title="使用 `auto-correct.py` 自动添加中西文之间的空格并纠正标点符号" src="https://cdn.retompi.com/ce1f0124-ec3d-438d-8030-e47b30eda43e.png" >}}
+![使用 `auto-correct.py` 自动添加中西文之间的空格并纠正标点符号](https://cdn.retompi.com/ce1f0124-ec3d-438d-8030-e47b30eda43e.png)
 
 值得一提的是，在不同的输出格式下，对「中西文盘古之白」的处理存在着差异。对于通过 LaTeX 生成的 PDF 来说，用于中文排版的 [ctex](https://ctan.org/pkg/ctex) 宏包会自动处理中英文之间的空格，因此无需使用这个 Python filter。只有在转换为 HTML、ePub 等其他格式，才需要使用这个 filter。而对于 DOCX 来说，情况则比较特殊，这是因为 Microsoft Word 有自动调整中西文间距的功能。
 
-{{< imgcap title="Microsoft Word 中自动调整中西文间距的设置" src="https://cdn.retompi.com/6494e9fe-3356-4bcc-a415-23aa35c8a6f5.png" >}}
+![Microsoft Word 中自动调整中西文间距的设置](https://cdn.retompi.com/6494e9fe-3356-4bcc-a415-23aa35c8a6f5.png)
 
 因此，如果你习惯在 Markdown 中手动输入空格，那么在转换为 DOCX 时，请使用 [remove-spaces](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/remove-spaces/remove-spaces.lua) 这个 Lua filter 来移除中西文之间的空格。如果你不想手动在 Markdown 中添加中西文之间的空格，则在转换为 DOCX 时，无需进行额外的操作，交给 Word 自动处理就好。
 
@@ -300,7 +300,7 @@ Markdown 中连续两个换行会生成一个空段落，而单个换行则会�
 
 尽管 Quarto 是基于 Pandoc 开发的，但它并 [不支持](https://github.com/quarto-dev/quarto-cli/issues/8520) `east_asian_line_breaks` 扩展。为了能够在中文写作时自由换行，用文字随心所欲地表达自我，而不用拘泥于是否应该在哪里换行，基于 [涛叔](https://taoshu.in/unix/markdown-soft-break.html) 的博客文章，我编写了一个 [Lua filter](https://github.com/TomBener/quarto-cn-tools/blob/main/_extensions/ignore-softbreaks/ignore-softbreaks.lua)，在 Quarto 中模拟 Pandoc 的 `east_asian_line_breaks` 扩展。需要注意的是，这个 Lua filter 假设文档中只包含中文和英文，判断中文的条件也十分简单粗暴，即「如果字符串不是 ASCII 字符，则认为是中文」。因此，如果你的文档中包含其他语言，可能会出现问题，不过对于中文学术论文来说，这个 Lua filter 还是适用的。
 
-{{< imgcap title="在 Quarto 中使用 Lua filter 模拟 Pandoc 的 `east_asian_line_breaks` 扩展，左侧为 Markdown 源码，右侧为转换后的 HTML 文件，可以看到标点符号后单个换行被忽略" src="https://cdn.retompi.com/17aecf68-0753-41de-b24e-eded7e336e45.png" >}}
+![在 Quarto 中使用 Lua filter 模拟 Pandoc 的 `east_asian_line_breaks` 扩展，左侧为 Markdown 源码，右侧为转换后的 HTML 文件，可以看到标点符号后单个换行被忽略](https://cdn.retompi.com/17aecf68-0753-41de-b24e-eded7e336e45.png)
 
 ## 结语
 
@@ -308,6 +308,6 @@ Markdown 中连续两个换行会生成一个空段落，而单个换行则会�
 
 需要指出的是，与相对稳定的 Pandoc 相比，Quarto 仍在积极开发中，很多功能还有待完善。比如目前它不支持在 `citeproc` 之后执行 Lua filter，这导致与处理引用相关的 filters 无法通过 `_quarto.yml` 配置文件来调用。为此，我采取了折中的办法：借助 [Makefile](https://github.com/TomBener/quarto-cn-tools/blob/main/Makefile)，通过命令行来执行脚本。不过好在 Quarto 的开发者们已经意识到了这个问题，并将其加入了版本 [1.7](https://github.com/quarto-dev/quarto-cli/milestone/15) 的更新计划中，相信未来这一问题会有更加优雅的解决方案。
 
-2024 年是人工智能狂飙突进的一年，人们越来越依赖大语言模型进行内容消费和创作。为了让互联网更好地兼容 AI，Markdown 越来越受到人们的 [青睐](https://p.migdal.pl/blog/2025/02/markdown-saves)，有人甚至提出了使用 [/llms.txt](https://llmstxt.org) 文件来提供信息，帮助 LLMs 更好地理解网站内容。事实上，纯文本不仅对 AI 友好，对人类来说也是更高效、更灵活的写作方式。我一直在中文互联网上推广用纯文本进行学术写作的理念，起初只是出于对 Word 和 LaTeX 的不满，想要找到一种更符合自己习惯的写作方式，而从 Pandoc 到如今的 Quarto，依然使用 Markdown，我的纯文本学术写作之路走过了探索、实践、再完善的循环。
+2024 年是人工智能狂飙突进的一年，人们越来越依赖大语言模型进行内容消费和创作。一方面，正是由于 ChatGPT、Claude、Gemini 等大语言模型的出现，大大降低了普通人用代码实现自己想法的门槛，本文介绍的诸多优化功能才能得以轻松实现。另一方面，为了让互联网更好地兼容 AI，Markdown 越来越受到人们的 [青睐](https://p.migdal.pl/blog/2025/02/markdown-saves)，有人甚至提出了使用 [/llms.txt](https://llmstxt.org) 文件来提供信息，帮助 LLMs 更好地理解网站内容。事实上，纯文本不仅对 AI 友好，对人类来说也是更高效、更灵活的写作方式。我一直在中文互联网上推广用纯文本进行学术写作的理念，起初只是出于对 Word 和 LaTeX 的不满，想要找到一种更符合自己习惯的写作方式，而从 Pandoc 到如今的 Quarto，依然使用 Markdown，我的纯文本学术写作之路走过了探索、实践、再完善的循环。
 
 在 2024 年全面应用 Quarto 写作论文的过程中，我深切体会到工具的进步为创作带来的便利和乐趣：写作时只需关注文字本身，不再为排版琐事分心，转换格式时不再焦头烂额地处理兼容问题，论文的结构和样式也更易于维护和迁移。当然，我并不是鼓吹花时间折腾工具胜过打磨内容。恰恰相反，只有当我们不再花费过多时间折腾形式上的排版，才能有更多时间去思考内容本身，从而产出更高质量的学术成果。学术写作之难，难在如何清晰准确地传达思想，但愿我们的工具箱不断丰富之余，写作的初心不变：让技术化繁为简，助力思想闪烁光芒。期待在不远的将来，看到有更多人加入纯文本写作的行列，分享你的故事和成果，而你的写作实践，又将成为下一年别人眼中的经验和灵感。祝我们在创作的道路上共同进步。

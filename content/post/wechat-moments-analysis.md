@@ -85,7 +85,7 @@ Python 和 R 进行简单的数据分析，也可以复用这些代码。除此�
 
 [^684]: 「联系人」的叫法来自于主流 IM（Instant Messaging）的英文称呼 contacts，而不是中文语境下的「朋友」或「好友」。在我看来，微信里的大部分 contacts 都不足以被称之为 friends。
 
-{{< imgcap title="保存在 Notion 中的原始数据" src="https://p15.p3.n0.cdn.getcloudapp.com/items/9Zuzo5Nx/08a10f0f-5bee-4cf2-927e-e434113bbc04.png" >}}
+![保存在 Notion 中的原始数据](https://p15.p3.n0.cdn.getcloudapp.com/items/9Zuzo5Nx/08a10f0f-5bee-4cf2-927e-e434113bbc04.png)
 
 这些数据的格式可以参见下面这个 CSV
 文件示例，应该可以从表头名称猜出各自的含义：
@@ -170,7 +170,7 @@ Python 库 [pandas] 和 [Matplotlib]。除此之外，这里还用到了字体
 
 由于我的朋友圈关键词涉及个人隐私，这里不便分享，因此以著名的《[兰亭集序](https://zh.wikipedia.org/zh-cn/蘭亭集序)》为例，展示一下生成的词云图：
 
-{{< imgcap title="使用《兰亭集序》生成的词云图" src="https://p15.p3.n0.cdn.getcloudapp.com/items/mXub2KWY/620ee116-8377-4e38-a37b-3f3d3e6a9851.png" >}}
+![使用《兰亭集序》生成的词云图](https://p15.p3.n0.cdn.getcloudapp.com/items/mXub2KWY/620ee116-8377-4e38-a37b-3f3d3e6a9851.png)
 
 <details>
 <summary>点击展开《兰亭集序》</summary>
@@ -359,7 +359,7 @@ header-includes:
                   citecolor=red!80}
 ```
 
-{{< imgcap title="使用 Tufte 样式排版的文章" src="https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOOeDB/86b566ac-f7fd-4284-92cc-274a7f3aed3b.png" >}}
+![使用 Tufte 样式排版的文章](https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOOeDB/86b566ac-f7fd-4284-92cc-274a7f3aed3b.png)
 
 ### 朋友圈可见时长
 
@@ -374,7 +374,7 @@ header-includes:
 种类型的可见时长分布比较平均，印象中最多的「三天可见」果然占比最高，但与其它
 3 类相比，差距并不是很大，而占比最低的则是「无时限」。占比最高和最低的可见时长，分别是最短的「三天」和最长的「无时限」，这与我的推测基本一致。
 
-{{< imgcap title="朋友圈可见时长比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJKmxg/4daa07ca-f023-4934-83a8-48d19f4315c9.png" >}}
+![朋友圈可见时长比例](https://p15.p3.n0.cdn.getcloudapp.com/items/GGuJKmxg/4daa07ca-f023-4934-83a8-48d19f4315c9.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -419,7 +419,7 @@ df %>%
 从下图可以看出，发朋友圈最多、最活跃的人群是我的高中同学，其次是本科同学，加起来超过
 80%。这大概是因为高中同学和本科同学本来就在所有联系人中占有很高的比例，其他人群如小学同学、老师、亲戚的数量不多，而研究生同学被我屏蔽了不少，或者对方把我屏蔽了，因此形成了这种「两极分化」的结果。很大程度上，微信朋友圈而不是微信的聊天功能，才是曾经的老同学的联系方式，甚至是唯一的方式。对我来说，没有互相加过微信的同学，往往更容易忘记对方的名字。
 
-{{< imgcap title="朋友圈活跃人群" src="https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDWgq6/8db28349-563e-417b-bedf-a961db703ad8.png" >}}
+![朋友圈活跃人群](https://p15.p3.n0.cdn.getcloudapp.com/items/YEuDWgq6/8db28349-563e-417b-bedf-a961db703ad8.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -463,7 +463,7 @@ relationship-based 而不是 interest-based
 的，所以如果你发的内容不是你的朋友们感兴趣的（而这几乎是必然的），而数量又很多的话，那么他们就会觉得你在「刷存在感」，或者在「立人设」，甚至其他各种乱七八糟的看法。也许正是基于这种顾虑，发 1
 条朋友圈的联系人是最多的（当然没有发的联系人更多，但不在此次统计范围之内）。
 
-{{< imgcap title="发朋友圈次数分布情况" src="https://p15.p3.n0.cdn.getcloudapp.com/items/WnuZDDjl/bd33cde8-3d61-4937-9d5b-dee29a914f8e.png" >}}
+![发朋友圈次数分布情况](https://p15.p3.n0.cdn.getcloudapp.com/items/WnuZDDjl/bd33cde8-3d61-4937-9d5b-dee29a914f8e.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -508,7 +508,7 @@ ggplot(data = df,
 而朋友圈的设计对图片是非常友好的，它的发布入口是一个相机图标，点击之后有「拍摄」和「从手机相册选择」两个选项，如果首次长按该图标发送文字，微信会提示「长按拍照按钮发文字，为内部体验功能。后续版本可能取消，也有可能保留，请勿过于依赖此方法」。而如果你点击「我
 -> 朋友圈」之后，则会在顶部显示「拍一张图片，开始记录你的生活」。
 
-{{< imgcap title="发布的媒介类型" src="https://p15.p3.n0.cdn.getcloudapp.com/items/llugdj1K/6558b388-3385-433a-b375-03df0cc4d189.png" >}}
+![发布的媒介类型](https://p15.p3.n0.cdn.getcloudapp.com/items/llugdj1K/6558b388-3385-433a-b375-03df0cc4d189.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -564,9 +564,9 @@ df %>%
 6 月 1 日，达到了 26 条，也许因为这一天是一年一度的儿童节，很多同学都还不想长大，幻想着自己还是一个要过节的小孩子，所以想要发条朋友圈庆祝一下。而最少的一天则是
 5 月 24 日，只有 9 条，大概是因为这一天是星期二，大家都在上课或上班，煎熬地度过「求死 Day」（Tuesday），而痛苦的日子大多是不适合发布在微信朋友圈中的。平均来看，每天大约发布 15.3 条。
 
-{{< imgcap title="每天的发布次数，按发布次数排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/v1uEQjg2/7cecc7a1-5ecb-447a-b698-40e76db608f3.png" >}}
+![每天的发布次数，按发布次数排列](https://p15.p3.n0.cdn.getcloudapp.com/items/v1uEQjg2/7cecc7a1-5ecb-447a-b698-40e76db608f3.png)
 
-{{< imgcap title="按发布次数排列，按时间顺序排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKyv/8c68d651-ba06-4d03-8d3f-bf3486f58740.png" >}}
+![按发布次数排列，按时间顺序排列](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKyv/8c68d651-ba06-4d03-8d3f-bf3486f58740.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -611,9 +611,9 @@ ggplot(data = df, aes(x = day,
 是相对低谷的时段，我猜是因为这个时间段大部分人都在吃晚饭吧。相比而言，发朋友圈最少的时间段是凌晨
 01:00 到 06:00 之间，很明显这个时间段大家都在睡觉，即使是夜猫子，大概也会蛰伏在床上，享受独自快乐的时光。
 
-{{< imgcap title="一天中的发朋友圈时间分布，按发布次数排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/WnuZDkDK/f1b54498-3398-4898-a3dc-6caaea14d7c9.png" >}}
+![一天中的发朋友圈时间分布，按发布次数排列](https://p15.p3.n0.cdn.getcloudapp.com/items/WnuZDkDK/f1b54498-3398-4898-a3dc-6caaea14d7c9.png)
 
-{{< imgcap title="一天中发朋友圈的时间分布，按时间顺序排列" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4ePey/925b4520-3b99-45b1-8f93-1c6500e670c4.png" >}}
+![一天中发朋友圈的时间分布，按时间顺序排列](https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4ePey/925b4520-3b99-45b1-8f93-1c6500e670c4.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -659,7 +659,7 @@ ggplot(data = df,
 从我的统计来看，将近 60%
 的朋友圈没有背景信息。但是必须要承认，这是不可避免的，因为对我来说没有背景信息，对其他人来说则并非如此，而这就与接下来的「[属性](#属性)」密不可分。
 
-{{< imgcap title="朋友圈是否具有背景信息" src="https://p15.p3.n0.cdn.getcloudapp.com/items/8Lug1DWx/442adb56-79f4-4e12-83d7-264323b9c3c7.png" >}}
+![朋友圈是否具有背景信息](https://p15.p3.n0.cdn.getcloudapp.com/items/8Lug1DWx/442adb56-79f4-4e12-83d7-264323b9c3c7.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -702,7 +702,7 @@ df %>%
 
 [^91A]: 「受欢迎」的依据是点赞和评论的数量，但由于只能看见双方共同联系人的互动，因此据此作出判断并不十分可靠。
 
-{{< imgcap title="朋友圈的属性" src="https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOxqkj/4fe343d2-c8ba-4b93-8e85-d8c613d2054e.png" >}}
+![朋友圈的属性](https://p15.p3.n0.cdn.getcloudapp.com/items/xQuOxqkj/4fe343d2-c8ba-4b93-8e85-d8c613d2054e.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -741,7 +741,7 @@ df %>%
 从下图可以看出，在所有的朋友圈中，正面和中立情绪几乎各占了一半，而负面情绪只有不到
 3%。当然，这样的分类完全基于我的主观判断，不具有客观性。但可以肯定的是，负面情绪在朋友圈中是非常少见的，而这与我此前的推测一致，即在朋友圈中「积极的真实生活的记录」是受欢迎的，而带有负面情绪的内容在长期的选择过程中会被逐渐淘汰掉。
 
-{{< imgcap title="朋友圈透露出的情绪" src="https://p15.p3.n0.cdn.getcloudapp.com/items/2Nu67zQ8/cb2d9669-c84f-435b-899c-be254928c76e.png" >}}
+![朋友圈透露出的情绪](https://p15.p3.n0.cdn.getcloudapp.com/items/2Nu67zQ8/cb2d9669-c84f-435b-899c-be254928c76e.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -776,9 +776,9 @@ df %>%
 张图片比较费时费力，而生活中大多数事情不值得这样做。除此之外，1
 张图片所占的比例也相对较高，超过 20%，这类朋友大概秉持着「少即是精」的原则。
 
-{{< imgcap title="朋友圈中的图片数量分布" src="https://p15.p3.n0.cdn.getcloudapp.com/items/llugdkdO/92facc6e-7808-4949-a1d7-913a18921ee5.png" >}}
+![朋友圈中的图片数量分布](https://p15.p3.n0.cdn.getcloudapp.com/items/llugdkdO/92facc6e-7808-4949-a1d7-913a18921ee5.png)
 
-{{< imgcap title="朋友圈中的图片数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/d5uyn6nq/07a14b46-a464-481a-9d89-d4a4a52c4211.png?v=6872f066c8dcdec9f11c2c5a4f7ab231" >}}
+![朋友圈中的图片数量比例](https://p15.p3.n0.cdn.getcloudapp.com/items/d5uyn6nq/07a14b46-a464-481a-9d89-d4a4a52c4211.png?v=6872f066c8dcdec9f11c2c5a4f7ab231)
 
 <details>
 <summary>点击展开代码</summary>
@@ -846,9 +846,9 @@ df %>%
 12% 的朋友圈有 1 个赞，点赞超过 1 个的朋友圈加起来不到
 20%。之所以会有这样的结果，一个非常重要的原因是微信朋友圈是一个「半开放」的平台，只会显示双方共同联系人在朋友圈动态下的互动内容，因此，我所看见的其他人朋友圈下的点赞数量并不真实，仅能反映出我和他们共同联系人的点赞数量。
 
-{{< imgcap title="点赞数量分布" src="https://p15.p3.n0.cdn.getcloudapp.com/items/Qwujd2dO/a29fd7dd-614d-4805-a572-1a6a426cfa23.png" >}}
+![点赞数量分布](https://p15.p3.n0.cdn.getcloudapp.com/items/Qwujd2dO/a29fd7dd-614d-4805-a572-1a6a426cfa23.png)
 
-{{< imgcap title="点赞数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKR6/c57fe412-42cf-46dd-95e8-5786405b3bf0.png" >}}
+![点赞数量比例](https://p15.p3.n0.cdn.getcloudapp.com/items/E0uRZKR6/c57fe412-42cf-46dd-95e8-5786405b3bf0.png)
 
 <details>
 <summary>点击展开代码</summary>
@@ -907,9 +907,9 @@ df %>%
 
 另一方面，由于我的朋友圈中的联系人现在的生活状况千差万别，不像高中或本科阶段，大家有着共同关心的问题或者类似的价值观，看见很多朋友圈，直接划过似乎是更好的选择，看到赞同或值得祝福的内容，顶多点个赞，而不太会选择评论。长此以往，曾经无话不谈的好朋友也可能渐渐沦为「点赞之交」。
 
-{{< imgcap title="评论数量分布" src="https://p15.p3.n0.cdn.getcloudapp.com/items/yAuAQ0Ao/1ca05aee-9044-4c06-86f3-74709a0db06e.png" >}}
+![评论数量分布](https://p15.p3.n0.cdn.getcloudapp.com/items/yAuAQ0Ao/1ca05aee-9044-4c06-86f3-74709a0db06e.png)
 
-{{< imgcap title="评论数量比例" src="https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4eP4y/85a30a11-81cc-4bbb-be69-08427790b692.png" >}}
+![评论数量比例](https://p15.p3.n0.cdn.getcloudapp.com/items/4gu4eP4y/85a30a11-81cc-4bbb-be69-08427790b692.png)
 
 <details>
 <summary>点击展开代码</summary>

@@ -35,13 +35,13 @@ categories:
 
 一般情况下，我们所说的 PDF 页码指的是物理页码，即 PDF 中从第 1 页开始递增的页码，每个 PDF 文档都有物理页码，这种页码被称作 page numbers，大多数情况下，page numbers 都使用阿拉伯数字计数。除此之外，在 PDF 特别是较长的 PDF 书籍中，还有另一种被称作 [page folios](https://www.devontechnologies.com/blog/20220208-pdf-page-numbering) 的页码，它是指 PDF 页面中页眉或页脚处的序列标记，可能是英文字母、罗马数字或阿拉伯数字，在 Adobe Acrobat 中也叫作 page labels。我们常说的某本书的第几页指的是 page folios，而不是 page numbers。例如下图中的 PDF 一共有 256 页，当前位于 page numbers 的第 19 页，page folios 的第 10 页。
 
-{{< imgcap title="PDF Expert 右下角显示的 PDF 页码" src="https://static.retompi.com/231532eb-5e0b-4ec3-9158-0bb6e50601d5.png" >}}
+![PDF Expert 右下角显示的 PDF 页码](https://static.retompi.com/231532eb-5e0b-4ec3-9158-0bb6e50601d5.png)
 
 在上图所示的 PDF 中，page numbers 和 page folios 不一致。当我们在 PDF 阅读软件中页码跳转框中输入阿拉伯数字 10 之后，会跳转到 page numbers 的第 10 页，而不是 page folios 的第 10 页（即这本书的第 10 页）。造成这种情况的原因是 PDF 书籍中的封面、版权、前言、目录等部分的 page numbers 通常使用的是英文字母或罗马数字，正文部分才是阿拉伯数字。为了方便阅读，我们通常需要将 page folios 和 page numbers 设置为相同的值。
 
 在 Adobe Acrobat 中，我们可以选中需要调整的页面缩略图，然后右键点击「Page Labels…」，在弹出的对话框中设置需要调整的页面范围，然后调整 page labels，可以选择使用阿拉伯数字、英文字母、罗马数字或自定义标记，以及为其添加前缀，最后点击「OK」即可，如下图所示。
 
-{{< imgcap title="在 Adobe Acrobat 中调整 PDF 页码" src="https://static.retompi.com/b1be6c92-3988-448b-b7bc-8fc9fb50da5b.png" >}}
+![在 Adobe Acrobat 中调整 PDF 页码](https://static.retompi.com/b1be6c92-3988-448b-b7bc-8fc9fb50da5b.png)
 
 尽管在 Adobe Acrobat 中调整 page labels 非常直观，但是这种方法需要付费，而且操作比较繁琐，需要多次点击，不够方便。下面介绍另一种调整 PDF 页码的方法——使用命令行工具 PDFtk。这种方法无需付费，并且非常符合 [Unix 哲学](https://en.wikipedia.org/wiki/Unix_philosophy)「一切皆文件」的原则。需要注意的是，由于原版 PDFtk[^aiq] 不支持调整 PDF 页码标签的功能，因此下文使用的都是 `pdftk-java`。
 
@@ -110,7 +110,7 @@ PageLabelNumStyle: DecimalArabicNumerals
 
 为了修改 PDF 的页码标签，我们需要先将 PDF 的页码标签元数据导出为文本文件，然后修改其中的页码标签信息，最后将修改后的元数据导入 PDF 文件，生成一个新的 PDF 文件。比如我们将上述示例中倒数第 3 行的 `17` 修改为 `20`，就可以将 PDF 的 page labels 修改为从阿拉伯数字 20 开始，而不是之前的 17，如下图所示。
 
-{{< imgcap title="修改元数据后得到 PDF，从第 20 页开始使用阿拉伯数字作为页码标签" src="https://static.retompi.com/49c758f8-871d-4d71-86e6-6737b51425bf.png" >}}
+![修改元数据后得到 PDF，从第 20 页开始使用阿拉伯数字作为页码标签](https://static.retompi.com/49c758f8-871d-4d71-86e6-6737b51425bf.png)
 
 经过上面的分析，修改 PDF 页码标签的步骤就很清晰了：
 
@@ -120,7 +120,7 @@ PageLabelNumStyle: DecimalArabicNumerals
 
 尽管上述步骤非常简单明了，但每次都需要修改文件名称，对于不熟悉命令行的朋友来说，可能还是有点难以上手。因此，我制作了一个 Keyboard Maestro macro 来实现这一功能，如下图所示。
 
-{{< imgcap title="调整 PDF 页码标签的 Keyboard Maestro macro" src="https://static.retompi.com/30b06a1c-7d24-42ed-80e3-884859df8389.png" >}}
+![调整 PDF 页码标签的 Keyboard Maestro macro](https://static.retompi.com/30b06a1c-7d24-42ed-80e3-884859df8389.png)
 
 这个 macro 首先获取访达（Finder）中选中文件及其所在路径，然后保存为 Keyboard Maestro 中的变量 `selected_pdf`。之后是一个条件判断，用于判断选中的文件是否是 PDF，如果不是，则弹出通知「No PDF was selected.」，然后取消执行 macro。如果选中的文件是 PDF 的话，则弹出一个提示框，让用户输入页码标签的起始页，这里包括了 3 种类型，也就是 3 个变量：
 
@@ -178,11 +178,11 @@ rm metadata.text
 
 激活这个 macro 之后，在访达中选中需要修改页码标签的 PDF 文件，然后按下快捷键 `⌃ + ⌥ + L` 或点击菜单栏的 Keyboard Maestro Engine 图标，在弹出的窗口中输入不同类型的页码标签的起始页，就可以得到页码标签修改后的 PDF 文件，使用效果见下图。
 
-{{< imgcap title="调整 PDF 页码标签的 Keyboard Maestro macro 使用效果" src="https://static.retompi.com/2735b7c5-8b3d-4574-8d91-1806391e0d0b.gif" >}}
+![调整 PDF 页码标签的 Keyboard Maestro macro 使用效果](https://static.retompi.com/2735b7c5-8b3d-4574-8d91-1806391e0d0b.gif)
 
 在上图的示例中，默认将第 1 页的 page label 设置为 `Cover`，小写罗马数字的起始页为 2，阿拉伯数字的起始页为 5，生成的 PDF 的页码标签如下图所示。
 
-{{< imgcap title="调整 PDF 页码标签后得到的 PDF" src="https://static.retompi.com/e7ea1f2e-c9f1-44fc-bba7-ded025a48755.png" >}}
+![调整 PDF 页码标签后得到的 PDF](https://static.retompi.com/e7ea1f2e-c9f1-44fc-bba7-ded025a48755.png)
 
 需要注意的是，上述 macro 只包括了自定义的 Cover、小写罗马数字和阿拉伯数字这 3 种类型的页码标签，如果你需要调整其他类型的页码标签，可以参考上面的示例，自行修改 Shell 脚本中的代码。需要注意的是，`KMVAR_` 是 Keyboard Maestro 中 Shell 脚本使用变量所必需的前缀，不可省略。
 
@@ -197,17 +197,17 @@ rm metadata.text
 
 再举个例子，如今很多学术期刊上的论文都采用在线出版（FirstView or Latest articles）的方式，即在论文编入某一期或卷之前首先发布在期刊的网站上，这样可以让研究成果尽快被读者阅读到，但此时的论文还没有被编入期刊的某一期（issue）或卷（volume）中，也就是还没有正式出版，在线出版和正式出版的时间往往相隔很长时间，有时甚至超过一年。绝大多数情况下，在线出版和正式出版论文唯一的区别是页码，例如在下图所示的例子中，左侧是在线出版的 PDF，页眉处的页码是 2，而在右侧正式出版的 PDF 中，页眉处的页码是 854。在引用这篇论文时，我们应该使用正式出版的论文，也就是右侧页码为 854 的论文，因此需要用右侧的论文替代左侧的论文。如果你已经在「在线出版」的论文 PDF 中做了一些批注，为了避免重复做一遍批注，你希望将批注转移到正式出版的论文中。
 
-{{< imgcap title="在线出版和正式出版的论文的 PDF 文件页码不同" src="https://static.retompi.com/4c6c2238-3847-4298-8ed1-5103434b142a.png" >}}
+![在线出版和正式出版的论文的 PDF 文件页码不同](https://static.retompi.com/4c6c2238-3847-4298-8ed1-5103434b142a.png)
 
 如果你使用的 PDF 阅读软件将批注保存为一个单独的文件或保存在专有数据库中，比如 [Zotero 6](https://sspai.com/post/72163) 内置的 PDF 阅读器，那么完全可以实现无痛切换。但是我不习惯这种方式，因为我同时使用多个 PDF 软件，我希望无论在哪个 PDF 软件中打开，批注都保存在 PDF 文件内部，也就是 embedded annotations。
 
 Adobe Acrobat 可以实现转移嵌入 PDF 内部的批注的功能，使用方式如下图所示。首先打开有批注的 PDF，点击右侧的「Comment」图标，然后点击右上角的更多选项图标，点击「Export All To Data File…」，然后在弹出的窗口中选择导出文件的存储位置和格式，有两种格式可选，一种是 FDF（Forms Data Format），另一种是 XFDF（XML Forms Data Format），这两种格式都可以导出 PDF 批注。
 
-{{< imgcap title="在 Adobe Acrobat 中导出批注" src="https://static.retompi.com/d948d734-201d-4a4e-bc29-4404e61dcdf7.png" >}}
+![在 Adobe Acrobat 中导出批注](https://static.retompi.com/d948d734-201d-4a4e-bc29-4404e61dcdf7.png)
 
 导出批注之后，再用 Adobe Acrobat 打开新的 PDF，点击右侧的「Comment」图标，然后点击右上角的更多选项图标，点击「Import Data File…」，然后在弹出的窗口中选择刚刚导出的批注文件，就可以将批注转移到新的 PDF 中。
 
-{{< imgcap title="在 Adobe Acrobat 中导入批注" src="https://static.retompi.com/ddda067f-b17f-4eda-b03d-52c0e8e8aef9.png" >}}
+![在 Adobe Acrobat 中导入批注](https://static.retompi.com/ddda067f-b17f-4eda-b03d-52c0e8e8aef9.png)
 
 说实话，我不喜欢使用 Adobe Acrobat 这种笨重且需要多次点击的软件，仅仅为了转移 PDF 批注，就需要两次打开 Adobe Acrobat，对我来说实在是难以忍受。因此，我曾多次尝试使用更加自动化的方法来代替在 Adobe Acrobat 中的操作。
 
@@ -261,13 +261,13 @@ plutil -convert xml1 -o output-skim.xml output-skim.skim
 
 使用 VS Code 打开转换得到的 `output-skim.xml` 文件，如下图所示。
 
-{{< imgcap title="将 Skim notes 转换得到的 XML 文件" src="https://static.retompi.com/62e72530-07c6-4ea3-8be5-a93c166024ec.png" >}}
+![将 Skim notes 转换得到的 XML 文件](https://static.retompi.com/62e72530-07c6-4ea3-8be5-a93c166024ec.png)
 
 从这个 XML 文件可以看出，Skim notes 中的信息非常丰富，完全不输 FDF 和 XFDF 文件，包含了批注的颜色、位置、页码、类型、作者、创建时间、修改时间等信息。因此通过 Skim notes，我们可以实现和 Adobe Acrobat 一样的功能，将 PDF 批注转移到另一个 PDF 中。
 
 为了让不熟悉命令行的朋友也能使用这个功能，我制作了两个 Keyboard Maestro macros 来实现「转移 PDF 批注」的功能，如下图所示。
 
-{{< imgcap title="转移 PDF 批注的 Keyboard Maestro macros" src="https://static.retompi.com/2e00d03a-6223-4e14-97fc-7c0dfc76b133.jpeg" >}}
+![转移 PDF 批注的 Keyboard Maestro macros](https://static.retompi.com/2e00d03a-6223-4e14-97fc-7c0dfc76b133.jpeg)
 
 之所以是两个 macros，是因为我们需要在访达中先后选择两个 PDF 文件。左侧的「Step I」用于选择包含批注的 PDF，右侧的「Step II」用于选择需要转移批注的 PDF，这两个 macros 唯一的区别是用到的 Shell 脚本不同。
 
@@ -307,11 +307,11 @@ rm output-skim.*
 
 这两个 macros 的使用方式见下图。首先，在访达中选中包含批注的 PDF，然后按下快捷键 `⌃ + ⌥ + ⇧ + I`，就会得到 `output-skim.pdf` 和 `output-skim.skim` 两个文件；接下来，在访达中选中需要转移批注的 PDF，然后按下快捷键 `⌃ + ⌥ + ⇧ + H`，得到带有批注的新的 PDF。
 
-{{< imgcap title="使用 Keyboard Maestro macros 转移 PDF 批注的使用效果" src="https://static.retompi.com/0b2cf512-ed2d-41dd-9b34-4cf6c6a4d9fc.gif" >}}
+![使用 Keyboard Maestro macros 转移 PDF 批注的使用效果](https://static.retompi.com/0b2cf512-ed2d-41dd-9b34-4cf6c6a4d9fc.gif)
 
 需要注意的是，通过 Skim 转移 PDF 批注可能会导致某些扫描版 PDF 的文字图层消失，比如通过 DEVONthink OCR 得到的 PDF 都存在这个问题，这大概是由于 Skim 使用 [Apple PDFKit](https://developer.apple.com/documentation/pdfkit) 框架来修改 PDF，而这一框架存在不少 [bug](https://discourse.devontechnologies.com/t/ocr-layer-disappearing/51806)。因此，请谨慎使用此方法转移扫描版 PDF 中的批注。
 
-{{< imgcap title="转移批注后的 PDF 显示编码软件为 PDFKit" src="https://static.retompi.com/279d6f23-290a-404b-ace4-a93d832a6ef1.jpeg" >}}
+![转移批注后的 PDF 显示编码软件为 PDFKit](https://static.retompi.com/279d6f23-290a-404b-ace4-a93d832a6ef1.jpeg)
 
 ## 移除 PDF 批注
 
@@ -319,11 +319,11 @@ rm output-skim.*
 
 PDF Expert 可以实现移除 PDF 批注的功能。首先，我们打开需要移除批注的 PDF，打开左侧的 Annotations 窗口（快捷键 `⌘ + ⌥ + 3`），然后全选所有批注（快捷键 `⌘ + A`），点击右键，选择「Remove」，或者在键盘上点击删除键，就可以将所有批注删除。使用方式如下图所示。
 
-{{< imgcap title="在 PDF Expert 中移除 PDF 批注" src="https://static.retompi.com/1e1eba0c-f982-4f22-a8a2-ff30c89c49e5.png" >}}
+![在 PDF Expert 中移除 PDF 批注](https://static.retompi.com/1e1eba0c-f982-4f22-a8a2-ff30c89c49e5.png)
 
 不过，对于页码和批注非常多的 PDF 来说，PDF Expert 不会一次性全部加载所有的批注，而需要向下滚动才能加载，这样就需要多次点击，变得非常麻烦。在我的日常使用中，超过 500 页的 PDF 大多存在这个问题，因此我希望能够一键移除 PDF 中的所有批注，避免多次点击。此外，PDF Expert 是一个付费软件，如果你不想为了移除批注而购买 PDF Expert，那么可以使用下面这个 Keyboard Maestro macro 来实现这个功能。
 
-{{< imgcap title="移除 PDF 批注的 Keyboard Maestro macro" src="https://static.retompi.com/ca672bd4-a6a9-4bec-8e78-29b7f96e5aad.png" >}}
+![移除 PDF 批注的 Keyboard Maestro macro](https://static.retompi.com/ca672bd4-a6a9-4bec-8e78-29b7f96e5aad.png)
 
 上图的 macro 中，核心部分是执行下面这行 Shell 脚本：
 
@@ -339,13 +339,13 @@ pdftk input.pdf output - uncompress | LC_ALL=C sed '/^\/Annots/d' | pdftk - outp
 
 借助 Keyboard Maestro，我们只需在访达中选中 PDF，然后按下快捷键 `⌃ + ⌥ + ⇧ + R` 或点击菜单栏中的 Keyboard Maestro Engine 图标，就可以得到一个不包含批注的 PDF 文件。使用效果见下图。
 
-{{< imgcap title="使用 Keyboard Maestro 移除 PDF 批注的使用效果" src="https://static.retompi.com/ef222955-d1d7-4078-a875-8157f76a0ccd.gif" >}}
+![使用 Keyboard Maestro 移除 PDF 批注的使用效果](https://static.retompi.com/ef222955-d1d7-4078-a875-8157f76a0ccd.gif)
 
 ## 分割 PDF 页面
 
 分割 PDF 是指将双栏或多栏 PDF 的每一栏单独成页。在处理一些扫描版 PDF 书籍时，为了方便在电子屏幕上阅读或打印成纸质版，同时也为了保持纸质书籍的 page folios 和 PDF 的 page labels 一致，我们需要将 PDF 书籍的每一页分割为两页，并按照书籍的页码顺序排列。
 
-{{< imgcap title="扫描得到的 PDF 书籍中，PDF 的每一页有书籍的两页" src="https://static.retompi.com/77c37d79-7843-43ce-b5dd-f30fa961fbd0.png" >}}
+![扫描得到的 PDF 书籍中，PDF 的每一页有书籍的两页](https://static.retompi.com/77c37d79-7843-43ce-b5dd-f30fa961fbd0.png)
 
 如本文开头所述，我使用 MuPDF 来实现分割 PDF 页面的功能。执行下面这行命令，就可以将双栏 PDF 转换为单栏 PDF：
 
@@ -367,11 +367,11 @@ mutool poster -x 2 "$KMVAR_pdf_file" output-$(date +%Y-%m-%d_%H-%M-%S).pdf
 
 然后将其添加到 Keyboard Maestro 中，制作如下图所示的一个 macro，就可以通过 Keyboard Maestro 快捷地分割 PDF 页面。
 
-{{< imgcap title="分割 PDF 页面的 Keyboard Maestro macro" src="https://static.retompi.com/62575e3a-1ede-4b60-92ba-3c4755ad8061.png" >}}
+![分割 PDF 页面的 Keyboard Maestro macro](https://static.retompi.com/62575e3a-1ede-4b60-92ba-3c4755ad8061.png)
 
 除了在 Keyboard Maestro 执行 `mutool` 之外，我们也可以在其他 macOS 自动化应用中执行这行命令。比如，在 Automator 中，我们将 workflow 接受的文件更改为「PDF files」，并且只在访达中起作用，也可以设置图标和颜色。接下来选择「Run Shell Script」action，将「Pass input」设置为 `arguments`，执行一段 Shell 脚本，制作一个如下图所示的 Automator Quick Action。
 
-{{< imgcap title="分割 PDF 页面的 Automator Quick Action" src="https://static.retompi.com/3dbeec71-14b0-4e03-a005-15f4b38dd004.png" >}}
+![分割 PDF 页面的 Automator Quick Action](https://static.retompi.com/3dbeec71-14b0-4e03-a005-15f4b38dd004.png)
 
 这个 Automator  quick action 执行的 Shell 脚本如下：
 
@@ -388,15 +388,15 @@ mutool poster -x 2 "${FILE}" "${DIR}/output-$(date +%Y-%m-%d_%H-%M-%S).pdf"
 
 类似地，我们也可以在 Shortcuts 中执行这行命令，制作如下图所示的一个 Shortcut。
 
-{{< imgcap title="分割 PDF 页面的 Shortcut" src="https://static.retompi.com/63ab41c2-a32f-4e65-bc2d-c6588e118a9a.png" >}}
+![分割 PDF 页面的 Shortcut](https://static.retompi.com/63ab41c2-a32f-4e65-bc2d-c6588e118a9a.png)
 
 这个 Shortcut 只接受 PDF 作为输入，如果没有输入则停止。主体部分是执行一段 Shell 脚本处理选中的 PDF，使用的代码和上面的 Automator workflow 完全相同。如上图所示，为了在访达和菜单栏点击使用这个 Shortcut，需要勾选右侧的「Use as Quick Action」及下方的「Finder」和「Services Menu」。你可以点击 [这里](https://www.icloud.com/shortcuts/19deef9c50574eb7afd862f1a0bb798c) 安装这个 Shortcut，使用效果见下图。
 
-{{< imgcap title="在访达中使用 Shortcut 分割 PDF 的使用效果" src="https://static.retompi.com/c0986c52-9ba9-4baf-b4d7-1bcc679cb899.gif" >}}
+![在访达中使用 Shortcut 分割 PDF 的使用效果](https://static.retompi.com/c0986c52-9ba9-4baf-b4d7-1bcc679cb899.gif)
 
 需要注意的是，首次执行这个 Shortcut 会弹出如下图所示的隐私弹窗，请求执行 Shell 脚本，点击允许即可。
 
-{{< imgcap title="首次运行 Shortcut 请求执行 Shell 脚本的隐私弹窗" src="https://static.retompi.com/e768bd81-b969-4f11-8adc-b9ad6a6672b0.png" >}}
+![首次运行 Shortcut 请求执行 Shell 脚本的隐私弹窗](https://static.retompi.com/e768bd81-b969-4f11-8adc-b9ad6a6672b0.png)
 
 ## 统一 PDF 页面尺寸
 
@@ -414,7 +414,7 @@ pdfjam input.pdf --a4paper --outfile a4paper.pdf --quiet
 
 尽管使用 pdfjam 统一 PDF 页面尺寸非常方便，但是它统一页面尺寸的机制是在 PDF 页面的四周填充白色边框，使其尺寸达到指定的大小。在下图的例子中，左侧的 `input.pdf` 是待处理的 PDF，右侧的 `a4paper.pdf` 是通过 pdfjam 统一页面尺寸后的 PDF。可以看到，与左侧 PDF 相比，右侧 PDF 页面四周边框变得很宽，导致 PDF 文字内容变得相对更小。
 
-{{< imgcap title="使用 pdfjam 统一 PDF 页面尺寸的效果" src="https://static.retompi.com/4a315059-7b5e-40f7-afa2-f163fcda0b15.png" >}}
+![使用 pdfjam 统一 PDF 页面尺寸的效果](https://static.retompi.com/4a315059-7b5e-40f7-afa2-f163fcda0b15.png)
 
 为了解决上述问题，我使用 Python 编写了一个脚本，实现按比例计算 PDF 的页面尺寸的功能，将所有页面统一为第一页的尺寸，代码如下：
 
@@ -464,7 +464,7 @@ unify_page_sizes(input_pdf_path, output_pdf_path)
 
 为了使用方便，我们可以将这段代码保存为一个 `.py` 文件，然后通过下图所示的 Keyboard Maestro macro 来执行它。
 
-{{< imgcap title="通过 Python 统一 PDF 页面尺寸的 Keyboard Maestro macro" src="https://static.retompi.com/801fe9e0-5109-47f2-b958-acb3ac9d4117.png" >}}
+![通过 Python 统一 PDF 页面尺寸的 Keyboard Maestro macro](https://static.retompi.com/801fe9e0-5109-47f2-b958-acb3ac9d4117.png)
 
 这个 macro 的核心是执行这行命令：
 
@@ -474,13 +474,13 @@ python ~/Documents/unify-pdf-pages/unify-pdf-pages.py
 
 需要注意的是，你需要修改这行命令中 `python` 在你的 Mac 上的路径和 `.py` 文件的名称和路径，否则无法正常执行。使用这个 macro 统一 PDF 页面尺寸的最终效果见下图。可以看到，与 pdfjam 相比，通过 Python 统一页面尺寸得到的 PDF 没有很宽的边框，效果相对更好。
 
-{{< imgcap title="通过 Keyboard Maestro 执行 Python 脚本统一 PDF 页面尺寸的效果" src="https://static.retompi.com/2da319ba-a075-463f-8d0d-b588b6190e1d.png" >}}
+![通过 Keyboard Maestro 执行 Python 脚本统一 PDF 页面尺寸的效果](https://static.retompi.com/2da319ba-a075-463f-8d0d-b588b6190e1d.png)
 
 ## 合并 PDF 页面
 
 与将多个 PDF 文件合并为一个 PDF 文件不同，「合并 PDF 页面」是指将同一个 PDF 文件的多个页面合并为一个页面。比如有时为了节约纸张，可以在打印时将两页 PDF 放置到一张纸上。尽管打印时大多有「多页打印」的设置，比如在 macOS 上，我们可以在打印设置窗口中选择「每张纸的页数」，但这个选项只能在有限的 2、4、6、9 等选项中选择，也无法实现自定义的排列方式。例如在下图中，每张纸中两页 PDF 的默认排列方式是水平排列，不能实现垂直排列。
 
-{{< imgcap title="打印时选择每张纸 2 页 PDF 的效果" src="https://static.retompi.com/9fa42355-d530-4349-a984-1adb8182e3a1.png" >}}
+![打印时选择每张纸 2 页 PDF 的效果](https://static.retompi.com/9fa42355-d530-4349-a984-1adb8182e3a1.png)
 
 为了实现更加个性化的合并 PDF 页面的需求，我们可以使用命令行工具 pdfjam。比如使用下面这行命令，就可以将 `input.pdf` 中每两页合并为一页，输出为 `output.pdf`：
 
@@ -502,11 +502,11 @@ pdfjam "$KMVAR_selected_pdf" --nup "$KMVAR_ColumnNum"x"$KMVAR_RowNum" --landscap
 
 然后将其添加到 Keyboard Maestro 中，制作如下图所示的一个 macro，就可以通过 Keyboard Maestro 快捷地合并 PDF 页面。
 
-{{< imgcap title="合并 PDF 页面的 Keyboard Maestro macro" src="https://static.retompi.com/1ddfe26e-e82b-42f2-a409-08a0e8f90969.png" >}}
+![合并 PDF 页面的 Keyboard Maestro macro](https://static.retompi.com/1ddfe26e-e82b-42f2-a409-08a0e8f90969.png)
 
 激活这个 macro，会首先弹出一个输入框，提示用户输入合并后的 PDF 中每一页的列数和行数，完成输入后，就会得到合并后的 PDF，保存到当前目录中，使用效果如下图所示。
 
-{{< imgcap title="借助 Keyboard Maestro 合并 PDF 页面的效果" src="https://static.retompi.com/0fa6e509-877b-47a6-aac6-fe434662c1b6.gif" >}}
+![借助 Keyboard Maestro 合并 PDF 页面的效果](https://static.retompi.com/0fa6e509-877b-47a6-aac6-fe434662c1b6.gif)
 
 ## 转移 PDF 书签
 
@@ -520,7 +520,7 @@ pdftk input.pdf dump_data_utf8 output metadata.text
 
 使用 VS Code 打开 `metadata.text`，可以看到如下图所示的内容。
 
-{{< imgcap title="导出 PDF 元数据后中的书签信息" src="https://static.retompi.com/0594a687-d1c6-4bf4-8b75-21cc70b46abd.png" >}}
+![导出 PDF 元数据后中的书签信息](https://static.retompi.com/0594a687-d1c6-4bf4-8b75-21cc70b46abd.png)
 
 从上图可以看到，每个书签条目由 4 行组成：
 
@@ -537,7 +537,7 @@ pdftk input.pdf update_info_utf8 metadata.text output output.pdf
 
 为了便捷地实现 PDF 书签的转移，我制作了两个 Keyboard Maestro macros，无需手动复制粘贴，就可以实现 PDF 书签的转移，如下图所示。
 
-{{< imgcap title="转移 PDF 书签的 Keyboard Maestro macros" src="https://static.retompi.com/76947f1c-e071-41ee-b965-9aac60fec587.jpeg" >}}
+![转移 PDF 书签的 Keyboard Maestro macros](https://static.retompi.com/76947f1c-e071-41ee-b965-9aac60fec587.jpeg)
 
 在上图左侧的 macro 中，核心部分是执行这两行命令：
 
@@ -579,7 +579,7 @@ pdftk input.pdf attach_files attach.png output output.pdf
 
 如下图所示，使用 PDF Expert 打开生成的 `output.pdf`，可以看到左侧的导航窗格中多了一个附件图标，点击之后即可在默认的应用程序中打开。
 
-{{< imgcap title="在 PDF Expert 中打开嵌入附件的 PDF" src="https://static.retompi.com/aac7fc37-558d-4d47-a70f-ff7d3dd6c4c9.png" >}}
+![在 PDF Expert 中打开嵌入附件的 PDF](https://static.retompi.com/aac7fc37-558d-4d47-a70f-ff7d3dd6c4c9.png)
 
 如果你想要将附件嵌入到 PDF 的某一页中，可以加上 `to_page` 参数，例如下面这行命令将 `attach.png` 嵌入到 `input.pdf` 的第一页中：
 
@@ -589,11 +589,11 @@ pdftk input.pdf attach_files attach.png to_page 1 output output.pdf
 
 同样使用 PDF Expert 打开生成的 `output.pdf`，可以看到该 PDF 的第一页中有一个类似回形针的附件图标，点击之后即可打开嵌入的 `attach.png`，如下图所示。
 
-{{< imgcap title="在 PDF Expert 中打开嵌入附件到第一页的 PDF" src="https://static.retompi.com/2cba4437-0e07-4dfb-8a45-7e9ff927897b.png" >}}
+![在 PDF Expert 中打开嵌入附件到第一页的 PDF](https://static.retompi.com/2cba4437-0e07-4dfb-8a45-7e9ff927897b.png)
 
 将上述代码稍加修改，我们可以制作下图所示的两个 Keyboard Maestro macros，用于将文件嵌入到 PDF 中。
 
-{{< imgcap title="将文件嵌入到 PDF 中的 Keyboard Maestro macros" src="https://static.retompi.com/fc0027f8-2e2a-4c8d-9c60-6636b28553e2.jpeg" >}}
+![将文件嵌入到 PDF 中的 Keyboard Maestro macros](https://static.retompi.com/fc0027f8-2e2a-4c8d-9c60-6636b28553e2.jpeg)
 
 上图左侧的 macro 非常简单，只是为了将要嵌入的文件保存为 Keyboard Maestro 中的变量 `attached_file`，供右侧的 macro 使用。右侧的 macro 中，核心部分是执行下面这两行命令：
 
@@ -605,7 +605,7 @@ pdftk "$KMVAR_pdf_file" attach_files "$KMVAR_attached_file" output "$KMVAR_pdf_p
 
 这段代码的作用是将上图左侧 macro 中的 `attached_file` 嵌入到右侧 macro 选中的 `pdf_file` 中，得到 `pdf-with-attachment.pdf`。使用时，你需要首先在访达中选中要嵌入的文件，然后执行左侧的 macro，将文件保存为变量 `attached_file`，接下来在访达中选中要添加附件的 PDF，然后执行右侧的 macro，就可以得到嵌入了附件的 PDF 文件 `pdf-with-attachment.pdf`。使用效果见下图。
 
-{{< imgcap title="通过 Keyboard Maestro 将文件嵌入到 PDF 中的使用效果" src="https://static.retompi.com/19c5f89b-94c0-425c-bc05-b617b70424b7.gif" >}}
+![通过 Keyboard Maestro 将文件嵌入到 PDF 中的使用效果](https://static.retompi.com/19c5f89b-94c0-425c-bc05-b617b70424b7.gif)
 
 除了将文件嵌入到 PDF 中，PDFtk 也支持将 PDF 中的附件导出。如果一个 PDF 包含嵌入的附件，你可以使用下面这行命令将附件 [导出](https://www.pdflabs.com/docs/pdftk-man-page/#dest-op-unpack) 到当前目录中：
 
@@ -619,15 +619,15 @@ pdftk input.pdf unpack_files
 
 PDF 有 [两种密码](https://helpx.adobe.com/acrobat/using/securing-pdfs-passwords.html) 保护方式，一种是打开密码（document open password），也被称为用户密码（user password），另一种是权限密码（permissions password）。前者是指打开 PDF 时需要输入的密码，后者是指对 PDF 进行编辑、打印、OCR 等操作时需要输入的密码。
 
-{{< imgcap title="在预览中打开有权限密码的 PDF" src="https://static.retompi.com/7eb81677-9802-43a3-a2f0-49ec964efcd1.png" >}}
+![在预览中打开有权限密码的 PDF](https://static.retompi.com/7eb81677-9802-43a3-a2f0-49ec964efcd1.png)
 
 尽管权限密码可以起到保护 PDF 内容的作用，但既然用户能够阅读，为什么不可以对它进行批注呢？好在有不少方法可以绕过 PDF 权限密码，下面介绍几种我用过的方法。需要注意的是，这些方法都只能绕过权限密码，而不能绕过打开密码。此外，PDF 权限密码在很大程度上依赖于 PDF 软件，比如同一份有权限密码的 PDF，在 Preview（预览）中无法批注，但在 PDF Expert 中可以批注，这可能是因为 PDF Expert 使用了自己开发的 PDF 框架，而不是使用 macOS 自带的 PDFKit 框架。受此启发，我们可以通过在 PDF Expert 中新建一个空白 PDF，然后将有权限密码的 PDF 拖拽到空白 PDF 中，再删除这个 PDF 第一页的空白页，就可以得到一个没有权限密码的 PDF，使用方法见下图。
 
-{{< imgcap title="使用 PDF Expert 中绕过 PDF 权限密码" src="https://static.retompi.com/be406737-04fa-491b-a39f-319cc2ae39ef.gif" >}}
+![使用 PDF Expert 中绕过 PDF 权限密码](https://static.retompi.com/be406737-04fa-491b-a39f-319cc2ae39ef.gif)
 
 除了 PDF Expert 外，你也可以使用系统自带的免费方案——Automator，制作一个如下图所示 quick action。
 
-{{< imgcap title="使用 Automator 绕过 PDF 权限密码" src="https://static.retompi.com/3a5ebc74-d476-4ce2-8ef1-afdd2c6264f8.png" >}}
+![使用 Automator 绕过 PDF 权限密码](https://static.retompi.com/3a5ebc74-d476-4ce2-8ef1-afdd2c6264f8.png)
 
 这个 Automator workflow 的作用是使用「Split PDF」这个 action，将访达中选中的 PDF 拆分为单页 PDF，保存到桌面上，命名为 `split-pdf-output-page*.pdf`，其中 `*` 表示页码。然后执行下面这段 Shell 脚本，使用 PDFtk 将这些单页 PDF 合并为一个 PDF，当然合并 PDF 有很多方案，你也可以选择其他方式。Shell 脚本的最后一步是删除所有单页 PDF，得到一个没有权限密码的 PDF 文件 `pdf-without-password.pdf`：
 
@@ -643,11 +643,11 @@ rm split-pdf-output-page*.pdf
 
 除了以上两种方法，最后再介绍一种绕过 PDF 权限密码到「开箱即用」的方法，也就是在访达中执行 [quick actions](https://support.apple.com/guide/mac-help/mchl97ff9142/mac)（快速操作），通过创建 PDF 的方式，将有权限密码的 PDF 转换为没有权限密码的 PDF。
 
-{{< imgcap title="在访达中通过「创建 PDF」的动作绕过 PDF 权限密码" src="https://static.retompi.com/774a4eb6-95a0-46b5-9c30-186d64465cd1.png" >}}
+![在访达中通过「创建 PDF」的动作绕过 PDF 权限密码](https://static.retompi.com/774a4eb6-95a0-46b5-9c30-186d64465cd1.png)
 
 值得注意的是，上图所示的「Create PDF」是 [macOS 自带](https://support.apple.com/guide/mac-help/mchl21ac2368/14.0/mac/14.0) 的一个 action，你只需要确保「Settings -> Privacy & Security -> Extensions -> Finder -> Create PDF」处于开启状态即可。
 
-{{< imgcap title="在系统设置中开启「Create PDF」" src="https://static.retompi.com/4944e000-5572-47f5-ae53-2c994b6b21f7.png" >}}
+![在系统设置中开启「Create PDF」](https://static.retompi.com/4944e000-5572-47f5-ae53-2c994b6b21f7.png)
 
 你可能注意到了，上图中创建 PDF 的快捷操作不仅适用于 PDF，对图片同样有效。因此，你可以创建一张图片或一个单页 PDF，然后同时选中有权限密码的 PDF 和这张图片或单页 PDF，右键点击，选择「Quick Actions -> Create PDF」，最后将生成的 PDF 中的辅助图片或 PDF 删除，就可以得到一个没有权限密码的 PDF。
 
