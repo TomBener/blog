@@ -27,10 +27,25 @@
         </div>
     </div>
 {{- else -}}
-    {{- $type := .Get 0 | default "note" -}}
-    <div class="details admonition {{ $type }}{{ if .Get 2 | ne false }} open{{ end }}">
+    {{- $paramCount := len .Params -}}
+    {{- $type := "note" -}}
+    {{- $title := "" -}}
+    {{- $open := true -}}
+    
+    {{- if eq $paramCount 1 -}}
+        {{- $title = .Get 0 -}}
+    {{- else if eq $paramCount 2 -}}
+        {{- $type = .Get 0 -}}
+        {{- $title = .Get 1 -}}
+    {{- else if eq $paramCount 3 -}}
+        {{- $type = .Get 0 -}}
+        {{- $title = .Get 1 -}}
+        {{- $open = .Get 2 -}}
+    {{- end -}}
+    
+    <div class="details admonition {{ $type }}{{ if $open }} open{{ end }}">
         <div class="details-summary admonition-title">
-            <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}" aria-hidden="true"></i>{{ .Get 1 | default (T $type) }}<i class="details-icon {{ $iconDetails }}" aria-hidden="true"></i>
+            <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}" aria-hidden="true"></i>{{ $title | default (T $type) }}<i class="details-icon {{ $iconDetails }}" aria-hidden="true"></i>
         </div>
         <div class="details-content">
             <div class="admonition-content">

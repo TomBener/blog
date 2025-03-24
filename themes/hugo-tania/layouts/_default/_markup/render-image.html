@@ -1,8 +1,13 @@
 {{- if strings.HasPrefix .Destination "http" -}}
-  <img loading="lazy" 
-    src="{{ .Destination | safeURL }}" 
-    alt="{{ .Text }}" 
-    {{ with .Title}} title="{{ . }}"{{ end }} />
+  <span class="caption-wrapper">
+    <img loading="lazy" 
+      src="{{ .Destination | safeURL }}" 
+      alt="{{ .Text }}" 
+      {{ with .Title}} title="{{ . }}"{{ end }} />
+    {{- if ne .Text "" -}}
+    <span class="caption-text">{{ .Text }}</span>
+    {{- end -}}
+  </span>
 {{- else -}}
   {{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
   {{- $permalink := "" -}}
@@ -14,10 +19,15 @@
   {{- $permalink = (printf "/%s" (.Destination | safeURL)) -}}
   {{- end -}}
 
-  <img loading="lazy" 
-    src="{{ $permalink }}" 
-    alt="{{ .Text }}" 
-    {{ with .Title}} title="{{ . }}"{{ end }} 
-    width={{ $image.Width }} 
-    height="{{ $image.Height }}"  />
+  <span class="caption-wrapper">
+    <img loading="lazy" 
+      src="{{ $permalink }}" 
+      alt="{{ .Text }}" 
+      {{ with .Title}} title="{{ . }}"{{ end }} 
+      width={{ $image.Width }} 
+      height="{{ $image.Height }}" />
+    {{- if ne .Text "" -}}
+    <span class="caption-text">{{ .Text }}</span>
+    {{- end -}}
+  </span>
 {{- end -}}

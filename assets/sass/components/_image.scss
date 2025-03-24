@@ -1,0 +1,21 @@
+// Image and caption styling
+
+.caption-wrapper {
+  display: block;
+  text-align: center;
+  margin: 1.5rem 0;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .caption-text {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: normal;
+  }
+} 
