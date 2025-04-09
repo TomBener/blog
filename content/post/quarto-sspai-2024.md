@@ -8,10 +8,7 @@ categories:
 ---
 
 {{< admonition title="🔖 Note" >}}
-本文参与少数派 [2024 年度征文活动]，你也可以在 [少数派] 上阅读本文。
-
-  [2024 年度征文活动]: https://sspai.com/post/95877
-  [少数派]: https://sspai.com/post/97056
+本文首发于 [少数派](https://sspai.com/post/97056)
 {{< /admonition >}}
 
 ## 前言：工具对了，事半功倍
